@@ -1953,3 +1953,14 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+
+#ftco-navbar .dropdown-menu .dropdown-item {
+  color: #000;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+#ftco-navbar .dropdown-menu .dropdown-item:hover,
+#ftco-navbar .dropdown-menu .dropdown-item:focus {
+  color: #0E4A84;
+  background-color: transparent;
+}

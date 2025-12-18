@@ -124,7 +124,7 @@
 				$this.removeClass('show');
 				$this.find('> a').attr('aria-expanded', false);
 				$this.find('.dropdown-menu').removeClass('show');
-			}, 200);
+			}, 0);
 		});
 	});
 
