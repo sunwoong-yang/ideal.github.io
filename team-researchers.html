@@ -42,12 +42,12 @@
   /* 좌측 네비 active 표시 (a/ li 둘 다 대응) */
   #navi a.active,
   #navi li.active > a {
-    color: #20b7bf !important;
+    color: #0E4A84 !important;
     font-weight: 700;
   }
 
   #navi a:hover {
-    color: #20b7bf !important;
+    color: #0E4A84 !important;
   }
 
   /* 섹션 타이틀에 민트색 포인트 */
@@ -61,7 +61,7 @@
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #20b7bf;
+    background-color: #0E4A84;
     margin-top: 0.5rem;
   }
 
@@ -100,19 +100,24 @@
     display: none !important;
   }
 
+  #ftco-navbar {
+    background-color: #f3f6fb !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
   /* 민트색 컬러 포인트 추가 */
   .navbar-nav .nav-link:hover {
-    color: #20b7bf !important;
+    color: #0E4A84 !important;
   }
 
   .btn-primary {
-    background-color: #20b7bf !important;
-    border-color: #20b7bf !important;
+    background-color: #0E4A84 !important;
+    border-color: #0E4A84 !important;
   }
 
   .btn-primary:hover {
-    background-color: #1a9da5 !important;
-    border-color: #1a9da5 !important;
+    background-color: #0b3b68 !important;
+    border-color: #0b3b68 !important;
   }
 
   /* About 섹션 이미지 - 원본 비율 유지 */
@@ -268,9 +273,9 @@
   }
 
   .social-icon:hover {
-    background-color: #20b7bf;
+    background-color: #0E4A84;
     color: white;
-    border-color: #20b7bf;
+    border-color: #0E4A84;
     transform: translateY(-2px);
     text-decoration: none;
   }
@@ -386,6 +391,18 @@
     font-size: 0.8rem;
     font-weight: 600;
     color: #888;
+  }
+
+  .footer-logo {
+    display: inline-block;
+    background: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo img {
+    display: block;
+    max-height: 60px;
+    width: auto;
   }
 
   /* About 섹션 제목 */
@@ -504,7 +521,7 @@
 					</li>
 					<li class="nav-item"><a href="publications.html" class="nav-link"><span>Publications</span></a></li>
 					<li class="nav-item"><a href="projects.html" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="index.html#page-4" class="nav-link"><span>News</span></a></li>
+					<li class="nav-item"><a href="news.html" class="nav-link"><span>News</span></a></li>
 				</ul>
 				</div>
 		</div>
@@ -550,13 +567,11 @@
 
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<p>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
-							href="https://colorlib.com" target="_blank">Colorlib</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					<div class="footer-logo">
+						<img src="images/HYU_logotype_ERICA_blue_kor_eng.png" alt="Hanyang University ERICA logo">
+					</div>
+					<p>&copy; IDEAL, Hanyang University ERICA. All rights reserved.<br>
+						<span>This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
 					</p>
 				</div>
 			</div>

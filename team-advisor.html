@@ -41,13 +41,54 @@
 
   /* 좌측 네비 active 표시 (a/ li 둘 다 대응) */
   #navi a.active,
-  #navi li.active > a {
-    color: #20b7bf !important;
+  #navi li.active > a,
+  #navi a.current,
+  #navi li a.current {
+    color: #0E4A84 !important;
     font-weight: 700;
   }
 
   #navi a:hover {
-    color: #20b7bf !important;
+    color: #0E4A84 !important;
+  }
+
+  #navi {
+    top: 180px;
+    position: sticky;
+    margin: 0;
+  }
+
+  #navi ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  #navi li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  #navi li a {
+    color: #000 !important;
+    display: inline-block;
+    transition: color 0.2s ease, margin-left 0.2s ease;
+  }
+
+  #navi li a.current {
+    margin-left: 20px;
+    position: relative;
+  }
+
+  #navi li a.current::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -24px;
+    width: 20px;
+    height: 2px;
+    background: #0E4A84;
+    transform: translateY(-50%);
   }
 
   /* 섹션 타이틀에 민트색 포인트 */
@@ -61,7 +102,7 @@
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #20b7bf;
+    background-color: #0E4A84;
     margin-top: 0.5rem;
   }
 
@@ -100,19 +141,24 @@
     display: none !important;
   }
 
+  #ftco-navbar {
+    background-color: #f3f6fb !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
   /* 민트색 컬러 포인트 추가 */
   .navbar-nav .nav-link:hover {
-    color: #20b7bf !important;
+    color: #0E4A84 !important;
   }
 
   .btn-primary {
-    background-color: #20b7bf !important;
-    border-color: #20b7bf !important;
+    background-color: #0E4A84 !important;
+    border-color: #0E4A84 !important;
   }
 
   .btn-primary:hover {
-    background-color: #1a9da5 !important;
-    border-color: #1a9da5 !important;
+    background-color: #0b3b68 !important;
+    border-color: #0b3b68 !important;
   }
 
   /* About 섹션 이미지 - 원본 비율 유지 */
@@ -268,9 +314,9 @@
   }
 
   .social-icon:hover {
-    background-color: #20b7bf;
+    background-color: #0E4A84;
     color: white;
-    border-color: #20b7bf;
+    border-color: #0E4A84;
     transform: translateY(-2px);
     text-decoration: none;
   }
@@ -278,6 +324,37 @@
   .social-icon svg {
     width: 20px;
     height: 20px;
+  }
+
+  .contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #000;
+    margin-top: 1rem;
+  }
+
+  .contact-email a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .contact-email svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-logo {
+    display: inline-block;
+    background: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo img {
+    display: block;
+    max-height: 60px;
+    width: auto;
   }
 
   /* Advisor + researcher sections */
@@ -288,14 +365,24 @@
   }
 
   .advisor-details .resume-wrap {
-    border: 1px solid rgba(14, 74, 132, 0.08);
-    border-radius: 12px;
-    padding: 1.25rem;
+    display: block;
     background: #fff;
+    border-radius: 18px;
+    padding: 1.6rem 1.75rem;
+    border: 1px solid rgba(14, 74, 132, 0.12);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
   }
 
   .advisor-details .resume-wrap + .resume-wrap {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .advisor-details .resume-wrap .text p {
+    margin-bottom: 0.35rem;
+  }
+
+  .advisor-details .resume-wrap .text p:last-child {
+    margin-bottom: 0;
   }
 
   .team-card {
@@ -388,11 +475,36 @@
     color: #888;
   }
 
+  .talks-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  .talks-list li {
+    margin-bottom: 0.45rem;
+    color: #000;
+  }
+
+  .meta-lines div {
+    margin-bottom: 0.2rem;
+  }
+
+  .meta-lines div:last-child {
+    margin-bottom: 0;
+  }
+
   /* About 섹션 제목 */
   .heading-section h2 {
     font-size: 1.8rem !important;
     font-weight: 700 !important;
     margin-bottom: 1rem !important;
+  }
+
+  .heading-section h3 {
+    font-size: 1.65rem !important;
+    font-weight: 700 !important;
+    color: #111 !important;
   }
 
   /* About 섹션 본문 */
@@ -504,7 +616,7 @@
 					</li>
 					<li class="nav-item"><a href="publications.html" class="nav-link"><span>Publications</span></a></li>
 					<li class="nav-item"><a href="projects.html" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="index.html#page-4" class="nav-link"><span>News</span></a></li>
+					<li class="nav-item"><a href="news.html" class="nav-link"><span>News</span></a></li>
 				</ul>
 				</div>
 		</div>
@@ -528,24 +640,25 @@
 				</div>
 				<div class="col-md-8 col-lg-8 py-4 py-md-0">
 					<div class="heading-section">
-						<h3 class="mb-3">Yubin Lee</h3>
-						<p>I'm Yubin Lee, a master's student at CCS Graduate School of Mobility, KAIST, conducting my research in the Smart Design Lab under the supervision of Prof. Namwoo Kang.</p>
-						<p>My research interests lie at the intersection of engineering, design, and AI, with a focus on design optimization and AI-driven generative design.</p>
+						<h3 class="mb-3">Sunwoong Yang</h3>
+						<p>I'm Sunwoong Yang, advisor of IDEAL at Hanyang University ERICA and a postdoctoral researcher exploring AI-powered aerodynamic design at KAIST.</p>
+						<p>My current work bridges data-driven modeling, reliable surrogate methods, and engineering applications to accelerate intelligent design workflows.</p>
+						<div class="contact-email">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+								<path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.52l10 6.25 10-6.25V6H2zm0 12h20V8.5l-9.4 5.9a1 1 0 0 1-1.2 0L2 8.5V18z"/>
+							</svg>
+							<a href="mailto:sunwoongy@gmail.com">E-mail: sunwoongy@gmail.com</a>
+						</div>
 					</div>
 					<div class="social-icons mt-4">
-						<a href="mailto:yubin.lee@kaist.ac.kr" class="social-icon" title="Email me">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-								<path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
-							</svg>
-						</a>
-						<a target="_blank" href="https://www.linkedin.com/in/yubinleeatkaist/" class="social-icon" title="LinkedIn">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-								<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-							</svg>
-						</a>
-						<a target="_blank" href="https://scholar.google.com/citations?user=KkXPMuMAAAAJ&hl=en" class="social-icon" title="Google Scholar">
+						<a target="_blank" href="https://scholar.google.com/citations?user=JmBzYnEAAAAJ&hl=en" class="social-icon" title="Google Scholar">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
 								<path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
+							</svg>
+						</a>
+						<a target="_blank" href="https://www.linkedin.com/in/sunwoong-yang-0438a8218/" class="social-icon" title="LinkedIn">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+								<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
 							</svg>
 						</a>
 					</div>
@@ -554,82 +667,121 @@
 
 			<div class="advisor-details">
 				<div class="row">
-					<div class="col-md-12 mb-5">
-						<h3 class="advisor-section-title">Education</h3>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Sep. 2025 - Present</span>
-								<h2>Korea Advanced Institute of Science and Technology (KAIST)</h2>
-								<span class="position">Master's Student in CCS Graduate School of Mobility</span>
-								<p>Advisor: Prof. Namwoo Kang</p>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Mar. 2021 - Aug. 2025</span>
-								<h2>Kyung Hee University</h2>
-								<span class="position">
-									Bachelor of Engineering in Mechanical Engineering <br>
-									Bachelor of Engineering in Engineering Design (Student Designed Major)
-								</span>
-								<p>Advisor: Prof. Jongmin Seo</p>
-							</div>
-						</div>
+					<div class="col-md-3 d-none d-md-block">
+						<nav id="navi">
+							<ul>
+								<li><a href="#advisor-education">Education</a></li>
+								<li><a href="#advisor-experience">Experience</a></li>
+								<li><a href="#advisor-talks">Invited Talks</a></li>
+								<li><a href="#advisor-awards">Awards &amp; Honors</a></li>
+							</ul>
+						</nav>
 					</div>
-
-					<div class="col-md-12 mb-5">
-						<h3 class="advisor-section-title">Research Experiences</h3>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Jun. 2024 - Aug. 2024</span>
-								<h2>Research Intern</h2>
-								<span class="position">Affective Systems and Cognitive Lab, KAIST</span>
-								<div>
-									<div> - Developed a conceptual design for a space for non-human beings</div>
+					<div class="col-md-9">
+						<div class="page mb-5" id="advisor-education">
+							<h3 class="advisor-section-title">Education</h3>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="text">
+									<span class="date">Mar. 2020 - Aug. 2023</span>
+									<h2>Ph.D., Seoul National University</h2>
+									<span class="position">Department of Aerospace Engineering</span>
+									<div class="meta-lines">
+										<div>Supervisor: Prof. Kwanjung Yee</div>
+										<div>Thesis: Efficient Aerodynamic Design via Data-driven Approaches (Outstanding Doctoral Dissertation Award in SNU)</div>
+									</div>
+								</div>
+							</div>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="text">
+									<span class="date">Mar. 2018 - Feb. 2020</span>
+									<h2>M.S., Seoul National University</h2>
+									<span class="position">Department of Mechanical and Aerospace Engineering</span>
+									<div class="meta-lines">
+										<div>Supervisor: Prof. Kwanjung Yee</div>
+										<div>Thesis: Planform Optimization of UCAV Considering Longitudinal Stability and Low-observability Using Variable-fidelity</div>
+									</div>
+								</div>
+							</div>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="text">
+									<span class="date">Mar. 2014 - Feb. 2018</span>
+									<h2>B.S., Seoul National University</h2>
+									<span class="position">Department of Mechanical and Aerospace Engineering</span>
 								</div>
 							</div>
 						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Jul. 2022 - Jun. 2024</span>
-								<h2>Undergraduate Researcher</h2>
-								<span class="position">Flow Physics & Computational Engineering Innovation Lab, Kyung Hee University</span>
-								<div>
-									<div> - Automated cardiovascular simulation workflows</div>
-									<div> - Intracranial aneurysm modeling and CFD simulation</div>
+
+						<div class="page mb-5" id="advisor-experience">
+							<h3 class="advisor-section-title">Experience</h3>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="text">
+									<span class="date">Mar. 2026 - Present</span>
+									<h2>Assistant Professor, Hanyang University</h2>
+									<span class="position">Mechanical Engineering</span>
+								</div>
+							</div>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="text">
+									<span class="date">Sep. 2023 - Feb. 2026</span>
+									<h2>Postdoctoral Researcher, KAIST</h2>
+									<span class="position">CCS Graduate School of Mobility</span>
+									<div class="meta-lines">
+										<div>Supervisor: Prof. Namwoo Kang</div>
+										<div>Funding: Sejong Fellowship (NRF, May 2024 - Apr. 2029)</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-md-12">
-						<h3 class="advisor-section-title">Awards and Honors</h3>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Nov. 2024</span>
-								<h2>Academic Excellence Award</h2>
-								<span class="position">Kyung Hee University</span>
+						<div class="page mb-5" id="advisor-talks">
+							<h3 class="advisor-section-title">Invited Talks</h3>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="text">
+									<ul class="talks-list">
+										<li>KSCFE AI-CFD Workshop, “Aerodynamic Design with AI: from Surrogates to LLMs”, November 2025.</li>
+										<li>Sejong University (Department of Defense Artificial Intelligence and Robotics Convergence Engineering), “AI for Rotor Aerodynamics”, September 2025.</li>
+										<li>Gwangju Institute of Science and Technology (GIST), “Physics-Guided AI for Aerodynamic Design”, September 2025.</li>
+										<li>Korea Aerospace Research Institute (KARI), “LLM Agents for Drone Design”, September 2025.</li>
+										<li>Zhejiang University (School of Mechanical Engineering), “AI for Aerodynamic Simulation & Design”, August 2025.</li>
+										<li>NTU Singapore (School of Mechanical and Aerospace Engineering), “Computational Fluid Dynamics with AI”, June 2025.</li>
+										<li>Korea Univ. Sejong Campus (Department of Autonomous Mobility), “Computer Simulation with AI”, September 2024.</li>
+										<li>KSME (Korean Society of Mechanical Engineers), “SciML for Aerodynamic Modeling”, August 2024. (Youtube)</li>
+										<li>KITECH (Korea Institute of Industrial Technology), “AI for Aerodynamic Simulation”, May 2024.</li>
+										<li>AI Frenz, “Data-driven Techniques in Aerospace Engineering”, May 2023. (Youtube)</li>
+								</ul>
+								</div>
 							</div>
 						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Nov. 2023</span>
-								<h2>National Undergraduate Fluid Mechanics Competition <br>Gold Prize</h2>
-								<span class="position">The Korean Society of Mechanical Engineers (KSME)</span>
+
+						<div class="page" id="advisor-awards">
+							<h3 class="advisor-section-title">Awards and Honors</h3>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="text">
+									<span class="date">Nov. 2024</span>
+									<h2>Academic Excellence Award</h2>
+									<span class="position">Kyung Hee University</span>
+								</div>
 							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Jan. 2022 - Feb. 2024</span>
-								<h2>Forest of Talents Scholarship</h2>
-								<span class="position">Korea Foundation for Advanced Studies (KFAS)</span>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="text">
+									<span class="date">Nov. 2023</span>
+									<h2>National Undergraduate Fluid Mechanics Competition <br>Gold Prize</h2>
+									<span class="position">The Korean Society of Mechanical Engineers (KSME)</span>
+								</div>
 							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Aug. 2022</span>
-								<h2>Superiority Scholarship</h2>
-								<span class="position">Kyung Hee University</span>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="text">
+									<span class="date">Jan. 2022 - Feb. 2024</span>
+									<h2>Forest of Talents Scholarship</h2>
+									<span class="position">Korea Foundation for Advanced Studies (KFAS)</span>
+								</div>
+							</div>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="text">
+									<span class="date">Aug. 2022</span>
+									<h2>Superiority Scholarship</h2>
+									<span class="position">Kyung Hee University</span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -643,13 +795,11 @@
 
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<p>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
-							href="https://colorlib.com" target="_blank">Colorlib</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					<div class="footer-logo">
+						<img src="images/HYU_logotype_ERICA_blue_kor_eng.png" alt="Hanyang University ERICA logo">
+					</div>
+					<p>&copy; IDEAL, Hanyang University ERICA. All rights reserved.<br>
+						<span>This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
 					</p>
 				</div>
 			</div>

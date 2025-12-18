@@ -42,12 +42,12 @@
   /* 좌측 네비 active 표시 (a/ li 둘 다 대응) */
   #navi a.active,
   #navi li.active > a {
-    color: #20b7bf !important;
+    color: #0E4A84 !important;
     font-weight: 700;
   }
 
   #navi a:hover {
-    color: #20b7bf !important;
+    color: #0E4A84 !important;
   }
 
   /* 섹션 타이틀에 민트색 포인트 */
@@ -61,7 +61,7 @@
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #20b7bf;
+    background-color: #0E4A84;
     margin-top: 0.5rem;
   }
 
@@ -100,19 +100,24 @@
     display: none !important;
   }
 
+  #ftco-navbar {
+    background-color: #f3f6fb !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
   /* 민트색 컬러 포인트 추가 */
   .navbar-nav .nav-link:hover {
-    color: #20b7bf !important;
+    color: #0E4A84 !important;
   }
 
   .btn-primary {
-    background-color: #20b7bf !important;
-    border-color: #20b7bf !important;
+    background-color: #0E4A84 !important;
+    border-color: #0E4A84 !important;
   }
 
   .btn-primary:hover {
-    background-color: #1a9da5 !important;
-    border-color: #1a9da5 !important;
+    background-color: #0b3b68 !important;
+    border-color: #0b3b68 !important;
   }
 
   /* About 섹션 이미지 - 원본 비율 유지 */
@@ -283,9 +288,9 @@
   }
 
   .social-icon:hover {
-    background-color: #20b7bf;
+    background-color: #0E4A84;
     color: white;
-    border-color: #20b7bf;
+    border-color: #0E4A84;
     transform: translateY(-2px);
     text-decoration: none;
   }
@@ -293,6 +298,18 @@
   .social-icon svg {
     width: 20px;
     height: 20px;
+  }
+
+  .footer-logo {
+    display: inline-block;
+    background: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo img {
+    display: block;
+    max-height: 60px;
+    width: auto;
   }
 
   /* Advisor + researcher sections */
@@ -519,7 +536,7 @@
 					</li>
 					<li class="nav-item"><a href="publications.html" class="nav-link"><span>Publications</span></a></li>
 					<li class="nav-item"><a href="projects.html" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="index.html#page-4" class="nav-link"><span>News</span></a></li>
+					<li class="nav-item"><a href="news.html" class="nav-link"><span>News</span></a></li>
 				</ul>
 				</div>
 		</div>
@@ -559,9 +576,8 @@
 				<div class="col-md-3 d-none d-md-block">
 					<nav id="navi">
 						<ul>
-							<li><a href="#page-1">Education</a></li>
-							<li><a href="#page-2">Research Experiences</a></li>
-							<li><a href="#page-3">Awards and Honors</a></li>
+							<li><a href="#page-1">Team Vision</a></li>
+							<li><a href="#page-2">Research Area</a></li>
 							<li><a href="#page-4">News</a></li>
 						</ul>
 					</nav>
@@ -570,120 +586,101 @@
 				<div class="col-md-9" id="education-section">
 
 					<div id="page-1" class="page one">
-						<h2 class="heading">Education</h2>
+						<h2 class="heading">Team Vision</h2>
 
 						<div class="resume-wrap d-flex ftco-animate">
 							<div class="text">
-								<span class="date">Sep. 2025 - Present</span>
-								<h2>Korea Advanced Institute of Science and Technology (KAIST)</h2>
-								<span class="position">Master's Student in CCS Graduate School of Mobility</span>
-								<p>Advisor: Prof. Namwoo Kang</p>
+								<span class="date">IDEAL Roadmap</span>
+								<h2>Human-Centered Intelligent Design</h2>
+								<p>We are building a studio where AI copilots amplify engineering creativity rather than replace it. Our team vision is to connect researchers, students, and industry partners through an open design culture that values transparency and reproducibility.</p>
+								<ul>
+									<li>Translate real-world engineering challenges into collaborative design missions.</li>
+									<li>Prototype responsible AI workflows that keep human intent in the loop.</li>
+									<li>Share reusable playbooks so young researchers can rapidly onboard.</li>
+								</ul>
 							</div>
 						</div>
 
 						<div class="resume-wrap d-flex ftco-animate">
 							<div class="text">
-								<span class="date">Mar. 2021 - Aug. 2025</span>
-								<h2>Kyung Hee University</h2>
-								<span class="position">
-									Bachelor of Engineering in Mechanical Engineering <br>
-									Bachelor of Engineering in Engineering Design (Student Designed Major)
-								</span>
-								<p>Advisor: Prof. Jongmin Seo</p>
+								<span class="date">Community Impact</span>
+								<h2>Trustworthy Engineering Intelligence</h2>
+								<p>IDEAL is committed to delivering reliable decision support tools for domains where safety and performance matter. We emphasize measurable gains—faster simulations, better prototypes, and explainable recommendations.</p>
+								<ul>
+									<li>Partner with academic labs and startups on high-impact demonstrators.</li>
+									<li>Publish open datasets and tutorials to encourage reproducible research.</li>
+									<li>Mentor the next generation of designers who speak both engineering and AI.</li>
+								</ul>
 							</div>
 						</div>
 					</div>
 
 					<div id="page-2" class="page two">
-						<h2 class="heading">Research Experiences</h2>
+						<h2 class="heading">Research Area</h2>
 
 						<div class="resume-wrap d-flex ftco-animate">
 							<div class="text">
-								<span class="date">Jun. 2024 - Aug. 2024</span>
-								<h2>Research Intern</h2>
-								<span class="position">Affective Systems and Cognitive Lab, KAIST</span>
-								<div>
-									<div>- Developed a conceptual design for a space for non-human beings</div>
-								</div>
+								<span class="date">Physics-Guided AI Pipelines</span>
+								<h2>Learning with Domain Constraints</h2>
+								<p>We develop hybrid surrogates that blend CFD/FEM knowledge with neural operators to deliver trustworthy predictions even when data is scarce.</p>
+								<ul>
+									<li>Multi-fidelity modeling for aerodynamics, rotorcraft, and fluid-structure systems.</li>
+									<li>Uncertainty quantification modules that feed directly into design trade-offs.</li>
+								</ul>
 							</div>
 						</div>
 
 						<div class="resume-wrap d-flex ftco-animate">
 							<div class="text">
-								<span class="date">Jul. 2022 - Jun. 2024</span>
-								<h2>Undergraduate Researcher</h2>
-								<span class="position">Flow Physics & Computational Engineering Innovation Lab, Kyung Hee University</span>
-								<div>
-									<div>- Automated cardiovascular simulation workflows</div>
-									<div>- Intracranial aneurysm modeling and CFD simulation</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div id="page-3" class="page three">
-						<h2 class="heading">Awards and Honors</h2>
-
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Nov. 2024</span>
-								<h2>Academic Excellence Award</h2>
-								<span class="position">Kyung Hee University</span>
-							</div>
-						</div>
-
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Nov. 2023</span>
-								<h2>National Undergraduate Fluid Mechanics Competition <br>Gold Prize</h2>
-								<span class="position">The Korean Society of Mechanical Engineers (KSME)</span>
-							</div>
-						</div>
-
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Jan. 2022 - Feb. 2024</span>
-								<h2>Forest of Talents Scholarship</h2>
-								<span class="position">Korea Foundation for Advanced Studies (KFAS)</span>
-							</div>
-						</div>
-
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Aug. 2022</span>
-								<h2>Superiority Scholarship</h2>
-								<span class="position">Kyung Hee University</span>
+								<span class="date">Generative Engineering Platforms</span>
+								<h2>Co-Designing with Large Models</h2>
+								<p>Our lab prototypes workflow agents that pair LLM reasoning with CAD, simulation, and optimization loops so that engineers can explore concepts faster.</p>
+								<ul>
+									<li>Prompt-to-geometry pipelines that maintain manufacturability constraints.</li>
+									<li>Dashboard analytics that capture design rationale for future reuse.</li>
+								</ul>
 							</div>
 						</div>
 					</div>
 
 					<div id="page-4" class="page four">
 						<h2 class="heading">News</h2>
-						<div class="news-item ftco-animate">
-							<img src="images/image_3.jpg" alt="news">
-							<div>
-								<span class="date">Sep. 26, 2025</span>
-								<h4>Celebrated my birthday with lab mates</h4>
-								<p>Grateful for their warm wishes and even a birthday song.</p>
-							</div>
-						</div>
-						<div class="news-item ftco-animate">
-							<img src="images/image_2.png" alt="news">
-							<div>
-								<span class="date">Aug. 25, 2025</span>
-								<h4>Joined SDL at KAIST</h4>
-								<p>Excited to begin this journey and hoping for many joyful days of research ahead.</p>
-							</div>
-						</div>
-						<div class="news-item ftco-animate">
-							<img src="images/image_1.jpg" alt="news">
-							<div>
-								<span class="date">Aug. 20, 2025</span>
-								<h4>Officially graduated from Kyung Hee University</h4>
-								<p>Feeling surreal to close this chapter and step into the next one.</p>
-							</div>
-						</div>
-					</div>
+		<div class="news-item ftco-animate">
+			<img src="images/about-1.jpg" alt="IDEAL sprint">
+			<div>
+				<span class="date">Oct. 10, 2025</span>
+				<h4>IDEAL kicks off the co-design studio sprint</h4>
+				<p>Launched a two-week sprint where mixed teams pair LLM copilots with rapid CFD studies to prototype rotor ideas.</p>
+			</div>
+		</div>
+		<div class="news-item ftco-animate">
+			<img src="images/image_3.jpg" alt="Birthday celebration">
+			<div>
+				<span class="date">Sep. 26, 2025</span>
+				<h4>Celebrated my birthday with lab mates</h4>
+				<p>Grateful for their warm wishes and even a birthday song.</p>
+			</div>
+		</div>
+		<div class="news-item ftco-animate">
+			<img src="images/image_2.png" alt="Seminar">
+			<div>
+				<span class="date">Sep. 5, 2025</span>
+				<h4>First IDEAL seminar on physics-guided AI</h4>
+				<p>Shared our surrogate modeling pipeline with campus visitors and received energizing feedback on deployment tooling.</p>
+			</div>
+		</div>
+		<div class="news-item ftco-animate">
+			<img src="images/image_2.png" alt="Joined SDL">
+			<div>
+				<span class="date">Aug. 25, 2025</span>
+				<h4>Joined SDL at KAIST</h4>
+				<p>Excited to begin this journey and hoping for many joyful days of research ahead.</p>
+			</div>
+		</div>
+	<div class="mt-3 text-center">
+		<a href="news.html" class="btn btn-primary btn-sm">View all news</a>
+	</div>
+		</div>
 
 				</div>
 			</div>
@@ -696,13 +693,12 @@
 
 			<div class="row">
 				<div class="col-md-12 text-center">
+					<div class="footer-logo">
+						<img src="images/HYU_logotype_ERICA_blue_kor_eng.png" alt="Hanyang University ERICA logo">
+					</div>
 					<p>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
-							href="https://colorlib.com" target="_blank">Colorlib</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						&copy; IDEAL, Hanyang University ERICA. All rights reserved.<br>
+						<span class="template-credit">This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
 					</p>
 				</div>
 			</div>
