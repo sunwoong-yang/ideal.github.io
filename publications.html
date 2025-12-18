@@ -18,6 +18,7 @@
   <style>
     body {
       font-family: "DM Sans", sans-serif;
+      font-optical-sizing: auto;
       font-size: 15px;
       line-height: 1.7;
       color: #333;
@@ -25,7 +26,7 @@
 
     .navbar-brand {
       background: none !important;
-      color: #000 !important;
+      color: #000000 !important;
       font-size: 1.1rem !important;
       font-weight: 600 !important;
       padding: 0 !important;
@@ -33,21 +34,37 @@
       align-items: baseline;
       gap: 0.4rem;
       flex-wrap: wrap;
+      line-height: 1.1;
+    }
+
+    .navbar-brand:hover,
+    .navbar-brand:focus {
+      color: #000000 !important;
     }
 
     .navbar-brand .brand-acronym {
       font-size: 2em;
       font-weight: 700;
-      color: #0E4A84;
+      color: #0E4A84 !important;
     }
 
     .navbar-brand .brand-text {
       font-size: 1.1rem;
+      color: #000000 !important;
+    }
+
+    .navbar-brand::before,
+    .navbar-brand::after {
+      display: none !important;
     }
 
     .navbar-nav .nav-link {
       font-size: 0.9rem !important;
       font-weight: 500 !important;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #20b7bf !important;
     }
 
     .navbar-nav .dropdown-menu {
@@ -70,17 +87,30 @@
       padding-bottom: 4rem;
     }
 
+    .heading-section h2 {
+      font-size: 1.8rem !important;
+      font-weight: 700 !important;
+      margin-bottom: 1rem !important;
+    }
+
+    .heading-section p {
+      font-size: 0.95rem !important;
+      line-height: 1.7 !important;
+      color: #555 !important;
+    }
+
     .publications-list {
       max-width: 900px;
       margin: 0 auto;
     }
 
     .pub-section-title {
-      font-size: 1.35rem;
+      font-size: 1.89rem;
       font-weight: 700;
       margin-top: 3rem;
       margin-bottom: 1.25rem;
       color: #0E4A84;
+      text-align: center;
     }
 
     .publication-card {
@@ -121,7 +151,7 @@
     .pub-note {
       font-style: italic;
       margin-top: 1rem;
-      color: #0E4A84;
+      color: #0E4A84 !important;
       text-align: center;
     }
 
@@ -156,9 +186,9 @@
     </div>
   </nav>
 
-  <section class="ftco-section" id="publications-section">
+  <section class="ftco-section bg-light" id="publications-section">
     <div class="container">
-      <div class="row justify-content-center mb-4">
+      <div class="row justify-content-center mb-5 pb-3">
         <div class="col-md-8 heading-section text-center ftco-animate">
           <h2 class="mb-4">Publications</h2>
           <p class="pub-note">Feel free to contact me with any questions or feedback about my publications! (sunwoongy@kaist.ac.kr)</p>
@@ -168,34 +198,34 @@
       <div class="publications-list">
         <h3 class="pub-section-title">Under Review / In Preparation</h3>
         <div class="publication-card ftco-animate">
-          <span class="pub-label">[IN PREPARATION]</span>
-          <p><strong>[1]</strong> Authors: S. Kim, M. Seo, <span class="yang">S. Yang</span>, and N. Kang</p>
-          <p><strong>Title:</strong> Decoupled Dynamics Framework with Neural Fields for 3D Spatio-temporal Prediction of Vehicle Collisions</p>
-        </div>
-        <div class="publication-card ftco-animate">
           <span class="pub-label">[UNDER REVIEW]</span>
-          <p><strong>[1]</strong> Authors: <span class="yang">S. Yang</span>, R. Vinuesa and N. Kang</p>
+          <p><strong>[1]</strong> <strong>Authors:</strong> <span class="yang">S. Yang</span>, R. Vinuesa and N. Kang</p>
           <p><strong>Title:</strong> Mesh-Agnostic AI for Unsteady Flow Simulation: U-Net-based Graph Neural Networks for Spatio-Temporal Forecasting</p>
         </div>
         <div class="publication-card ftco-animate">
           <span class="pub-label">[UNDER REVIEW]</span>
-          <p><strong>[2]</strong> Authors: D. Lee, <span class="yang">S. Yang</span>, J.W. Oh, S.G. Cho, S. Kim and N. Kang</p>
+          <p><strong>[2]</strong> <strong>Authors:</strong> D. Lee, <span class="yang">S. Yang</span>, J.W. Oh, S.G. Cho, S. Kim and N. Kang</p>
           <p><strong>Title:</strong> AI-powered Digital Twin of the Ocean: Reliable Uncertainty Quantification for Real-time Wave Height Prediction</p>
         </div>
         <div class="publication-card ftco-animate">
           <span class="pub-label">[UNDER REVIEW]</span>
-          <p><strong>[3]</strong> Authors: J. Shin, C. Kim, <span class="yang">S. Yang</span>, M. Lee, S. J. Kim, and J. Jeon</p>
+          <p><strong>[3]</strong> <strong>Authors:</strong> J. Shin, C. Kim, <span class="yang">S. Yang</span>, M. Lee, S. J. Kim, and J. Jeon</p>
           <p><strong>Title:</strong> Node Assigned physics-informed neural networks for thermal-hydraulic system simulation: CVH/FL module</p>
         </div>
         <div class="publication-card ftco-animate">
           <span class="pub-label">[UNDER REVIEW]</span>
-          <p><strong>[4]</strong> Authors: Y.E. Kang, D. Lee, Y. Hong, <span class="yang">S. Yang</span>, and K. Yee</p>
+          <p><strong>[4]</strong> <strong>Authors:</strong> Y.E. Kang, D. Lee, Y. Hong, <span class="yang">S. Yang</span>, and K. Yee</p>
           <p><strong>Title:</strong> AI-Driven Surrogate Modeling Framework for Real-Time Prediction of Airfoil Lookup Tables: Application to Proprotor Optimization</p>
         </div>
         <div class="publication-card ftco-animate">
           <span class="pub-label">[UNDER REVIEW]</span>
-          <p><strong>[5]</strong> Authors: J. Kim, <span class="yang">S. Yang (co-corresponding author)</span>, and N. Kang</p>
+          <p><strong>[5]</strong> <strong>Authors:</strong> J. Kim, <span class="yang">S. Yang (co-corresponding author)</span>, and N. Kang</p>
           <p><strong>Title:</strong> Point-wise Diffusion Models for Physical Systems with Shape Variations: Application to Spatio-temporal and Large-scale system</p>
+        </div>
+        <div class="publication-card ftco-animate">
+          <span class="pub-label">[IN PREPARATION]</span>
+          <p><strong>[6]</strong> <strong>Authors:</strong> S. Kim, M. Seo, <span class="yang">S. Yang</span>, and N. Kang</p>
+          <p><strong>Title:</strong> Decoupled Dynamics Framework with Neural Fields for 3D Spatio-temporal Prediction of Vehicle Collisions</p>
         </div>
 
         <h3 class="pub-section-title">Published</h3>
