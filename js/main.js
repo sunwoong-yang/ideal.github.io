@@ -354,6 +354,81 @@ if (document.readyState === 'loading') {
   initTxtRotate();
 }
 
+// TxtFade - Fade In/Out Text Effect
+var TxtFade = function(el, texts, duration) {
+  this.texts = texts;
+  this.el = el;
+  this.currentIndex = 0;
+  this.duration = parseInt(duration, 10) || 2000;
+  this.fadeSpeed = parseInt(el.getAttribute('data-fade-speed'), 10) || 50;
+  this.opacity = 0;
+  this.isFadingIn = true;
+  this.waitTime = parseInt(el.getAttribute('data-wait'), 10) || 1000;
+  this.isWaiting = false;
+  // 색상 명시적으로 설정
+  this.el.style.color = '#0E4A84';
+  this.el.style.fontWeight = '700';
+  this.el.style.textDecoration = 'none';
+  this.updateText();
+  this.fade();
+};
+
+TxtFade.prototype.updateText = function() {
+  this.el.textContent = this.texts[this.currentIndex];
+};
+
+TxtFade.prototype.fade = function() {
+  var that = this;
+
+  if (this.isWaiting) {
+    setTimeout(function() {
+      that.isWaiting = false;
+      that.isFadingIn = false;
+      that.fade();
+    }, this.waitTime);
+    return;
+  }
+
+  if (this.isFadingIn) {
+    this.opacity += 0.02;
+    if (this.opacity >= 1) {
+      this.opacity = 1;
+      this.isWaiting = true;
+    }
+  } else {
+    this.opacity -= 0.02;
+    if (this.opacity <= 0) {
+      this.opacity = 0;
+      this.isFadingIn = true;
+      this.currentIndex = (this.currentIndex + 1) % this.texts.length;
+      this.updateText();
+    }
+  }
+
+  this.el.style.opacity = this.opacity;
+
+  setTimeout(function() {
+    that.fade();
+  }, this.fadeSpeed);
+};
+
+var initTxtFade = function() {
+  var elements = document.getElementsByClassName('txt-fade');
+  for (var i = 0; i < elements.length; i++) {
+    var texts = elements[i].getAttribute('data-texts');
+    var duration = elements[i].getAttribute('data-duration');
+    if (texts) {
+      new TxtFade(elements[i], JSON.parse(texts), duration);
+    }
+  }
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTxtFade);
+} else {
+  initTxtFade();
+}
+
 
 })(jQuery);
 
