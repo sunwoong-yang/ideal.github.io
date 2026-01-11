@@ -109,24 +109,27 @@
 	};
 	carousel();
 
-	$('nav .dropdown').each(function(){
-		var timeout;
-		$(this).hover(function(){
-			var $this = $(this);
-			clearTimeout(timeout);
-			$this.addClass('show');
-			$this.find('> a').attr('aria-expanded', true);
-			$this.find('.dropdown-menu').addClass('show');
-		}, function(){
-			var $this = $(this);
-			clearTimeout(timeout);
-			timeout = setTimeout(function(){
-				$this.removeClass('show');
-				$this.find('> a').attr('aria-expanded', false);
-				$this.find('.dropdown-menu').removeClass('show');
-			}, 200);
+	// 데스크톱에서만 드롭다운 hover 활성화 (모바일에서는 클릭으로 작동)
+	if ($(window).width() >= 992) {
+		$('nav .dropdown').each(function(){
+			var timeout;
+			$(this).hover(function(){
+				var $this = $(this);
+				clearTimeout(timeout);
+				$this.addClass('show');
+				$this.find('> a').attr('aria-expanded', true);
+				$this.find('.dropdown-menu').addClass('show');
+			}, function(){
+				var $this = $(this);
+				clearTimeout(timeout);
+				timeout = setTimeout(function(){
+					$this.removeClass('show');
+					$this.find('> a').attr('aria-expanded', false);
+					$this.find('.dropdown-menu').removeClass('show');
+				}, 200);
+			});
 		});
-	});
+	}
 
 
 	$('#dropdown04').on('show.bs.dropdown', function () {
