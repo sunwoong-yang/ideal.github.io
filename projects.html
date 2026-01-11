@@ -94,7 +94,11 @@
     font-size: 1.1rem;
     color: #000000 !important;
   }
-  
+
+  .navbar-brand .university-text {
+    color: #000000 !important;
+  }
+
   .navbar-brand::before,
   .navbar-brand::after {
     display: none !important;
@@ -103,8 +107,11 @@
   #ftco-navbar {
     background-color: #f3f6fb !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
+  }
+
+  /* Menu item bold 처리 */
+  .navbar-nav .nav-link {
+    font-weight: 700 !important;
   }
 
   /* 민트색 컬러 포인트 추가 */
@@ -525,6 +532,12 @@
       border-radius: 0.5rem;
     }
 
+    /* 모바일 navbar height 조정 */
+    #ftco-navbar {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
+
     .hero-wrap h1 {
       font-size: 2.5rem !important;
     }
@@ -545,6 +558,12 @@
 
     .footer-logo img {
       max-height: 150px !important;
+    }
+
+    /* Footer 텍스트 줄바꿈 */
+    .footer-line-1::after {
+      content: '\A';
+      white-space: pre;
     }
   }
 </style>
@@ -618,8 +637,8 @@
 							<img src="images/01 캐릭터 마크 - 기본형-04.png" alt="Hanyang University ERICA logo" style="max-height: 240px;">
 						</div>
 						<p style="text-align: center; margin: 0;">
-							&copy; IDEAL, Hanyang University ERICA.<br>
-							All rights reserved.<br>
+							<span class="footer-line-1">&copy; IDEAL, Hanyang University ERICA.</span>
+							<span class="footer-line-2">All rights reserved.</span><br>
 							<span class="template-credit">This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
 						</p>
 					</div>
