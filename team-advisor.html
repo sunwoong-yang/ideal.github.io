@@ -587,7 +587,8 @@
     }
 
     .navbar-toggler .oi,
-    .navbar-toggler span {
+    .navbar-toggler span,
+    .navbar-toggler .menu-text {
       color: #000000 !important;
     }
 
@@ -602,6 +603,11 @@
 
     .navbar-brand .brand-text {
       font-size: 0.9rem !important;
+    }
+
+    /* 모바일에서 University 단어 숨기기 */
+    .university-text {
+      display: none !important;
     }
 
     .hero-wrap h1 {
@@ -634,10 +640,10 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html"><span class="brand-acronym">IDEAL</span><span class="brand-text"> at Hanyang University ERICA</span></a>
+			<a class="navbar-brand" href="index.html"><span class="brand-acronym">IDEAL</span><span class="brand-text"> at Hanyang <span class="university-text">University</span> ERICA</span></a>
 			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
 				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
+				<span class="oi oi-menu"></span> <span class="menu-text">Menu</span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
