@@ -184,6 +184,45 @@
       max-height: 60px;
       width: auto;
     }
+
+    /* 모바일 반응형 */
+    @media (max-width: 768px) {
+      /* 모바일 navbar 텍스트 색상 수정 */
+      .navbar-nav .nav-link {
+        color: #000000 !important;
+      }
+
+      .navbar-toggler {
+        border-color: #000000 !important;
+      }
+
+      /* 모바일에서 navbar 브랜드 크기 조정 */
+      .navbar-brand .brand-acronym {
+        font-size: 1.5em !important;
+      }
+
+      .navbar-brand .brand-text {
+        font-size: 0.9rem !important;
+      }
+
+      /* Footer 세로 배치 */
+      .ftco-footer .col-md-12 > div {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+      }
+
+      .footer-logo img {
+        max-height: 150px !important;
+      }
+
+      .heading-section h2 {
+        font-size: 1.5rem !important;
+      }
+
+      .pub-label {
+        font-size: 0.8rem !important;
+      }
+    }
   </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
