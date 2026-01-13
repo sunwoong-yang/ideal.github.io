@@ -341,6 +341,39 @@
     color: #555;
   }
 
+  .recruitment-link-card {
+    background: #fff;
+    border: 1px solid rgba(14, 74, 132, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+    padding: 1.75rem 2rem;
+    text-align: center;
+  }
+
+  .recruitment-link-card p {
+    margin-bottom: 1rem;
+    color: #444;
+  }
+
+  .recruitment-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    padding: 0.65rem 1.5rem;
+    border-radius: 999px;
+    background: #0E4A84;
+    color: #fff;
+    transition: background 0.2s ease;
+  }
+
+  .recruitment-link-btn:hover,
+  .recruitment-link-btn:focus {
+    text-decoration: none;
+    color: #fff;
+    background: #0b3b68;
+  }
+
   .team-card-placeholder {
     background: rgba(14, 74, 132, 0.03);
     text-align: center;
@@ -574,35 +607,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-		<div class="container">
-			<a class="navbar-brand" href="index.html"><span class="brand-acronym">IDEAL</span><span class="brand-text"> at Hanyang <span class="university-text">University</span> ERICA</span></a>
-			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
-				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> <span class="menu-text">Menu</span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav nav ml-auto">
-					<li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
-					<li class="nav-item dropdown active">
-						<a class="nav-link dropdown-toggle active" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<span>Team</span>
-						</a>
-						<div class="dropdown-menu" aria-labelledby="teamDropdown">
-							<a class="dropdown-item" href="team-advisor.html">Advisor</a>
-							<a class="dropdown-item" href="team-researchers.html">Researchers</a>
-						</div>
-					</li>
-					<li class="nav-item"><a href="publications.html" class="nav-link"><span>Publications</span></a></li>
-					<li class="nav-item"><a href="projects.html" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="news.html" class="nav-link"><span>News</span></a></li>
-				</ul>
-				</div>
-		</div>
-	</nav>
+	<div data-navbar data-active="team"></div>
 	<section class="ftco-section bg-light" id="researchers-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
@@ -610,6 +615,15 @@
 					<span class="subheading">Team</span>
 					<h2 class="mb-4">Researchers</h2>
 					<p>Meet the researchers driving IDEAL. We are growing and will introduce new collaborators soon.</p>
+				</div>
+			</div>
+
+			<div class="row justify-content-center mb-4 ftco-animate">
+				<div class="col-lg-9">
+					<div class="recruitment-link-card">
+						<p>IDEAL 연구실은 이제 막 기반을 다지기 시작한 팀으로, 초기 멤버를 함께 모시고 있습니다.<br>더 자세한 모집 안내는 아래 버튼을 눌러 확인해 주세요.</p>
+						<a class="recruitment-link-btn" href="join-us.html">신규 멤버 모집 안내 보기 →</a>
+					</div>
 				</div>
 			</div>
 
@@ -681,6 +695,9 @@
 	<script src="js/aos.js"></script>
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/navbar.js"></script>
+
 
 	<script src="js/main.js"></script>
 
