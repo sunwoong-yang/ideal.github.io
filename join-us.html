@@ -104,6 +104,28 @@
       color: #555 !important;
     }
 
+    .contact-card {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid rgba(14, 74, 132, 0.12);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+      padding: 1.5rem 1.75rem;
+      margin: 0 auto 1.5rem;
+      max-width: 704px;
+      text-align: center;
+    }
+
+    .contact-card p {
+      margin-bottom: 0;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .contact-card a {
+      color: #0E4A84;
+      font-weight: 700;
+    }
+
     .join-hero-img {
       width: 100%;
       max-width: 420px;
@@ -233,13 +255,20 @@
           <p>AI 기술로 공학 설계의 패러다임을 바꿀 젊고 역동적인 연구실 IDEAL이 첫 발을 내디뎠습니다.<br>지능형 설계의 새로운 기준을 세우며, 연구실의 문화를 함께 정립해 나갈 주도적이고 열의 넘치는 동료를 찾습니다.</p>
         </div>
       </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10 ftco-animate">
+          <div class="contact-card">
+            <p>모집 관련 문의나 상담을 원하시면 언제든 <a href="mailto:sunwoongy@hanyang.ac.kr">sunwoongy@hanyang.ac.kr</a> 로 연락 주세요.</br>관심 분야와 간단한 소개를 보내주시면 48시간 이내에 답변드리겠습니다.</p>
+          </div>
+        </div>
+      </div>
       <div class="row justify-content-center" id="join-details">
         <div class="col-lg-10 ftco-animate">
           <div class="recruitment-card">
             <h3>자주 묻는 질문</h3>
 
             <div class="faq-item">
-              <div class="faq-question">어떤 연구실 문화를 만들어 가고 있나요?</div>
+              <div class="faq-question">어떤 연구실 문화를 지향하나요?</div>
               <p><strong>IDEAL은 이제 막 기반을 다지기 시작한 한양대 지능형 설계 연구실</strong>로, 젊은 지도교수의 추진력을 바탕으로 열린 의사소통과 빠른 실행을 최우선에 둡니다. 혼자 연구하기보다 서로의 시행착오와 아이디어를 즉시 공유하며 <strong>초기 멤버가 연구실의 역사와 전통을 직접 설계</strong>합니다. 지도교수가 제공하는 체계적인 코칭과 연구 로드맵으로 방황 없이 성장할 수 있는 환경을 제공합니다.</p>
             </div>
 
@@ -250,12 +279,7 @@
 
             <div class="faq-item">
               <div class="faq-question">AI 분야 말고 다른 전공에도 관심이 있는데 어떻게 해야 할까요?</div>
-              <p><strong>우리 연구실은 AI 자체만을 독립적으로 연구하지 않고</strong> 기계·항공 분야 전반에서 AI가 필요한 문제를 발굴하고 이를 위한 솔루션을 기획합니다. 학생분들이 평소에 관심 갖고 계신 분야(예를 들어 로봇 동역학, 자동차 충돌 해석, EV 배터리/모터, 반도체 설계 등)에 대한 학습을 적극 지원하며, <strong>각 분야 국내 전문가와의 공동연구를 직접 매칭</strong>해 드림으로써 해당 산업에 특화된 AI 전문가로 성장할 수 있도록 합니다.</p>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">구체적인 연구 분야는 어떻게 정해지나요?</div>
-              <p><strong>우리 연구실은 지원자가 원하는 연구 분야에 최대한 맞춰 매칭하는 것을 원칙</strong>으로 합니다. 초기 상담을 통해 관심 영역과 커리어 목표를 충분히 공유한 뒤, 지도교수가 프로젝트와 협업 파트너를 직접 매칭합니다. 진행 중 상황에 따라 세부 주제가 조정될 수는 있지만, 사전에 충분히 협의하고 합의된 방향으로 연구를 이어가니 안심하셔도 됩니다.</p>
+              <p><strong>우리 연구실은 AI 자체만을 독립적으로 연구하지 않고</strong> 기계·항공 분야 전반에서 AI가 필요한 문제를 발굴하고 이를 위한 솔루션을 기획합니다. 학생분들이 평소에 관심 갖고 계신 분야 (예를 들어 로봇 동역학, 자동차 충돌 해석, EV 배터리/모터, 반도체 설계 등)에 대한 학습을 적극 지원하며, <strong>각 분야 국내 전문가와의 공동연구를 직접 매칭</strong>해 드림으로써 해당 산업에 특화된 AI 전문가로 성장할 수 있도록 합니다.</p>
             </div>
 
             <div class="faq-item">
@@ -263,18 +287,23 @@
               <ul>
                 <li><strong>학부연구생</strong> (3학년 이상 지원 가능)</li>
                 <li><strong>학·석사 연계과정</strong></li>
-                <li><strong>석사과정</strong> (최소 2개월 학부연구생 경험 권장: <span class="emphasis-note">서로의 스타일을 파악해 석사 과정에서 더 빠르게 성장하기 위함</span>)</li>
-                <li><strong>박사과정</strong></li>
+                <li><strong>석사과정</strong> (최소 2개월 학부연구생 경험 권장: 서로의 스타일을 파악해 석사 과정에서 더 빠르게 성장하기 위함)</li>
+                <li><strong>박사과정</strong> (석사 시절 갈고닦은 타 분야 전공을 AI 설계 대상으로 활용하여 빠르게 본인만의 연구를 기획하고자 하는 분 환영)</li>
               </ul>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">입학 후 구체적인 연구 분야는 어떻게 정해지나요?</div>
+              <p><strong>우리 연구실은 지원자가 원하는 연구 분야에 최대한 맞춰 매칭하는 것을 원칙</strong>으로 합니다. 초기 상담을 통해 관심 영역과 커리어 목표를 충분히 공유한 뒤, 지도교수가 프로젝트와 협업 파트너를 직접 매칭합니다. 진행 중 상황에 따라 세부 주제가 조정될 수는 있지만, 사전에 충분히 협의하고 합의된 방향으로 연구를 이어가니 안심하셔도 됩니다.</p>
             </div>
 
             <div class="faq-item">
               <div class="faq-question">이 연구실에서 어떤 것을 기대할 수 있나요?</div>
               <ul>
+                <li><strong>자동차·반도체·항공 등 다양한 분야와의 산학 프로젝트</strong>를 추진해 산업 인공지능 역량을 바탕으로 한 취업용 포트폴리오 제공</li>
                 <li><strong>연구실 투입 후 2년 내 SCI(E) 논문 게재</strong>를 목표로 맞춤 지도</li>
                 <li><strong>국내외 학회 발표·참가 전폭 지원</strong>과 논문 실적 중심 커리어 멘토링</li>
                 <li><strong>서울대학교, KAIST, POSTECH, 독일항공우주센터(DLR), Purdue University</strong> 등과의 협업 기회 제공</li>
-                <li><strong>자동차·반도체·항공 등 다양한 분야와의 산학 프로젝트</strong>를 추진해 산업 인공지능 역량을 바탕으로 한 취업용 포트폴리오 제공</li>
               </ul>
             </div>
 

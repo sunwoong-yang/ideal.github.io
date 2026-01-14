@@ -9027,6 +9027,37 @@ h1, h2, h3, h4, h5,
   font-weight: 400;
   opacity: 1 !important;
 }
+
+.ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link {
+  border: 2px solid #0E4A84;
+  border-radius: 999px;
+  color: #0E4A84;
+  padding: 0.35rem 1.2rem;
+  margin-left: 0.8rem;
+  font-weight: 600;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link span {
+  color: inherit;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link:hover,
+.ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link:focus,
+.ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link.active {
+  background: #0E4A84;
+  color: #fff;
+}
+.ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link.active {
+  cursor: pointer;
+}
+.ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link:hover span,
+.ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link:focus span,
+.ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link.active span {
+  color: #fff;
+}
+.ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link.active span:before {
+  display: none;
+}
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link span {
   position: relative;
   display: block;

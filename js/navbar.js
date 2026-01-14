@@ -33,8 +33,8 @@
         <li class="nav-item" data-nav-item="news">
           <a href="news.html" class="nav-link"><span>News</span></a>
         </li>
-        <li class="nav-item" data-nav-item="join">
-          <a href="join-us.html" class="nav-link"><span>Join us</span></a>
+        <li class="nav-item nav-cta" data-nav-item="join">
+          <a href="join-us.html" class="nav-link nav-cta-link"><span>Join Us</span></a>
         </li>
       </ul>
     </div>
