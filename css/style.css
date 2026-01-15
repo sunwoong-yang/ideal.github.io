@@ -9065,9 +9065,9 @@ h1, h2, h3, h4, h5,
   }
   .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link {
     margin-left: 0;
-    min-width: 190px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    min-width: 110px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link:hover span,
