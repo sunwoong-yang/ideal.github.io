@@ -9050,6 +9050,26 @@ h1, h2, h3, h4, h5,
 .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link.active {
   cursor: pointer;
 }
+.ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media (max-width: 991.98px) {
+  .ftco-navbar-light .navbar-nav > .nav-item.nav-cta {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.85rem;
+  }
+  .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link {
+    margin-left: 0;
+    min-width: 190px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link:hover span,
 .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link:focus span,
 .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link.active span {
