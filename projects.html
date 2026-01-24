@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>IDEAL | Projects</title>
+<title>IDEA LAB | Projects</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -50,7 +50,7 @@
     color: #000000 !important;
   }
 
-  .navbar-brand .brand-acronym {
+  .navbar-brand .brand-acronym, .navbar-brand .brand-lab {
     font-size: 2em;
     font-weight: 700;
     color: #0E4A84 !important;
@@ -113,6 +113,41 @@
     color: #555 !important;
   }
 
+  .projects-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .project-item {
+    background: #fff;
+    border-radius: 18px;
+    border: 1px solid rgba(14, 74, 132, 0.12);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+    padding: 1.5rem 1.75rem;
+  }
+
+  .project-role {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #0E4A84;
+    margin-bottom: 0.35rem;
+    display: inline-block;
+  }
+
+  .project-item h4 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .project-meta {
+    margin-bottom: 0.3rem;
+  }
+
   .footer-logo {
     display: inline-block;
     background: #fff;
@@ -154,7 +189,7 @@
     }
 
     /* 모바일에서 navbar 브랜드 크기 조정 */
-    .navbar-brand .brand-acronym {
+    .navbar-brand .brand-acronym, .navbar-brand .brand-lab {
       font-size: 1.5em !important;
     }
 
@@ -194,6 +229,10 @@
       font-size: 1.5rem !important;
     }
 
+    .projects-wrapper {
+      padding: 0 0.5rem;
+    }
+
     /* Footer 세로 배치 */
     .ftco-footer .col-md-12 > div {
       flex-direction: column !important;
@@ -224,20 +263,18 @@
 				</div>
 			</div>
 
-			<div class="row justify-content-center">
-				<div class="col-md-6 col-lg-5 mb-4 ftco-animate">
-					<div class="info-card">
-						<span class="meta">Ongoing</span>
-						<h4>IDEAL Platform</h4>
-						<p>Building an integrated platform that blends human-centered design workflows with AI copilots.</p>
-					</div>
+			<div class="projects-wrapper">
+				<div class="project-item ftco-animate">
+					<span class="project-role">Role: PI</span>
+					<h4>Development of AI-based Flow Prediction Framework Considering Versatility and User-Friendliness in Digital Twins</h4>
+					<p class="project-meta"><strong>Sponsor:</strong> National Research Foundation of Korea (Sejong Fellowship)</p>
+					<p class="project-meta"><strong>Period & Funding:</strong> 2024.05.01 ~ 2029.04.30 (5 years, 500,000,000 KRW)</p>
 				</div>
-				<div class="col-md-6 col-lg-5 mb-4 ftco-animate">
-					<div class="info-card">
-						<span class="meta">Upcoming</span>
-						<h4>Generative Engineering Benchmarks</h4>
-						<p>Defining benchmark problems to evaluate AI for engineering design under realistic constraints.</p>
-					</div>
+				<div class="project-item ftco-animate">
+					<span class="project-role">Role: PI</span>
+					<h4>Development of AI algorithms for preform design for blow molding</h4>
+					<p class="project-meta"><strong>Sponsor:</strong> Korea Institute of Industrial Technology (KITECH)</p>
+					<p class="project-meta"><strong>Period & Funding:</strong> 2024.05.08 ~ 2024.08.31 (4 months, 20,000,000 KRW)</p>
 				</div>
 			</div>
 		</div>
@@ -253,7 +290,7 @@
 							<img src="images/01 캐릭터 마크 - 기본형-04.png" alt="Hanyang University ERICA logo" style="max-height: 240px;">
 						</div>
 						<p style="text-align: center; margin: 0;">
-							<span class="footer-line-1">&copy; IDEAL, Hanyang University ERICA.</span>
+							<span class="footer-line-1">&copy; IDEA LAB, Hanyang University ERICA.</span>
 							<span class="footer-line-2">All rights reserved.</span><br>
 							<span class="template-credit">This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
 						</p>

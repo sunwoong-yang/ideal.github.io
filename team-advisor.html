@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>IDEAL | Advisor</title>
+<title>IDEA LAB | Advisor</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -125,7 +125,7 @@
     color: #000000 !important;
   }
 
-  .navbar-brand .brand-acronym {
+  .navbar-brand .brand-acronym, .navbar-brand .brand-lab {
     font-size: 2em;
     font-weight: 700;
     color: #0E4A84 !important;
@@ -504,6 +504,26 @@
     margin-bottom: 0;
   }
 
+  .award-tag-wrapper {
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .award-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(14, 74, 132, 0.08);
+    color: #0E4A84;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(14, 74, 132, 0.2);
+  }
+
   /* About 섹션 제목 */
   .heading-section h2 {
     font-size: 1.8rem !important;
@@ -609,7 +629,7 @@
     }
 
     /* 모바일에서 navbar 브랜드 크기 조정 */
-    .navbar-brand .brand-acronym {
+    .navbar-brand .brand-acronym, .navbar-brand .brand-lab {
       font-size: 1.5em !important;
     }
 
@@ -690,7 +710,7 @@
 				<div class="col-md-8 col-lg-8 py-4 py-md-0">
 					<div class="heading-section">
 						<h3 class="mb-3">Sunwoong Yang</h3>
-						<p>I'm Sunwoong Yang, advisor of IDEAL at Hanyang University ERICA and a postdoctoral researcher exploring AI-powered aerodynamic design at KAIST.</p>
+						<p>I'm Sunwoong Yang, advisor of IDEA LAB at Hanyang University ERICA and a postdoctoral researcher exploring AI-powered aerodynamic design at KAIST.</p>
 						<p>My current work bridges data-driven modeling, reliable surrogate methods, and engineering applications to accelerate intelligent design workflows.</p>
 						<div class="contact-email">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -759,13 +779,14 @@
 						<div class="page mb-5" id="advisor-education">
 							<h3 class="advisor-section-title">Education</h3>
 							<div class="resume-wrap d-flex ftco-animate">
-								<div class="text">
-									<span class="date">Mar. 2020 - Aug. 2023</span>
+									<div class="text">
+										<div class="award-tag-wrapper"><span class="award-tag">Outstanding Doctoral Dissertation Award in SNU</span></div>
+										<span class="date">Mar. 2020 - Aug. 2023</span>
 									<h2>Ph.D., Seoul National University</h2>
 									<span class="position">Department of Aerospace Engineering</span>
 									<div class="meta-lines">
 										<div>Supervisor: Prof. Kwanjung Yee</div>
-										<div>Thesis: Efficient Aerodynamic Design via Data-driven Approaches (Outstanding Doctoral Dissertation Award in SNU)</div>
+										<div>Thesis: Efficient Aerodynamic Design via Data-driven Approaches</div>
 									</div>
 								</div>
 							</div>
@@ -856,7 +877,7 @@
 							<img src="images/01 캐릭터 마크 - 기본형-04.png" alt="Hanyang University ERICA logo" style="max-height: 240px;">
 						</div>
 						<p style="text-align: center; margin: 0;">
-							<span class="footer-line-1">&copy; IDEAL, Hanyang University ERICA.</span>
+							<span class="footer-line-1">&copy; IDEA LAB, Hanyang University ERICA.</span>
 							<span class="footer-line-2">All rights reserved.</span><br>
 							<span class="template-credit">This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
 						</p>

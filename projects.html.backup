@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>IDEAL | Projects</title>
+<title>IDEA LAB | Projects</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -50,7 +50,7 @@
     color: #000000 !important;
   }
 
-  .navbar-brand .brand-acronym {
+  .navbar-brand .brand-acronym, .navbar-brand .brand-lab {
     font-size: 2em;
     font-weight: 700;
     color: #0E4A84 !important;
@@ -462,7 +462,7 @@
     }
 
     /* 모바일에서 navbar 브랜드 크기 조정 */
-    .navbar-brand .brand-acronym {
+    .navbar-brand .brand-acronym, .navbar-brand .brand-lab {
       font-size: 1.5em !important;
     }
 
@@ -526,7 +526,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html"><span class="brand-acronym">IDEAL</span><span class="brand-text"> at Hanyang <span class="university-text">University</span> ERICA</span></a>
+			<a class="navbar-brand" href="index.html"><span class="brand-acronym">IDEA</span><span class="brand-lab">LAB</span><span class="brand-text"> at Hanyang <span class="university-text">University</span> ERICA</span></a>
 			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
 				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> <span class="menu-text">Menu</span>
@@ -564,7 +564,7 @@
 				<div class="col-md-6 col-lg-5 mb-4 ftco-animate">
 					<div class="info-card">
 						<span class="meta">Ongoing</span>
-						<h4>IDEAL Platform</h4>
+						<h4>IDEA LAB Platform</h4>
 						<p>Building an integrated platform that blends human-centered design workflows with AI copilots.</p>
 					</div>
 				</div>
@@ -589,7 +589,7 @@
 							<img src="images/01 캐릭터 마크 - 기본형-04.png" alt="Hanyang University ERICA logo" style="max-height: 240px;">
 						</div>
 						<p style="text-align: center; margin: 0;">
-							<span class="footer-line-1">&copy; IDEAL, Hanyang University ERICA.</span>
+							<span class="footer-line-1">&copy; IDEA LAB, Hanyang University ERICA.</span>
 							<span class="footer-line-2">All rights reserved.</span><br>
 							<span class="template-credit">This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
 						</p>

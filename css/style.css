@@ -9291,6 +9291,11 @@ h1, h2, h3, h4, h5,
   color: #fff;
 }
 
+.navbar-brand .brand-lab {
+  margin-left: 0.2rem;
+  letter-spacing: 0.03em;
+}
+
 .hero-wrap {
   width: 100%;
   height: 100%;
