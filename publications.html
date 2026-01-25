@@ -221,12 +221,35 @@
     }
 
     .publication-stat-item {
-      display: flex;
-      justify-content: center;
-      gap: 0.75rem;
+      display: grid;
+      grid-template-columns: minmax(70px, 1fr) minmax(120px, 1fr) minmax(80px, 1fr);
+      gap: 0.65rem;
       font-size: 0.95rem;
       line-height: 1.4;
       align-items: center;
+      justify-items: center;
+    }
+
+    .publication-stat-stars {
+      font-family: inherit;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      color: rgba(255, 179, 0, 0.95);
+      text-align: center;
+      justify-self: center;
+      text-shadow: -1px -1px 0 rgba(0,0,0,0.35), 1px -1px 0 rgba(0,0,0,0.35), -1px 1px 0 rgba(0,0,0,0.35), 1px 1px 0 rgba(0,0,0,0.35);
+    }
+
+    .publication-stats-list .publication-stat-item:nth-child(2) .publication-stat-stars {
+      color: rgba(255, 128, 82, 0.95);
+    }
+
+    .publication-stats-list .publication-stat-item:nth-child(3) .publication-stat-stars {
+      color: rgba(64, 196, 255, 0.95);
+    }
+
+    .publication-stats-list .publication-stat-item:nth-child(4) .publication-stat-stars {
+      color: rgba(110, 207, 151, 0.95);
     }
 
     .publication-stat-label {
@@ -237,14 +260,16 @@
       font-weight: 700;
       color: #fff;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      justify-self: center;
     }
 
     .publication-stats-list .publication-stat-item:nth-child(1) .publication-stat-label {
-      background: rgba(255, 179, 0, 0.9);
+      background: rgba(255, 210, 92, 0.95);
+      color: #5a3a00;
     }
 
     .publication-stats-list .publication-stat-item:nth-child(1) .publication-stat-value {
-      color: rgba(255, 179, 0, 0.95);
+      color: rgba(255, 210, 92, 0.95);
     }
 
     .publication-stats-list .publication-stat-item:nth-child(2) .publication-stat-label {
@@ -274,6 +299,7 @@
     .publication-stat-value {
       font-weight: 700;
       font-size: 1.15rem;
+      justify-self: center;
     }
 
     .yang {
@@ -413,18 +439,22 @@
           <p><strong>JCR ranking summary</strong></p>
           <div class="publication-stats-list">
             <div class="publication-stat-item">
+              <span class="publication-stat-stars">★★★★</span>
               <span class="publication-stat-label">Top 5%</span>
               <span class="publication-stat-value">6 papers</span>
             </div>
             <div class="publication-stat-item">
+              <span class="publication-stat-stars">★★★</span>
               <span class="publication-stat-label">Top 5–10%</span>
               <span class="publication-stat-value">3 papers</span>
             </div>
             <div class="publication-stat-item">
+              <span class="publication-stat-stars">★★</span>
               <span class="publication-stat-label">Top 10–25%</span>
               <span class="publication-stat-value">1 paper</span>
             </div>
             <div class="publication-stat-item">
+              <span class="publication-stat-stars">★</span>
               <span class="publication-stat-label">Top 25–50%</span>
               <span class="publication-stat-value">2 papers</span>
             </div>
