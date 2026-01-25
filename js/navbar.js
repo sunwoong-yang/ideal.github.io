@@ -25,6 +25,9 @@
             <a class="dropdown-item" href="team-researchers.html">Researchers</a>
           </div>
         </li>
+        <li class="nav-item" data-nav-item="research">
+          <a href="research.html" class="nav-link"><span>Research</span></a>
+        </li>
         <li class="nav-item" data-nav-item="publications">
           <a href="publications.html" class="nav-link"><span>Publications</span></a>
         </li>
