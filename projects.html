@@ -129,6 +129,58 @@
     padding: 1.5rem 1.75rem;
   }
 
+  .project-tag-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.65rem;
+  }
+
+  .project-role-tag-wrapper {
+    display: block;
+  }
+
+  .project-role-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(14, 74, 132, 0.08);
+    color: #0E4A84;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(14, 74, 132, 0.2);
+  }
+
+  .project-role-tag .project-role-text {
+    font-weight: 500;
+  }
+
+  .project-status-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.18rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+
+  .project-status-ongoing {
+    background: rgba(33, 150, 83, 0.12);
+    color: #217a3a;
+    border: 1px solid rgba(33, 150, 83, 0.35);
+  }
+
+  .project-status-completed {
+    background: rgba(120, 120, 120, 0.12);
+    color: #444;
+    border: 1px solid rgba(120, 120, 120, 0.35);
+  }
+
   .project-meta {
     margin-bottom: 0.3rem;
   }
@@ -248,15 +300,21 @@
 				</div>
 			</div>
 
-			<div class="projects-wrapper">
-				<div class="project-item ftco-animate">
-					<p class="project-meta"><strong>Role:</strong> Principal Investigator</p>
-					<p class="project-meta"><strong>Sponsor:</strong> National Research Foundation of Korea (Sejong Fellowship)</p>
+				<div class="projects-wrapper">
+					<div class="project-item ftco-animate">
+						<div class="project-tag-row">
+							<span class="project-status-tag project-status-ongoing">Ongoing</span>
+							<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Principal Investigator</span></span></div>
+						</div>
+						<p class="project-meta"><strong>Sponsor:</strong> National Research Foundation of Korea (Sejong Fellowship)</p>
 					<p class="project-meta"><strong>Title:</strong> Development of AI-based Flow Prediction Framework Considering Versatility and User-Friendliness in Digital Twins</p>
 					<p class="project-meta"><strong>Period & Funding:</strong> 2024.05.01 ~ 2029.04.30 (5 years, 500,000,000 KRW)</p>
 				</div>
-				<div class="project-item ftco-animate">
-					<p class="project-meta"><strong>Role:</strong> Principal Investigator</p>
+					<div class="project-item ftco-animate">
+						<div class="project-tag-row">
+							<span class="project-status-tag project-status-completed">Completed</span>
+							<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Principal Investigator</span></span></div>
+						</div>
 					<p class="project-meta"><strong>Sponsor:</strong> Korea Institute of Industrial Technology (KITECH)</p>
 					<p class="project-meta"><strong>Title:</strong> Development of AI algorithms for preform design for blow molding</p>
 					<p class="project-meta"><strong>Period & Funding:</strong> 2024.05.08 ~ 2024.08.31 (4 months, 20,000,000 KRW)</p>
