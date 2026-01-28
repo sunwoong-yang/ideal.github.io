@@ -333,6 +333,45 @@
     color: #0E4A84;
     font-weight: 700;
     display: inline-block;
+    position: relative;
+    padding-bottom: 0.1rem;
+  }
+
+  .vision-bullet-second::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform-origin: left;
+    transform: scaleX(0);
+    opacity: 0;
+    animation: visionUnderline 3.2s ease-in-out infinite;
+  }
+
+  @keyframes visionUnderline {
+    0% {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    20% {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    40% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+    90% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scaleX(0);
+      opacity: 0;
+    }
   }
 
   .vision-heading {
@@ -813,20 +852,20 @@
 								<ul class="vision-list">
 									<li>
 										<div class="vision-bullet-content">
-											<span class="vision-bullet-title">From <strong class="vision-bullet-first">data-driven AI</strong> to <strong class="vision-bullet-second txt-fade" data-texts='["insight-driven AI"]' data-fade-speed="15" data-wait="300">insight-driven AI</strong></span>
-											<p>: We embed domain experts' experience and know-how into our AI models.</p>
+											<span class="vision-bullet-title">From <strong class="vision-bullet-first">data-driven AI</strong> to <strong class="vision-bullet-second">insight-driven AI</strong></span>
+											<p>We embed domain experts' experience and know-how so models learn from real production constraints.</p>
 										</div>
 									</li>
 									<li>
 										<div class="vision-bullet-content">
-											<span class="vision-bullet-title">From <strong class="vision-bullet-first">physics-blind AI</strong> to <strong class="vision-bullet-second txt-fade" data-texts='["physics-guided AI"]' data-fade-speed="15" data-wait="300">physics-guided AI</strong></span>
-											<p>: We enforce governing equations and physical constraints, ensuring physically reliable and explainable AI.</p>
+											<span class="vision-bullet-title">From <strong class="vision-bullet-first">physics-blind AI</strong> to <strong class="vision-bullet-second">physics-guided AI</strong></span>
+											<p>We enforce governing equations and physical constraints, ensuring physically reliable and explainable AI.</p>
 										</div>
 									</li>
 									<li>
 										<div class="vision-bullet-content">
-											<span class="vision-bullet-title">From <strong class="vision-bullet-first">ideas</strong> to <strong class="vision-bullet-second txt-fade" data-texts='["ideal designs"]' data-fade-speed="15" data-wait="300">ideal designs</strong></span>
-											<p>: We leverage AI to explore creative designs and rapidly evaluate them, identifying ideal solutions.</p>
+											<span class="vision-bullet-title">From <strong class="vision-bullet-first">ideas</strong> to <strong class="vision-bullet-second">ideal designs</strong></span>
+											<p>We leverage AI to explore creative designs and rapidly evaluate them, identifying ideal solutions.</p>
 										</div>
 									</li>
 								</ul>

@@ -364,10 +364,13 @@ var TxtFade = function(el, texts, duration) {
   this.currentIndex = 0;
   this.duration = parseInt(duration, 10) || 2000;
   this.fadeSpeed = parseInt(el.getAttribute('data-fade-speed'), 10) || 50;
+  this.minOpacity = parseFloat(el.getAttribute('data-min-opacity')) || 0.5;
   this.opacity = 0;
   this.isFadingIn = true;
   this.waitTime = parseInt(el.getAttribute('data-wait'), 10) || 1000;
+  this.waitTimeMin = parseInt(el.getAttribute('data-wait-min'), 10) || Math.max(this.waitTime / 2, 0);
   this.isWaiting = false;
+  this.waitPhase = null;
   // 색상 명시적으로 설정
   this.el.style.color = '#0E4A84';
   this.el.style.fontWeight = '700';
@@ -384,11 +387,17 @@ TxtFade.prototype.fade = function() {
   var that = this;
 
   if (this.isWaiting) {
+    var delay = this.waitPhase === 'min' ? this.waitTimeMin : this.waitTime;
     setTimeout(function() {
       that.isWaiting = false;
-      that.isFadingIn = false;
+      if (that.waitPhase === 'min') {
+        that.isFadingIn = true;
+      } else {
+        that.isFadingIn = false;
+      }
+      that.waitPhase = null;
       that.fade();
-    }, this.waitTime);
+    }, delay);
     return;
   }
 
@@ -397,12 +406,14 @@ TxtFade.prototype.fade = function() {
     if (this.opacity >= 1) {
       this.opacity = 1;
       this.isWaiting = true;
+      this.waitPhase = 'max';
     }
   } else {
     this.opacity -= 0.02;
-    if (this.opacity <= 0) {
-      this.opacity = 0;
-      this.isFadingIn = true;
+    if (this.opacity <= this.minOpacity) {
+      this.opacity = this.minOpacity;
+      this.waitPhase = 'min';
+      this.isWaiting = true;
       this.currentIndex = (this.currentIndex + 1) % this.texts.length;
       this.updateText();
     }
