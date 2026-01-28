@@ -287,6 +287,63 @@
     margin-top: 0 !important;
   }
 
+  .vision-idea-accent {
+    color: #0E4A84;
+    font-weight: 700;
+  }
+
+  .vision-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .vision-list li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .vision-list li::before {
+    content: '\2714';
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    color: #0E4A84;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .vision-bullet-title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    line-height: 1.4;
+  }
+
+  .vision-bullet-title .vision-bullet-first {
+    font-weight: 700;
+    color: #000;
+    display: inline-block;
+  }
+
+  .vision-bullet-title .vision-bullet-second {
+    color: #0E4A84;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  .vision-heading {
+    margin-bottom: 1.75rem !important;
+  }
+
+  .vision-bullet-content {
+    display: block;
+  }
+
+
   .hero-lab-text {
     font-weight: 700;
     color: #000000 !important;
@@ -750,27 +807,30 @@
 
 						<div class="resume-wrap d-flex ftco-animate">
 							<div class="text">
-								<span class="date">IDEA LAB Roadmap</span>
-								<h2>Human-Centered Intelligent Design</h2>
-								<p>We are building a studio where AI copilots amplify engineering creativity rather than replace it. Our team vision is to connect researchers, students, and industry partners through an open design culture that values transparency and reproducibility.</p>
-								<ul>
-									<li>Translate real-world engineering challenges into collaborative design missions.</li>
-									<li>Prototype responsible AI workflows that keep human intent in the loop.</li>
-									<li>Share reusable playbooks so young researchers can rapidly onboard.</li>
+<!--								<span class="date">Vision Statement</span>-->
+								<h2 class="vision-heading"><span class="vision-idea-accent">IDEA LAB</span> Realizes <span class="vision-idea-accent">IDEAs</span> with AI-Driven Design Framework</h2>
+<!--								<p>We show that AI-driven design matters only when it leverages industrial insight and physics knowledge.</p>-->
+								<ul class="vision-list">
+									<li>
+										<div class="vision-bullet-content">
+											<span class="vision-bullet-title">From <strong class="vision-bullet-first">data-driven AI</strong> to <strong class="vision-bullet-second txt-fade" data-texts='["insight-driven AI"]' data-fade-speed="15" data-wait="300">insight-driven AI</strong></span>
+											<p>: We embed domain experts' experience and know-how into our AI models.</p>
+										</div>
+									</li>
+									<li>
+										<div class="vision-bullet-content">
+											<span class="vision-bullet-title">From <strong class="vision-bullet-first">physics-blind AI</strong> to <strong class="vision-bullet-second txt-fade" data-texts='["physics-guided AI"]' data-fade-speed="15" data-wait="300">physics-guided AI</strong></span>
+											<p>: We enforce governing equations and physical constraints, ensuring physically reliable and explainable AI.</p>
+										</div>
+									</li>
+									<li>
+										<div class="vision-bullet-content">
+											<span class="vision-bullet-title">From <strong class="vision-bullet-first">ideas</strong> to <strong class="vision-bullet-second txt-fade" data-texts='["ideal designs"]' data-fade-speed="15" data-wait="300">ideal designs</strong></span>
+											<p>: We leverage AI to explore creative designs and rapidly evaluate them, identifying ideal solutions.</p>
+										</div>
+									</li>
 								</ul>
-							</div>
-						</div>
-
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Community Impact</span>
-								<h2>Trustworthy Engineering Intelligence</h2>
-								<p>IDEA LAB is committed to delivering reliable decision support tools for domains where safety and performance matter. We emphasize measurable gains—faster simulations, better prototypes, and explainable recommendations.</p>
-								<ul>
-									<li>Partner with academic labs and startups on high-impact demonstrators.</li>
-									<li>Publish open datasets and tutorials to encourage reproducible research.</li>
-									<li>Mentor the next generation of designers who speak both engineering and AI.</li>
-								</ul>
+<!--								<p>The result is a studio that spots bottlenecks fast, spins up design IDEAs faster, and helps Korea’s mechanical and aerospace sectors adopt trustworthy AI.</p>-->
 							</div>
 						</div>
 					</div>
