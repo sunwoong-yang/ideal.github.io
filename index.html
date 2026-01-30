@@ -269,6 +269,17 @@
     color: #0E4A84;
   }
 
+  .hero-mobile-break {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    .hero-mobile-break {
+      display: block;
+      height: 0;
+    }
+  }
+
   .hero-idea {
     color: #0E4A84;
   }
@@ -878,7 +889,7 @@
 						-->
 						<div class="hero-copy">
 							<div class="hero-cloud"></div>
-							<h2 class="hero-slogan">We shape <strong class="hero-color">IDEAs</strong> into <strong class="hero-color">IDEAL</strong> design solutions.</h2>
+							<h2 class="hero-slogan">We shape <strong class="hero-color">IDEAs</strong> into<span class="hero-mobile-break"></span> <strong class="hero-color">IDEAL</strong> design solutions.</h2>
 						<h2 class="hero-subtitle">And &nbsp<strong><span class="txt-fade" data-texts='["\"AI\""]' data-fade-speed="40" data-wait="200" data-min-opacity="0.3"></span></strong>&nbsp is our design engine.</h2>
 						</div>
 					</div>
@@ -923,25 +934,25 @@
 								<ul class="vision-list">
 									<li>
 										<div class="vision-bullet-content">
-											<span class="vision-bullet-title">From <strong class="vision-bullet-first">data-driven AI</strong> to <strong class="vision-bullet-second">knowledge-driven AI</strong></span>
-											<p>We embed domain experts' experience and know-how so models learn from real production constraints.</p>
-										</div>
-									</li>
-									<li>
-										<div class="vision-bullet-content">
-											<span class="vision-bullet-title">From <strong class="vision-bullet-first">physics-blind AI</strong> to <strong class="vision-bullet-second">physics-guided AI</strong></span>
-											<p>We enforce governing equations and physical constraints, ensuring physically reliable and explainable AI.</p>
-										</div>
-									</li>
-									<li>
-										<div class="vision-bullet-content">
-											<span class="vision-bullet-title">From <strong class="vision-bullet-first">ideas</strong> to <strong class="vision-bullet-second">ideal designs</strong></span>
+											<span class="vision-bullet-title"><strong>Goal:</strong> From <strong class="vision-bullet-first">ideas</strong> to <strong class="vision-bullet-second">ideal designs</strong></span>
 											<p>We leverage AI to explore creative designs and rapidly evaluate them, identifying ideal solutions.</p>
 										</div>
 									</li>
 									<li>
 										<div class="vision-bullet-content">
-											<span class="vision-bullet-title">From <strong class="vision-bullet-first">ground</strong> to <strong class="vision-bullet-second">space</strong></span>
+											<span class="vision-bullet-title"><strong>Approach 1:</strong> From <strong class="vision-bullet-first">data-driven AI</strong> to <strong class="vision-bullet-second">knowledge-driven AI</strong></span>
+											<p>We embed domain experts' experience and know-how so models learn from real production constraints.</p>
+										</div>
+									</li>
+									<li>
+										<div class="vision-bullet-content">
+											<span class="vision-bullet-title"><strong>Approach 2:</strong> From <strong class="vision-bullet-first">physics-blind AI</strong> to <strong class="vision-bullet-second">physics-guided AI</strong></span>
+											<p>We enforce governing equations and physical constraints, ensuring physically reliable and explainable AI.</p>
+										</div>
+									</li>
+									<li>
+										<div class="vision-bullet-content">
+											<span class="vision-bullet-title"><strong>Application:</strong> From <strong class="vision-bullet-first">ground</strong> to <strong class="vision-bullet-second">space</strong></span>
 											<p>We redefine engineering design with our AI framework for physical systems, from ground to space.</p>
 										</div>
 									</li>
