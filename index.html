@@ -287,6 +287,7 @@
 
   /* 히어로 섹션 오버레이 흰색으로 변경 */
   .hero-wrap {
+    position: relative;
     background-image: url('images/space_NASA2.jpg');
     background-size: cover;
     background-position: center;
@@ -297,7 +298,40 @@
     background: rgba(255, 255, 255, 0.5) !important;
     opacity: 1 !important;
     width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
   }
+
+  .hero-copy {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+
+  .hero-copy h2 {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-copy .hero-cloud {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -15px;
+    width: 120%;
+    height: calc(100% + 20px);
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.85), transparent 60%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.75), transparent 55%),
+                rgba(255, 255, 255, 0.3);
+    filter: blur(5px);
+    border-radius: 40% / 50%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
 
   .hero-wrap h2 {
     font-size: 1.5rem !important;
@@ -831,7 +865,7 @@
 		<div class="container">
 			<div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
 				<div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
-					<div class="text text-center">
+					<div class="text text-center hero-text">
 						<img src="images/HYU_logo_singlecolor_png.png" alt="Hanyang University" class="hero-logo img-fluid">
 						<span class="hero-title-break"></span>
 <!--						<span class="subheading">Hello! Here is</span>-->
@@ -842,8 +876,11 @@
 							<span class="txt-rotate" data-period="2000" data-speed="120" data-rotate='[ "Engineering Design &amp; AI"]'></span>
 						</h2>
 						-->
-						<h2 class="hero-slogan">We shape <strong class="hero-color">IDEAs</strong> into <strong class="hero-color">IDEAL</strong> design solutions.</h2>
-						<h2 class="hero-subtitle">And <strong><span class="txt-fade" data-texts='["AI"]' data-fade-speed="40" data-wait="200"></span></strong> is our design engine.</h2>
+						<div class="hero-copy">
+							<div class="hero-cloud"></div>
+							<h2 class="hero-slogan">We shape <strong class="hero-color">IDEAs</strong> into <strong class="hero-color">IDEAL</strong> design solutions.</h2>
+						<h2 class="hero-subtitle">And &nbsp<strong><span class="txt-fade" data-texts='["\"AI\""]' data-fade-speed="40" data-wait="200" data-min-opacity="0.3"></span></strong>&nbsp is our design engine.</h2>
+						</div>
 					</div>
 				</div>
 			</div>
