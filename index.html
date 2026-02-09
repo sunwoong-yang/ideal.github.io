@@ -107,7 +107,7 @@
   }
 
   #ftco-navbar {
-    background-color: #f3f6fb !important;
+    background-color: #ffffff !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
@@ -630,20 +630,28 @@
 
   .news-item {
     display: flex;
-    gap: 1rem;
+    gap: 1.4rem;
     align-items: center;
-    padding: 1rem 1.25rem;
-    border-radius: 12px;
-    border: 1px solid rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    border-radius: 18px;
+    border: 1px solid rgba(14, 74, 132, 0.12);
     background: #fff;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .news-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 55px rgba(15, 23, 42, 0.12);
   }
 
   .news-item img {
     width: 120px;
-    height: auto;
-    border-radius: 10px;
+    height: 120px;
+    border-radius: 14px;
     object-fit: cover;
+    flex-shrink: 0;
   }
 
   .news-item h4 {
@@ -993,35 +1001,11 @@
 					<div id="page-4" class="page four">
 						<h2 class="heading">News</h2>
 		<div class="news-item ftco-animate">
-			<img src="images/image_3.jpg" alt="Award ceremony">
+			<img src="images/HYU_logo_singlecolor_png.png" alt="Hanyang University seal">
 			<div>
-				<span class="date">Nov. 12, 2025</span>
-				<h4>Received the HYU IDEA LAB Impact Award</h4>
-				<p>Honored to be recognized for leading our data-driven design initiatives and mentoring the next wave of IDEA LAB researchers.</p>
-			</div>
-		</div>
-		<div class="news-item ftco-animate">
-			<img src="images/about-1.jpg" alt="IDEA LAB sprint">
-			<div>
-				<span class="date">Oct. 10, 2025</span>
-				<h4>IDEA LAB kicks off the co-design studio sprint</h4>
-				<p>Launched a two-week sprint where mixed teams pair LLM copilots with rapid CFD studies to prototype rotor ideas.</p>
-			</div>
-		</div>
-		<div class="news-item ftco-animate">
-			<img src="images/image_3.jpg" alt="Birthday celebration">
-			<div>
-				<span class="date">Sep. 26, 2025</span>
-				<h4>Celebrated my birthday with lab mates</h4>
-				<p>Grateful for their warm wishes and even a birthday song.</p>
-			</div>
-		</div>
-		<div class="news-item ftco-animate">
-			<img src="images/image_2.png" alt="Seminar">
-			<div>
-				<span class="date">Sep. 5, 2025</span>
-				<h4>First IDEA LAB seminar on physics-guided AI</h4>
-				<p>Shared our surrogate modeling pipeline with campus visitors and received energizing feedback on deployment tooling.</p>
+				<span class="date">Mar. 1, 2026</span>
+				<h4>Appointed Assistant Professor at Hanyang University</h4>
+				<p>As of March 1, 2026, I have been appointed an Assistant Professor at Hanyang University ERICA. With IDEA LAB now officially established on campus, I will expand AI-powered design research for a variety of engineering applications.</p>
 			</div>
 		</div>
 	<div class="mt-3 text-center">

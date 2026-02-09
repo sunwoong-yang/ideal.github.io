@@ -71,7 +71,7 @@
   }
 
   #ftco-navbar {
-    background-color: #f3f6fb !important;
+    background-color: #ffffff !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
