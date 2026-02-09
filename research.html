@@ -156,52 +156,47 @@
       border-radius: 12px;
     }
 
-    .key-components-pair {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.5rem;
-      margin: 3rem auto;
-      max-width: 1160px;
-    }
-
     .key-components {
-      margin: 0;
-      max-width: 100%;
+      margin: 3rem auto;
+      max-width: 1100px;
     }
 
-    .key-components.column {
-      padding: 0 1rem;
-      position: relative;
+    .key-components h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 1.5rem;
     }
 
-    .key-components.column:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -1.25rem;
-      width: 1px;
-      height: 100%;
-      background: rgba(14, 74, 132, 0.15);
+    .key-components h3 .title-accent {
+      color: #0E4A84;
     }
 
-    .key-components h3,
+    .key-components.crimson-theme h3 .title-accent {
+      color: #B22222;
+    }
+
+    .key-components h3 .title-plain {
+      color: #111;
+    }
+
     .specialization h3,
     .research-overview-title {
       text-align: center;
       font-size: 1.5rem;
       font-weight: 700;
-      color: #0E4A84 !important;
+      color: #111 !important;
       margin-bottom: 1.5rem;
     }
 
     .research-overview-title {
-      color: #000 !important;
       margin-top: 1rem;
     }
 
     .component-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 1rem;
     }
 
@@ -380,65 +375,63 @@
       <div class="research-hero ftco-animate">
         <p class="subheading text-uppercase" style="letter-spacing:0.2em; color:#111;">Research Topic</p>
         <h2>Physics-Guided AI for Engineering Simulation &amp; Design</h2>
-        <p class="hero-statement"><strong>We integrate physical understanding with reliable AI workflows</br>to speed up simulations, predict future physical behavior, and guide better design decisions.</strong></p>
+        <p class="hero-statement">We integrate physical understanding with reliable AI workflows</br>to speed up simulations, predict future physical behavior, and guide better design decisions.</p>
       </div>
 
-      <div class="research-overview-title">Research Overview</div>
+      <div class="research-overview-title">▼ Research Overview</div>
 
       <div class="research-visual ftco-animate">
         <img src="images/Research%20Overview_260209.png" alt="Physics-guided AI roadmap graphic" />
       </div>
 
-      <div class="key-components-pair">
-        <div class="key-components column">
-          <h3 class="text-white">Key Components of AI-based Design</h3>
-          <div class="component-grid">
-            <div class="component-card ftco-animate">
-              <span class="component-number">1</span>
-              <h4>Simulation</h4>
-              <p>Computer simulations provide physics-consistent data that anchor AI models to real engineering behavior.</p>
-            </div>
-            <div class="component-card ftco-animate">
-              <span class="component-number">2</span>
-              <h4>AI Modeling</h4>
-              <p>AI models learn how physical systems behave by capturing patterns and rules, not just fitting data points.</p>
-            </div>
-            <div class="component-card ftco-animate">
-              <span class="component-number">4</span>
-              <h4>Design Optimization</h4>
-              <p>AI connects prediction to decision-making by searching for better designs under physical and practical constraints.</p>
-            </div>
-            <div class="component-card ftco-animate">
-              <span class="component-number">3</span>
-              <h4>Prediction</h4>
-              <p>Trained AI models forecast how systems evolve over time, turning simulation knowledge into usable future insight.</p>
-            </div>
+      <div class="key-components">
+        <h3><span class="title-accent">▼ Key Components</span><span class="title-plain"> of AI-based Design</span></h3>
+        <div class="component-grid">
+          <div class="component-card ftco-animate">
+            <span class="component-number">1</span>
+            <h4>Simulation</h4>
+            <p>Computer simulations provide physics-consistent data that anchor AI models to real engineering behavior.</p>
+          </div>
+          <div class="component-card ftco-animate">
+            <span class="component-number">2</span>
+            <h4>AI Modeling</h4>
+            <p>AI models learn how physical systems behave by capturing patterns and rules, not just fitting data points.</p>
+          </div>
+          <div class="component-card ftco-animate">
+            <span class="component-number">3</span>
+            <h4>Prediction</h4>
+            <p>Trained AI models forecast how systems evolve over time, turning simulation knowledge into usable future insight.</p>
+          </div>
+          <div class="component-card ftco-animate">
+            <span class="component-number">4</span>
+            <h4>Design Optimization</h4>
+            <p>AI connects prediction to decision-making by searching for better designs under physical and practical constraints.</p>
           </div>
         </div>
+      </div>
 
-        <div class="key-components column crimson-theme">
-          <h3>Our Core AI Techniques for AI-based Design</h3>
-          <div class="component-grid">
-            <div class="component-card ftco-animate">
-              <span class="component-number">1</span>
-              <h4>Data-Independent AI</h4>
-              <p>AI remains reliable even with <strong>limited</strong>, <strong>noisy</strong>, or <strong>inconsistent data</strong>, so its performance does not depend on a specific setup.</p>
-            </div>
-            <div class="component-card ftco-animate">
-              <span class="component-number">2</span>
-              <h4>Long-Term Forecasting</h4>
-              <p>AI predicts <strong>future</strong> physical behavior over <strong>long time horizons</strong> while staying consistent with physical trends.</p>
-            </div>
-            <div class="component-card ftco-animate">
-              <span class="component-number">4</span>
-              <h4>Generative Design</h4>
-              <p>AI <strong>creates and tests numerous novel design candidates</strong>, enabling efficient discovery of high-performing designs.</p>
-            </div>
-            <div class="component-card ftco-animate">
-              <span class="component-number">3</span>
-              <h4>Uncertainty Quantification</h4>
-              <p>AI quantifies <strong>uncertainty</strong> to inform how much confidence engineers should have in each prediction.</p>
-            </div>
+      <div class="key-components crimson-theme">
+        <h3><span class="title-accent">▼ Our Signature AI Techniques</span><span class="title-plain"> for AI-based Design</span></h3>
+        <div class="component-grid">
+          <div class="component-card ftco-animate">
+            <span class="component-number">1</span>
+            <h4>Data-Independent AI</h4>
+            <p>AI remains reliable even with <strong>limited</strong>, <strong>noisy</strong>, or <strong>inconsistent data</strong>, so its performance does not depend on a specific setup.</p>
+          </div>
+          <div class="component-card ftco-animate">
+            <span class="component-number">2</span>
+            <h4>Long-Term Forecasting</h4>
+            <p>AI predicts <strong>future</strong> physical behavior over <strong>long time horizons</strong> while staying consistent with physical trends.</p>
+          </div>
+          <div class="component-card ftco-animate">
+            <span class="component-number">3</span>
+            <h4>Uncertainty Quantification</h4>
+            <p>AI quantifies <strong>uncertainty</strong> to inform how much confidence engineers should have in each prediction.</p>
+          </div>
+          <div class="component-card ftco-animate">
+            <span class="component-number">4</span>
+            <h4>Generative Design</h4>
+            <p>AI <strong>creates and tests numerous novel design candidates</strong>, enabling efficient discovery of high-performing designs.</p>
           </div>
         </div>
       </div>
