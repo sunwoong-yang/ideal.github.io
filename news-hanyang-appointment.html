@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>IDEA LAB | News</title>
+  <title>IDEA LAB | News - Appointment Announcement</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -18,14 +15,17 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
-
   <style>
     body {
       font-family: "DM Sans", sans-serif;
-      font-optical-sizing: auto;
       font-size: 15px;
-      line-height: 1.7;
       color: #333;
+      line-height: 1.7;
+    }
+
+    #ftco-navbar {
+      background-color: #ffffff !important;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     .navbar-brand {
@@ -41,7 +41,13 @@
       line-height: 1.1;
     }
 
-    .navbar-brand .brand-acronym, .navbar-brand .brand-lab {
+    .navbar-brand:hover,
+    .navbar-brand:focus {
+      color: #000000 !important;
+    }
+
+    .navbar-brand .brand-acronym,
+    .navbar-brand .brand-lab {
       font-size: 2em;
       font-weight: 700;
       color: #0E4A84 !important;
@@ -79,83 +85,74 @@
       display: none;
     }
 
-    #ftco-navbar {
-      background-color: #ffffff !important;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .heading-section h2 {
-      font-size: 1.8rem !important;
-      font-weight: 700 !important;
-      margin-bottom: 1rem !important;
-    }
-
-    .heading-section p {
-      font-size: 0.95rem !important;
-      line-height: 1.7 !important;
-      color: #555 !important;
-    }
-
-    .news-wrapper {
-      max-width: 900px;
+    .news-detail {
+      max-width: 760px;
       margin: 0 auto;
-    }
-
-    .news-item {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      padding: 1.35rem 1.75rem;
-      border-radius: 18px;
+      background: #fff;
+      border-radius: 24px;
       border: 1px solid rgba(14, 74, 132, 0.12);
-      background: #fff;
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
-      margin-bottom: 1rem;
+      box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
+      padding: 2.5rem;
     }
 
-    .news-item img {
-      width: 140px;
+    .news-detail img {
+      width: 100%;
       height: auto;
-      border-radius: 10px;
-      object-fit: cover;
+      border-radius: 18px;
+      margin-bottom: 1.5rem;
     }
 
-    .news-item h4 {
-      margin-bottom: 0.25rem;
-      font-size: 1.05rem;
-    }
-
-    .news-item .date {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #888;
-    }
-
-    .footer-logo {
-      display: inline-block;
-      background: #fff;
-      margin-bottom: 1rem;
-    }
-
-    .footer-logo img {
+    .news-detail .date {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #0E4A84;
+      font-weight: 700;
+      font-size: 0.85rem;
       display: block;
-      max-height: 60px;
-      width: auto;
+      margin-bottom: 0.8rem;
     }
 
-    /* 모바일 반응형 */
+    .news-detail h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: #111;
+    }
+
+    .news-detail p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #0E4A84;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
-      /* 모바일 navbar 텍스트 색상 수정 */
+      .news-detail {
+        padding: 1.5rem;
+        border-radius: 18px;
+      }
+
+      .news-detail h1 {
+        font-size: 1.5rem;
+      }
+
       #ftco-navbar .navbar-nav .nav-link {
         color: #000000 !important;
         font-size: 0.9rem !important;
         font-weight: 700 !important;
-      }
-
-      .news-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
       }
 
       .navbar-toggler {
@@ -169,27 +166,8 @@
         color: #000000 !important;
       }
 
-      .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-      }
-
-      .news-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .news-item img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 0.85rem;
-      }
-
-      .news-item > div {
-        width: 100%;
-      }
-
-      /* 모바일에서 navbar 브랜드 크기 조정 */
-      .navbar-brand .brand-acronym, .navbar-brand .brand-lab {
+      .navbar-brand .brand-acronym,
+      .navbar-brand .brand-lab {
         font-size: 1.5em !important;
       }
 
@@ -197,12 +175,10 @@
         font-size: 0.9rem !important;
       }
 
-      /* 모바일에서 University 단어 숨기기 */
       .university-text {
         display: none !important;
       }
 
-      /* 모바일에서 펼쳐진 메뉴 배경색 투명도 추가 */
       .navbar-collapse {
         background-color: rgba(243, 246, 251, 0.85) !important;
         margin-top: 1rem;
@@ -210,57 +186,23 @@
         border-radius: 0.5rem;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
-
-      /* 모바일 navbar height 조정 */
-      #ftco-navbar {
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-      }
-
-      /* Footer 세로 배치 */
-      .ftco-footer .col-md-12 > div {
-        flex-direction: column !important;
-        gap: 1.5rem !important;
-      }
-
-      .footer-logo img {
-        max-height: 150px !important;
-      }
-
-      /* Footer 텍스트 줄바꿈 */
-      .footer-line-1::after {
-        content: '\A';
-        white-space: pre;
-      }
-
-      .heading-section h2 {
-        font-size: 1.5rem !important;
-      }
     }
   </style>
 </head>
-
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
   <div data-navbar data-active="news"></div>
 
-  <section class="ftco-section bg-light" id="news-section">
+  <section class="ftco-section bg-light" id="news-detail-section">
     <div class="container">
-      <div class="row justify-content-center mb-5 pb-3 mt-4">
-        <div class="col-md-8 heading-section text-center ftco-animate">
-          <h2 class="mb-4">News</h2>
-          <p>Snapshots from our lab community, workshops, and collaborations.</p>
-        </div>
-      </div>
-
-      <div class="news-wrapper">
-        <a class="news-item ftco-animate" href="news-hanyang-appointment.html">
-          <img src="images/HYU_logo_singlecolor_png.png" alt="Hanyang University seal">
-          <div>
-            <span class="date">Mar. 1, 2026</span>
-            <h4>Appointed Assistant Professor at Hanyang University</h4>
-          </div>
-        </a>
-      </div>
+      <a class="back-link" href="news.html">&larr; Back to News</a>
+      <article class="news-detail ftco-animate">
+        <img src="images/HYU_logo_singlecolor_png.png" alt="Hanyang University seal">
+        <span class="date">Mar. 1, 2026</span>
+        <h1>Appointed Assistant Professor at Hanyang University ERICA</h1>
+        <p>Effective March 1, 2026, I have joined the Department of Mechanical Engineering at Hanyang University ERICA as an Assistant Professor. This appointment officially launches IDEA LAB on campus and opens up new opportunities to build an AI-driven design culture with students and industry partners.</p>
+        <p>My recent postdoctoral work at KAIST focused on trustworthy AI for aerodynamic applications and is now being transitioned into the IDEA LAB research roadmap. By integrating data-efficient learning, physics-guided modeling, and design automation tools, I plan to accelerate how engineering teams explore concepts, validate ideas, and deploy solutions.</p>
+        <p>IDEA LAB will continue expanding collaborations across Korea’s aerospace and mobility sectors. We welcome prospective students and industry partners who want to co-create the next generation of intelligent design workflows.</p>
+      </article>
     </div>
   </section>
 
@@ -273,7 +215,7 @@
               <img src="images/01 캐릭터 마크 - 기본형-04.png" alt="Hanyang University ERICA logo" style="max-height: 240px;">
             </div>
             <p style="text-align: center; margin: 0;">
-          <span class="footer-line-1">&copy; IDEA LAB, Hanyang University ERICA.</span>
+              <span class="footer-line-1">&copy; IDEA LAB, Hanyang University ERICA.</span>
               <span class="footer-line-2">All rights reserved.</span><br>
               <span class="template-credit">This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
             </p>
@@ -298,8 +240,6 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/navbar.js"></script>
-
   <script src="js/main.js"></script>
 </body>
-
 </html>
