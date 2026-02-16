@@ -217,7 +217,24 @@
     .key-components.crimson-theme .hover-hint {
       order: 2;
       margin-top: 0;
-      color: #1a1a1a;
+      color: #fff;
+      background: linear-gradient(135deg, #f47c6a, #d94b3f);
+      padding: 0.35rem 0.95rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      box-shadow: 0 10px 24px rgba(217, 75, 63, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+    }
+
+    .key-components.crimson-theme .component-card.hoverable:hover .hover-hint,
+    .key-components.crimson-theme .component-card.hoverable:focus-within .hover-hint {
+      background: linear-gradient(135deg, #ff9b8b, #ec5f51);
+      box-shadow: 0 16px 32px rgba(233, 95, 81, 0.3);
+      transform: translateY(-1px);
     }
 
     .component-card .component-number {
