@@ -144,10 +144,82 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
     }
 
-    .component-card span,
-    .component-number {
+    .component-card.hoverable {
+      cursor: pointer;
+    }
+
+    .component-card .hover-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      padding: 1rem;
+      flex-direction: column;
+    }
+
+    .component-card .hover-logo img {
+      max-width: 70%;
+      height: auto;
+      object-fit: contain;
+      margin: auto;
+    }
+
+    .hover-logo-full img {
+      max-width: 100%;
+    }
+
+    .component-card.hoverable:hover .hover-logo,
+    .component-card.hoverable:focus-within .hover-logo {
+      opacity: 1;
+    }
+
+    .hover-logo a {
+      display: inline-block;
+    }
+
+    .hover-hint {
+      margin-top: 0;
+      margin-bottom: 0.3rem;
+      font-size: 16px;
+      color: #1a1a1a;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      display: inline-block;
+      line-height: 1.1;
+      white-space: nowrap;
+      align-self: center;
+    }
+
+    .key-components.crimson-theme .hover-logo {
+      justify-content: flex-start;
+      padding-top: 0.5rem;
+      padding-bottom: 0.25rem;
+    }
+
+    .key-components.crimson-theme .hover-logo img {
+      max-width: 100%;
+      order: 2;
+    }
+
+    .key-components.crimson-theme .hover-hint {
+      order: 1;
+      margin-top: 0;
+      margin-bottom: 0.35rem;
+    }
+
+    .component-card .component-number {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -279,25 +351,37 @@
       <div class="key-components ftco-animate">
         <h3><span class="title-accent">▼ Key Components</span><span class="title-plain"> of AI-based Design</span></h3>
         <div class="component-grid">
-          <div class="component-card ftco-animate">
+          <div class="component-card ftco-animate hoverable" data-image="images/1 Simulation.png" data-title="Simulation">
             <span class="component-number">1</span>
             <h4>Simulation</h4>
             <p>Computer simulations provide physics-consistent data that anchor AI models to real engineering behavior.</p>
+            <div class="hover-logo">
+              <img src="images/1 Simulation.png" alt="Simulation illustration">
+            </div>
           </div>
-          <div class="component-card ftco-animate">
+          <div class="component-card ftco-animate hoverable" data-image="images/2 AI Modeling.png" data-title="AI Modeling">
             <span class="component-number">2</span>
             <h4>AI Modeling</h4>
             <p>AI models learn how physical systems behave by capturing patterns and rules, not just fitting data points.</p>
+            <div class="hover-logo">
+              <img src="images/2 AI Modeling.png" alt="AI modeling illustration">
+            </div>
           </div>
-          <div class="component-card ftco-animate">
+          <div class="component-card ftco-animate hoverable" data-image="images/3 AI Prediction.png" data-title="AI Prediction">
             <span class="component-number">3</span>
             <h4>AI Prediction</h4>
             <p>Trained AI models forecast how systems evolve over time, turning simulation knowledge into usable future insight.</p>
+            <div class="hover-logo">
+              <img src="images/3 AI Prediction.png" alt="AI prediction illustration">
+            </div>
           </div>
-          <div class="component-card ftco-animate">
+          <div class="component-card ftco-animate hoverable" data-image="images/4 Design Optimization.png" data-title="Design Optimization">
             <span class="component-number">4</span>
             <h4>Design Optimization</h4>
             <p>AI connects prediction to decision-making by searching for better designs under physical and practical constraints.</p>
+            <div class="hover-logo hover-logo-wide">
+              <img src="images/4 Design Optimization.png" alt="Design optimization illustration">
+            </div>
           </div>
         </div>
       </div>
@@ -305,25 +389,41 @@
       <div class="key-components crimson-theme ftco-animate">
         <h3><span class="title-accent">▼ Our Signature AI Techniques</span><span class="title-plain"> for AI-based Design</span></h3>
         <div class="component-grid">
-          <div class="component-card ftco-animate">
+          <div class="component-card ftco-animate hoverable" data-image="images/1 DataIndependent.png" data-title="Data-Independent AI">
             <span class="component-number">1</span>
             <h4>Data-Independent AI</h4>
             <p>AI remains reliable even with <strong>limited</strong>, <strong>noisy</strong>, or <strong>inconsistent data</strong>, so its performance does not depend on a specific setup.</p>
+            <div class="hover-logo hover-logo-full">
+              <img src="images/1 DataIndependent.png" alt="Data independent AI illustration">
+              <span class="hover-hint">Click for full image</span>
+            </div>
           </div>
-          <div class="component-card ftco-animate">
+          <div class="component-card ftco-animate hoverable" data-image="images/2 LongTerm.png" data-title="Long-Term Forecasting">
             <span class="component-number">2</span>
             <h4>Long-Term Forecasting</h4>
             <p>AI predicts <strong>future</strong> physical behavior over <strong>long time horizons</strong> while staying consistent with physical trends.</p>
+            <div class="hover-logo hover-logo-full">
+              <img src="images/2 LongTerm.png" alt="Long-term forecasting illustration">
+              <span class="hover-hint">Click for full image</span>
+            </div>
           </div>
-          <div class="component-card ftco-animate">
+          <div class="component-card ftco-animate hoverable" data-image="images/3 UQ.png" data-title="Uncertainty Quantification">
             <span class="component-number">3</span>
             <h4>Uncertainty Quantification</h4>
             <p>AI quantifies <strong>uncertainty</strong> to inform how much confidence engineers should have in each prediction.</p>
+            <div class="hover-logo hover-logo-full">
+              <img src="images/3 UQ.png" alt="Uncertainty quantification illustration">
+              <span class="hover-hint">Click for full image</span>
+            </div>
           </div>
-          <div class="component-card ftco-animate">
+          <div class="component-card ftco-animate hoverable" data-image="images/4 GD.png" data-title="Generative Design">
             <span class="component-number">4</span>
             <h4>Generative Design</h4>
             <p>AI <strong>suggests numerous novel design candidates</strong>, enabling efficient discovery of high-performing designs.</p>
+            <div class="hover-logo hover-logo-wide hover-logo-full">
+              <img src="images/4 GD.png" alt="Generative design illustration">
+              <span class="hover-hint">Click for full image</span>
+            </div>
           </div>
         </div>
       </div>
@@ -388,6 +488,23 @@
   <script src="js/scrollax.min.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.component-card.hoverable').forEach(function (card) {
+        var image = card.getAttribute('data-image');
+        if (!image) return;
+        var title = card.getAttribute('data-title') || '';
+        card.addEventListener('click', function () {
+          var url = new URL('view-image.html', window.location.href);
+          url.searchParams.set('img', image);
+          if (title) {
+            url.searchParams.set('title', title);
+          }
+          window.open(url.toString(), '_blank', 'noopener');
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

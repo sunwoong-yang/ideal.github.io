@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>IDEA LAB | Image Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      font-family: 'DM Sans', sans-serif;
+      color: #1c1c1c;
+      padding: 1.5rem;
+    }
+
+    .viewer-container {
+      text-align: center;
+      width: 100%;
+    }
+
+    .viewer-image {
+      max-width: 100%;
+      max-height: 85vh;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .viewer-actions {
+      margin-top: 2rem;
+    }
+
+    .viewer-actions a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      background: #0E4A84;
+      padding: 0.55rem 1.5rem;
+      border-radius: 999px;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="viewer-container">
+    <img id="viewer-image" class="viewer-image" alt="IDEA LAB image preview">
+    <div class="viewer-actions">
+      <a href="javascript:window.close()">Close Window</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const imgSrc = params.get('img');
+      const title = params.get('title') || '';
+      const imgEl = document.getElementById('viewer-image');
+      if (imgSrc) {
+        imgEl.src = imgSrc;
+        imgEl.alt = title || 'IDEA LAB image preview';
+      }
+    })();
+  </script>
+</body>
+
+</html>
