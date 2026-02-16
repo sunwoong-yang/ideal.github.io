@@ -162,11 +162,12 @@
       background: rgba(255, 255, 255, 0.95);
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       opacity: 0;
       transition: opacity 0.2s ease;
       padding: 1rem;
       flex-direction: column;
+      gap: 0.5rem;
     }
 
     .component-card .hover-logo img {
@@ -190,8 +191,6 @@
     }
 
     .hover-hint {
-      margin-top: 0;
-      margin-bottom: 0.3rem;
       font-size: 16px;
       color: #1a1a1a;
       font-weight: 600;
@@ -200,23 +199,25 @@
       line-height: 1.1;
       white-space: nowrap;
       align-self: center;
+      margin-top: 0.2rem;
     }
 
     .key-components.crimson-theme .hover-logo {
-      justify-content: flex-start;
-      padding-top: 0.5rem;
-      padding-bottom: 0.25rem;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      gap: 0.5rem;
     }
 
     .key-components.crimson-theme .hover-logo img {
       max-width: 100%;
-      order: 2;
+      order: 1;
     }
 
     .key-components.crimson-theme .hover-hint {
-      order: 1;
+      order: 2;
       margin-top: 0;
-      margin-bottom: 0.35rem;
+      color: #1a1a1a;
     }
 
     .component-card .component-number {
@@ -395,7 +396,7 @@
             <p>AI remains reliable even with <strong>limited</strong>, <strong>noisy</strong>, or <strong>inconsistent data</strong>, so its performance does not depend on a specific setup.</p>
             <div class="hover-logo hover-logo-full">
               <img src="images/1 DataIndependent.png" alt="Data independent AI illustration">
-              <span class="hover-hint">Click for full image</span>
+              <div class="hover-hint">Click for full image</div>
             </div>
           </div>
           <div class="component-card ftco-animate hoverable" data-image="images/2 LongTerm.png" data-title="Long-Term Forecasting">
@@ -404,7 +405,7 @@
             <p>AI predicts <strong>future</strong> physical behavior over <strong>long time horizons</strong> while staying consistent with physical trends.</p>
             <div class="hover-logo hover-logo-full">
               <img src="images/2 LongTerm.png" alt="Long-term forecasting illustration">
-              <span class="hover-hint">Click for full image</span>
+              <div class="hover-hint">Click for full image</div>
             </div>
           </div>
           <div class="component-card ftco-animate hoverable" data-image="images/3 UQ.png" data-title="Uncertainty Quantification">
@@ -413,7 +414,7 @@
             <p>AI quantifies <strong>uncertainty</strong> to inform how much confidence engineers should have in each prediction.</p>
             <div class="hover-logo hover-logo-full">
               <img src="images/3 UQ.png" alt="Uncertainty quantification illustration">
-              <span class="hover-hint">Click for full image</span>
+              <div class="hover-hint">Click for full image</div>
             </div>
           </div>
           <div class="component-card ftco-animate hoverable" data-image="images/4 GD.png" data-title="Generative Design">
@@ -422,7 +423,7 @@
             <p>AI <strong>suggests numerous novel design candidates</strong>, enabling efficient discovery of high-performing designs.</p>
             <div class="hover-logo hover-logo-wide hover-logo-full">
               <img src="images/4 GD.png" alt="Generative design illustration">
-              <span class="hover-hint">Click for full image</span>
+              <div class="hover-hint">Click for full image</div>
             </div>
           </div>
         </div>
