@@ -9054,7 +9054,8 @@ h1, h2, h3, h4, h5,
   justify-content: center;
   width: auto;
   text-align: center;
-  padding-bottom: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link:hover,
@@ -9079,6 +9080,9 @@ h1, h2, h3, h4, h5,
     padding-left: 1rem;
     padding-right: 1rem;
     align-self: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link:hover span,
