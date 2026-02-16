@@ -168,17 +168,20 @@
       padding: 1rem;
       flex-direction: column;
       gap: 0.5rem;
+      overflow: hidden;
     }
 
     .component-card .hover-logo img {
       max-width: 70%;
       height: auto;
+      max-height: calc(100% - 40px);
       object-fit: contain;
       margin: auto;
     }
 
     .hover-logo-full img {
       max-width: 100%;
+      max-height: calc(100% - 40px);
     }
 
     .component-card.hoverable:hover .hover-logo,
@@ -228,6 +231,13 @@
       border: 1px solid rgba(255, 255, 255, 0.5);
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
       cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .component-card .hover-logo img,
+      .hover-logo-full img {
+        max-height: 85%;
+      }
     }
 
     .key-components.crimson-theme .component-card.hoverable:hover .hover-hint,
