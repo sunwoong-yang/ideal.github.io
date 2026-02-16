@@ -665,6 +665,102 @@
     color: #666 !important;
   }
 
+  /* Home Research preview */
+  .home-research-preview {
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(14, 74, 132, 0.12);
+    background: #fff;
+    box-shadow: 0 30px 70px rgba(15, 23, 42, 0.08);
+    text-align: center;
+  }
+
+  .home-research-media {
+    margin-bottom: 1.5rem;
+  }
+
+  .home-research-media img {
+    width: 100%;
+    height: auto;
+    max-width: 560px;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+  }
+
+  .home-research-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .home-research-eyebrow {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #0E4A84;
+    margin-bottom: 0.75rem;
+  }
+
+  .home-research-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #000;
+  }
+
+  .home-research-text {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .home-research-chips {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 0;
+    align-items: center;
+  }
+
+  .home-research-chip-row {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home-research-chip {
+    background: rgba(14, 74, 132, 0.08);
+    color: #000;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+  }
+
+  .home-research-keyword-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 1.2rem 0 0.8rem;
+    color: #0E4A84;
+  }
+
+  .home-research-cta {
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .home-research-preview {
+      padding: 2rem;
+    }
+
+    .home-research-content {
+      text-align: center;
+    }
+  }
+
   /* 좌측 네비게이션 */
   #navi ul li a {
     font-size: 0.9rem !important;
@@ -868,28 +964,29 @@
 					<div id="page-2" class="page two">
 						<h2 class="heading">Research Area</h2>
 
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Physics-Guided AI Pipelines</span>
-								<h2>Learning with Domain Constraints</h2>
-								<p>We develop hybrid surrogates that blend CFD/FEM knowledge with neural operators to deliver trustworthy predictions even when data is scarce.</p>
-								<ul>
-									<li>Multi-fidelity modeling for aerodynamics, rotorcraft, and fluid-structure systems.</li>
-									<li>Uncertainty quantification modules that feed directly into design trade-offs.</li>
-								</ul>
+						<div class="home-research-preview ftco-animate">
+							<div class="home-research-media">
+								<img src="images/Research%20Overview_260209.png" alt="IDEA LAB physics-guided AI roadmap">
+							</div>
+								<div class="home-research-content">
+									<h3 class="home-research-title">Physics-Guided AI for Engineering Simulation &amp; Design</h3>
+									<p class="home-research-text">We build AI models grounded in physical knowledge to speed up simulations, predict future physical behavior, and guide trustworthy design decisions.</p>
+								<p class="home-research-keyword-label">Research keywords</p>
+									<div class="home-research-chips">
+										<div class="home-research-chip-row">
+											<span class="home-research-chip">AI-based Simulation</span>
+											<span class="home-research-chip">Physics-guided AI</span>
+										</div>
+										<div class="home-research-chip-row">
+											<span class="home-research-chip">Future Forecasting</span>
+											<span class="home-research-chip">Uncertainty Quantification</span>
+											<span class="home-research-chip">Generative Design</span>
+										</div>
+									</div>
 							</div>
 						</div>
-
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="text">
-								<span class="date">Generative Engineering Platforms</span>
-								<h2>Co-Designing with Large Models</h2>
-								<p>Our lab prototypes workflow agents that pair LLM reasoning with CAD, simulation, and optimization loops so that engineers can explore concepts faster.</p>
-								<ul>
-									<li>Prompt-to-geometry pipelines that maintain manufacturability constraints.</li>
-									<li>Dashboard analytics that capture design rationale for future reuse.</li>
-								</ul>
-							</div>
+						<div class="home-research-cta text-center">
+							<a href="research.html" class="btn btn-primary btn-sm">See research details</a>
 						</div>
 					</div>
 
