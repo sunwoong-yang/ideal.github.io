@@ -10894,18 +10894,18 @@ textarea.form-control {
 
 /* IDEA LAB navbar overrides */
 #ftco-navbar {
-  background-color: #ffffff !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: #030303 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 #ftco-navbar .navbar-brand {
   background: none !important;
-  color: #000000 !important;
+  color: #f5f5f5 !important;
   font-size: 1.1rem !important;
   font-weight: 600 !important;
   padding: 0 !important;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.4rem;
   flex-wrap: wrap;
   line-height: 1.1;
@@ -10913,7 +10913,7 @@ textarea.form-control {
 
 #ftco-navbar .navbar-brand:hover,
 #ftco-navbar .navbar-brand:focus {
-  color: #000000 !important;
+  color: #f5f5f5 !important;
 }
 
 #ftco-navbar .brand-logo {
@@ -10931,10 +10931,23 @@ textarea.form-control {
 #ftco-navbar .navbar-nav .nav-link {
   font-size: 0.9rem !important;
   font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  transition: color 0.2s ease;
 }
 
-#ftco-navbar .navbar-nav .nav-link:hover {
-  color: #0E4A84 !important;
+#ftco-navbar .navbar-nav .nav-link:hover,
+#ftco-navbar .navbar-nav .nav-link:focus,
+#ftco-navbar .navbar-nav .nav-link.active {
+  color: #f6e8c7 !important;
+}
+
+#ftco-navbar .navbar-nav .nav-item.nav-cta > .nav-link {
+  border-color: rgba(255, 255, 255, 0.65);
+  color: #f6e8c7 !important;
+}
+
+#ftco-navbar .navbar-nav .nav-item.nav-cta > .nav-link span {
+  color: inherit !important;
 }
 
 .navbar-nav .dropdown-menu {
@@ -10954,24 +10967,24 @@ textarea.form-control {
 
 @media (max-width: 768px) {
   #ftco-navbar .navbar-nav .nav-link {
-    color: #000000 !important;
-    font-size: 0.9rem !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+    font-size: 0.95rem !important;
     font-weight: 700 !important;
   }
 
   #ftco-navbar .navbar-toggler {
-    border-color: #000000 !important;
-    color: #000000 !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.95) !important;
   }
 
   #ftco-navbar .navbar-toggler .oi,
   #ftco-navbar .navbar-toggler span,
   #ftco-navbar .navbar-toggler .menu-text {
-    color: #000000 !important;
+    color: rgba(255, 255, 255, 0.95) !important;
   }
 
   #ftco-navbar .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
   }
 
   #ftco-navbar .brand-logo {
@@ -10979,11 +10992,11 @@ textarea.form-control {
   }
 
   #ftco-navbar .navbar-collapse {
-    background-color: rgba(243, 246, 251, 0.85) !important;
+    background-color: rgba(0, 0, 0, 0.95) !important;
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   }
 
   #ftco-navbar {
