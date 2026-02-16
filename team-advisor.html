@@ -106,61 +106,6 @@
     margin-top: 0.5rem;
   }
 
-  /* 로고 스타일 수정 - 배경 제거, 글씨 검정 */
-  .navbar-brand {
-    background: none !important;
-    color: #000000 !important;
-    font-size: 1.1rem !important;
-    font-weight: 600 !important;
-    padding: 0 !important;
-    display: flex;
-    align-items: baseline;
-    gap: 0.4rem;
-    flex-wrap: wrap;
-    line-height: 1.1;
-  }
-
-  .navbar-brand:hover,
-  .navbar-brand:focus {
-    color: #000000 !important;
-  }
-
-  .navbar-brand .brand-acronym, .navbar-brand .brand-lab {
-    font-size: 2em;
-    font-weight: 700;
-    color: #0E4A84 !important;
-  }
-
-  .navbar-brand .brand-text {
-    font-size: 1.1rem;
-    color: #000000 !important;
-  }
-
-  .navbar-brand .university-text {
-    color: #000000 !important;
-  }
-
-  .navbar-brand::before,
-  .navbar-brand::after {
-    display: none !important;
-  }
-
-  #ftco-navbar {
-    background-color: #ffffff !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  /* Menu item 스타일 */
-  .navbar-nav .nav-link {
-    font-size: 0.9rem !important;
-    font-weight: 500 !important;
-  }
-
-  /* 민트색 컬러 포인트 추가 */
-  .navbar-nav .nav-link:hover {
-    color: #0E4A84 !important;
-  }
-
   .btn-primary {
     background-color: #0E4A84 !important;
     border-color: #0E4A84 !important;
@@ -244,28 +189,6 @@
     #about-section .col-md-8 {
       flex: 0 0 100%;
       max-width: 100%;
-    }
-  }
-
-  /* 네비게이션 링크 크기 조정 */
-  .navbar-nav .nav-link {
-    font-size: 0.9rem !important;
-    font-weight: 500 !important;
-  }
-
-
-  .navbar-nav .dropdown-menu {
-    border-radius: 0.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
-  .navbar-nav .dropdown-toggle::after {
-    display: none;
-  }
-
-  @media (min-width: 992px) {
-    .navbar-nav .dropdown:hover > .dropdown-menu {
-      display: block;
     }
   }
 
@@ -606,57 +529,6 @@
   @media (max-width: 768px) {
     body {
       font-size: 14px;
-    }
-
-    /* 모바일 navbar 텍스트 색상 수정 */
-    #ftco-navbar .navbar-nav .nav-link {
-      color: #000000 !important;
-      font-size: 0.9rem !important;
-      font-weight: 700 !important;
-    }
-
-    .navbar-toggler {
-      border-color: #000000 !important;
-      color: #000000 !important;
-    }
-
-    .navbar-toggler .oi,
-    .navbar-toggler span,
-    .navbar-toggler .menu-text {
-      color: #000000 !important;
-    }
-
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-    }
-
-    /* 모바일에서 navbar 브랜드 크기 조정 */
-    .navbar-brand .brand-acronym, .navbar-brand .brand-lab {
-      font-size: 1.5em !important;
-    }
-
-    .navbar-brand .brand-text {
-      font-size: 0.9rem !important;
-    }
-
-    /* 모바일에서 University 단어 숨기기 */
-    .university-text {
-      display: none !important;
-    }
-
-    /* 모바일에서 펼쳐진 메뉴 배경색 투명도 추가 */
-    .navbar-collapse {
-      background-color: rgba(243, 246, 251, 0.85) !important;
-      margin-top: 1rem;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    /* 모바일 navbar height 조정 */
-    #ftco-navbar {
-      padding-top: 1rem !important;
-      padding-bottom: 1rem !important;
     }
 
     .hero-wrap h1 {

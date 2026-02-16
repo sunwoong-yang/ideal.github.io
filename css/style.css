@@ -10892,4 +10892,104 @@ textarea.form-control {
   background-color: rgba(14, 74, 132, 0.1);
 }
 
+/* IDEA LAB navbar overrides */
+#ftco-navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#ftco-navbar .navbar-brand {
+  background: none !important;
+  color: #000000 !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  line-height: 1.1;
+}
+
+#ftco-navbar .navbar-brand:hover,
+#ftco-navbar .navbar-brand:focus {
+  color: #000000 !important;
+}
+
+#ftco-navbar .brand-logo {
+  height: 48px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#ftco-navbar .navbar-brand::before,
+#ftco-navbar .navbar-brand::after {
+  display: none !important;
+}
+
+#ftco-navbar .navbar-nav .nav-link {
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+}
+
+#ftco-navbar .navbar-nav .nav-link:hover {
+  color: #0E4A84 !important;
+}
+
+.navbar-nav .dropdown-menu {
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.navbar-nav .dropdown-toggle::after {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  #ftco-navbar .navbar-nav .nav-link {
+    color: #000000 !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+  }
+
+  #ftco-navbar .navbar-toggler {
+    border-color: #000000 !important;
+    color: #000000 !important;
+  }
+
+  #ftco-navbar .navbar-toggler .oi,
+  #ftco-navbar .navbar-toggler span,
+  #ftco-navbar .navbar-toggler .menu-text {
+    color: #000000 !important;
+  }
+
+  #ftco-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+
+  #ftco-navbar .brand-logo {
+    height: 36px;
+  }
+
+  #ftco-navbar .navbar-collapse {
+    background-color: rgba(243, 246, 251, 0.85) !important;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #ftco-navbar {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

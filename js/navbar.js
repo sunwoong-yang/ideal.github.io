@@ -3,9 +3,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <span class="brand-acronym">IDEA</span>
-      <span class="brand-lab">LAB</span>
-      <span class="brand-text"> at Hanyang <span class="university-text">University</span> ERICA</span>
+      <img src="images/01_text_right_black.png" alt="IDEA LAB" class="brand-logo" loading="lazy">
     </a>
     <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
       data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">

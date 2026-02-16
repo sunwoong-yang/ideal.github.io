@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 - Root contains static site sources for IDEA LAB. Key directories: `index.html` and `.html` subpages for content, `css/` and `scss/` for styling, `js/` for behavior (notably `navbar.js`), `images/` and `fonts/` for assets.
-- Shared navbar and footer markup is loaded via `js/navbar.js`; most pages import it with `<div data-navbar ...>`. Keep variants in `team-*.html`, `projects.html`, etc. consistent.
+- Shared navbar and footer markup is loaded via `js/navbar.js`; most pages import it with `<div data-navbar ...>`. Keep variants in `team-*.html`, `projects.html`, etc. consistent. **All pages must use the exact same top banner styling**—do not introduce page-specific navbar tweaks that make the banner look different anywhere.
 - Use `images/Research Overview_260209.png`, `images/HYU_logo_singlecolor_png.png`, etc. for hero graphics; place new assets in `images/` and reference relative paths.
 - The News system is manual. Add new entries at the top of `news.html` (newest first) and ensure only the latest four appear in the home page News section (`index.html`). Remove or comment out older entries from the home page as new ones are added.
 

@@ -32,74 +32,6 @@
       overflow-x: hidden;
     }
 
-    .navbar-brand {
-      background: none !important;
-      color: #000000 !important;
-      font-size: 1.1rem !important;
-      font-weight: 600 !important;
-      padding: 0 !important;
-      display: flex;
-      align-items: baseline;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-      line-height: 1.1;
-    }
-
-    .navbar-brand:hover,
-    .navbar-brand:focus {
-      color: #000000 !important;
-    }
-
-    .navbar-brand .brand-acronym,
-    .navbar-brand .brand-lab {
-      font-size: 2em;
-      font-weight: 700;
-      color: #0E4A84 !important;
-    }
-
-    .navbar-brand .brand-text {
-      font-size: 1.1rem;
-      color: #000000 !important;
-    }
-
-    .navbar-brand .university-text {
-      color: #000000 !important;
-    }
-
-    .navbar-brand::before,
-    .navbar-brand::after {
-      display: none !important;
-    }
-
-    .navbar-nav .nav-link {
-      font-size: 0.9rem !important;
-      font-weight: 500 !important;
-    }
-
-    .navbar-nav .nav-link:hover {
-      color: #0E4A84 !important;
-    }
-
-    .navbar-nav .dropdown-menu {
-      border-radius: 0.5rem;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    .navbar-nav .dropdown-toggle::after {
-      display: none;
-    }
-
-    @media (min-width: 992px) {
-      .navbar-nav .dropdown:hover > .dropdown-menu {
-        display: block;
-      }
-    }
-
-    #ftco-navbar {
-      background-color: #ffffff !important;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
     #research-section {
       padding-top: 5rem;
       padding-bottom: 4rem;
@@ -203,7 +135,7 @@
     .component-card {
       background: #fff;
       border-radius: 18px;
-      border: 1px solid rgba(14, 74, 132, 0.12);
+      border: 1px solid rgba(14, 74, 132, 0.25);
       box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
       padding: 1.35rem;
       height: 100%;
@@ -312,50 +244,6 @@
     }
 
     @media (max-width: 768px) {
-      /* Match navbar appearance with other pages (e.g., publications) */
-      #ftco-navbar .navbar-nav .nav-link {
-        color: #000000 !important;
-        font-size: 0.9rem !important;
-        font-weight: 700 !important;
-      }
-
-      .navbar-toggler {
-        border-color: #000000 !important;
-        color: #000000 !important;
-      }
-
-      .navbar-toggler .oi,
-      .navbar-toggler span,
-      .navbar-toggler .menu-text {
-        color: #000000 !important;
-      }
-
-      .navbar-brand .brand-acronym,
-      .navbar-brand .brand-lab {
-        font-size: 1.5em !important;
-      }
-
-      .navbar-brand .brand-text {
-        font-size: 0.9rem !important;
-      }
-
-      .university-text {
-        display: none !important;
-      }
-
-      .navbar-collapse {
-        background-color: rgba(243, 246, 251, 0.85) !important;
-        margin-top: 1rem;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      #ftco-navbar {
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-      }
-
       .research-hero h2 {
         font-size: 1.7rem;
       }
@@ -382,13 +270,13 @@
         <p class="hero-statement">We integrate physical understanding with reliable AI workflows</br>to speed up simulations, predict future physical behavior, and guide better design decisions.</p>
       </div>
 
-      <div class="research-overview-title">▼ Research Overview</div>
+      <div class="research-overview-title ftco-animate">▼ Research Overview</div>
 
       <div class="research-visual ftco-animate">
         <img src="images/Research%20Overview_260209.png" alt="Physics-guided AI roadmap graphic" />
       </div>
 
-      <div class="key-components">
+      <div class="key-components ftco-animate">
         <h3><span class="title-accent">▼ Key Components</span><span class="title-plain"> of AI-based Design</span></h3>
         <div class="component-grid">
           <div class="component-card ftco-animate">
@@ -403,7 +291,7 @@
           </div>
           <div class="component-card ftco-animate">
             <span class="component-number">3</span>
-            <h4>Prediction</h4>
+            <h4>AI Prediction</h4>
             <p>Trained AI models forecast how systems evolve over time, turning simulation knowledge into usable future insight.</p>
           </div>
           <div class="component-card ftco-animate">
@@ -414,7 +302,7 @@
         </div>
       </div>
 
-      <div class="key-components crimson-theme">
+      <div class="key-components crimson-theme ftco-animate">
         <h3><span class="title-accent">▼ Our Signature AI Techniques</span><span class="title-plain"> for AI-based Design</span></h3>
         <div class="component-grid">
           <div class="component-card ftco-animate">
