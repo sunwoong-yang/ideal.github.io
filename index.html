@@ -679,16 +679,26 @@
 
   .home-research-media {
     margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
   }
 
-  .home-research-media img {
+  .home-research-visual {
+    border-radius: 18px;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+    background: #fff;
+    padding: 1.5rem;
+    border: 2px solid rgba(14, 74, 132, 0.35);
+    display: inline-block;
+  }
+
+  .home-research-visual img {
     width: 100%;
     height: auto;
-    max-width: 560px;
-    border-radius: 18px;
-    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    border-radius: 12px;
+    max-width: 620px;
   }
 
   .home-research-content {
@@ -970,7 +980,9 @@
 
 						<div class="home-research-preview ftco-animate">
 							<div class="home-research-media">
-								<img src="images/Research%20Overview_260209.png" alt="IDEA LAB physics-guided AI roadmap">
+								<div class="home-research-visual">
+									<img src="images/Research%20Overview_260209.png" alt="IDEA LAB physics-guided AI roadmap">
+								</div>
 							</div>
 								<div class="home-research-content">
 									<h3 class="home-research-title">Physics-Guided AI for Engineering Simulation &amp; Design</h3>
