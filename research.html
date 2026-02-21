@@ -5,7 +5,7 @@
   <title>IDEA LAB | Research</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/png" href="images/05_simple_original.png">
+  <link rel="icon" type="image/png" href="images/HYU_logo_singlecolor_png.png">
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -94,37 +94,71 @@
       max-width: 1100px;
     }
 
-    .key-components h3 {
+    .section-title-block {
+      --section-title-color: #111;
+      --section-title-sub: rgba(0, 0, 0, 0.75);
+      --section-title-underline: linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45));
+      width: min(520px, 100%);
+      margin: 0 auto 1.4rem;
       text-align: center;
-      font-size: 1.5rem;
+      color: var(--section-title-color);
+    }
+
+    .section-title-main {
+      font-size: 1.3rem;
       font-weight: 700;
-      color: #111;
-      margin-bottom: 1.5rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--section-title-color);
+      display: inline-block;
+      padding-bottom: 0.35rem;
+      position: relative;
     }
 
-    .key-components h3 .title-accent {
-      color: #0E4A84;
+    .section-title-main::after {
+      content: "";
+      display: block;
+      width: 140px;
+      max-width: 70%;
+      height: 4px;
+      margin: 0.25rem auto 0;
+      border-radius: 999px;
+      background: var(--section-title-underline);
     }
 
-    .key-components.crimson-theme h3 .title-accent {
-      color: #B22222;
+    .section-title-sub {
+      font-size: 1.05rem;
+      letter-spacing: 0.05em;
+      text-transform: none;
+      color: var(--section-title-sub);
+      display: block;
+      margin-top: 0.35rem;
     }
 
-    .key-components h3 .title-plain {
-      color: #111;
+    .section-title-block--midnight {
+      --section-title-color: #111;
+      --section-title-sub: rgba(17, 17, 17, 0.7);
+      --section-title-underline: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(70, 74, 82, 0.4));
     }
 
-    .specialization h3,
-    .research-overview-title {
+    .section-title-block--blue {
+      --section-title-color: #0E4A84;
+      --section-title-sub: rgba(14, 74, 132, 0.8);
+      --section-title-underline: linear-gradient(90deg, rgba(14, 74, 132, 0.95), rgba(30, 121, 196, 0.5));
+    }
+
+    .section-title-block--crimson {
+      --section-title-color: #B22222;
+      --section-title-sub: rgba(178, 34, 34, 0.8);
+      --section-title-underline: linear-gradient(90deg, rgba(178, 34, 34, 0.95), rgba(234, 95, 88, 0.5));
+    }
+
+    .specialization h3 {
       text-align: center;
       font-size: 1.5rem;
       font-weight: 700;
       color: #111 !important;
       margin-bottom: 1.5rem;
-    }
-
-    .research-overview-title {
-      margin-top: 1rem;
     }
 
     .component-grid {
@@ -368,17 +402,22 @@
       <div class="research-hero ftco-animate">
         <p class="subheading text-uppercase" style="letter-spacing:0.2em; color:#111;">Research Topic</p>
         <h2>Physics-Guided AI for Engineering Simulation &amp; Design</h2>
-        <p class="hero-statement">We integrate physical understanding with reliable AI workflows</br>to speed up simulations, predict future physical behavior, and guide better design decisions.</p>
+        <p class="hero-statement">We integrate physical understanding with reliable AI workflowsto speed up simulations, </br>predict future physical behavior, and guide better design decisions.</p>
       </div>
 
-      <div class="research-overview-title ftco-animate">▼ Research Overview</div>
+      <div class="section-title-block section-title-block--midnight ftco-animate">
+        <span class="section-title-main">Research Overview</span>
+      </div>
 
       <div class="research-visual ftco-animate">
         <img src="images/Research%20Overview_260209.png" alt="Physics-guided AI roadmap graphic" />
       </div>
 
       <div class="key-components ftco-animate">
-        <h3><span class="title-accent">▼ Key Components</span><span class="title-plain"> of AI-based Design</span></h3>
+        <div class="section-title-block section-title-block--blue ftco-animate">
+          <span class="section-title-main">Key Components</span>
+          <span class="section-title-sub">of AI-based Design</span>
+        </div>
         <div class="component-grid">
           <div class="component-card ftco-animate hoverable" data-image="images/1 Simulation.png" data-title="Simulation">
             <span class="component-number">1</span>
@@ -416,7 +455,10 @@
       </div>
 
       <div class="key-components crimson-theme ftco-animate">
-        <h3><span class="title-accent">▼ Our Signature AI Techniques</span><span class="title-plain"> for AI-based Design</span></h3>
+        <div class="section-title-block section-title-block--crimson ftco-animate">
+          <span class="section-title-main">Our Signature AI Techniques</span>
+          <span class="section-title-sub">for AI-based Design</span>
+        </div>
         <div class="component-grid">
           <div class="component-card ftco-animate hoverable" data-image="images/1 DataIndependent.png" data-title="Data-Independent AI">
             <span class="component-number">1</span>
@@ -519,7 +561,7 @@
   <script src="js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('.component-card.hoverable').forEach(function (card) {
+      document.querySelectorAll('.key-components.crimson-theme .component-card.hoverable').forEach(function (card) {
         var image = card.getAttribute('data-image');
         if (!image) return;
         var title = card.getAttribute('data-title') || '';
