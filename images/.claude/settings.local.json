@@ -9,7 +9,8 @@
       "Bash(node -e \"require\\('fs'\\).mkdirSync\\(require\\('path'\\).join\\(process.env.CLAUDE_CONFIG_DIR||require\\('path'\\).join\\(require\\('os'\\).homedir\\(\\),'.claude'\\),'hud'\\),{recursive:true}\\)\" && echo \"HUD dir created\"\nnode -e \"const p=require\\('path'\\).join\\(require\\('os'\\).homedir\\(\\),'.claude','hud','omc-hud.mjs'\\);console.log\\(JSON.stringify\\(p\\)\\)\")",
       "Bash(chmod 755 /root/.claude/hud/omc-hud.mjs && echo \"Made executable\")",
       "Bash(node -e \"\nconst fs = require\\('fs'\\), path = require\\('path'\\);\nconst configFile = path.join\\(require\\('os'\\).homedir\\(\\), '.claude', '.omc-config.json'\\);\nconst existing = fs.existsSync\\(configFile\\) ? JSON.parse\\(fs.readFileSync\\(configFile, 'utf8'\\)\\) : {};\nexisting.defaultExecutionMode = 'ultrawork';\nexisting.configuredAt = new Date\\(\\).toISOString\\(\\);\nfs.writeFileSync\\(configFile, JSON.stringify\\(existing, null, 2\\)\\);\nconsole.log\\('Saved:', JSON.stringify\\(existing, null, 2\\)\\);\n\"2)",
-      "Bash(claude mcp add context7 -- npx -y @upstash/context7-mcp 2>&1)"
+      "Bash(claude mcp add context7 -- npx -y @upstash/context7-mcp 2>&1)",
+      "Bash(claude mcp list 2>&1)"
     ]
   }
 }

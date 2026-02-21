@@ -9073,6 +9073,7 @@ h1, h2, h3, h4, h5,
     justify-content: center;
     width: 100%;
     margin-top: 0.85rem;
+    align-items: stretch;
   }
   .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link {
     margin-left: 0;
@@ -9083,12 +9084,21 @@ h1, h2, h3, h4, h5,
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 40px;
-    padding-top: 0.35rem;
-    padding-bottom: 0.35rem;
+    min-height: 0;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
   }
   .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link span {
-    height: 100%;
+    height: auto;
+  }
+  #ftco-navbar .navbar-nav > .nav-item.nav-cta > .nav-link.nav-cta-link {
+    padding-top: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+    min-height: 0 !important;
+    line-height: 1.2 !important;
+  }
+  #ftco-navbar .navbar-nav > .nav-item.nav-cta > .nav-link.nav-cta-link span {
+    line-height: 1.2 !important;
   }
 }
 .ftco-navbar-light .navbar-nav > .nav-item.nav-cta > .nav-link:hover span,
