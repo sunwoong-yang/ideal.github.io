@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"node -e \\\"\\nconst fs = require('fs'), path = require('path');\\nconst configFile = path.join(require('os').homedir(), '.claude', '.omc-config.json');\\nconst existing = fs.existsSync(configF...",
+  "error": "Exit code 1\n<anonymous_script>:1\n\n\nSyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at [eval]:4:51\n    at runScriptInThisContext (node:internal/vm:209:10)\n    at node:internal/process/execution:449:12\n    at [eval]-wrapper:6:24\n    at runScriptInContext (node:internal/process/execution:447:60)\n    at evalFunction (node:internal/process/execution:87:30)\n    at evalScript (node:internal/process/execution:99:3)\n    at node:internal/main/eval_string:74:3\n\nNode.js v22.17....",
+  "timestamp": "2026-02-21T09:52:20.325Z",
+  "retry_count": 1
+}
