@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1771666194134,
+  "projectRoot": "/mnt/z/Lab_github/ideal.github.io",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": "npm test",
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "css": {
+      "path": "css",
+      "purpose": null,
+      "fileCount": 13,
+      "lastAccessed": 1771666194106,
+      "keyFiles": [
+        "ajax-loader.gif",
+        "animate.css",
+        "aos.css",
+        "bootstrap.min.css",
+        "flaticon.css"
+      ]
+    },
+    "demo": {
+      "path": "demo",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1771666194126,
+      "keyFiles": [
+        "20210428.gif"
+      ]
+    },
+    "fonts": {
+      "path": "fonts",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1771666194126,
+      "keyFiles": []
+    },
+    "images": {
+      "path": "images",
+      "purpose": null,
+      "fileCount": 31,
+      "lastAccessed": 1771666194127,
+      "keyFiles": [
+        "01 캐릭터 마크 - 기본형-04.png",
+        "01_text_right_black.png",
+        "01_text_right_original.png",
+        "01_text_right_white.png",
+        "04_text_symbol_original.png"
+      ]
+    },
+    "js": {
+      "path": "js",
+      "purpose": null,
+      "fileCount": 16,
+      "lastAccessed": 1771666194127,
+      "keyFiles": [
+        "aos.js",
+        "bootstrap.min.js",
+        "google-map.js",
+        "jquery-3.2.1.min.js",
+        "jquery-migrate-3.0.1.min.js"
+      ]
+    },
+    "scss": {
+      "path": "scss",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1771666194128,
+      "keyFiles": [
+        "style.scss"
+      ]
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}
