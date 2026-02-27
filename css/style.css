@@ -9000,8 +9000,8 @@ h1, h2, h3, h4, h5,
 }
 .ftco-navbar-light .navbar-brand {
   color: #000000;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
 }
 .ftco-navbar-light .navbar-brand:hover, .ftco-navbar-light .navbar-brand:focus {
   color: #000000 !important;
@@ -9019,8 +9019,8 @@ h1, h2, h3, h4, h5,
 }
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
   font-size: 16px;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
   padding-left: 20px;
   padding-right: 20px;
   color: #000000;
@@ -9037,7 +9037,7 @@ h1, h2, h3, h4, h5,
   border: 2px solid #0E4A84;
   border-radius: 999px;
   color: #0E4A84;
-  padding: 0.5rem 1.2rem;
+  padding: 0.55rem 1.2rem;
   margin-left: 0.8rem;
   font-weight: 600;
   display: inline-flex;
@@ -10994,6 +10994,17 @@ textarea.form-control {
     color: rgba(255, 255, 255, 0.92) !important;
     font-size: 0.95rem !important;
     font-weight: 700 !important;
+  }
+
+  #ftco-navbar .navbar-nav .dropdown-menu {
+    margin: 0.35rem 0 0.9rem;
+    padding: 0.35rem 0.15rem;
+    border-radius: 0.65rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  #ftco-navbar .navbar-nav .dropdown-menu .dropdown-item {
+    padding: 0.45rem 0.35rem;
   }
 
   #ftco-navbar .navbar-toggler {
