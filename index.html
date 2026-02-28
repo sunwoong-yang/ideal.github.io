@@ -561,18 +561,17 @@
 
   .news-item {
     display: flex;
-    gap: 1.4rem;
+    gap: 1rem;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1.35rem 1.75rem;
     border-radius: 18px;
     border: 1px solid rgba(14, 74, 132, 0.12);
     background: #fff;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     text-decoration: none;
     color: inherit;
-    cursor: pointer;
   }
 
   .news-item:hover,
@@ -584,15 +583,15 @@
   }
 
   .news-item img {
-    width: 80px;
-    height: 80px;
-    border-radius: 14px;
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
     object-fit: cover;
     flex-shrink: 0;
   }
 
   .news-item h4 {
-    margin-bottom: 0;
+    margin-bottom: 0.25rem;
     font-size: 1.05rem;
   }
 
@@ -791,20 +790,29 @@
       font-size: 14px;
     }
 
-    /* 모바일에서 News 카드 세로 배치 */
+    /* 모바일에서도 News 카드 컴팩트하게 가로 정렬 */
     .news-item {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 1rem 1.35rem;
     }
 
     .news-item img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 0.85rem;
+      width: 64px;
+      height: 64px;
+      margin-bottom: 0;
+      border-radius: 12px;
     }
 
     .news-item > div {
-      width: 100%;
+      flex: 1;
+      width: auto;
+    }
+
+    .news-item h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
     }
 
     /* Hero 섹션 텍스트 크기 축소 */
