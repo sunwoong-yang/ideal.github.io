@@ -246,6 +246,23 @@
     border: 1px solid rgba(14, 74, 132, 0.08);
   }
 
+  .team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 3px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.18);
+  }
+
+  .team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   .team-card .team-role {
     font-size: 0.85rem;
     font-weight: 600;
@@ -522,10 +539,13 @@
 
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
-					<div class="team-card team-card-placeholder">
-						<div class="team-role">M.S. Candidate</div>
-						<h4>Next Member</h4>
-						<p>More IDEA LAB researchers will be introduced soon.</p>
+					<div class="team-card">
+						<div class="team-photo">
+							<img src="images/jimin-kong.jpg" alt="Portrait of Jimin Kong">
+						</div>
+						<div class="team-role">Housekeeper</div>
+						<h4>Jimin Kong</h4>
+						<p>She cleans her advisor’s house without any compensation.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
