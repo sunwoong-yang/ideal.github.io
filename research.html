@@ -56,6 +56,20 @@
       display: block;
     }
 
+    .mobile-stack-title .stack-segment {
+      display: inline;
+    }
+
+    @media (max-width: 576px) {
+      .mobile-stack-title .stack-segment {
+        display: block;
+      }
+
+      .mobile-stack-title .stack-segment + .stack-segment {
+        margin-top: 0.15rem;
+      }
+    }
+
     .research-hero .subheading {
       color: #0E4A84;
     }
@@ -401,7 +415,11 @@
     <div class="container">
       <div class="research-hero ftco-animate">
         <p class="subheading text-uppercase" style="letter-spacing:0.2em; color:#111;">Research Topic</p>
-        <h2>Physics-Guided AI for Engineering Simulation &amp; Design</h2>
+        <h2 class="mobile-stack-title">
+          <span class="stack-segment">Physics-Guided AI</span>
+          <span class="stack-segment">for Engineering</span>
+          <span class="stack-segment">Simulation &amp; Design</span>
+        </h2>
         <p class="hero-statement">We integrate physical understanding with reliable AI workflowsto speed up simulations, </br>predict future physical behavior, and guide better design decisions.</p>
       </div>
 

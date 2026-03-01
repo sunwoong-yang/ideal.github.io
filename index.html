@@ -199,6 +199,23 @@
     color: #0E4A84;
   }
 
+  .mobile-stack-title .stack-segment,
+  .mobile-stack-text .stack-segment {
+    display: inline;
+  }
+
+  @media (max-width: 576px) {
+    .mobile-stack-title .stack-segment,
+    .mobile-stack-text .stack-segment {
+      display: block;
+    }
+
+    .mobile-stack-title .stack-segment + .stack-segment,
+    .mobile-stack-text .stack-segment + .stack-segment {
+      margin-top: 0.15rem;
+    }
+  }
+
   .hero-mobile-break {
     display: none;
   }
@@ -997,8 +1014,18 @@
 								</div>
 							</div>
 								<div class="home-research-content">
-									<h3 class="home-research-title">Physics-Guided AI for Engineering Simulation &amp; Design</h3>
-										<p class="home-research-text">We build AI models grounded in physical knowledge to speed up simulations, </br>predict future physical behavior, and guide trustworthy design decisions.</p>
+										<h3 class="home-research-title mobile-stack-title">
+											<span class="stack-segment">Physics-Guided AI</span>
+											<span class="stack-segment">for Engineering</span>
+											<span class="stack-segment">Simulation &amp; Design</span>
+										</h3>
+											<p class="home-research-text mobile-stack-text">
+												<span class="stack-segment">We build AI models</span>
+												<span class="stack-segment">grounded in physical knowledge</span>
+												<span class="stack-segment">to speed up simulations,</span>
+												<span class="stack-segment">predict future physical behavior, and</span>
+												<span class="stack-segment">guide trustworthy design decisions.</span>
+											</p>
 								<p class="home-research-keyword-label">Research keywords</p>
 									<div class="home-research-chips">
 										<div class="home-research-chip-row">
