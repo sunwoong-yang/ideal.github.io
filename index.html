@@ -216,6 +216,16 @@
     }
   }
 
+  .desktop-stack-break {
+    display: inline;
+  }
+
+  @media (min-width: 577px) {
+    .desktop-stack-break {
+      display: block;
+    }
+  }
+
   .hero-mobile-break {
     display: none;
   }
@@ -1023,8 +1033,10 @@
 												<span class="stack-segment">We build AI models</span>
 												<span class="stack-segment">grounded in physical knowledge</span>
 												<span class="stack-segment">to speed up simulations,</span>
-												<span class="stack-segment">predict future physical behavior, and</span>
-												<span class="stack-segment">guide trustworthy design decisions.</span>
+												<span class="desktop-stack-break">
+													<span class="stack-segment">predict future physical behavior, and</span>
+													<span class="stack-segment">guide trustworthy design decisions.</span>
+												</span>
 											</p>
 								<p class="home-research-keyword-label">Research keywords</p>
 									<div class="home-research-chips">
