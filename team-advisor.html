@@ -483,6 +483,7 @@
   .course-count {
     font-weight: 700;
     color: #0b1426;
+    white-space: nowrap;
   }
 
   .teaching-bar-track {
@@ -504,8 +505,10 @@
   .teaching-total-grid {
     flex: 1;
     min-width: 220px;
-    display: flex;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    width: 100%;
   }
 
   .teaching-total {
@@ -542,11 +545,7 @@
 
     .teaching-total-grid {
       width: 100%;
-      flex-direction: column;
-    }
-
-    .teaching-total {
-      width: 100%;
+      grid-template-columns: 1fr;
     }
   }
 
