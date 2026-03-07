@@ -220,6 +220,25 @@
       overflow: hidden;
     }
 
+    .component-card.initial-reveal .hover-logo {
+      opacity: 1;
+      animation: initialHoverFade 2s ease-out forwards;
+    }
+
+    @keyframes initialHoverFade {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
     .component-card .hover-logo img {
       max-width: 70%;
       height: auto;
@@ -592,6 +611,57 @@
           window.open(url.toString(), '_blank', 'noopener');
         });
       });
+
+      var componentCards = document.querySelectorAll('.component-card.hoverable');
+      if (!componentCards.length) {
+        return;
+      }
+
+      var revealDuration = 2000;
+      var revealTimers = new WeakMap();
+
+      var triggerInitialHover = function (card) {
+        if (!card) {
+          return;
+        }
+        if (revealTimers.has(card)) {
+          clearTimeout(revealTimers.get(card));
+        }
+        card.dataset.revealActive = 'true';
+        card.classList.add('initial-reveal');
+        var timeoutId = window.setTimeout(function () {
+          card.classList.remove('initial-reveal');
+          revealTimers.delete(card);
+        }, revealDuration);
+        revealTimers.set(card, timeoutId);
+      };
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            var card = entry.target;
+            if (entry.isIntersecting) {
+              if (card.dataset.revealActive === 'true') {
+                return;
+              }
+              triggerInitialHover(card);
+            } else {
+              card.dataset.revealActive = 'false';
+            }
+          });
+        }, { threshold: 0.6 });
+
+        componentCards.forEach(function (card) {
+          card.dataset.revealActive = 'false';
+          observer.observe(card);
+        });
+      } else {
+        componentCards.forEach(function (card, index) {
+          setTimeout(function () {
+            triggerInitialHover(card);
+          }, 200 * index);
+        });
+      }
     });
   </script>
 </body>
