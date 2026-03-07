@@ -865,30 +865,30 @@
 												<div class="teaching-bar-row">
 													<div class="teaching-bar-info">
 													<span class="course-name">Computer-based Design</span>
-													<span class="course-count">82&nbsp;students</span>
+													<span class="course-count" data-count="82" data-label="students">82&nbsp;students</span>
 													</div>
 														<div class="teaching-bar-track">
-															<div class="teaching-bar-fill" style="width: 61%;"></div>
+															<div class="teaching-bar-fill" data-target-width="82" style="width: 82%;"></div>
 														</div>
 												</div>
 												<div class="teaching-bar-row">
 													<div class="teaching-bar-info">
 													<span class="course-name">Mechanical Design</span>
-													<span class="course-count">42&nbsp;students</span>
+													<span class="course-count" data-count="42" data-label="students">42&nbsp;students</span>
 													</div>
 														<div class="teaching-bar-track">
-															<div class="teaching-bar-fill" style="width: 35%;"></div>
+															<div class="teaching-bar-fill" data-target-width="42" style="width: 42%;"></div>
 														</div>
 												</div>
 											</div>
 											<div class="teaching-total-grid">
 												<div class="teaching-total">
 													<span class="total-label">Total</span>
-													<span class="total-value">126 students</span>
+													<span class="total-value">124 students</span>
 												</div>
 												<div class="teaching-total">
 													<span class="total-label">Cumulative</span>
-													<span class="total-value">126 students</span>
+													<span class="total-value">124 students</span>
 												</div>
 											</div>
 										</div>
@@ -977,11 +977,112 @@
 	<script src="js/aos.js"></script>
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
-
 	<script src="js/navbar.js"></script>
-
-
 	<script src="js/main.js"></script>
+	<script>
+	  document.addEventListener('DOMContentLoaded', function () {
+	    const teachingSection = document.querySelector('#advisor-teaching');
+	    if (!teachingSection) {
+	      return;
+	    }
+
+	    const countElements = teachingSection.querySelectorAll('.course-count[data-count]');
+	    const barElements = teachingSection.querySelectorAll('.teaching-bar-fill[data-target-width]');
+	    if (!countElements.length && !barElements.length) {
+	      return;
+	    }
+
+	    let canAnimate = true;
+
+	    const resetVisuals = () => {
+	      countElements.forEach((el) => {
+	        const label = el.dataset.label || '';
+	        el.dataset.label = label;
+	        el.innerHTML = label ? formatCountText(0, label) : '0';
+	      });
+
+	      barElements.forEach((el) => {
+	        if (!el.dataset.targetWidth) {
+	          el.dataset.targetWidth = parseFloat(el.style.width) || 0;
+	        }
+	        el.style.width = '0%';
+	      });
+	    };
+
+	    const startAnimations = () => {
+	      resetVisuals();
+	      countElements.forEach((el) => {
+	        const target = parseInt(el.dataset.count, 10) || 0;
+	        animateCount(el, target);
+	      });
+	      barElements.forEach((el) => {
+	        const targetWidth = parseFloat(el.dataset.targetWidth) || 0;
+	        animateBar(el, targetWidth);
+	      });
+	    };
+
+	    resetVisuals();
+
+	    const observerTarget = teachingSection.querySelector('.teaching-bars-wrapper') || teachingSection;
+	    const observerOptions = { threshold: 0.6 };
+	    if ('IntersectionObserver' in window && observerTarget) {
+	      const observer = new IntersectionObserver((entries) => {
+	        entries.forEach((entry) => {
+	          if (entry.isIntersecting && canAnimate) {
+	            canAnimate = false;
+	            startAnimations();
+	          } else if (!entry.isIntersecting) {
+	            canAnimate = true;
+	          }
+	        });
+	      }, observerOptions);
+	      observer.observe(observerTarget);
+	    } else {
+	      startAnimations();
+	    }
+
+	    function animateCount(element, target, duration = 1200) {
+	      const label = element.dataset.label || '';
+	      const start = performance.now();
+	      const initial = 0;
+
+	      const step = (now) => {
+	        const progress = Math.min((now - start) / duration, 1);
+	        const eased = easeOutCubic(progress);
+	        const value = Math.round(initial + (target - initial) * eased);
+	        element.innerHTML = label ? formatCountText(value, label) : `${value}`;
+	        if (progress < 1) {
+	          requestAnimationFrame(step);
+	        }
+	      };
+
+	      requestAnimationFrame(step);
+	    }
+
+	    function animateBar(element, targetPercent, duration = 1200) {
+	      const start = performance.now();
+
+	      const step = (now) => {
+	        const progress = Math.min((now - start) / duration, 1);
+	        const eased = easeOutCubic(progress);
+	        element.style.width = `${targetPercent * eased}%`;
+	        if (progress < 1) {
+	          requestAnimationFrame(step);
+	        }
+	      };
+
+	      requestAnimationFrame(step);
+	    }
+
+	    function formatCountText(value, label) {
+	      return label ? `${value}&nbsp;${label}` : `${value}`;
+	    }
+
+	    function easeOutCubic(t) {
+	      return 1 - Math.pow(1 - t, 3);
+	    }
+	  });
+	</script>
 
 </body>
 
