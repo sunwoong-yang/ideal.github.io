@@ -222,7 +222,7 @@
 
     .component-card.initial-reveal .hover-logo {
       opacity: 1;
-      animation: initialHoverFade 2s ease-out forwards;
+      animation: initialHoverFade 2.1s ease-out forwards;
     }
 
     @keyframes initialHoverFade {
@@ -230,7 +230,7 @@
         opacity: 1;
       }
 
-      50% {
+      38% {
         opacity: 1;
       }
 
@@ -617,7 +617,7 @@
         return;
       }
 
-      var revealDuration = 2000;
+      var revealDuration = 2100;
       var revealTimers = new WeakMap();
 
       var triggerInitialHover = function (card) {
