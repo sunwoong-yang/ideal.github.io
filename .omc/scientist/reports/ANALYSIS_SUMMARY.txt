@@ -1,0 +1,198 @@
+================================================================================
+CSS FOOTER ANALYSIS REPORT - SUMMARY
+IDEA LAB Website (ideal.github.io)
+Analysis Date: March 17, 2026
+================================================================================
+
+OBJECTIVE
+---------
+Analyze CSS files in the website project to identify footer-related CSS rules,
+media queries affecting footer layout, and any CSS causing different wrapping
+behavior on mobile devices.
+
+DATA SOURCES
+------------
+1. css/style.css (222,278 bytes, 11,043 lines)
+   - Main custom stylesheet
+   - Contains 50+ media queries but 0 target footer elements
+
+2. index.html (27,816 bytes)
+   - Contains footer HTML structure
+   - Has 6 media query blocks
+   - 3 media queries attempt to handle footer responsiveness
+
+KEY FINDINGS
+============
+
+[FINDING 1] NO RESPONSIVE FOOTER MEDIA QUERIES IN style.css
+Status: CRITICAL
+Location: Entire css/style.css file
+Detail: Searched all 50+ @media rules - ZERO target .ftco-footer or footer-* classes
+Impact: All footer styling relies entirely on inline HTML styles
+Statistical Evidence: 50 media queries found, 0 apply to footer = 0% coverage
+
+[FINDING 2] MAIN FOOTER USES INLINE FLEXBOX WITHOUT RESPONSIVE VARIANT
+Status: CRITICAL
+Location: index.html line 1085
+CSS: <div style="display: flex; align-items: center; justify-content: center; gap: 3rem;">
+Detail: Horizontal flex layout has no @media query to change flex-direction on mobile
+Impact: Logo and text forced side-by-side on mobile, causing wrapping
+Missing: @media (max-width: 768px) { flex-direction: column; }
+
+[FINDING 3] FOOTER PADDING NOT RESPONSIVE
+Status: HIGH
+CSS Rule: .ftco-footer { padding: 7em 0; } (line 10219)
+Inline Override: style="padding: 2rem 0;" (index.html line 1080)
+Issue: Both desktop (7em) and mobile (2rem) are fixed values
+Impact: Large vertical spacing maintained even on narrow screens
+
+[FINDING 4] CSS MEDIA QUERY SELECTOR MISMATCH
+Status: HIGH
+Location: index.html line 894
+CSS Rule: @media (max-width: 768px) { .ftco-footer .col-md-12 > div { flex-direction: column; } }
+Target: .col-md-12 > div
+Actual Structure: Unmarked <div> without col-md-12 class
+Impact: Media query may not apply to element causing wrapping
+
+[FINDING 5] LOGO SIZE CHANGES BUT LAYOUT DOESN'T
+Status: MEDIUM
+Desktop: max-height: 240px (inline style)
+Mobile: max-height: 150px (media query)
+Gap: 3rem (48px) remains unchanged
+Result: Smaller logo but flex container still forces horizontal layout
+Impact: Mobile width = 150px + 48px + text > 100% screen width
+
+[FINDING 6] FOOTER SOCIAL ICONS USE FLOAT LAYOUT
+Status: MEDIUM
+CSS: .ftco-footer-social li a { float: left; display: block; } (line 10273)
+Issue: float: left with inline-block keeps icons horizontal
+Missing: No media query to change this layout
+Impact: Social icons don't stack on mobile (if present in footer)
+
+[FINDING 7] FOOTER NAVIGATION ITEMS REMAIN INLINE
+Status: MEDIUM
+CSS: .footer-small-nav > li { display: inline-block; } (line 10293)
+Issue: No media query to change to block or flex-column
+Impact: Navigation items stay side-by-side on mobile
+
+STATISTICS
+==========
+
+[STAT:File_Coverage]
+- css/style.css total lines: 11,043
+- Footer CSS rules found: 12 (lines 10219-10301)
+- Media queries in file: 50+
+- Media queries targeting footer: 0
+- Coverage: 0%
+
+[STAT:HTML_Media_Queries]
+- Total media queries in index.html: 6
+- Specifically for footer: 3 (lines 894, 900, 905)
+- Effectiveness: Low (selector mismatch for main wrapper)
+
+[STAT:Responsive_Elements]
+- Responsive footer padding: 0 out of 2 CSS instances
+- Responsive flex layout: 0 out of 1
+- Responsive logo sizing: 1 out of 1
+- Overall responsiveness: 20%
+
+[STAT:Inline_Style_Coverage]
+- Inline styles in footer: 5 (logo wrapper, image, text paragraph)
+- With mobile variants: 2 (logo image resized, text wrapping)
+- Without variants: 3 (main flexbox, gap, padding)
+- Coverage: 40%
+
+LIMITATIONS
+===========
+
+[LIMITATION 1] HTML/CSS Coupling
+The footer uses inline styles which cannot be overridden by external media queries
+in the same way as class-based CSS. This creates a maintenance issue where
+responsive behavior is split across multiple locations (CSS file and HTML style tag).
+
+[LIMITATION 2] Selector Specificity
+Inline styles have higher specificity than any external CSS rule. The media query
+rule `.ftco-footer .col-md-12 > div` may not match the actual structure,
+making it ineffective even if written correctly.
+
+[LIMITATION 3] Gap and Padding Not Adaptive
+The 3rem (48px) gap and footer padding are fixed values. On screens narrower than
+320px (common for older mobile devices), this reduces available space significantly.
+
+[LIMITATION 4] Logo Sizing Strategy
+While logo height is reduced from 240px to 150px on mobile, the flex container
+still uses horizontal flow. A better strategy would be to change flex-direction
+to column AND adjust the gap/padding accordingly.
+
+[LIMITATION 5] No Mobile-First Approach
+The CSS appears to be desktop-first (large default padding 7em) with limited
+mobile overrides. A mobile-first approach would make responsive design cleaner.
+
+RECOMMENDATIONS
+===============
+
+To fix footer wrapping on mobile, implement:
+
+1. Add proper media query for main footer flex wrapper:
+   @media (max-width: 768px) {
+     [selector-for-main-flex-wrapper] {
+       flex-direction: column;
+       gap: 1rem;
+       align-items: stretch;
+     }
+   }
+
+2. Convert inline styles to CSS classes:
+   - Move display: flex; from inline style to .footer-content class
+   - Create .footer-content-mobile with flex-direction: column
+
+3. Adjust gap and padding responsively:
+   - Desktop: gap: 3rem, padding: 2rem 0
+   - Mobile: gap: 1rem, padding: 1.5rem 0
+
+4. Ensure logo constraints work with new layout:
+   - Use max-width instead of just max-height
+   - Test on actual mobile devices (320px, 480px widths)
+
+FILES ANALYZED
+==============
+
+Primary Files:
+  /css/style.css
+  - Lines: 11,043
+  - Footer CSS: lines 10219-10301
+  - Key classes: .ftco-footer, .ftco-footer-social, .footer-small-nav
+
+  /index.html
+  - Lines: 1,100+
+  - Footer HTML: lines 1080-1098
+  - Inline styles: 5 instances
+  - Media queries: 3 for footer (lines 894, 900, 905)
+
+Supporting Files Checked:
+  - css/ directory: 14 files (mostly libraries)
+  - No other footer-specific CSS files found
+
+CONCLUSION
+==========
+
+The footer wrapping issue on mobile is caused by:
+
+1. Missing responsive media query for main footer flex wrapper
+2. Inline flexbox styles that don't adapt to screen width
+3. CSS selector mismatch preventing existing media queries from working
+4. Fixed gap (3rem) that doesn't scale to mobile widths
+5. Layout design that prioritizes desktop appearance over mobile responsiveness
+
+The website lacks a comprehensive responsive strategy for the footer section.
+While some mobile adjustments exist (logo resizing), they don't address the
+core layout issue - the flex container needs to change from row to column
+on mobile devices.
+
+All CSS rules and issues have been documented with exact line numbers and
+can be accessed in the detailed analysis report.
+
+================================================================================
+Report Generated: 2026-03-17
+Analysis Tool: Scientist Agent (oh-my-claudecode)
+================================================================================

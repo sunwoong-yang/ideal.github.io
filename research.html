@@ -423,6 +423,22 @@
       .component-grid {
         grid-template-columns: 1fr;
       }
+
+      /* Footer 세로 배치 */
+      .ftco-footer .col-md-12 > div {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+      }
+
+      .footer-logo img {
+        max-height: 150px !important;
+      }
+
+      /* Footer 텍스트 줄바꿈 */
+      .footer-line-1::after {
+        content: '\A';
+        white-space: pre;
+      }
     }
   </style>
 </head>

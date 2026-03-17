@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1771666194134,
-  "projectRoot": "/mnt/z/Lab_github/ideal.github.io",
+  "lastScanned": 1773714445873,
+  "projectRoot": "/mnt/z/★ERICA/3. 연구실 홈페이지/Lab_github/ideal.github.io",
   "techStack": {
     "languages": [
       {
@@ -47,7 +47,7 @@
       "path": "css",
       "purpose": null,
       "fileCount": 13,
-      "lastAccessed": 1771666194106,
+      "lastAccessed": 1773714445788,
       "keyFiles": [
         "ajax-loader.gif",
         "animate.css",
@@ -60,7 +60,7 @@
       "path": "demo",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1771666194126,
+      "lastAccessed": 1773714445821,
       "keyFiles": [
         "20210428.gif"
       ]
@@ -69,14 +69,14 @@
       "path": "fonts",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1771666194126,
+      "lastAccessed": 1773714445825,
       "keyFiles": []
     },
     "images": {
       "path": "images",
       "purpose": null,
-      "fileCount": 31,
-      "lastAccessed": 1771666194127,
+      "fileCount": 33,
+      "lastAccessed": 1773714445851,
       "keyFiles": [
         "01 캐릭터 마크 - 기본형-04.png",
         "01_text_right_black.png",
@@ -89,7 +89,7 @@
       "path": "js",
       "purpose": null,
       "fileCount": 16,
-      "lastAccessed": 1771666194127,
+      "lastAccessed": 1773714445858,
       "keyFiles": [
         "aos.js",
         "bootstrap.min.js",
@@ -98,16 +98,56 @@
         "jquery-migrate-3.0.1.min.js"
       ]
     },
+    "news": {
+      "path": "news",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1773714445869,
+      "keyFiles": [
+        "news-hanyang-appointment.html"
+      ]
+    },
     "scss": {
       "path": "scss",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1771666194128,
+      "lastAccessed": 1773714445870,
       "keyFiles": [
         "style.scss"
       ]
     }
   },
-  "hotPaths": [],
+  "hotPaths": [
+    {
+      "path": "research.html",
+      "accessCount": 7,
+      "lastAccessed": 1773720103512,
+      "type": "directory"
+    },
+    {
+      "path": "css/style.css",
+      "accessCount": 5,
+      "lastAccessed": 1773719853449,
+      "type": "directory"
+    },
+    {
+      "path": "publications.html",
+      "accessCount": 5,
+      "lastAccessed": 1773720086669,
+      "type": "directory"
+    },
+    {
+      "path": "index.html",
+      "accessCount": 3,
+      "lastAccessed": 1773719871895,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 1,
+      "lastAccessed": 1773720078209,
+      "type": "directory"
+    }
+  ],
   "userDirectives": []
 }
