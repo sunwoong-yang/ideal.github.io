@@ -125,6 +125,12 @@
       "type": "directory"
     },
     {
+      "path": "index.html",
+      "accessCount": 7,
+      "lastAccessed": 1773796075479,
+      "type": "file"
+    },
+    {
       "path": "css/style.css",
       "accessCount": 5,
       "lastAccessed": 1773719853449,
@@ -135,12 +141,6 @@
       "accessCount": 5,
       "lastAccessed": 1773720086669,
       "type": "directory"
-    },
-    {
-      "path": "index.html",
-      "accessCount": 3,
-      "lastAccessed": 1773719871895,
-      "type": "file"
     },
     {
       "path": "",
