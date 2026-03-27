@@ -9621,13 +9621,15 @@ h1, h2, h3, h4, h5,
 }
 .btn.btn-primary {
   background: #0E4A84;
-  border: 1px solid #0E4A84 !important;
+  border: 2px solid #000 !important;
   color: #fff !important;
+  box-shadow: 0 2px 8px rgba(14,74,132,0.28);
+  transition: border-color 0.2s ease;
 }
 .btn.btn-primary:hover {
-  border: 1px solid #0E4A84 !important;
-  background: #0E4A84 !important;
-  color: #000000 !important;
+  border: 2px solid #000 !important;
+  background: #1a6ab5 !important;
+  color: #fff !important;
 }
 .btn.btn-primary.btn-outline-primary {
   border: 2px solid #0E4A84 !important;
@@ -11039,5 +11041,6 @@ textarea.form-control {
     padding-bottom: 1rem !important;
   }
 }
+
 
 /*# sourceMappingURL=style.css.map */

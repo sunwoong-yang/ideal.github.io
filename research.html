@@ -44,6 +44,39 @@
       margin-bottom: 2.5rem;
     }
 
+    .research-hero .btn-primary {
+      font-size: 0.85rem !important;
+      font-weight: 500 !important;
+      padding: 0.6rem 1.5rem !important;
+      letter-spacing: 0.02em;
+      border-color: #000 !important;
+      box-shadow: 0 2px 8px rgba(14,74,132,0.28);
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+
+    .research-hero .btn-primary::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      right: -10px;
+      width: 18px;
+      height: 22px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 22'%3E%3Cpath d='M2 1 L2 17 L6 13 L9 20 L11 19 L8 12 L14 12 Z' fill='white' stroke='black' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+
+    .research-hero .btn-primary:hover {
+      background-color: #1a6ab5 !important;
+      border-color: #000 !important;
+      color: #fff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(14,74,132,0.35);
+    }
+
+
     .research-hero h2 {
       font-size: 2rem;
       font-weight: 700;
@@ -456,6 +489,9 @@
           <span class="stack-segment">Simulation &amp; Design</span>
         </h2>
         <p class="hero-statement">We integrate physical understanding with reliable AI workflowsto speed up simulations, </br>predict future physical behavior, and guide better design decisions.</p>
+        <div style="margin-top: 1.5rem;">
+          <a href="https://sanghyuk-kim.me/project" target="_blank" class="btn btn-primary btn-sm">See How It Works</a>
+        </div>
       </div>
 
       <div class="section-title-block section-title-block--midnight ftco-animate">

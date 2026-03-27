@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1773714445873,
-  "projectRoot": "/mnt/z/★ERICA/3. 연구실 홈페이지/Lab_github/ideal.github.io",
+  "lastScanned": 1774598936393,
+  "projectRoot": "/mnt/z/★ERICA/3. 연구실 브랜딩/Lab_github/ideal.github.io",
   "techStack": {
     "languages": [
       {
@@ -47,7 +47,7 @@
       "path": "css",
       "purpose": null,
       "fileCount": 13,
-      "lastAccessed": 1773714445788,
+      "lastAccessed": 1774598936310,
       "keyFiles": [
         "ajax-loader.gif",
         "animate.css",
@@ -60,7 +60,7 @@
       "path": "demo",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1773714445821,
+      "lastAccessed": 1774598936375,
       "keyFiles": [
         "20210428.gif"
       ]
@@ -69,14 +69,14 @@
       "path": "fonts",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1773714445825,
+      "lastAccessed": 1774598936376,
       "keyFiles": []
     },
     "images": {
       "path": "images",
       "purpose": null,
-      "fileCount": 33,
-      "lastAccessed": 1773714445851,
+      "fileCount": 38,
+      "lastAccessed": 1774598936377,
       "keyFiles": [
         "01 캐릭터 마크 - 기본형-04.png",
         "01_text_right_black.png",
@@ -89,7 +89,7 @@
       "path": "js",
       "purpose": null,
       "fileCount": 16,
-      "lastAccessed": 1773714445858,
+      "lastAccessed": 1774598936377,
       "keyFiles": [
         "aos.js",
         "bootstrap.min.js",
@@ -101,9 +101,10 @@
     "news": {
       "path": "news",
       "purpose": null,
-      "fileCount": 1,
-      "lastAccessed": 1773714445869,
+      "fileCount": 2,
+      "lastAccessed": 1774598936380,
       "keyFiles": [
+        "news-excellent-paper.html",
         "news-hanyang-appointment.html"
       ]
     },
@@ -111,7 +112,7 @@
       "path": "scss",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1773714445870,
+      "lastAccessed": 1774598936388,
       "keyFiles": [
         "style.scss"
       ]
@@ -120,32 +121,32 @@
   "hotPaths": [
     {
       "path": "research.html",
-      "accessCount": 7,
-      "lastAccessed": 1773720103512,
+      "accessCount": 25,
+      "lastAccessed": 1774604106057,
       "type": "directory"
     },
     {
       "path": "index.html",
-      "accessCount": 7,
-      "lastAccessed": 1773796075479,
+      "accessCount": 14,
+      "lastAccessed": 1774602661891,
       "type": "file"
     },
     {
       "path": "css/style.css",
-      "accessCount": 5,
-      "lastAccessed": 1773719853449,
-      "type": "directory"
-    },
-    {
-      "path": "publications.html",
-      "accessCount": 5,
-      "lastAccessed": 1773720086669,
+      "accessCount": 10,
+      "lastAccessed": 1774602658216,
       "type": "directory"
     },
     {
       "path": "",
+      "accessCount": 4,
+      "lastAccessed": 1774599746837,
+      "type": "directory"
+    },
+    {
+      "path": "css",
       "accessCount": 1,
-      "lastAccessed": 1773720078209,
+      "lastAccessed": 1774599044094,
       "type": "directory"
     }
   ],
