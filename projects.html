@@ -26,11 +26,18 @@
 
 	<style>
   body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-size: 15px;
     line-height: 1.7;
     color: #333;
+  }
+
+  #projects-section {
+    flex: 1 0 auto;
   }
 
   .heading-section h2 {
@@ -59,6 +66,12 @@
     border: 1px solid rgba(14, 74, 132, 0.12);
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
     padding: 1.5rem 1.75rem;
+  }
+
+  .project-item.project-completed {
+    background: #f3f4f6;
+    border-color: rgba(40, 40, 40, 0.16);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
   }
 
   .project-tag-row {
@@ -192,6 +205,15 @@
 					<p class="project-meta"><strong>Period & Funding:</strong> 2024.05.01 ~ 2029.04.30 (5 years, 500,000,000 KRW)</p>
 				</div>
 					<div class="project-item ftco-animate">
+						<div class="project-tag-row">
+							<span class="project-status-tag project-status-ongoing">Ongoing</span>
+							<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Principal Investigator</span></span></div>
+						</div>
+						<p class="project-meta"><strong>Sponsor:</strong> Hanyang University</p>
+					<p class="project-meta"><strong>Title:</strong> AI-based Aerodynamic Design of a Helicopter Blade for Mars Exploration</p>
+					<p class="project-meta"><strong>Period & Funding:</strong> 2026.03.01 ~ 2027.02.28 (1 year, 40,000,000 KRW)</p>
+				</div>
+					<div class="project-item project-completed ftco-animate">
 						<div class="project-tag-row">
 							<span class="project-status-tag project-status-completed">Completed</span>
 							<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Principal Investigator</span></span></div>
