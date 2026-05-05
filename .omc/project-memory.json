@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1775708470124,
+  "lastScanned": 1777990984767,
   "projectRoot": "/mnt/z/★ERICA/3. 연구실 브랜딩/Lab_github/ideal.github.io",
   "techStack": {
     "languages": [
@@ -47,7 +47,7 @@
       "path": "css",
       "purpose": null,
       "fileCount": 13,
-      "lastAccessed": 1775708470025,
+      "lastAccessed": 1777990984610,
       "keyFiles": [
         "ajax-loader.gif",
         "animate.css",
@@ -60,7 +60,7 @@
       "path": "demo",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1775708470058,
+      "lastAccessed": 1777990984634,
       "keyFiles": [
         "20210428.gif"
       ]
@@ -69,14 +69,14 @@
       "path": "fonts",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1775708470106,
+      "lastAccessed": 1777990984652,
       "keyFiles": []
     },
     "images": {
       "path": "images",
       "purpose": null,
-      "fileCount": 41,
-      "lastAccessed": 1775708470113,
+      "fileCount": 47,
+      "lastAccessed": 1777990984663,
       "keyFiles": [
         "01 캐릭터 마크 - 기본형-04.png",
         "01_text_right_black.png",
@@ -89,7 +89,7 @@
       "path": "js",
       "purpose": null,
       "fileCount": 16,
-      "lastAccessed": 1775708470115,
+      "lastAccessed": 1777990984677,
       "keyFiles": [
         "aos.js",
         "bootstrap.min.js",
@@ -102,7 +102,7 @@
       "path": "news",
       "purpose": null,
       "fileCount": 2,
-      "lastAccessed": 1775708470119,
+      "lastAccessed": 1777990984693,
       "keyFiles": [
         "news-excellent-paper.html",
         "news-hanyang-appointment.html"
@@ -112,19 +112,12 @@
       "path": "scss",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1775708470120,
+      "lastAccessed": 1777990984712,
       "keyFiles": [
         "style.scss"
       ]
     }
   },
-  "hotPaths": [
-    {
-      "path": "research.html",
-      "accessCount": 13,
-      "lastAccessed": 1775711105539,
-      "type": "file"
-    }
-  ],
+  "hotPaths": [],
   "userDirectives": []
 }
