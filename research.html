@@ -49,6 +49,7 @@
       font-weight: 500 !important;
       padding: 0.6rem 1.5rem !important;
       letter-spacing: 0.02em;
+      border-width: 0.5px !important;
       border-color: #000 !important;
       box-shadow: 0 2px 8px rgba(14,74,132,0.28);
       transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
@@ -83,6 +84,114 @@
       color: #fff !important;
       transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(14,74,132,0.35);
+    }
+
+    .demo-launcher {
+      margin-top: 1.5rem;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.85rem;
+      position: relative;
+    }
+
+    .demo-trigger {
+      z-index: 2;
+    }
+
+    .demo-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 0.7rem;
+      width: min(100%, 470px);
+      padding: 0.7rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(14, 74, 132, 0.14);
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
+      backdrop-filter: blur(14px);
+      opacity: 0;
+      transform: translateY(-10px) scale(0.92);
+      pointer-events: none;
+      transition: opacity 0.28s ease, transform 0.32s ease;
+    }
+
+    .demo-launcher.is-open .demo-options {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+
+    .demo-option {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-width: 0;
+      padding: 0.78rem 1.1rem;
+      border-radius: 999px;
+      text-decoration: none !important;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: #123a67;
+      background: linear-gradient(135deg, #f7fbff, #e7f1fb);
+      border: 1px solid rgba(14, 74, 132, 0.16);
+      box-shadow: 0 10px 18px rgba(14, 74, 132, 0.09);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .demo-option:first-child {
+      color: #0f4f6c;
+      background: linear-gradient(135deg, #f1fbff, #dff4fb);
+      border-color: rgba(23, 119, 156, 0.2);
+      box-shadow: 0 10px 18px rgba(23, 119, 156, 0.12);
+    }
+
+    .demo-option:last-child {
+      color: #5f3146;
+      background: linear-gradient(135deg, #fff4f7, #fde7ef);
+      border-color: rgba(173, 78, 121, 0.2);
+      box-shadow: 0 10px 18px rgba(173, 78, 121, 0.12);
+    }
+
+    .demo-option:hover,
+    .demo-option:focus {
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .demo-option:first-child:hover,
+    .demo-option:first-child:focus {
+      background: linear-gradient(135deg, #17779c, #3aaecf);
+      box-shadow: 0 16px 28px rgba(23, 119, 156, 0.24);
+    }
+
+    .demo-option:last-child:hover,
+    .demo-option:last-child:focus {
+      background: linear-gradient(135deg, #ad4e79, #d9779d);
+      box-shadow: 0 16px 28px rgba(173, 78, 121, 0.24);
+    }
+
+    .demo-option-label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.15;
+      white-space: normal;
+      text-align: center;
+      gap: 0.14rem;
+    }
+
+    .demo-option-label strong {
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+
+    .demo-option-label span {
+      font-size: 0.88rem;
+      font-weight: 700;
     }
 
 
@@ -462,6 +571,17 @@
         font-size: 1rem !important;
       }
 
+      .demo-options {
+        grid-template-columns: 1fr;
+        width: min(92vw, 280px);
+        border-radius: 22px;
+      }
+
+      .demo-option {
+        width: 100%;
+        min-width: 0;
+      }
+
       .component-grid {
         grid-template-columns: 1fr;
       }
@@ -498,8 +618,24 @@
           <span class="stack-segment">Simulation &amp; Design</span>
         </h2>
         <p class="hero-statement">We integrate physical understanding with reliable AI workflowsto speed up simulations, </br>predict future physical behavior, and guide better design decisions.</p>
-        <div style="margin-top: 1.5rem;">
-          <a href="https://sanghyuk-kim.me/project" target="_blank" class="btn btn-primary btn-sm">See How It Works</a>
+        <div class="demo-launcher" data-demo-launcher>
+          <button type="button" class="btn btn-primary btn-sm demo-trigger" data-demo-trigger aria-expanded="false" aria-controls="demo-options">
+            See How It Works
+          </button>
+          <div class="demo-options" id="demo-options" aria-hidden="true">
+            <a href="https://sanghyuk-kim.me/project#demo" target="_blank" rel="noopener" class="demo-option">
+              <span class="demo-option-label">
+                <strong>Demo 1</strong>
+                <span>Vehicle Dynamics</span>
+              </span>
+            </a>
+            <a href="https://csmd2025.github.io/smr-svmoe-page/#viewer" target="_blank" rel="noopener" class="demo-option">
+              <span class="demo-option-label">
+                <strong>Demo 2</strong>
+                <span>Large-Scale Physics Prediction</span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -620,6 +756,7 @@
 <!--        </div>-->
 <!--      </div>-->
 
+<!--
       <div class="key-components ftco-animate" style="margin-top: 3rem;">
         <div class="section-title-block section-title-block--midnight ftco-animate">
           <span class="section-title-main">Application</span>
@@ -671,6 +808,7 @@
           </div>
         </div>
       </div>
+-->
     </div>
   </section>
 
@@ -711,6 +849,34 @@
   <script src="js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      var demoLauncher = document.querySelector('[data-demo-launcher]');
+      var demoTrigger = document.querySelector('[data-demo-trigger]');
+      var demoOptions = document.getElementById('demo-options');
+
+      if (demoLauncher && demoTrigger && demoOptions) {
+        var setDemoState = function (isOpen) {
+          demoLauncher.classList.toggle('is-open', isOpen);
+          demoTrigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          demoOptions.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+        };
+
+        demoTrigger.addEventListener('click', function () {
+          setDemoState(!demoLauncher.classList.contains('is-open'));
+        });
+
+        document.addEventListener('click', function (event) {
+          if (!demoLauncher.contains(event.target)) {
+            setDemoState(false);
+          }
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            setDemoState(false);
+          }
+        });
+      }
+
       document.querySelectorAll('.key-components.crimson-theme .component-card.hoverable').forEach(function (card) {
         var image = card.getAttribute('data-image');
         if (!image) return;
