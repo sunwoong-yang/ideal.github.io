@@ -10,3 +10,8 @@
 3. `index.html` — 홈 화면 하단 News 섹션을 **최신 3개**로 유지 (링크 포함)
 
 news.html과 index.html의 링크는 항상 실제 파일명과 일치해야 한다.
+
+## Invited Talk 업데이트 규칙
+
+뉴스가 Invited Talk에 해당하는 경우, `team-advisor.html`의 Invited Talks 목록 **맨 위**에도 추가한다.
+형식: `<li>[기관명], "[발표 제목]", [월] [연도].</li>`

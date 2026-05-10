@@ -126,9 +126,21 @@
       "type": "file"
     },
     {
+      "path": "join-us.html",
+      "accessCount": 5,
+      "lastAccessed": 1778423411957,
+      "type": "file"
+    },
+    {
       "path": "index.html",
       "accessCount": 2,
       "lastAccessed": 1778403957157,
+      "type": "file"
+    },
+    {
+      "path": "CLAUDE.md",
+      "accessCount": 2,
+      "lastAccessed": 1778404487867,
       "type": "file"
     },
     {
@@ -144,9 +156,9 @@
       "type": "file"
     },
     {
-      "path": "CLAUDE.md",
+      "path": "team-advisor.html",
       "accessCount": 1,
-      "lastAccessed": 1778403961671,
+      "lastAccessed": 1778404461497,
       "type": "file"
     }
   ],
