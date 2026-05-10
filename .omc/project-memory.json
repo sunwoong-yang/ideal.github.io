@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1777990984767,
+  "lastScanned": 1778403407163,
   "projectRoot": "/mnt/z/★ERICA/3. 연구실 브랜딩/Lab_github/ideal.github.io",
   "techStack": {
     "languages": [
@@ -47,7 +47,7 @@
       "path": "css",
       "purpose": null,
       "fileCount": 13,
-      "lastAccessed": 1777990984610,
+      "lastAccessed": 1778403407087,
       "keyFiles": [
         "ajax-loader.gif",
         "animate.css",
@@ -60,7 +60,7 @@
       "path": "demo",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1777990984634,
+      "lastAccessed": 1778403407105,
       "keyFiles": [
         "20210428.gif"
       ]
@@ -69,14 +69,14 @@
       "path": "fonts",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1777990984652,
+      "lastAccessed": 1778403407122,
       "keyFiles": []
     },
     "images": {
       "path": "images",
       "purpose": null,
-      "fileCount": 47,
-      "lastAccessed": 1777990984663,
+      "fileCount": 45,
+      "lastAccessed": 1778403407130,
       "keyFiles": [
         "01 캐릭터 마크 - 기본형-04.png",
         "01_text_right_black.png",
@@ -89,7 +89,7 @@
       "path": "js",
       "purpose": null,
       "fileCount": 16,
-      "lastAccessed": 1777990984677,
+      "lastAccessed": 1778403407135,
       "keyFiles": [
         "aos.js",
         "bootstrap.min.js",
@@ -102,7 +102,7 @@
       "path": "news",
       "purpose": null,
       "fileCount": 2,
-      "lastAccessed": 1777990984693,
+      "lastAccessed": 1778403407140,
       "keyFiles": [
         "news-excellent-paper.html",
         "news-hanyang-appointment.html"
@@ -112,12 +112,43 @@
       "path": "scss",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1777990984712,
+      "lastAccessed": 1778403407145,
       "keyFiles": [
         "style.scss"
       ]
     }
   },
-  "hotPaths": [],
+  "hotPaths": [
+    {
+      "path": "news.html",
+      "accessCount": 5,
+      "lastAccessed": 1778403763872,
+      "type": "file"
+    },
+    {
+      "path": "index.html",
+      "accessCount": 2,
+      "lastAccessed": 1778403957157,
+      "type": "file"
+    },
+    {
+      "path": "news/news-excellent-paper.html",
+      "accessCount": 1,
+      "lastAccessed": 1778403680859,
+      "type": "file"
+    },
+    {
+      "path": "news/news-26CAE-conference.html",
+      "accessCount": 1,
+      "lastAccessed": 1778403708789,
+      "type": "file"
+    },
+    {
+      "path": "CLAUDE.md",
+      "accessCount": 1,
+      "lastAccessed": 1778403961671,
+      "type": "file"
+    }
+  ],
   "userDirectives": []
 }
