@@ -1,0 +1,8 @@
+{
+  "active": true,
+  "started_at": "2026-05-22T03:58:55.545Z",
+  "original_prompt": "현재는 홈페이지의 publications에 논문만 강조되어있는데, 이 탭을 2개의 subcategory로 나눠서 한개는 publications , 한개는 conference(s?)로 설정하고싶어. 메뉴의 foramt은 team을 따르면될듯 (team도 마우스를 올리면 2개 subcategory가 나오잖아. 이떄와 완벽히 동일한 디자인을 채택해). 그럼 이 pub와 conf를 아우르는 표현을 적절히써서, 기능을 구현해봐. conf는 아직 내용 채우지말고",
+  "session_id": "b4d1ec83-5ee0-4521-be7b-da750366d22e",
+  "reinforcement_count": 0,
+  "last_checked_at": "2026-05-22T03:58:55.545Z"
+}

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IDEA LAB | Conferences</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="images/HYU_logo_singlecolor_png.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: "DM Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    #conferences-section {
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+    }
+
+    .heading-section h2 {
+      font-size: 1.8rem !important;
+      font-weight: 700 !important;
+      margin-bottom: 1rem !important;
+    }
+
+    .heading-section p {
+      font-size: 0.95rem !important;
+      line-height: 1.7 !important;
+      color: #555 !important;
+    }
+
+    .publications-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .pub-section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      color: #0E4A84;
+      text-align: center;
+    }
+
+    .publication-card {
+      display: block;
+      background: #fff;
+      border-radius: 18px;
+      padding: 1.6rem 1.75rem;
+      border: 1px solid rgba(14, 74, 132, 0.12);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .publication-card:hover,
+    .publication-card:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .publication-card + .publication-card {
+      margin-top: 1.25rem;
+    }
+
+    .pub-label {
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: #0E4A84;
+      display: block;
+      margin-bottom: 0.65rem;
+    }
+
+    .publication-card p {
+      margin-bottom: 0.35rem;
+    }
+
+    .yang {
+      color: #B22222;
+      font-weight: 700;
+    }
+
+    .pub-category-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0E4A84;
+      text-align: center;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid rgba(14, 74, 132, 0.25);
+      margin-bottom: 0.5rem;
+      margin-top: 4rem;
+    }
+
+    .best-paper {
+      color: #8B0000;
+      font-weight: 700;
+    }
+
+    .conf-tab-switcher {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      width: min(100%, 470px);
+      margin: 0 auto 2.5rem;
+      padding: 0.7rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(14, 74, 132, 0.14);
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
+    }
+
+    .conf-tab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.78rem 1.1rem;
+      border-radius: 999px;
+      text-decoration: none !important;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .conf-tab:first-child {
+      color: #0f4f6c;
+      background: linear-gradient(135deg, #f1fbff, #dff4fb);
+      border: 1px solid rgba(23, 119, 156, 0.2);
+      box-shadow: 0 10px 18px rgba(23, 119, 156, 0.12);
+    }
+
+    .conf-tab:last-child {
+      color: #5f3146;
+      background: linear-gradient(135deg, #fff4f7, #fde7ef);
+      border: 1px solid rgba(173, 78, 121, 0.2);
+      box-shadow: 0 10px 18px rgba(173, 78, 121, 0.12);
+    }
+
+    .conf-tab:first-child:hover,
+    .conf-tab:first-child.conf-tab--active {
+      background: linear-gradient(135deg, #17779c, #3aaecf);
+      color: #fff !important;
+      box-shadow: 0 16px 28px rgba(23, 119, 156, 0.24);
+      transform: translateY(-2px);
+    }
+
+    .conf-tab:last-child:hover,
+    .conf-tab:last-child.conf-tab--active {
+      background: linear-gradient(135deg, #ad4e79, #d9779d);
+      color: #fff !important;
+      box-shadow: 0 16px 28px rgba(173, 78, 121, 0.24);
+      transform: translateY(-2px);
+    }
+
+    .conf-tab-label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.15;
+      text-align: center;
+      gap: 0.14rem;
+    }
+
+    .conf-tab-label strong {
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+
+    .conf-tab-label span {
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .footer-logo {
+      display: inline-block;
+      background: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .footer-logo img {
+      display: block;
+      max-height: 60px;
+      width: auto;
+    }
+
+    @media (max-width: 768px) {
+      .ftco-footer .col-md-12 > div {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+      }
+
+      .footer-logo img {
+        max-height: 150px !important;
+      }
+
+      .footer-line-1::after {
+        content: '\A';
+        white-space: pre;
+      }
+
+      .heading-section h2 {
+        font-size: 1.5rem !important;
+      }
+
+      .pub-label {
+        font-size: 0.8rem !important;
+      }
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <div data-navbar data-active="output"></div>
+
+  <section class="ftco-section bg-light" id="conferences-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3 mt-4">
+        <div class="col-md-8 heading-section text-center ftco-animate">
+          <h2 class="mb-4">Conferences</h2>
+          <p>Conference presentations by IDEA LAB members. Feel free to reach out with any questions! (sunwoongy@hanyang.ac.kr)</p>
+        </div>
+      </div>
+
+      <div class="conf-tab-switcher ftco-animate">
+        <a href="#" class="conf-tab conf-tab--active" data-tab="intl">
+          <span class="conf-tab-label">
+            <strong>International</strong>
+            <span>Conferences</span>
+          </span>
+        </a>
+        <a href="#" class="conf-tab" data-tab="dome">
+          <span class="conf-tab-label">
+            <strong>Domestic</strong>
+            <span>Conferences</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="publications-list">
+        <div id="conf-intl-section">
+
+        <h3 class="pub-section-title">2025</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>14.</strong> APCOM 2025 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> J. Kim, <span class="yang">S. Yang</span>, and N. Kang</p>
+          <p><strong>Title:</strong> Point-based Diffusion Model for Predicting Spatio-Temporal Dynamics in Physical Systems</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>13.</strong> NURETH-21, 2025 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> J. Shin, M. Lee, C. Kim, <span class="yang">S. Yang</span>, J. Jeon</p>
+          <p><strong>Title:</strong> A Feasibility Study of Physics-Informed Neural Network-Based Severe Accident Analysis Code</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>12.</strong> NURETH-21, 2025 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> J. Jeon, M. Lee, M. Song, B. Cho, <span class="yang">S. Yang</span>, N. Kang, H. Choi, Y. Yu</p>
+          <p><strong>Title:</strong> Preliminary CFD Benchmarking of Machine Learning Algorithm for Korean Virtual Small Modular Reactor</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>11.</strong> ASME IDETC/CIE, 2025 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> S. Kim, <span class="yang">S. Yang</span>, M. Seo, and N. Kang</p>
+          <p><strong>Title:</strong> Decoupled Dynamics Framework with Neural Fields for 3D Spatio-Temporal Prediction of Vehicle Collisions</p>
+        </div>
+
+        <h3 class="pub-section-title">2024</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>10.</strong> APS DFD, 2024 <strong>[Interactive Session]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, Y. Hong, A. Vishwasrao, R. Vinuesa, and N. Kang</p>
+          <p><strong>Title:</strong> Integration of Temporal Dynamics in Graph U-Nets for Improved Mesh-Agnostic Spatio-Temporal Flow Prediction</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>9.</strong> ICTAM, 2024 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, R. Vinuesa, and N. Kang</p>
+          <p><strong>Title:</strong> Mesh-agnostic Spatio-temporal Prediction of Flows using Improved Graph U-nets</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>8.</strong> AIAA Aviation, 2024 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> Y.E. Kang, K. Lee, Y. Hong, <span class="yang">S. Yang</span>, and K. Yee</p>
+          <p><strong>Title:</strong> Leveraging Deep Neural Networks for Efficient Prediction of Aerodynamic Performance Tables</p>
+        </div>
+
+        <h3 class="pub-section-title">2023</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>7.</strong> 79th VFS Forum, 2023 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> Y. Hong, D. Lee, <span class="yang">S. Yang</span>, H. Kook, and K. Yee</p>
+          <p><strong>Title:</strong> Design Exploration for Aerodynamic Performance of Hovering Stacked Rotor</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>6.</strong> AIAA SciTech, 2023 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span> and K. Yee</p>
+          <p><strong>Title:</strong> Uncertainty Quantification via Deep Ensembles in Missile Performance Prediction</p>
+        </div>
+
+        <h3 class="pub-section-title">2022</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>5.</strong> Asian Computational Fluid Dynamics Conference, 2022 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span> and K. Yee</p>
+          <p><strong>Title:</strong> Uncertainty Quantification via Deep Ensembles</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>4.</strong> Asian Computational Fluid Dynamics Conference, 2022 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> Y. Hong, D. Lee, <span class="yang">S. Yang</span>, and K. Yee</p>
+          <p><strong>Title:</strong> Design Exploration on Performance for Co-rotating Coaxial Rotor</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>3.</strong> 48th European Rotorcraft Forum, 2022 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> Y. Hong, D. Lee, <span class="yang">S. Yang</span>, and K. Yee</p>
+          <p><strong>Title:</strong> Numerical Investigation and Design Exploration on Aerodynamic Performance for Stacked Rotor</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>2.</strong> Asia-Pacific International Symposium on Aerospace Technology, 2022 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span> and K. Yee</p>
+          <p><strong>Title:</strong> Quantifying Calibration Uncertainty in Missile Aerodynamic Data via Deep Ensembles</p>
+        </div>
+
+        <h3 class="pub-section-title">2021</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>1.</strong> Asia-Pacific International Symposium on Aerospace Technology, 2021 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, Y.E. Kang, and K. Yee</p>
+          <p><strong>Title:</strong> Multi-fidelity optimization via regression-based hierarchical Kriging</p>
+        </div>
+
+        </div><!-- /conf-intl-section -->
+        <div id="conf-dome-section" style="display:none;">
+
+        <h3 class="pub-section-title">2026</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>40.</strong> The Korean Society of Mechanical Engineers, 2026 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, S. Park, and K. Yee</p>
+          <p><strong>Title:</strong> Aerodynamic Design Optimization of Martian Rotorcraft Airfoil using AI</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>39.</strong> The Korean Society for Aeronautical and Space Sciences, 2026 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, S. Park, and K. Yee</p>
+          <p><strong>Title:</strong> Aerodynamic Design Optimization of Martian Rotorcraft Airfoil Using Generative AI and Quality-Diversity Algorithms</p>
+        </div>
+
+        <h3 class="pub-section-title">2025</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>38.</strong> The Korean Society of Mechanical Engineers, 2025 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, Y. Lee, and N.W. Kang</p>
+          <p><strong>Title:</strong> Physics Guided Multi Fidelity DeepONet for Data Efficient Flow Field Prediction</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>37.</strong> The Korean Society for Aeronautical and Space Sciences, 2025 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span> and N.W. Kang</p>
+          <p><strong>Title:</strong> Multi Fidelity Aerodynamic Shape Optimization using AI Agents</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>36.</strong> The Korean Society of Mechanical Engineers, 2025 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span> and N.W. Kang</p>
+          <p><strong>Title:</strong> AI Agents for Multi Fidelity Aerodynamic Shape Optimization</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>35.</strong> AAICON, 2025 <strong>[Oral]</strong> <span class="best-paper">[Best Paper Award]</span></span>
+          <p><strong>Authors:</strong> S. Kim, <span class="yang">S. Yang</span>, S. Kim, J. Han, B. Cho, C. Song, J. Kang, and N.W. Kang</p>
+          <p><strong>Title:</strong> Prediction of Unsteady Flow Fields for Varying Multi-Cylinder Arrangements Using DeepONet</p>
+        </div>
+
+        <h3 class="pub-section-title">2024</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>34.</strong> The Korean Society of Mechanical Engineers, 2024 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, Y. Wang, A. Vishwasrao, R. Vinuesa, and N.W. Kang</p>
+          <p><strong>Title:</strong> Improved Temporal Prediction of Transient Flow Fields using Graph Neural Networks</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>33.</strong> The Korean Society of Mechanical Engineers, 2024 <strong>[Poster]</strong></span>
+          <p><strong>Authors:</strong> J. Kim, <span class="yang">S. Yang</span>, and N.W. Kang</p>
+          <p><strong>Title:</strong> Comparison of Spatio-Temporal Prediction Performance of 2D Cylinder Flow: Meshgraphnet vs Neural Implicit Representation</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>32.</strong> The Korean Society of Mechanical Engineers, 2024 <strong>[Poster]</strong></span>
+          <p><strong>Authors:</strong> S. Kim, <span class="yang">S. Yang</span>, and N.W. Kang</p>
+          <p><strong>Title:</strong> Improvement and Optimization of Ensemble-based Multi-Fidelity Approaches</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>31.</strong> Korean Society for Computational Fluids Engineering, 2024 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, R. Vinuesa, and N.W. Kang</p>
+          <p><strong>Title:</strong> Prediction of Vortex Shedding from a Circular Cylinder using Graph Neural Networks</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>30.</strong> The Korean Society of Mechanical Engineers, 2024 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, R. Vinuesa, and N.W. Kang</p>
+          <p><strong>Title:</strong> Temporal Flow Fields Prediction using Mesh-agnostic Graph U-Nets</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>29.</strong> Korean Society for Computational Fluids Engineering, 2024 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, R. Vinuesa, and N. Kang</p>
+          <p><strong>Title:</strong> Prediction of Vortex Shedding from a Circular Cylinder using Graph Neural Networks</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>28.</strong> The Korean Society of Mechanical Engineers, 2024 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, R. Vinuesa, and N. Kang</p>
+          <p><strong>Title:</strong> Temporal Flow Fields Prediction using Mesh-agnostic Graph U-Nets</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>27.</strong> The Korean Society of Mechanical Engineers, 2024 <strong>[Poster]</strong></span>
+          <p><strong>Authors:</strong> S. Kim, <span class="yang">S. Yang</span>, and N. Kang</p>
+          <p><strong>Title:</strong> Feasibility Study of Multi-fidelity LSTM for Time-series Prediction</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>26.</strong> The Korean Society of Mechanical Engineers, 2024 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> J. Kim, J. Park, <span class="yang">S. Yang</span>, and N. Kang</p>
+          <p><strong>Title:</strong> Physics-Informed Graph Neural Network Based Surrogate Model for Predicting the Durability of OLED Displays under Drop Impact</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>25.</strong> The Korean Society of Mechanical Engineers, 2024 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> D. Lee, <span class="yang">S. Yang</span>, J. Oh, S. Cho, S. Kim, and N. Kang</p>
+          <p><strong>Title:</strong> Digital Twin for Wave Energy Converter: Uncertainty Quantification of Real-time Wave Height Prediction using Deep Learning</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>24.</strong> The Korean Society of Mechanical Engineers, 2024 <strong>[Oral]</strong> <span class="best-paper">[Best Paper Award]</span></span>
+          <p><strong>Authors:</strong> S. Lee, <span class="yang">S. Yang</span>, and N. Kang</p>
+          <p><strong>Title:</strong> Manipulator Mechanism Design Optimization using Surrogate Model-based Optimization and Sensitivity Analysis for Design Rule Extraction Methodology</p>
+        </div>
+
+        <h3 class="pub-section-title">2023</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>23.</strong> The Korean Society of Mechanical Engineers, 2023 <strong>[Oral]</strong> <span class="best-paper">[Best Paper Award]</span></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, H. Kim, Y. Hong, K. Yee, and N. Kang</p>
+          <p><strong>Title:</strong> Fluid-oriented Physics-informed Neural Networks via Adaptive Sampling and Data-driven Approaches</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>22.</strong> Korean Society for Computational Fluids Engineering, 2023 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, H. Kim, Y. Hong, K. Yee, and N. Kang</p>
+          <p><strong>Title:</strong> Prediction of 2D Flow Field using Vorticity-pressure-aware Physics-informed Neural Networks</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>21.</strong> Korean Society for Computational Fluids Engineering, 2023 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> Y. Hong, D. Lee, <span class="yang">S. Yang</span>, H. Kook, and K. Yee</p>
+          <p><strong>Title:</strong> Investigation of Steady and Unsteady effects of Hovering Stacked Rotor</p>
+        </div>
+
+        <h3 class="pub-section-title">2022</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>20.</strong> The Korean Society for Aeronautical and Space Sciences, 2022 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, Y.E. Kang, and K. Yee</p>
+          <p><strong>Title:</strong> Physics-aware prediction of high-dimensional data: theoretical background</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>19.</strong> The Korean Society for Aeronautical and Space Sciences, 2022 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> Y.E. Kang, <span class="yang">S. Yang</span>, and K. Yee</p>
+          <p><strong>Title:</strong> Physics-aware prediction of high-dimensional data: practical applications</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>18.</strong> The Korean Society for Aeronautical and Space Sciences, 2022 <strong>[Poster]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span> and K. Yee</p>
+          <p><strong>Title:</strong> Towards Quantifying Calibrated Uncertainty in Missile Performance Regression Tasks via Deep Ensembles</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>17.</strong> The Korean Society of Mechanical Engineers, 2022 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, Y.E. Kang, and K. Yee</p>
+          <p><strong>Title:</strong> Physics-aware prediction of high-dimensional data: theoretical background</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>16.</strong> The Korean Society of Mechanical Engineers, 2022 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> Y.E. Kang, <span class="yang">S. Yang</span>, and K. Yee</p>
+          <p><strong>Title:</strong> Physics-aware prediction of high-dimensional data: practical applications</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>15.</strong> AIIS Retreat, 2022 <strong>[Poster]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, Y.E. Kang, and K. Yee</p>
+          <p><strong>Title:</strong> Extraction of Physical Generating Factors from Given Dataset</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>14.</strong> Korea Data Mining Society, 2022 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, Y.E. Kang, and K. Yee</p>
+          <p><strong>Title:</strong> Physics-aware Reduced-order Modeling of Transonic Flow via &beta;-variational Autoencoder</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>13.</strong> Korea Institute of Military Science and Technology, 2022 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> K. Kang, Y. Kim, E. Kang, J. Huh, <span class="yang">S. Yang</span>, and K. Yee</p>
+          <p><strong>Title:</strong> Comparison of fusion methods for modeling missile aerodynamic database based on multi-fidelity aerodynamic data</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>12.</strong> The Korean Society of Mechanical Engineers, 2022 <strong>[Oral]</strong> <span class="best-paper">[Best Paper Award]</span></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span> and K. Yee</p>
+          <p><strong>Title:</strong> Application of deep ensembles to quantifying predictive uncertainty in aerospace engineering</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>11.</strong> The Korean Society for Aeronautical and Space Sciences, 2022 <strong>[Poster]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span> and K. Yee</p>
+          <p><strong>Title:</strong> Application of deep ensembles to quantifying predictive uncertainty in aerodynamic data</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>10.</strong> The Korean Society for Aeronautical and Space Sciences, 2022 <strong>[Poster]</strong></span>
+          <p><strong>Authors:</strong> Y.E. Kang, <span class="yang">S. Yang</span>, and K. Yee</p>
+          <p><strong>Title:</strong> Investigation on beta-VAE based reduced-order modeling of transonic flowfield</p>
+        </div>
+
+        <h3 class="pub-section-title">2021</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>9.</strong> The Korean Society for Aeronautical and Space Sciences, 2021 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, S. Yoo, S. Jeong, and K. Yee</p>
+          <p><strong>Title:</strong> Missile performance prediction via multi-fidelity modelling</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>8.</strong> The Korean Society for Aeronautical and Space Sciences, 2021 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, S. Lee, and K. Yee</p>
+          <p><strong>Title:</strong> Inverse design optimization framework using variational autoencoder: application to wind turbine airfoil optimization</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>7.</strong> The Korean Society of Mechanical Engineers, 2021 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, Y.E. Kang, and K. Yee</p>
+          <p><strong>Title:</strong> Multi-fidelity optimization via regression-based hierarchical Kriging</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>6.</strong> Korean Institute of Intelligent Systems, 2021 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, S. Lee, and K. Yee</p>
+          <p><strong>Title:</strong> Development of inverse design framework using deep generative model</p>
+        </div>
+
+        <h3 class="pub-section-title">2020</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>5.</strong> The Korean Society of Mechanical Engineers, 2020 <strong>[Oral]</strong> <span class="best-paper">[Best Paper Award]</span></span>
+          <p><strong>Authors:</strong> S. Shin, <span class="yang">S. Yang</span>, S. Lee, and K. Yee</p>
+          <p><strong>Title:</strong> Airfoil inverse design performance comparison among MLP, CNN, and RNN</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>4.</strong> The Korean Society for Aeronautical and Space Sciences, 2020 <strong>[Poster]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, Y. Hong, S. Park, and K. Yee</p>
+          <p><strong>Title:</strong> Airfoil optimization of UCAV considering cruise flight performance and low-speed longitudinal stability</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>3.</strong> Korean Society for Computational Fluids Engineering, 2020 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, S. Park, and K. Yee</p>
+          <p><strong>Title:</strong> Multi-objective and multivariate aerodynamic design analysis of double delta wing UCAV</p>
+        </div>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>2.</strong> The National Congress of Fluids Engineering, 2020 <strong>[Oral]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span> and K. Yee</p>
+          <p><strong>Title:</strong> Trade-off study of the multi-objective unmanned combat aerial vehicle optimization via variable-fidelity modeling and data mining</p>
+        </div>
+
+        <h3 class="pub-section-title">2019</h3>
+
+        <div class="publication-card ftco-animate">
+          <span class="pub-label"><strong>1.</strong> The Korean Society for Aeronautical and Space Sciences, 2019 <strong>[Poster]</strong></span>
+          <p><strong>Authors:</strong> <span class="yang">S. Yang</span>, Y. Hong, S. Park, and K. Yee</p>
+          <p><strong>Title:</strong> Multi-objective multi-fidelity design optimization of cranked wing type UCAV considering longitudinal stability</p>
+        </div>
+
+        </div><!-- /conf-dome-section -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="ftco-footer ftco-section" style="padding: 2rem 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div style="display: flex; align-items: center; justify-content: center; gap: 3rem;">
+            <div class="footer-logo" style="background: transparent;">
+              <img src="images/01 캐릭터 마크 - 기본형-04.png" alt="Hanyang University ERICA logo" style="max-height: 240px;">
+            </div>
+            <p style="text-align: center; margin: 0;">
+              <span class="footer-line-1">&copy; IDEA LAB, Hanyang University ERICA.</span>
+              <span class="footer-line-2">All rights reserved.</span><br>
+              <span class="template-credit">This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/navbar.js"></script>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabs = document.querySelectorAll('.conf-tab');
+      var intlSection = document.getElementById('conf-intl-section');
+      var domeSection = document.getElementById('conf-dome-section');
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function (e) {
+          e.preventDefault();
+          var targetTab = this.getAttribute('data-tab');
+
+          tabs.forEach(function (t) { t.classList.remove('conf-tab--active'); });
+          this.classList.add('conf-tab--active');
+
+          if (targetTab === 'intl') {
+            intlSection.style.display = 'block';
+            domeSection.style.display = 'none';
+          } else {
+            intlSection.style.display = 'none';
+            domeSection.style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

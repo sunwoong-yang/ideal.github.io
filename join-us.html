@@ -59,10 +59,10 @@
     }
 
     .contact-card {
-      background: #fff;
+      background: linear-gradient(135deg, rgba(253, 232, 212, 0.1) 0%, rgba(255, 250, 245, 0.1) 100%);
       border-radius: 16px;
-      border: 1px solid rgba(14, 74, 132, 0.12);
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.22);
       padding: 1.5rem 1.75rem;
       margin: 0 auto 1.5rem;
       max-width: 704px;
@@ -117,8 +117,13 @@
       color: #0E4A84;
       background: rgba(14, 74, 132, 0.08);
       border-left: 4px solid #0E4A84;
+      border-right: 4px solid #0E4A84;
       border-radius: 10px;
       padding: 0.55rem 0.9rem;
+      text-align: center;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .recruitment-card ul {
@@ -231,13 +236,14 @@
             </div>
 
             <div class="faq-item">
-              <div class="faq-question">이 연구실에서 어떤 것을 기대할 수 있나요?</div>
+              <div class="faq-question">연구실에서 받을 수 있는 혜택은 무엇인가요?</div>
               <ul>
-                <li><strong>자동차·반도체·항공 등 다양한 분야와의 산학 프로젝트</strong>를 추진해 산업 인공지능 역량을 바탕으로 한 취업 포트폴리오 제공</li>
-                <li><strong>연구실 투입 후 2년 내 SCI(E) 논문 게재</strong>를 목표로, 지도교수가 현재도 직접 수행하는 논문 작성 노하우에 기반한 논문 지도</li>
-                <li><strong>국내외 학회 발표·참가 전폭 지원</strong>과 논문 실적 중심 커리어 멘토링</li>
-                <li><strong>연구 브랜딩 역량 강화</strong>를 위해, 연구성과를 임팩트 있게 전달하는 발표자료 제작 및 발표 역량을 지도하고, 이를 진로·취업 경쟁력으로 연결</li>
-                <li><strong>서울대학교, KAIST, POSTECH, 독일항공우주센터(DLR), Purdue University, University of Michigan</strong> 등과의 협업 기회 제공</li>
+                <li><strong>산학 프로젝트</strong>: 자동차·반도체·항공우주·방산 등 다양한 분야와의 산학 과제를 통해 산업 AI 역량 기반의 취업 포트폴리오 제공</li>
+                <li><strong>논문 지도</strong>: 연구실 투입 후 2년 내 SCI(E) 논문 게재를 목표로, 지도교수가 직접 논문 작성 노하우 전수</li>
+                <li><strong>학회 지원</strong>: 국내 및 해외 학회 발표·참가 전폭 지원</li>
+                <li><strong>공동연구 기회</strong>: 서울대학교, KAIST, POSTECH, 독일항공우주센터(DLR), Purdue University, University of Michigan 등</li>
+                <li><strong>AI 구독료 지원</strong>: 매달 13만원 현금 지급으로 ChatGPT, Claude, Google AI Pro 등 연구용 AI 툴 부담 없이 사용 가능</li>
+                <li><strong>기타 복지</strong>: 논문 인센티브, 프로젝트 수행 인센티브, 코어타임 (10시-16시) 운영, 커피머신</li>
               </ul>
             </div>
 
@@ -286,6 +292,14 @@
   <script src="js/navbar.js"></script>
 
   <script src="js/main.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      var questions = document.querySelectorAll('.faq-question');
+      var maxWidth = 0;
+      questions.forEach(function (q) { maxWidth = Math.max(maxWidth, q.scrollWidth); });
+      questions.forEach(function (q) { q.style.width = maxWidth + 'px'; });
+    });
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,14 @@
+{"t":0,"agent":"a3e4e3b","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"ab5bb67","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a0ffb82","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a096ecb","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"aaf4ece","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"ae8d87a","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"ad9dad4","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a68f4e8","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a206085","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a97f917","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"af9008e","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a4adb30","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"system","event":"keyword_detected","keyword":"team"}
+{"t":0,"agent":"system","event":"mode_change","mode_from":"none","mode_to":"team"}

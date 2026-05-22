@@ -36,8 +36,13 @@
         <li class="nav-item" data-nav-item="research">
           <a href="${prefix}research.html" class="nav-link"><span>Research</span></a>
         </li>
-        <li class="nav-item" data-nav-item="publications">
-          <a href="${prefix}publications.html" class="nav-link"><span>Publications</span></a>
+        <li class="nav-item dropdown" data-nav-item="output">
+          <a class="nav-link dropdown-toggle" href="#" id="outputDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"><span>Achievements</span></a>
+          <div class="dropdown-menu" aria-labelledby="outputDropdown">
+            <a class="dropdown-item" href="${prefix}publications.html">Publications</a>
+            <a class="dropdown-item" href="${prefix}conferences.html">Conferences</a>
+          </div>
         </li>
         <li class="nav-item" data-nav-item="projects">
           <a href="${prefix}projects.html" class="nav-link"><span>Projects</span></a>
