@@ -357,6 +357,40 @@
     color: #444;
   }
 
+  .team-card .member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.25rem;
+    border: 3px solid rgba(14, 74, 132, 0.15);
+    box-shadow: 0 4px 12px rgba(14, 74, 132, 0.12);
+  }
+
+  .team-card .member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .team-card .member-since {
+    font-size: 0.78rem;
+    color: #aaa;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.03em;
+  }
+
+  .team-card .member-quote {
+    font-style: italic;
+    color: #777;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: 0;
+  }
+
   .news-item {
     display: flex;
     gap: 1rem;
@@ -528,24 +562,24 @@
 
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
-					<div class="team-card team-card-placeholder">
-						<div class="team-role">M.S. Candidate</div>
-						<h4>Next Member</h4>
-						<p>More IDEA LAB researchers will be introduced soon.</p>
+					<div class="team-card">
+						<div class="member-photo" style="background:#f8f9fa;">
+						</div>
+						<div class="team-role">Undergraduate Intern</div>
+						<h4>정승한</h4>
+						<p class="member-since">Prospective M.S. (2027.03)</p>
+						<p class="member-quote"><em>To be filled.</em></p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
-					<div class="team-card team-card-placeholder">
-						<div class="team-role">M.S. Candidate</div>
-						<h4>Next Member</h4>
-						<p>More IDEA LAB researchers will be introduced soon.</p>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
-					<div class="team-card team-card-placeholder">
-						<div class="team-role">M.S. Candidate</div>
-						<h4>Next Member</h4>
-						<p>More IDEA LAB researchers will be introduced soon.</p>
+					<div class="team-card">
+						<div class="member-photo">
+							<img src="images/최민혁.jpg" alt="최민혁">
+						</div>
+						<div class="team-role">Undergraduate Intern</div>
+						<h4>최민혁</h4>
+						<p class="member-since">Prospective M.S. (2028.03)</p>
+						<p class="member-quote"><em>"Wanna become a Defense AI reasearcher"</em></p>
 					</div>
 				</div>
 			</div>
