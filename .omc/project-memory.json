@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1780459195664,
+  "lastScanned": 1780653852783,
   "projectRoot": "/mnt/z/★ERICA/3. 연구실 브랜딩/Lab_github/ideal.github.io",
   "techStack": {
     "languages": [
@@ -47,7 +47,7 @@
       "path": "css",
       "purpose": null,
       "fileCount": 13,
-      "lastAccessed": 1780459195615,
+      "lastAccessed": 1780653852726,
       "keyFiles": [
         "ajax-loader.gif",
         "animate.css",
@@ -60,7 +60,7 @@
       "path": "demo",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1780459195620,
+      "lastAccessed": 1780653852741,
       "keyFiles": [
         "20210428.gif"
       ]
@@ -69,14 +69,14 @@
       "path": "fonts",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1780459195625,
+      "lastAccessed": 1780653852746,
       "keyFiles": []
     },
     "images": {
       "path": "images",
       "purpose": null,
       "fileCount": 47,
-      "lastAccessed": 1780459195632,
+      "lastAccessed": 1780653852752,
       "keyFiles": [
         "01 캐릭터 마크 - 기본형-04.png",
         "01_text_right_black.png",
@@ -89,7 +89,7 @@
       "path": "js",
       "purpose": null,
       "fileCount": 16,
-      "lastAccessed": 1780459195638,
+      "lastAccessed": 1780653852757,
       "keyFiles": [
         "aos.js",
         "bootstrap.min.js",
@@ -102,7 +102,7 @@
       "path": "news",
       "purpose": null,
       "fileCount": 3,
-      "lastAccessed": 1780459195644,
+      "lastAccessed": 1780653852762,
       "keyFiles": [
         "260301_news-hanyang-appointment.html",
         "260320_news-excellent-paper.html",
@@ -113,7 +113,7 @@
       "path": "scss",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1780459195648,
+      "lastAccessed": 1780653852767,
       "keyFiles": [
         "style.scss"
       ]
@@ -121,9 +121,9 @@
   },
   "hotPaths": [
     {
-      "path": "publications.html",
-      "accessCount": 5,
-      "lastAccessed": 1780459357533,
+      "path": "team-researchers.html",
+      "accessCount": 4,
+      "lastAccessed": 1780653987187,
       "type": "file"
     }
   ],
