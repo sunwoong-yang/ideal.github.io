@@ -941,6 +941,140 @@
     color: #0E4A84 !important;
     text-decoration: none !important;
   }
+
+  /* ── Announcement Popup ── */
+  #idea-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 20, 50, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.38s ease;
+    padding: 1rem;
+  }
+
+  #idea-popup-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #idea-popup-card {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 18px;
+    padding: 0 1.9rem 1.4rem;
+    max-width: 440px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2), 0 0 0 1px rgba(14, 74, 132, 0.08);
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+    text-align: center;
+  }
+
+  #idea-popup-overlay.show #idea-popup-card {
+    transform: translateY(0);
+  }
+
+  .idea-popup-accent-bar {
+    height: 3px;
+    background: linear-gradient(90deg, #0E4A84 0%, #1a6ab5 100%);
+    margin: 0 -1.9rem 1.35rem;
+  }
+
+  #idea-popup-close {
+    position: absolute;
+    top: 1.05rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.2rem;
+    transition: color 0.2s;
+  }
+
+  #idea-popup-close:hover {
+    color: #555;
+  }
+
+  .idea-popup-eyebrow {
+    font-size: 1.17rem;
+    font-weight: 600;
+    color: #0E4A84;
+    margin-bottom: 0.5rem;
+  }
+
+  .idea-popup-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.55;
+    margin-bottom: 0.75rem;
+    color: #111;
+  }
+
+  .idea-popup-title-label {
+    color: #111;
+    font-weight: 700;
+  }
+
+  .idea-popup-desc {
+    font-size: 0.80rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 0.9rem;
+  }
+
+  .idea-popup-desc strong {
+    color: #111;
+    font-weight: 600;
+  }
+
+  .idea-popup-divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.07);
+    margin-bottom: 0.75rem;
+  }
+
+  .idea-popup-meta {
+    font-size: 0.74rem;
+    color: #888;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  .idea-popup-footer {
+    margin-top: 1rem;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 0.85rem;
+  }
+
+  #idea-popup-dismiss {
+    background: none;
+    border: none;
+    color: #222;
+    font-size: 0.74rem;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+  }
+
+  #idea-popup-dismiss:hover {
+    color: #000;
+    text-decoration: underline;
+  }
 </style>
 </head>
 
@@ -1157,6 +1291,46 @@
 
 
 	<script src="js/main.js"></script>
+
+  <!-- Announcement Popup -->
+  <div id="idea-popup-overlay" role="dialog" aria-modal="true" aria-label="연구과제 수주 안내">
+    <div id="idea-popup-card">
+      <div class="idea-popup-accent-bar"></div>
+      <button id="idea-popup-close" aria-label="닫기">&#x2715;</button>
+      <p class="idea-popup-eyebrow">신규 연구과제 수주</p>
+      <h4 class="idea-popup-title"><span class="idea-popup-title-label">[연구과제명]</span><br>뿌리산업 AI 생태계 조성을 위한<br>디지털 전환 기술고도화 기반 구축</h4>
+      <p class="idea-popup-desc">IDEA LAB은 본 과제의<br><strong>제조업 5대 분야 (금형·소성가공·주조·정밀가공·사출/프레스)</strong><br><strong>설계 자동화를 위한 AI 모델 개발</strong>을 담당합니다.</p>
+      <div class="idea-popup-divider"></div>
+      <p class="idea-popup-meta">산업통상자원부 · 한국생산기술연구원 주관<br>2026.07 – 2030.12 (4.5년) &nbsp;·&nbsp; 5억 원</p>
+      <div class="idea-popup-footer">
+        <button id="idea-popup-dismiss">더이상 안보기</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var KEY = 'ideaLab_popup_rootIndustry_v7';
+      if (localStorage.getItem(KEY)) return;
+
+      var overlay = document.getElementById('idea-popup-overlay');
+      if (!overlay) return;
+
+      setTimeout(function () { overlay.classList.add('show'); }, 900);
+
+      function close() {
+        overlay.classList.remove('show');
+        setTimeout(function () { overlay.style.display = 'none'; }, 420);
+      }
+
+      document.getElementById('idea-popup-close').addEventListener('click', close);
+      overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+      document.getElementById('idea-popup-dismiss').addEventListener('click', function () {
+        localStorage.setItem(KEY, '1');
+        close();
+      });
+    })();
+  </script>
 
 </body>
 

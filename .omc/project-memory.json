@@ -121,9 +121,15 @@
   },
   "hotPaths": [
     {
+      "path": "index.html",
+      "accessCount": 26,
+      "lastAccessed": 1781616600466,
+      "type": "file"
+    },
+    {
       "path": "projects.html",
-      "accessCount": 20,
-      "lastAccessed": 1781600213993,
+      "accessCount": 21,
+      "lastAccessed": 1781615121303,
       "type": "file"
     },
     {
@@ -136,6 +142,24 @@
       "path": "js/navbar.js",
       "accessCount": 1,
       "lastAccessed": 1781597643689,
+      "type": "file"
+    },
+    {
+      "path": "news/260507_news-26CAE-conference.html",
+      "accessCount": 1,
+      "lastAccessed": 1781615120880,
+      "type": "file"
+    },
+    {
+      "path": "news.html",
+      "accessCount": 1,
+      "lastAccessed": 1781615126733,
+      "type": "file"
+    },
+    {
+      "path": "news/260616_news-root-industry-ai.html",
+      "accessCount": 1,
+      "lastAccessed": 1781615234362,
       "type": "file"
     }
   ],
