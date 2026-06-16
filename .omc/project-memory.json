@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1780975495155,
+  "lastScanned": 1781594058369,
   "projectRoot": "/mnt/z/★ERICA/3. 연구실 브랜딩/Lab_github/ideal.github.io",
   "techStack": {
     "languages": [
@@ -47,7 +47,7 @@
       "path": "css",
       "purpose": null,
       "fileCount": 13,
-      "lastAccessed": 1780975495036,
+      "lastAccessed": 1781594058295,
       "keyFiles": [
         "ajax-loader.gif",
         "animate.css",
@@ -60,7 +60,7 @@
       "path": "demo",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1780975495058,
+      "lastAccessed": 1781594058300,
       "keyFiles": [
         "20210428.gif"
       ]
@@ -69,14 +69,14 @@
       "path": "fonts",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1780975495072,
+      "lastAccessed": 1781594058312,
       "keyFiles": []
     },
     "images": {
       "path": "images",
       "purpose": null,
       "fileCount": 47,
-      "lastAccessed": 1780975495088,
+      "lastAccessed": 1781594058318,
       "keyFiles": [
         "01 캐릭터 마크 - 기본형-04.png",
         "01_text_right_black.png",
@@ -89,7 +89,7 @@
       "path": "js",
       "purpose": null,
       "fileCount": 16,
-      "lastAccessed": 1780975495103,
+      "lastAccessed": 1781594058325,
       "keyFiles": [
         "aos.js",
         "bootstrap.min.js",
@@ -102,7 +102,7 @@
       "path": "news",
       "purpose": null,
       "fileCount": 3,
-      "lastAccessed": 1780975495120,
+      "lastAccessed": 1781594058331,
       "keyFiles": [
         "260301_news-hanyang-appointment.html",
         "260320_news-excellent-paper.html",
@@ -113,7 +113,7 @@
       "path": "scss",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1780975495134,
+      "lastAccessed": 1781594058338,
       "keyFiles": [
         "style.scss"
       ]
@@ -121,9 +121,21 @@
   },
   "hotPaths": [
     {
-      "path": "publications.html",
-      "accessCount": 4,
-      "lastAccessed": 1780975655409,
+      "path": "projects.html",
+      "accessCount": 20,
+      "lastAccessed": 1781600213993,
+      "type": "file"
+    },
+    {
+      "path": "team-advisor.html",
+      "accessCount": 16,
+      "lastAccessed": 1781597714814,
+      "type": "file"
+    },
+    {
+      "path": "js/navbar.js",
+      "accessCount": 1,
+      "lastAccessed": 1781597643689,
       "type": "file"
     }
   ],
