@@ -87,10 +87,10 @@
 
     .demo-options {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       align-items: stretch;
       gap: 0.7rem;
-      width: min(100%, 470px);
+      width: min(100%, 680px);
       padding: 0.7rem 0.8rem;
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.94);
@@ -120,13 +120,13 @@
     }
 
     @keyframes cursor-approach {
-      0%    { transform: translate(14px, 14px); opacity: 0; }
-      7.5%  { transform: translate(14px, 14px); opacity: 1; }
-      30%   { transform: translate(0, 0);        opacity: 1; }
-      42.5% { transform: translate(0, 0);        opacity: 1; }
-      49%   { transform: translate(0, 0);        opacity: 0; }
-      49.5% { transform: translate(14px, 14px); opacity: 0; }
-      100%  { transform: translate(14px, 14px); opacity: 0; }
+      0%   { transform: translate(14px, 14px); opacity: 0; }
+      5%   { transform: translate(14px, 14px); opacity: 1; }
+      20%  { transform: translate(0, 0);        opacity: 1; }
+      28%  { transform: translate(0, 0);        opacity: 1; }
+      33%  { transform: translate(0, 0);        opacity: 0; }
+      34%  { transform: translate(14px, 14px); opacity: 0; }
+      100% { transform: translate(14px, 14px); opacity: 0; }
     }
 
     .demo-option::after {
@@ -140,11 +140,16 @@
       background-size: contain;
       background-repeat: no-repeat;
       pointer-events: none;
-      animation: cursor-approach 3.4s ease-out infinite;
+      animation: cursor-approach 5.1s ease-out infinite;
+    }
+
+    .demo-option:nth-child(2)::after {
+      animation-delay: 1.7s;
+      animation-fill-mode: backwards;
     }
 
     .demo-option:last-child::after {
-      animation-delay: 1.7s;
+      animation-delay: 3.4s;
       animation-fill-mode: backwards;
     }
 
@@ -155,11 +160,18 @@
       box-shadow: 0 10px 18px rgba(23, 119, 156, 0.12);
     }
 
-    .demo-option:last-child {
+    .demo-option:nth-child(2) {
       color: #5f3146;
       background: linear-gradient(135deg, #fff4f7, #fde7ef);
       border-color: rgba(173, 78, 121, 0.2);
       box-shadow: 0 10px 18px rgba(173, 78, 121, 0.12);
+    }
+
+    .demo-option:last-child {
+      color: #1f4d2e;
+      background: linear-gradient(135deg, #f0fdf4, #d1fae5);
+      border-color: rgba(22, 101, 52, 0.2);
+      box-shadow: 0 10px 18px rgba(22, 101, 52, 0.12);
     }
 
     .demo-option:hover,
@@ -174,10 +186,16 @@
       box-shadow: 0 16px 28px rgba(23, 119, 156, 0.24);
     }
 
-    .demo-option:last-child:hover,
-    .demo-option:last-child:focus {
+    .demo-option:nth-child(2):hover,
+    .demo-option:nth-child(2):focus {
       background: linear-gradient(135deg, #ad4e79, #d9779d);
       box-shadow: 0 16px 28px rgba(173, 78, 121, 0.24);
+    }
+
+    .demo-option:last-child:hover,
+    .demo-option:last-child:focus {
+      background: linear-gradient(135deg, #166534, #22c55e);
+      box-shadow: 0 16px 28px rgba(22, 101, 52, 0.24);
     }
 
     .demo-option-label {
@@ -587,6 +605,11 @@
         border-radius: 22px;
       }
 
+      .demo-option:nth-child(2)::after,
+      .demo-option:last-child::after {
+        animation-delay: 0s;
+      }
+
       .demo-option {
         width: 100%;
         min-width: 0;
@@ -648,6 +671,15 @@
                 <span>
                   <span class="demo-option-line">Large-Scale</span>
                   <span class="demo-option-line">Physics Prediction</span>
+                </span>
+              </span>
+            </a>
+            <a href="https://hanjinseong.github.io/ipmsm-design/" target="_blank" rel="noopener" class="demo-option">
+              <span class="demo-option-label">
+                <strong>Demo 3</strong>
+                <span>
+                  <span class="demo-option-line">Agent-based</span>
+                  <span class="demo-option-line">Motor Design</span>
                 </span>
               </span>
             </a>
