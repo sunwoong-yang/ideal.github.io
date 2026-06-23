@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1781692211786,
+  "lastScanned": 1782213774984,
   "projectRoot": "/mnt/z/★ERICA/3. 연구실 브랜딩/Lab_github/ideal.github.io",
   "techStack": {
     "languages": [
@@ -47,7 +47,7 @@
       "path": "css",
       "purpose": null,
       "fileCount": 13,
-      "lastAccessed": 1781692211674,
+      "lastAccessed": 1782213774934,
       "keyFiles": [
         "ajax-loader.gif",
         "animate.css",
@@ -60,7 +60,7 @@
       "path": "demo",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1781692211690,
+      "lastAccessed": 1782213774939,
       "keyFiles": [
         "20210428.gif"
       ]
@@ -69,14 +69,14 @@
       "path": "fonts",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1781692211707,
+      "lastAccessed": 1782213774945,
       "keyFiles": []
     },
     "images": {
       "path": "images",
       "purpose": null,
       "fileCount": 48,
-      "lastAccessed": 1781692211725,
+      "lastAccessed": 1782213774952,
       "keyFiles": [
         "01 캐릭터 마크 - 기본형-04.png",
         "01_text_right_black.png",
@@ -89,7 +89,7 @@
       "path": "js",
       "purpose": null,
       "fileCount": 16,
-      "lastAccessed": 1781692211744,
+      "lastAccessed": 1782213774958,
       "keyFiles": [
         "aos.js",
         "bootstrap.min.js",
@@ -102,7 +102,7 @@
       "path": "news",
       "purpose": null,
       "fileCount": 4,
-      "lastAccessed": 1781692211761,
+      "lastAccessed": 1782213774964,
       "keyFiles": [
         "260301_news-hanyang-appointment.html",
         "260320_news-excellent-paper.html",
@@ -114,25 +114,12 @@
       "path": "scss",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1781692211772,
+      "lastAccessed": 1782213774969,
       "keyFiles": [
         "style.scss"
       ]
     }
   },
-  "hotPaths": [
-    {
-      "path": "team-researchers.html",
-      "accessCount": 19,
-      "lastAccessed": 1781741089451,
-      "type": "file"
-    },
-    {
-      "path": "research.html",
-      "accessCount": 11,
-      "lastAccessed": 1781772744662,
-      "type": "file"
-    }
-  ],
+  "hotPaths": [],
   "userDirectives": []
 }
