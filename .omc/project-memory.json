@@ -120,6 +120,37 @@
       ]
     }
   },
-  "hotPaths": [],
+  "hotPaths": [
+    {
+      "path": "index.html",
+      "accessCount": 7,
+      "lastAccessed": 1782385049583,
+      "type": "file"
+    },
+    {
+      "path": "news.html",
+      "accessCount": 6,
+      "lastAccessed": 1782384959028,
+      "type": "file"
+    },
+    {
+      "path": "news/260624_news-ai-digital-learning-center.html",
+      "accessCount": 4,
+      "lastAccessed": 1782384905287,
+      "type": "file"
+    },
+    {
+      "path": "news/260616_news-root-industry-ai.html",
+      "accessCount": 1,
+      "lastAccessed": 1782384594989,
+      "type": "file"
+    },
+    {
+      "path": "news/260625_news-ai-digital-learning-center.html",
+      "accessCount": 1,
+      "lastAccessed": 1782384754008,
+      "type": "file"
+    }
+  ],
   "userDirectives": []
 }
