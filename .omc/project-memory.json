@@ -123,20 +123,20 @@
   "hotPaths": [
     {
       "path": "index.html",
-      "accessCount": 7,
-      "lastAccessed": 1782385049583,
+      "accessCount": 9,
+      "lastAccessed": 1782445607228,
       "type": "file"
     },
     {
       "path": "news.html",
-      "accessCount": 6,
-      "lastAccessed": 1782384959028,
+      "accessCount": 8,
+      "lastAccessed": 1782445605924,
       "type": "file"
     },
     {
       "path": "news/260624_news-ai-digital-learning-center.html",
-      "accessCount": 4,
-      "lastAccessed": 1782384905287,
+      "accessCount": 5,
+      "lastAccessed": 1782445604969,
       "type": "file"
     },
     {
