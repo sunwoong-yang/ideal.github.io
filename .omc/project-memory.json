@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1782213774984,
+  "lastScanned": 1783061378655,
   "projectRoot": "/mnt/z/★ERICA/3. 연구실 브랜딩/Lab_github/ideal.github.io",
   "techStack": {
     "languages": [
@@ -47,7 +47,7 @@
       "path": "css",
       "purpose": null,
       "fileCount": 13,
-      "lastAccessed": 1782213774934,
+      "lastAccessed": 1783061378606,
       "keyFiles": [
         "ajax-loader.gif",
         "animate.css",
@@ -60,7 +60,7 @@
       "path": "demo",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1782213774939,
+      "lastAccessed": 1783061378610,
       "keyFiles": [
         "20210428.gif"
       ]
@@ -69,14 +69,14 @@
       "path": "fonts",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1782213774945,
+      "lastAccessed": 1783061378616,
       "keyFiles": []
     },
     "images": {
       "path": "images",
       "purpose": null,
-      "fileCount": 48,
-      "lastAccessed": 1782213774952,
+      "fileCount": 43,
+      "lastAccessed": 1783061378624,
       "keyFiles": [
         "01 캐릭터 마크 - 기본형-04.png",
         "01_text_right_black.png",
@@ -89,7 +89,7 @@
       "path": "js",
       "purpose": null,
       "fileCount": 16,
-      "lastAccessed": 1782213774958,
+      "lastAccessed": 1783061378630,
       "keyFiles": [
         "aos.js",
         "bootstrap.min.js",
@@ -101,20 +101,21 @@
     "news": {
       "path": "news",
       "purpose": null,
-      "fileCount": 4,
-      "lastAccessed": 1782213774964,
+      "fileCount": 5,
+      "lastAccessed": 1783061378635,
       "keyFiles": [
         "260301_news-hanyang-appointment.html",
         "260320_news-excellent-paper.html",
         "260507_news-26CAE-conference.html",
-        "260616_news-root-industry-ai.html"
+        "260616_news-root-industry-ai.html",
+        "260624_news-ai-digital-learning-center.html"
       ]
     },
     "scss": {
       "path": "scss",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1782213774969,
+      "lastAccessed": 1783061378639,
       "keyFiles": [
         "style.scss"
       ]
@@ -122,39 +123,9 @@
   },
   "hotPaths": [
     {
-      "path": "index.html",
-      "accessCount": 9,
-      "lastAccessed": 1782445607228,
-      "type": "file"
-    },
-    {
-      "path": "news.html",
-      "accessCount": 8,
-      "lastAccessed": 1782445605924,
-      "type": "file"
-    },
-    {
-      "path": "team-researchers.html",
-      "accessCount": 6,
-      "lastAccessed": 1782462502925,
-      "type": "file"
-    },
-    {
-      "path": "news/260624_news-ai-digital-learning-center.html",
-      "accessCount": 5,
-      "lastAccessed": 1782445604969,
-      "type": "file"
-    },
-    {
-      "path": "news/260616_news-root-industry-ai.html",
-      "accessCount": 1,
-      "lastAccessed": 1782384594989,
-      "type": "file"
-    },
-    {
-      "path": "news/260625_news-ai-digital-learning-center.html",
-      "accessCount": 1,
-      "lastAccessed": 1782384754008,
+      "path": "projects.html",
+      "accessCount": 16,
+      "lastAccessed": 1783062337000,
       "type": "file"
     }
   ],
