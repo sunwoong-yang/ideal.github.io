@@ -65,7 +65,7 @@
       box-shadow: 0 20px 45px rgba(15, 23, 42, 0.22);
       padding: 1.5rem 1.75rem;
       margin: 0 auto 1.5rem;
-      max-width: 704px;
+      max-width: 850px;
       text-align: center;
     }
 
@@ -142,6 +142,55 @@
       color: #555;
     }
 
+    .recruitment-card a {
+      color: #0E4A84;
+      font-weight: 700;
+    }
+
+    .file-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    .file-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 104px;
+      padding: 0.85rem 0.5rem 0.6rem;
+      border-radius: 10px;
+      text-decoration: none !important;
+      color: #333 !important;
+      text-align: center;
+      font-weight: 400 !important;
+      background: rgba(14, 74, 132, 0.03);
+      border: 1px solid rgba(14, 74, 132, 0.1);
+      transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+    }
+
+    .file-card:hover {
+      background: rgba(14, 74, 132, 0.09);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .file-card .file-icon {
+      width: 40px;
+      height: 50px;
+      margin-bottom: 0.4rem;
+    }
+
+    .file-card .file-name {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #333;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+
     /* 모바일 반응형 */
     @media (max-width: 768px) {
       .heading-section h2 {
@@ -177,14 +226,19 @@
               <strong>&lt;대학원생 및 학부연구생 모집&gt;</strong>
             </p>
             <p style="text-align:center; text-align-last:center;">
-              IDEA LAB에서는 항공우주, 국방, 제조, 자동차, 연료전지 등 다양한 분야의<br>
-              공학 시뮬레이션·설계 자동화/자율화 연구에 함께할<br>
-              대학원생 및 학부연구생을 모집합니다.<br>
+              IDEA LAB에서는 항공우주, 국방, 제조, 모빌리티 등 다양한 분야에서<br>
+              <strong style="color: #0E4A84;">공학 설계 전반(CAD modeling → Meshing → CAE Simulation → AI training → Engineering Insight Extraction)의<br>
+              AI 기반 자율화</strong>에 관심있는 대학원생 및 학부연구생을 모집합니다.<br>
+              <br>
+              구체적인 모집 분야는 다음과 같습니다.<br>
+              1) <strong>공학 시뮬레이션 자율화</strong>를 위한 AI (CAD modeling, Meshing 등)<br>
+              2) <strong>공학 시뮬레이션 가속화</strong>를 위한 AI (Surrogate modeling, Multi-fidelity modeling 등)<br>
+              3) <strong>공학 설계 가속화 및 형상 설계안 다양화</strong>를 위한 AI (Generative AI 등)<br>
+              <br>
               모집 관련 상담을 원하시면 관심 분야, 성적표, 포트폴리오(CV)를 첨부하여<br>
               <a href="mailto:sunwoongy@hanyang.ac.kr">sunwoongy@hanyang.ac.kr</a>로 연락주세요.<br>
               <br>
-              연구실 합류 여부와 관계없이, 대학원 생활이나 연구 방향이 궁금하신 분들도<br>
-              언제든 편하게 문의해 주세요.
+              연구실 합류 여부와 관계없이, 대학원 생활이나 연구 방향이 궁금하신 분들도 편하게 문의주세요.
             </p>
           </div>
         </div>
@@ -212,6 +266,49 @@
             <div class="faq-item">
               <div class="faq-question">■ AI가 너무 어렵게 느껴지는데, 저도 연구실 활동을 잘 해낼 수 있을까요?</div>
               <p>신입 구성원(학부연구생 포함)이 합류하면 지도교수가 직접 참여하는 <strong>AI 스터디</strong>를 진행합니다. AI 교재를 바탕으로 매주 학습한 내용을 PPT로 발표하고, 발표 내용과 이해도에 대해 구체적인 피드백 및 추가 티칭이 이루어집니다. 약 2개월간의 체계적인 스터디 과정과 성실한 동료들과의 학습 환경, 그리고 지도교수의 밀도 있는 지도가 함께한다면, AI 경험이 많지 않더라도 누구나 빠르게 기본기를 갖추고 연구에 필요한 역량을 쌓아갈 수 있습니다.</p>
+              <p style="text-align: center; text-align-last: center;">▼ 학부연구생들이 스터디를 위해 직접 제작하고 발표했던 자료 ▼</p>
+              <div class="file-grid">
+                <a href="files/ai-study-examples/익명1_4장.pdf" target="_blank" class="file-card">
+                  <svg class="file-icon" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4,2 H26 L36,12 V48 H4 Z" fill="#fff" stroke="#0E4A84" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M26,2 L26,12 L36,12 Z" fill="#0E4A84" fill-opacity="0.15" stroke="#0E4A84" stroke-width="2" stroke-linejoin="round"/>
+                    <rect x="10" y="22" width="20" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                    <rect x="10" y="29" width="20" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                    <rect x="10" y="36" width="13" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                  </svg>
+                  <span class="file-name">예시1.pdf</span>
+                </a>
+                <a href="files/ai-study-examples/익명3_4장.pdf" target="_blank" class="file-card">
+                  <svg class="file-icon" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4,2 H26 L36,12 V48 H4 Z" fill="#fff" stroke="#0E4A84" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M26,2 L26,12 L36,12 Z" fill="#0E4A84" fill-opacity="0.15" stroke="#0E4A84" stroke-width="2" stroke-linejoin="round"/>
+                    <rect x="10" y="22" width="20" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                    <rect x="10" y="29" width="20" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                    <rect x="10" y="36" width="13" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                  </svg>
+                  <span class="file-name">예시2.pdf</span>
+                </a>
+                <a href="files/ai-study-examples/익명2_PCA_MLE.pdf" target="_blank" class="file-card">
+                  <svg class="file-icon" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4,2 H26 L36,12 V48 H4 Z" fill="#fff" stroke="#0E4A84" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M26,2 L26,12 L36,12 Z" fill="#0E4A84" fill-opacity="0.15" stroke="#0E4A84" stroke-width="2" stroke-linejoin="round"/>
+                    <rect x="10" y="22" width="20" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                    <rect x="10" y="29" width="20" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                    <rect x="10" y="36" width="13" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                  </svg>
+                  <span class="file-name">예시3.pdf</span>
+                </a>
+                <a href="files/ai-study-examples/익명1_PCA_MLE.pdf" target="_blank" class="file-card">
+                  <svg class="file-icon" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4,2 H26 L36,12 V48 H4 Z" fill="#fff" stroke="#0E4A84" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M26,2 L26,12 L36,12 Z" fill="#0E4A84" fill-opacity="0.15" stroke="#0E4A84" stroke-width="2" stroke-linejoin="round"/>
+                    <rect x="10" y="22" width="20" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                    <rect x="10" y="29" width="20" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                    <rect x="10" y="36" width="13" height="2.5" rx="1" fill="#0E4A84" fill-opacity="0.55"/>
+                  </svg>
+                  <span class="file-name">예시4.pdf</span>
+                </a>
+              </div>
             </div>
 
             <div class="faq-item">
