@@ -47,8 +47,13 @@
         <li class="nav-item" data-nav-item="projects">
           <a href="${prefix}projects.html" class="nav-link"><span>Projects</span></a>
         </li>
-        <li class="nav-item" data-nav-item="news">
-          <a href="${prefix}news.html" class="nav-link"><span>News</span></a>
+        <li class="nav-item dropdown" data-nav-item="news">
+          <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"><span>News</span></a>
+          <div class="dropdown-menu" aria-labelledby="newsDropdown">
+            <a class="dropdown-item" href="${prefix}news.html">Research</a>
+            <a class="dropdown-item" href="${prefix}news-activities.html">Activities</a>
+          </div>
         </li>
         <li class="nav-item nav-cta" data-nav-item="join">
           <a href="${prefix}join-us.html" class="nav-link nav-cta-link"><span>Join Us</span></a>
