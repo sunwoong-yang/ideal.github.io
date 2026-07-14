@@ -129,9 +129,63 @@
       "type": "file"
     },
     {
+      "path": "research.html",
+      "accessCount": 6,
+      "lastAccessed": 1784013581638,
+      "type": "file"
+    },
+    {
+      "path": "news.html",
+      "accessCount": 5,
+      "lastAccessed": 1784013468781,
+      "type": "file"
+    },
+    {
+      "path": "news-activities.html",
+      "accessCount": 5,
+      "lastAccessed": 1784013860102,
+      "type": "file"
+    },
+    {
+      "path": "news/260624_news-ai-digital-learning-center.html",
+      "accessCount": 5,
+      "lastAccessed": 1784013872703,
+      "type": "file"
+    },
+    {
       "path": "team-researchers.html",
       "accessCount": 4,
       "lastAccessed": 1783666788132,
+      "type": "file"
+    },
+    {
+      "path": "news/260301_news-hanyang-appointment.html",
+      "accessCount": 3,
+      "lastAccessed": 1784013482718,
+      "type": "file"
+    },
+    {
+      "path": "news/260320_news-excellent-paper.html",
+      "accessCount": 3,
+      "lastAccessed": 1784013491614,
+      "type": "file"
+    },
+    {
+      "path": "news/260507_news-26CAE-conference.html",
+      "accessCount": 3,
+      "lastAccessed": 1784013499238,
+      "type": "file"
+    },
+    {
+      "path": "news/260616_news-root-industry-ai.html",
+      "accessCount": 3,
+      "lastAccessed": 1784013515193,
+      "type": "file"
+    },
+    {
+      "path": "index.html",
+      "accessCount": 3,
+      "lastAccessed": 1784013861581,
       "type": "file"
     }
   ],
