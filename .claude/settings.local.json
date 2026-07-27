@@ -2,7 +2,29 @@
   "permissions": {
     "allow": [
       "Bash(sed:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "WebSearch",
+      "WebFetch(domain:www.motir.go.kr)",
+      "WebFetch(domain:www.hanyang.ac.kr)",
+      "WebFetch(domain:www.kitech.re.kr)",
+      "WebFetch(domain:www.koreaaero.com)",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.hanyang.ac.kr/symbol-logo\")",
+      "Bash(grep -oE '\\(https?:\\)?//[^\"'\"'\"']*\\\\.\\(png|jpg|jpeg|svg|ai|zip\\)')",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.motir.go.kr/kor/contents/69\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.koreaaero.com/KO/Company/CorporateIdentity.aspx\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.kitech.re.kr/introduce/ci\")",
+      "Bash(curl -s -I -A \"Mozilla/5.0\" \"https://www.koreaaero.com/KO/data_file/KAI_Corporate_Identity.zip\")",
+      "Bash(curl -s -I -A \"Mozilla/5.0\" \"https://m.koreaaero.com/KO/data_file/KAI_Corporate_Identity.pdf\")",
+      "Bash(curl -s -I -A \"Mozilla/5.0\" -e \"https://www.koreaaero.com/KO/Company/CorporateIdentity.aspx\" \"https://www.koreaaero.com/KO/data_file/KAI_Corporate_Identity.zip\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" -o \"hanyang-university-logo.png\" \"https://www.hanyang.ac.kr/documents/20122/350734610/HYU_symbol_basic_th.png/8b1ae965-0eb2-07de-565e-e6ce688e7356?t=1776057163083&download=true\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" -o \"kitech_ci.zip\" \"https://www.kitech.re.kr/images/dummy/ci_Dwn_jpg.zip\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" -o \"motir-logo.png\" \"https://www.motir.go.kr/images/contents/sub/m06_0104_symbol01.png\")",
+      "Bash(unzip -o -j kitech_ci.zip -d kitech_extracted)",
+      "Bash(mv kitech_extracted/ci_Dwn_jpg.jpg kitech-institute-logo.jpg)",
+      "Bash(rmdir kitech_extracted)",
+      "Bash(rm kitech_ci.zip)",
+      "Bash(python3 -c ' *)",
+      "Bash(grep -oE 'href=\\\\\\\\?\"[^\"\\\\\\\\]*\\(symbol|logotype|initial\\)[^\"\\\\\\\\]*\\\\.\\(svg|ai|png\\)[^\"\\\\\\\\]*\"' \"C:\\\\Users\\\\Woong\\\\.claude\\\\projects\\\\Z---ERICA-3----------Lab-github-ideal-github-io\\\\171b95d4-c444-43ce-9ac5-d960c7c840a5\\\\tool-results\\\\mcp-Claude_Browser-read_page-1785130352286.txt\")"
     ],
     "deny": [],
     "ask": []

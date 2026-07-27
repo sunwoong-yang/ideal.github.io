@@ -74,12 +74,38 @@
     box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
   }
 
+  .project-header-row {
+    overflow: hidden;
+  }
+
+  .project-logo-box {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 0.4rem;
+    width: 140px;
+    height: 56px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+  }
+
+  .project-logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
   .project-tag-row {
     display: flex;
     align-items: center;
     gap: 0.6rem;
     flex-wrap: wrap;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.5rem;
   }
 
   .project-role-tag-wrapper {
@@ -283,6 +309,11 @@
       padding: 0 0.5rem;
     }
 
+    .project-logo-box {
+      width: 110px;
+      height: 44px;
+    }
+
     .funding-banner-inner {
       flex-direction: column;
       align-items: center;
@@ -372,76 +403,91 @@
 
 				<div class="projects-wrapper">
 					<div class="project-item ftco-animate">
-						<div class="project-tag-row">
-							<span class="project-status-tag project-status-ongoing">Ongoing</span>
-							<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Co-Investigator</span></span></div>
+						<div class="project-header-row">
+							<div class="project-logo-box"><img src="images/projects/motir-logo.png" alt="Ministry of Trade, Industry and Resources logo"></div>
+							<div class="project-tag-row">
+								<span class="project-status-tag project-status-ongoing">Ongoing</span>
+								<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Co-Investigator</span></span></div>
+							</div>
+							<p class="project-meta"><strong>Sponsor:</strong> Ministry of Trade, Industry and Resources (MOTIR)</p>
 						</div>
-						<p class="project-meta"><strong>Sponsor:</strong> Ministry of Trade, Industry and Resources (MOTIR)</p>
-					<p class="project-meta"><strong>Title:</strong> Digital Transformation Technology for Creating an AI Ecosystem for Root Industries</p>
-					<div class="project-keywords">
-						<span class="project-keywords-label">Keywords:</span>
-						<span class="project-keyword-tag">AI-based Manufacturing</span>
-						<span class="project-keyword-tag">Design Automation/Autonomy</span>
+						<p class="project-meta"><strong>Title:</strong> Digital Transformation Technology for Creating an AI Ecosystem for Root Industries</p>
+						<div class="project-keywords">
+							<span class="project-keywords-label">Keywords:</span>
+							<span class="project-keyword-tag">AI-based Manufacturing</span>
+							<span class="project-keyword-tag">Design Automation/Autonomy</span>
+						</div>
+						<p class="project-meta"><strong>Period & Funding:</strong> 2026.07.01 ~ 2030.12.31 (4.5 years, <strong>500,000,000 KRW</strong>)</p>
 					</div>
-					<p class="project-meta"><strong>Period & Funding:</strong> 2026.07.01 ~ 2030.12.31 (4.5 years, <strong>500,000,000 KRW</strong>)</p>
-				</div>
 					<div class="project-item ftco-animate">
-						<div class="project-tag-row">
-							<span class="project-status-tag project-status-ongoing">Ongoing</span>
-							<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Co-Investigator</span></span></div>
+						<div class="project-header-row">
+							<div class="project-logo-box"><img src="images/projects/KAI.svg" alt="Korea Aerospace Industries logo"></div>
+							<div class="project-tag-row">
+								<span class="project-status-tag project-status-ongoing">Ongoing</span>
+								<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Co-Investigator</span></span></div>
+							</div>
+							<p class="project-meta"><strong>Sponsor:</strong> Korea Aerospace Industries (KAI)</p>
 						</div>
-						<p class="project-meta"><strong>Sponsor:</strong> Korea Aerospace Industries (KAI)</p>
-					<p class="project-meta"><strong>Title:</strong> Development of an AI-based Framework for Aerodynamic Prediction and Design of Unmanned Aerial Vehicles</p>
-					<div class="project-keywords">
-						<span class="project-keywords-label">Keywords:</span>
-						<span class="project-keyword-tag">UAV Design</span>
-						<span class="project-keyword-tag">Aerodynamic Design</span>
-						<span class="project-keyword-tag">Foundation Model for UAV</span>
+						<p class="project-meta"><strong>Title:</strong> Development of an AI-based Framework for Aerodynamic Prediction and Design of Unmanned Aerial Vehicles</p>
+						<div class="project-keywords">
+							<span class="project-keywords-label">Keywords:</span>
+							<span class="project-keyword-tag">UAV Design</span>
+							<span class="project-keyword-tag">Aerodynamic Design</span>
+							<span class="project-keyword-tag">Foundation Model for UAV</span>
+						</div>
+						<p class="project-meta"><strong>Period & Funding:</strong> 2026.03.01 ~ 2027.02.28 (1 year, <strong>20,000,000 KRW</strong>)</p>
 					</div>
-					<p class="project-meta"><strong>Period & Funding:</strong> 2026.03.01 ~ 2027.02.28 (1 year, <strong>20,000,000 KRW</strong>)</p>
-				</div>
 					<div class="project-item ftco-animate">
-						<div class="project-tag-row">
-							<span class="project-status-tag project-status-ongoing">Ongoing</span>
-							<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Principal Investigator</span></span></div>
+						<div class="project-header-row">
+							<div class="project-logo-box"><img src="images/projects/NRF.jpg" alt="National Research Foundation of Korea logo"></div>
+							<div class="project-tag-row">
+								<span class="project-status-tag project-status-ongoing">Ongoing</span>
+								<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Principal Investigator</span></span></div>
+							</div>
+							<p class="project-meta"><strong>Sponsor:</strong> National Research Foundation of Korea (Sejong Fellowship)</p>
 						</div>
-						<p class="project-meta"><strong>Sponsor:</strong> National Research Foundation of Korea (Sejong Fellowship)</p>
-					<p class="project-meta"><strong>Title:</strong> Development of AI-based Flow Prediction Framework Considering Versatility and User-Friendliness in Digital Twins</p>
-					<div class="project-keywords">
-						<span class="project-keywords-label">Keywords:</span>
-						<span class="project-keyword-tag">AI-based Aerodynamic Design</span>
-						<span class="project-keyword-tag">LLM-based Autonomous Design</span>
+						<p class="project-meta"><strong>Title:</strong> Development of AI-based Flow Prediction Framework Considering Versatility and User-Friendliness in Digital Twins</p>
+						<div class="project-keywords">
+							<span class="project-keywords-label">Keywords:</span>
+							<span class="project-keyword-tag">AI-based Aerodynamic Design</span>
+							<span class="project-keyword-tag">LLM-based Autonomous Design</span>
+						</div>
+						<p class="project-meta"><strong>Period & Funding:</strong> 2024.05.01 ~ 2029.04.30 (5 years, <strong>500,000,000 KRW</strong>)</p>
 					</div>
-					<p class="project-meta"><strong>Period & Funding:</strong> 2024.05.01 ~ 2029.04.30 (5 years, <strong>500,000,000 KRW</strong>)</p>
-				</div>
 					<div class="project-item ftco-animate">
-						<div class="project-tag-row">
-							<span class="project-status-tag project-status-ongoing">Ongoing</span>
-							<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Principal Investigator</span></span></div>
+						<div class="project-header-row">
+							<div class="project-logo-box"><img src="images/projects/hanyang-university-logo.png" alt="Hanyang University logo"></div>
+							<div class="project-tag-row">
+								<span class="project-status-tag project-status-ongoing">Ongoing</span>
+								<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Principal Investigator</span></span></div>
+							</div>
+							<p class="project-meta"><strong>Sponsor:</strong> Hanyang University</p>
 						</div>
-						<p class="project-meta"><strong>Sponsor:</strong> Hanyang University</p>
-					<p class="project-meta"><strong>Title:</strong> AI-based Aerodynamic Design of a Helicopter Blade for Mars Exploration</p>
-					<div class="project-keywords">
-						<span class="project-keywords-label">Keywords:</span>
-						<span class="project-keyword-tag">Mars Exploration</span>
-						<span class="project-keyword-tag">Helicopter Aerodynamic Design</span>
+						<p class="project-meta"><strong>Title:</strong> AI-based Aerodynamic Design of a Helicopter Blade for Mars Exploration</p>
+						<div class="project-keywords">
+							<span class="project-keywords-label">Keywords:</span>
+							<span class="project-keyword-tag">Mars Exploration</span>
+							<span class="project-keyword-tag">Helicopter Aerodynamic Design</span>
+						</div>
+						<p class="project-meta"><strong>Period & Funding:</strong> 2026.03.01 ~ 2027.02.28 (1 year, <strong>40,000,000 KRW</strong>)</p>
 					</div>
-					<p class="project-meta"><strong>Period & Funding:</strong> 2026.03.01 ~ 2027.02.28 (1 year, <strong>40,000,000 KRW</strong>)</p>
-				</div>
 					<div class="project-item project-completed ftco-animate">
-						<div class="project-tag-row">
-							<span class="project-status-tag project-status-completed">Completed</span>
-							<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Principal Investigator</span></span></div>
+						<div class="project-header-row">
+							<div class="project-logo-box"><img src="images/projects/kitech-institute-logo.jpg" alt="Korea Institute of Industrial Technology logo"></div>
+							<div class="project-tag-row">
+								<span class="project-status-tag project-status-completed">Completed</span>
+								<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Principal Investigator</span></span></div>
+							</div>
+							<p class="project-meta"><strong>Sponsor:</strong> Korea Institute of Industrial Technology (KITECH)</p>
 						</div>
-					<p class="project-meta"><strong>Sponsor:</strong> Korea Institute of Industrial Technology (KITECH)</p>
-					<p class="project-meta"><strong>Title:</strong> Development of AI algorithms for preform design for blow molding</p>
-					<div class="project-keywords">
-						<span class="project-keywords-label">Keywords:</span>
-						<span class="project-keyword-tag">AI-based Blow Molding</span>
-						<span class="project-keyword-tag">AI-based Manufacturing</span>
+						<p class="project-meta"><strong>Title:</strong> Development of AI algorithms for preform design for blow molding</p>
+						<div class="project-keywords">
+							<span class="project-keywords-label">Keywords:</span>
+							<span class="project-keyword-tag">AI-based Blow Molding</span>
+							<span class="project-keyword-tag">AI-based Manufacturing</span>
+						</div>
+						<p class="project-meta"><strong>Period & Funding:</strong> 2024.05.08 ~ 2024.08.31 (4 months, <strong>20,000,000 KRW</strong>)</p>
 					</div>
-					<p class="project-meta"><strong>Period & Funding:</strong> 2024.05.08 ~ 2024.08.31 (4 months, <strong>20,000,000 KRW</strong>)</p>
-				</div>
 			</div>
 		</div>
 	</section>
