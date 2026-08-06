@@ -244,6 +244,60 @@
     box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
     height: 100%;
     border: 1px solid rgba(14, 74, 132, 0.08);
+    position: relative;
+  }
+
+  .member-website {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.65rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    color: #0E4A84;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    font-size: 1.85rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+    z-index: 1;
+  }
+
+  .member-website::before {
+    content: '';
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(219, 84, 147, 0.38) 0%, rgba(219, 84, 147, 0.2) 48%, rgba(219, 84, 147, 0) 82%);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: -1;
+  }
+
+  .member-website:hover {
+    color: #0b3b68;
+    transform: scale(1.06);
+    text-decoration: none;
+  }
+
+  .member-website:hover::before {
+    opacity: 0.78;
+    transform: scale(1);
+  }
+
+  .member-website:focus-visible {
+    color: #0b3b68;
+    outline: 2px solid rgba(14, 74, 132, 0.35);
+    outline-offset: 2px;
+  }
+
+  .member-website:active {
+    transform: scale(0.95);
   }
 
   .team-card .team-role,
@@ -571,6 +625,9 @@
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
 					<div class="team-card">
+						<a class="member-website" href="https://snowfalling-master.github.io/snowfall/" target="_blank" rel="noopener noreferrer" aria-label="정승한 개인 웹사이트 열기" title="정승한 개인 웹사이트">
+							<span class="icon-home" aria-hidden="true"></span>
+						</a>
 						<div class="member-photo">
 							<img src="images/members/정승한 사진.jpg" alt="정승한">
 						</div>
@@ -583,6 +640,9 @@
 				</div>
 				<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
 					<div class="team-card">
+						<a class="member-website" href="https://broha-source.github.io/broha/#home" target="_blank" rel="noopener noreferrer" aria-label="하형진 개인 웹사이트 열기" title="하형진 개인 웹사이트">
+							<span class="icon-home" aria-hidden="true"></span>
+						</a>
 						<div class="member-photo">
 							<img src="images/members/하형진 사진.jpg" alt="하형진">
 						</div>
@@ -595,6 +655,9 @@
 				</div>
 				<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
 					<div class="team-card">
+						<a class="member-website" href="https://greebtreea.github.io/" target="_blank" rel="noopener noreferrer" aria-label="최민혁 개인 웹사이트 열기" title="최민혁 개인 웹사이트">
+							<span class="icon-home" aria-hidden="true"></span>
+						</a>
 						<div class="member-photo">
 							<img src="images/members/최민혁 사진.jpg" alt="최민혁">
 						</div>
@@ -607,6 +670,9 @@
 				</div>
 				<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
 					<div class="team-card">
+						<a class="member-website" href="https://chlwns301-cloud.github.io/choi-junseok-idea-lab/index.html" target="_blank" rel="noopener noreferrer" aria-label="최준석 개인 웹사이트 열기" title="최준석 개인 웹사이트">
+							<span class="icon-home" aria-hidden="true"></span>
+						</a>
 						<div class="member-photo">
 							<img src="images/members/최준석 사진.jpg" alt="최준석">
 						</div>
@@ -619,6 +685,9 @@
 				</div>
 				<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
 					<div class="team-card">
+						<a class="member-website" href="https://donggyun12.github.io/" target="_blank" rel="noopener noreferrer" aria-label="안동균 개인 웹사이트 열기" title="안동균 개인 웹사이트">
+							<span class="icon-home" aria-hidden="true"></span>
+						</a>
 						<div class="member-photo">
 							<img src="images/members/안동균 사진.jpg" alt="안동균">
 						</div>
