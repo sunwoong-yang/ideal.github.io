@@ -421,6 +421,23 @@
 					</div>
 					<div class="project-item ftco-animate">
 						<div class="project-header-row">
+							<div class="project-logo-box"><img src="images/projects/ecoremix-logo.png" alt="EcoRemix logo"></div>
+							<div class="project-tag-row">
+								<span class="project-status-tag project-status-ongoing">Ongoing</span>
+								<div class="project-role-tag-wrapper"><span class="project-role-tag">Role: <span class="project-role-text">Co-Investigator</span></span></div>
+							</div>
+							<p class="project-meta"><strong>Sponsor:</strong> EcoRemix (Startup Company)</p>
+						</div>
+						<p class="project-meta"><strong>Title:</strong> AI-Based Design Optimization of a Containerized CO₂ Carbonation Curing Chamber</p>
+						<div class="project-keywords">
+							<span class="project-keywords-label">Keywords:</span>
+							<span class="project-keyword-tag">Sustainable Energy</span>
+							<span class="project-keyword-tag">AI-based Design</span>
+						</div>
+						<p class="project-meta"><strong>Period & Funding:</strong> 2026.07.01 ~ 2026.11.30 (5 months, <strong>20,000,000 KRW</strong>)</p>
+					</div>
+					<div class="project-item ftco-animate">
+						<div class="project-header-row">
 							<div class="project-logo-box"><img src="images/projects/KAI.svg" alt="Korea Aerospace Industries logo"></div>
 							<div class="project-tag-row">
 								<span class="project-status-tag project-status-ongoing">Ongoing</span>
@@ -560,7 +577,7 @@
 
 	      // 펀딩: 10,000,000 단위로 점프, 2초 완료
 	      var fundingSteps = [0];
-	      for (var v = 10000000; v <= 1080000000; v += 10000000) {
+	      for (var v = 10000000; v <= 1100000000; v += 10000000) {
 	        fundingSteps.push(v);
 	      }
 	      var fundingInterval = Math.round(1500 / (fundingSteps.length - 1));
@@ -568,13 +585,13 @@
 	        return n.toLocaleString('ko-KR');
 	      });
 
-	      // 프로젝트: 0~9 랜덤 스크램블 후 최종값 5에 정착
+	      // 프로젝트: 0~9 랜덤 스크램블 후 최종값 6에 정착
 	      var scramble = setInterval(function () {
 	        elProjects.textContent = Math.floor(Math.random() * 10);
 	      }, 60);
 	      setTimeout(function () {
 	        clearInterval(scramble);
-	        elProjects.textContent = 5;
+	        elProjects.textContent = 6;
 	      }, 1500);
 	    }
 
