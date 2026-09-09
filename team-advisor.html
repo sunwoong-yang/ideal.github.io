@@ -503,11 +503,11 @@
   }
 
   .teaching-total-grid {
-    flex: 1;
-    min-width: 220px;
+    flex: 0 0 300px;
+    min-width: 300px;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: repeat(2, minmax(125px, 1fr));
+    gap: 0.75rem;
     width: 100%;
   }
 
@@ -517,11 +517,13 @@
     border-radius: 16px;
     border: 1px solid rgba(14, 74, 132, 0.2);
     background: rgba(14, 74, 132, 0.06);
-    padding: 0.9rem 1.4rem;
+    min-height: 78px;
+    padding: 0.75rem 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
-    text-align: left;
+    justify-content: center;
+    gap: 0.2rem;
+    text-align: center;
   }
 
   .total-label {
@@ -536,6 +538,12 @@
     font-size: 1.15rem;
     font-weight: 700;
     color: #0b1426;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .teaching-total.cumulative-latest .total-label {
+    color: #DC143C;
   }
 
   @media (max-width: 576px) {
@@ -545,7 +553,19 @@
 
     .teaching-total-grid {
       width: 100%;
-      grid-template-columns: 1fr;
+      min-width: 0;
+      flex-basis: auto;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.6rem;
+    }
+
+    .teaching-total {
+      min-height: 72px;
+      padding: 0.7rem 0.8rem;
+    }
+
+    .total-value {
+      font-size: 1rem;
     }
   }
 
@@ -860,6 +880,52 @@
 
 						<div class="page mb-5" id="advisor-teaching">
 							<h3 class="advisor-section-title">Teaching</h3>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="text">
+										<p class="teaching-term">2026 Fall Semester</p>
+										<div class="teaching-bars-wrapper">
+											<div class="teaching-bars">
+												<div class="teaching-bar-row">
+													<div class="teaching-bar-info">
+													<span class="course-name">Methods for Design Practice</span>
+													<span class="course-count" data-count="42" data-label="students">42&nbsp;students</span>
+													</div>
+														<div class="teaching-bar-track">
+															<div class="teaching-bar-fill" data-target-width="42" style="width: 42%;"></div>
+														</div>
+												</div>
+												<div class="teaching-bar-row">
+													<div class="teaching-bar-info">
+													<span class="course-name">Mechanical Capstone Design 1</span>
+													<span class="course-count" data-count="12" data-label="students">12&nbsp;students</span>
+													</div>
+														<div class="teaching-bar-track">
+															<div class="teaching-bar-fill" data-target-width="12" style="width: 12%;"></div>
+														</div>
+												</div>
+												<div class="teaching-bar-row">
+													<div class="teaching-bar-info">
+													<span class="course-name">Computer-Aided Draft and Design</span>
+													<span class="course-count" data-count="24" data-label="students">24&nbsp;students</span>
+													</div>
+														<div class="teaching-bar-track">
+															<div class="teaching-bar-fill" data-target-width="24" style="width: 24%;"></div>
+														</div>
+												</div>
+											</div>
+											<div class="teaching-total-grid">
+												<div class="teaching-total">
+													<span class="total-label">Total</span>
+													<span class="total-value">78 students</span>
+												</div>
+												<div class="teaching-total cumulative-latest">
+													<span class="total-label">Cumulative</span>
+													<span class="total-value">202 students</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							<div class="resume-wrap d-flex ftco-animate">
 								<div class="text">
 										<p class="teaching-term">2026 Spring Semester</p>
