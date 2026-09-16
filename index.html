@@ -959,6 +959,10 @@
     padding: 1rem;
   }
 
+  #idea-popup-overlay[hidden] {
+    display: none;
+  }
+
   #idea-popup-overlay.show {
     opacity: 1;
     pointer-events: auto;
@@ -1312,7 +1316,7 @@
 	<script src="js/main.js"></script>
 
   <!-- Announcement Popup -->
-  <div id="idea-popup-overlay" role="dialog" aria-modal="true" aria-label="연구과제 수주 안내">
+  <div id="idea-popup-overlay" role="dialog" aria-modal="true" aria-label="연구과제 수주 안내" hidden>
     <div id="idea-popup-card">
       <div class="idea-popup-accent-bar"></div>
       <button id="idea-popup-close" aria-label="닫기">&#x2715;</button>
@@ -1330,11 +1334,14 @@
 
   <script>
     (function () {
+      // Set to true when this announcement popup should be shown again.
+      var POPUP_ENABLED = false;
+      var overlay = document.getElementById('idea-popup-overlay');
+      if (!POPUP_ENABLED || !overlay) return;
+      overlay.removeAttribute('hidden');
+
       var KEY = 'ideaLab_popup_rootIndustry_v11';
       if (localStorage.getItem(KEY)) return;
-
-      var overlay = document.getElementById('idea-popup-overlay');
-      if (!overlay) return;
 
       setTimeout(function () { overlay.classList.add('show'); }, 900);
 
