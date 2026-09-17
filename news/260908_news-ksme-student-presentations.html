@@ -94,43 +94,49 @@
       flex: 1;
       min-width: 0;
       min-height: 1.35rem;
-      padding: 0.3rem 0.35rem;
-      border-radius: 6px;
+      padding: 0.25rem 0.35rem;
       color: #333;
+      font-weight: 400;
       text-decoration: none;
       white-space: nowrap;
       cursor: pointer;
-      transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      transition: color 0.2s ease, transform 0.2s ease;
     }
 
     .presentation-title::after {
-      content: "\2197";
+      content: "PDF";
       display: inline-block;
-      margin-left: 0.4rem;
-      color: #0E4A84;
-      font-size: 0.8em;
-      opacity: 0.45;
-      transition: opacity 0.2s ease, transform 0.2s ease;
+      margin-left: 0.45rem;
+      padding: 0.08rem 0.3rem;
+      border: 1px solid rgba(14, 74, 132, 0.28);
+      border-radius: 4px;
+      color: rgba(14, 74, 132, 0.72);
+      font-size: 0.62rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.04em;
+      vertical-align: 0.12em;
+      transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
     }
 
     .presentation-title[href]:hover,
     .presentation-title[href]:focus {
       color: #0E4A84;
-      background-color: rgba(14, 74, 132, 0.08);
-      box-shadow: 0 4px 12px rgba(14, 74, 132, 0.12);
-      transform: translateX(3px);
+      transform: translateX(2px);
       text-decoration: none;
       outline: none;
     }
 
     .presentation-title[href]:hover::after,
     .presentation-title[href]:focus::after {
-      opacity: 1;
-      transform: translate(2px, -2px);
+      color: #fff;
+      background-color: #0E4A84;
+      border-color: #0E4A84;
     }
 
     .presentation-title[href]:focus-visible {
-      box-shadow: 0 0 0 2px rgba(14, 74, 132, 0.28), 0 4px 12px rgba(14, 74, 132, 0.12);
+      border-radius: 3px;
+      box-shadow: 0 0 0 2px rgba(14, 74, 132, 0.2);
     }
 
     .back-link {
