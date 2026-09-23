@@ -92,7 +92,7 @@
       gap: 0.7rem;
       width: min(100%, 680px);
       padding: 0.7rem 0.8rem;
-      border-radius: 999px;
+      border-radius: 28px;
       background: rgba(255, 255, 255, 0.94);
       border: 1px solid rgba(14, 74, 132, 0.14);
       box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
@@ -140,7 +140,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       pointer-events: none;
-      animation: cursor-approach 5.1s ease-out infinite;
+      animation: cursor-approach 6.8s ease-out infinite;
     }
 
     .demo-option:nth-child(2)::after {
@@ -148,8 +148,13 @@
       animation-fill-mode: backwards;
     }
 
-    .demo-option:last-child::after {
+    .demo-option:nth-child(3)::after {
       animation-delay: 3.4s;
+      animation-fill-mode: backwards;
+    }
+
+    .demo-option:nth-child(4)::after {
+      animation-delay: 5.1s;
       animation-fill-mode: backwards;
     }
 
@@ -167,11 +172,19 @@
       box-shadow: 0 10px 18px rgba(173, 78, 121, 0.12);
     }
 
-    .demo-option:last-child {
+    .demo-option:nth-child(3) {
       color: #1f4d2e;
       background: linear-gradient(135deg, #f0fdf4, #d1fae5);
       border-color: rgba(22, 101, 52, 0.2);
       box-shadow: 0 10px 18px rgba(22, 101, 52, 0.12);
+    }
+
+    .demo-option:nth-child(4) {
+      grid-column: 2;
+      color: #43306b;
+      background: linear-gradient(135deg, #f7f3ff, #ebe2ff);
+      border-color: rgba(102, 72, 164, 0.2);
+      box-shadow: 0 10px 18px rgba(102, 72, 164, 0.12);
     }
 
     .demo-option:hover,
@@ -192,10 +205,16 @@
       box-shadow: 0 16px 28px rgba(173, 78, 121, 0.24);
     }
 
-    .demo-option:last-child:hover,
-    .demo-option:last-child:focus {
+    .demo-option:nth-child(3):hover,
+    .demo-option:nth-child(3):focus {
       background: linear-gradient(135deg, #166534, #22c55e);
       box-shadow: 0 16px 28px rgba(22, 101, 52, 0.24);
+    }
+
+    .demo-option:nth-child(4):hover,
+    .demo-option:nth-child(4):focus {
+      background: linear-gradient(135deg, #6648a4, #8b6fd1);
+      box-shadow: 0 16px 28px rgba(102, 72, 164, 0.24);
     }
 
     .demo-option-label {
@@ -606,13 +625,18 @@
       }
 
       .demo-option:nth-child(2)::after,
-      .demo-option:last-child::after {
+      .demo-option:nth-child(3)::after,
+      .demo-option:nth-child(4)::after {
         animation-delay: 0s;
       }
 
       .demo-option {
         width: 100%;
         min-width: 0;
+      }
+
+      .demo-option:nth-child(4) {
+        grid-column: auto;
       }
 
       .component-grid {
@@ -680,6 +704,15 @@
                 <span>
                   <span class="demo-option-line">Agent-based</span>
                   <span class="demo-option-line">Motor Design</span>
+                </span>
+              </span>
+            </a>
+            <a href="https://sunwoong-yang.github.io/wing_aero_foundation/" target="_blank" rel="noopener" class="demo-option">
+              <span class="demo-option-label">
+                <strong>Demo 4</strong>
+                <span>
+                  <span class="demo-option-line">3D Wing Aerodynamic</span>
+                  <span class="demo-option-line">Foundation Model</span>
                 </span>
               </span>
             </a>
