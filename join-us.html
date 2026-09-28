@@ -83,6 +83,46 @@
       font-weight: 700;
     }
 
+    .recruitment-fields {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0;
+      text-align: left;
+    }
+
+    .recruitment-field {
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(14, 74, 132, 0.12);
+      border-radius: 12px;
+      background: rgba(14, 74, 132, 0.035);
+    }
+
+    .recruitment-field h3 {
+      margin-bottom: 0.65rem;
+      color: #0E4A84;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .recruitment-field ul {
+      margin: 0;
+      padding-left: 1.15rem;
+    }
+
+    .recruitment-field li {
+      margin-bottom: 0.45rem;
+      color: #444;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      text-align: left;
+    }
+
+    .recruitment-field li:last-child {
+      margin-bottom: 0;
+    }
+
     .join-hero-img {
       width: 100%;
       max-width: 420px;
@@ -200,6 +240,10 @@
       .join-hero-img {
         margin-top: 1.5rem;
       }
+
+      .recruitment-fields {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -228,10 +272,26 @@
             <p style="text-align:center; text-align-last:center;">
               <strong style="color: #0E4A84;">공학 설계 전반(CAD Modeling → Meshing → CAE Simulation → AI Training → Design Optimization)의<br>
               AI 기반 자율화</strong>를 함께 연구할 석박사통합과정 학생 2명을 모집합니다.<br>
-              <br>
-              <strong>항공우주 및 국방 AI: 1명</strong><br>
-              <strong>제조 AI: 1명</strong><br>
-              <br>
+            </p>
+            <div class="recruitment-fields">
+              <div class="recruitment-field">
+                <h3>항공우주 및 국방 AI · 1명</h3>
+                <ul>
+                  <li>드론 및 미사일 형상의 공력 성능 예측과 공력 설계 가속화를 위한 AI</li>
+                  <li>제한된 CFD·실험 데이터로부터 3차원 유동장과 공력 성능을 신속하게 예측하는 AI 모델</li>
+                  <li>CAD Modeling–Meshing–CFD–Design Optimization으로 이어지는 공력 설계 과정의 AI 기반 자율화</li>
+                </ul>
+              </div>
+              <div class="recruitment-field">
+                <h3>제조 AI · 1명</h3>
+                <ul>
+                  <li>사출성형, 블로우성형, 3D 프린팅·적층제조 등 다양한 제조 공정에 적용할 AI</li>
+                  <li>공정 조건·소재·제품 형상에 따른 제조 불량과 품질을 예측하는 AI 모델</li>
+                  <li>공정 조건 최적화와 제품 설계 자동화를 통해 기존 제조 현장의 문제를 해결하는 AI</li>
+                </ul>
+              </div>
+            </div>
+            <p style="text-align:center; text-align-last:center;">
               두 분야 모두 국가적·산업적 AI 수요가 분명한 핵심 분야입니다.<br>
               실제 공학 문제를 해결하는 연구를 수행하며, 각 분야를 선도할 전문 인재로 성장하고자 하는 학생을 기다립니다.<br>
               석박사통합과정 진학자를 우선적으로 모집하지만,<br>
