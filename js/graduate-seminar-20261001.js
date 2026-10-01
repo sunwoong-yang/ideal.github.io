@@ -40,7 +40,7 @@
     previous.addEventListener('click', function () { show(current - 1, true); });
     next.addEventListener('click', function () { show(current + 1, true); });
     document.addEventListener('keydown', function (event) {
-        if (dialog.open || event.altKey || event.ctrlKey || event.metaKey || /INPUT|TEXTAREA|SELECT/.test(event.target.tagName)) return;
+        if (document.querySelector('dialog[open]') || event.altKey || event.ctrlKey || event.metaKey || /INPUT|TEXTAREA|SELECT/.test(event.target.tagName)) return;
         let target;
         if (event.key === 'ArrowRight' || event.key === 'PageDown') target = current + 1;
         if (event.key === 'ArrowLeft' || event.key === 'PageUp') target = current - 1;
@@ -64,6 +64,10 @@
     document.getElementById('sources-open').addEventListener('click', function () { dialog.showModal(); });
     document.getElementById('sources-close').addEventListener('click', function () { dialog.close(); });
     dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
+    const fundingDialog = document.getElementById('funding-dialog');
+    document.getElementById('funding-open').addEventListener('click', function () { fundingDialog.showModal(); });
+    document.getElementById('funding-close').addEventListener('click', function () { fundingDialog.close(); });
+    fundingDialog.addEventListener('click', function (event) { if (event.target === fundingDialog) fundingDialog.close(); });
     const fullscreen = document.getElementById('fullscreen');
     if (!document.fullscreenEnabled) fullscreen.hidden = true;
     fullscreen.addEventListener('click', async function () {
