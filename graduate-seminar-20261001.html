@@ -53,6 +53,47 @@
     @media(max-height:850px) and (min-width:801px) { .seminar { min-height:550px; }.seminar h1,.seminar h2 { font-size:32px; }.seminar-slide { padding-top:12px; }.takeaway { font-size:19px; margin-top:6px; }.ranking-card,.growth-card { padding:16px 24px; }.rank-pair strong,.researcher-stat strong { font-size:56px; }.comparison { padding:16px 24px; }.comparison-grid { padding-top:12px; }.comparison h3 { font-size:24px; }.comparison-points p { margin:6px 0; }.comparison svg { height:105px; margin:8px 0; }.mini-index { margin-bottom:6px; }.comparison-points p { font-size:18px; }.paper-grid { padding-top:12px; gap:8px; }.spectrum-ring { padding-top:14px; }.paper-stack { height:140px; width:110px; } }
     @media(max-width:800px) { .seminar { margin-top:76px; height:calc(100svh - 76px); min-height:580px; padding:12px 20px; }.seminar-top { font-size:10px; }.seminar-top>div { gap:12px; }.seminar-date { display:none; }.seminar-slide { padding-top:18px; }.seminar h1,.seminar h2 { font-size:28px; }.eyebrow { font-size:10px; }.takeaway { font-size:17px; }.fine-print { font-size:9px; }.mini-index { font-size:11px; }.degree-grid { gap:6px; }.degree h3 { font-size:22px; }.degree p { font-size:11px; text-align:center; }.claw-machine { max-height:320px; }.comparison-grid { gap:12px; }.comparison { padding:16px 12px; }.comparison h3 { font-size:19px; }.comparison-points p { font-size:13px; gap:7px; }.comparison svg { height:110px; }.analogy-layout { grid-template-columns:29% 71%; }.analogy-labels h3 { font-size:17px; }.analogy-labels p { font-size:11px; }.paper-grid { grid-template-columns:repeat(4,minmax(0,1fr)); grid-template-rows:repeat(4,150px); flex:none; }.paper-card img { height:123px; }.paper-card span { font-size:9px; }.gallery-header { display:block; }.gallery-hint { display:block; margin-top:8px; }.opportunity-layout { gap:15px; }.identity-stack { width:24%; }.identity-stack h3 { font-size:15px; }.paper-stack { width:76px; height:110px; }.paper-stack span:last-child { font-size:18px; }.paper-stack b { font-size:10px; }.big-arrow { font-size:24px; }.spectrum { width:72%; }.spectrum-ring { padding:18px 10px 0; border-radius:16px; }.spectrum-ring>span { font-size:15px; }.master { margin:16px 12px 0; }.bachelor { margin:16px 8px 0; padding-bottom:18px; }.spectrum-tags { gap:7px; flex-wrap:wrap; }.erica-layout { gap:12px; }.ranking-card,.growth-card { padding:18px 15px; }.rank-pair strong,.researcher-stat strong { font-size:48px; }.rank-pair span { font-size:15px; }.rank-pair strong small,.researcher-stat strong small { font-size:18px; }.rank-change { flex-wrap:wrap; justify-content:center; }.rank-change>span:first-child,.rank-change>span:last-child { width:100%; text-align:center; }.researcher-stat { gap:8px; flex-wrap:wrap; }.researcher-stat span { font-size:12px; }.growth-chain { font-size:15px; }.source-line { font-size:10px; } }
     @media(max-width:480px) { .mobile-break { display:block; }.seminar h1,.seminar h2 { font-size:25px; }.analogy-layout { grid-template-columns:1fr; grid-template-rows:auto 1fr; }.analogy-labels { flex-direction:row; gap:12px; padding:10px 0 0; }.analogy-labels h3 { font-size:14px; }.analogy-labels p { font-size:10px; }.analogy-connector { transform:rotate(-90deg); align-self:center; }.analogy-art { max-height:300px; }.degree-grid { flex:none; margin:auto 0; padding:20px 0; }.degree p { font-size:10px; }.comparison-grid { grid-template-columns:1fr; gap:12px; flex:none; }.comparison { display:grid; grid-template-columns:1fr 1fr; column-gap:12px; }.comparison .mini-index,.comparison h3 { grid-column:1/-1; }.comparison svg { margin:8px 0; height:85px; }.comparison-points { align-self:center; }.comparison-points p { display:block; font-size:11px; }.comparison-points span { margin:0 4px; }.opportunity-layout { flex-direction:column; flex:none; gap:15px; }.identity-stack { width:100%; display:flex; align-items:center; justify-content:center; gap:25px; }.identity-stack h3 { margin:0; }.paper-stack { margin:0; width:64px; height:87px; }.big-arrow { display:none; }.spectrum { width:100%; }.spectrum-ring { padding-top:12px; }.master,.bachelor { margin-top:10px; }.erica-layout { grid-template-columns:1fr; flex:none; }.rank-pair { margin:5px 0 12px; }.rank-change { flex-wrap:nowrap; }.rank-change>span:first-child,.rank-change>span:last-child { width:auto; }.rank-pair strong { font-size:44px; }.growth-card { display:flex; flex-wrap:wrap; gap:8px 16px; }.growth-card>.mini-index { width:100%; }.researcher-stat { flex:1; flex-direction:column; align-items:start; }.researcher-stat strong { font-size:38px; }.growth-chain { flex:1.5; font-size:13px; padding-top:0; }.source-line { margin-bottom:10px; }.slide-arrow { width:42px; height:42px; } }
+
+    /* Presentation navigation stays at the outside edges of the stage. */
+    .seminar { position:relative; padding-left:max(96px, 6vw); padding-right:max(96px, 6vw); }
+    .seminar:fullscreen { padding-left:max(96px, 6vw); padding-right:max(96px, 6vw); }
+    .slide-controls { justify-content:center; min-height:56px; }
+    .slide-arrow { position:absolute; top:50%; transform:translateY(-50%); z-index:5; display:flex; align-items:center; justify-content:center; width:64px; height:84px; border:0; border-radius:18px; background:#0e4a84; color:#fff; box-shadow:0 6px 20px #0e4a8433; }
+    #previous { left:12px; } #next { right:12px; }
+    .slide-arrow svg { width:38px; height:38px; fill:none; stroke:currentColor; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+    .slide-arrow:hover:enabled { background:#063465; box-shadow:0 8px 24px #0e4a844d; }
+    .slide-arrow:disabled { opacity:.18; box-shadow:none; }
+    .work-demos { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+    .work-demo { display:inline-flex; align-items:center; justify-content:center; gap:7px; padding:9px 12px; min-height:40px; border:1px solid #a9cbe6; border-radius:10px; background:#e8f3fd; color:#0e4a84; font-size:13px; font-weight:700; line-height:1.4; text-decoration:none; }
+    a.work-demo:hover { background:#0e4a84; color:white; }
+    .work-demo:disabled { background:#f3f5f7; border-color:#d8dfe7; color:#778495; cursor:default; }
+    .work-demo small { font-size:10px; font-weight:500; }
+    @media(max-height:850px) and (min-width:801px) {
+      .analogy-labels h3 { font-size:22px; }
+      .analogy-labels p { font-size:14px; }
+      .analogy-labels { padding:6px 0; }
+      .work-demos { margin-top:9px; gap:6px; }
+      .work-demo { padding:7px 9px; font-size:12px; min-height:35px; }
+    }
+    @media(max-width:800px) {
+      .seminar,.seminar:fullscreen { padding-left:56px; padding-right:56px; }
+      .slide-arrow { width:44px; height:64px; border-radius:13px; }
+      #previous { left:4px; } #next { right:4px; }
+      .slide-arrow svg { width:30px; height:30px; }
+      .work-demo { font-size:11px; padding:7px 8px; }
+      .work-demos { gap:6px; margin-top:9px; }
+    }
+    @media(max-width:480px) {
+      .analogy-labels { flex-wrap:wrap; }
+      .analogy-labels>div:first-child { flex:1; }
+      .analogy-labels>.work-description { flex:1.2; min-width:130px; }
+      .analogy-connector { display:none; }
+      .work-demos { margin-top:8px; gap:5px; }
+      .work-demo { font-size:10px; padding:6px 7px; min-height:32px; }
+      .work-demo small { font-size:9px; }
+      .slide-progress { gap:10px; }
+      .slide-dots { gap:0; }
+    }
     @media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; animation:none!important; scroll-behavior:auto!important; } }
 </style>
 </head>
@@ -64,7 +105,7 @@
     <div class="slide-window">
       <section class="seminar-slide active" id="slide-1" aria-labelledby="title-1">
         <header><p class="eyebrow">01 / 같은 출발선</p><h1 id="title-1" tabindex="-1">모두가 할 수 있는 일,<br class="mobile-break"> 나만이 할 수 있는 일.</h1></header>
-        <div class="analogy-layout"><div class="analogy-labels"><div><span class="mini-index">예비군 훈련</span><h3>서로 다른 경험<br>공통의 기초 훈련</h3><p>방독면 · 투척 · 엎드리기</p></div><div class="analogy-connector" aria-hidden="true">↓</div><div><span class="mini-index blue">취업 후의 업무</span><h3>전문성이 드러나기 전,<br>주어진 일을 수행</h3><p>CAD · 메싱 · 해석 실행<br>파일 정리 · 자료 조사</p></div></div><img class="analogy-art" src="images/seminar-20261001/routine-to-research.png" alt="위: 방독면 착용, 가까운 표적 투척, 엎드리기 기초 훈련을 하는 예비군. 아래: CAD와 메싱, 해석 실행, 파일 정리와 자료 조사를 하는 사무실의 엔지니어들."></div>
+        <div class="analogy-layout"><div class="analogy-labels"><div><span class="mini-index">예비군 훈련</span><h3>서로 다른 경험<br>공통의 기초 훈련</h3><p>방독면 · 투척 · 엎드리기</p></div><div class="analogy-connector" aria-hidden="true">↓</div><div class="work-description"><span class="mini-index blue">취업 후의 업무</span><h3>전문성이 드러나기 전,<br>주어진 일을 수행</h3><p>CAD · 메싱 · 해석 실행<br>파일 정리 · 자료 조사</p><div class="work-demos" aria-label="학생 연구 데모"><a class="work-demo" href="https://junseokchoi-hyu.github.io/" target="_blank" rel="noopener">CAD 모델링 <span aria-hidden="true">↗</span></a><button class="work-demo" type="button" disabled>Meshing <small>준비 중</small></button><a class="work-demo" href="https://hanjinseong.github.io/ipmsm-design/" target="_blank" rel="noopener">해석 자동화 · Simulation <span aria-hidden="true">↗</span></a></div></div></div><img class="analogy-art" src="images/seminar-20261001/routine-to-research.png" alt="위: 방독면 착용, 가까운 표적 투척, 엎드리기 기초 훈련을 하는 예비군. 아래: CAD와 메싱, 해석 실행, 파일 정리와 자료 조사를 하는 사무실의 엔지니어들."></div>
         <p class="takeaway">내 전문성이 보이지 않으면, <strong>맡는 일도 비슷해진다.</strong></p><p class="fine-print">전문성의 가시성을 설명하는 비유 · 실제 업무는 직무와 개인의 경험에 따라 다릅니다.</p>
       </section>
       <section class="seminar-slide" id="slide-2" aria-labelledby="title-2" inert aria-hidden="true">
@@ -218,7 +259,7 @@
         <div class="source-line"><span>ERICA 전체 지표 · 기계공학과 개별 순위가 아닙니다.</span><button type="button" id="sources-open">지표와 출처 보기 ↗</button><a href="join-us.html#join-details">IDEA LAB에서 시작하기 →</a></div>
       </section>
     </div>
-    <div class="slide-controls"><button class="slide-arrow" id="previous" type="button" aria-label="이전 슬라이드">←</button><div class="slide-progress"><div class="slide-dots" aria-label="슬라이드 선택"></div><span id="slide-count" aria-live="polite">01 / 06</span></div><button class="slide-arrow" id="next" type="button" aria-label="다음 슬라이드">→</button></div>
+    <div class="slide-controls"><button class="slide-arrow" id="previous" type="button" aria-label="이전 슬라이드"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="m25 8-12 12 12 12"/></svg></button><div class="slide-progress"><div class="slide-dots" aria-label="슬라이드 선택"></div><span id="slide-count" aria-live="polite">01 / 06</span></div><button class="slide-arrow" id="next" type="button" aria-label="다음 슬라이드"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="m15 8 12 12-12 12"/></svg></button></div>
   </main>
   <dialog id="sources-dialog" aria-labelledby="sources-title"><button class="dialog-close" type="button" id="sources-close" aria-label="출처 닫기">×</button><h2 id="sources-title">ERICA 지표와 출처</h2><p>2026년 10월 1일 확인. 서울캠퍼스 지표와 구분했습니다.</p><ul><li><strong>2025 중앙일보 대학평가:</strong> 교수연구 7위, FWCI 6위, 종합 13위(2024년 16위).</li><li><strong>2025 세계 상위 2% 연구자:</strong> ERICA 27명. 위 대학평가의 순위 지표와는 별도입니다.</li></ul><p><a href="https://hy-erica.com/vol112/pdf/ERICA_vol_112.pdf" target="_blank" rel="noopener">한양대학교 ERICA 공식 매거진 · 2025 WINTER Vol.112 ↗</a></p><p><a href="https://www.joongang.co.kr/article/25389511" target="_blank" rel="noopener">중앙일보 · 2025 평가우수대학 (2025.12.12) ↗</a></p><p class="source-note">이 수치는 ERICA 전체의 연구 환경을 보여줍니다. 기계공학과만의 순위, 교수 1인당 연구비·논문 수, 졸업생 개인의 취업 성과를 뜻하지는 않습니다. 연구 환경이 개인의 성장 기회로 이어진다는 설명은 세미나의 해석입니다.</p></dialog>
   <footer class="ftco-footer ftco-section" style="padding: 2rem 0;">
