@@ -94,6 +94,98 @@
       .slide-progress { gap:10px; }
       .slide-dots { gap:0; }
     }
+
+    .analogy-labels h3 { line-height:1.3; margin-bottom:5px; }
+    .analogy-connector { font-size:20px; line-height:1; }
+    .analogy-labels { padding:0; }
+    .degree p { min-height:3em; }
+    /* Large, high-contrast type for a spoken presentation. */
+    .seminar { --muted:#34465d; }
+    .eyebrow { font-size:clamp(22px,1.8vw,30px); color:#164b7b; letter-spacing:.01em; margin-bottom:10px; }
+    .seminar h1,.seminar h2 { font-size:clamp(36px,3.4vw,58px); }
+    .takeaway { font-size:clamp(28px,2.35vw,40px); color:#162d4c; font-weight:500; line-height:1.4; margin-top:16px; }
+    .takeaway strong { font-weight:800; }
+    .degree h3 { font-size:clamp(32px,2.8vw,46px); }
+    .degree p { font-size:clamp(23px,1.9vw,32px); color:#162d4c; font-weight:700; text-align:center; }
+    .degree p .paper-count { display:block; font-size:.8em; margin-top:4px; color:#34465d; }
+    .mini-index { font-size:clamp(19px,1.5vw,25px); color:#674b24; }
+    .analogy-labels h3 { font-size:clamp(24px,2.15vw,35px); }
+    .analogy-labels p { font-size:clamp(18px,1.45vw,24px); color:#24394f; }
+    .work-demo { font-size:16px; }.work-demo small { font-size:13px; }
+    .gallery-hint { font-size:19px; color:#24394f; }
+    .paper-card span { font-size:15px; color:#24394f; font-weight:600; }
+    .identity-stack h3 { font-size:clamp(24px,2.1vw,34px); }
+    .spectrum-ring>span { font-size:clamp(23px,1.9vw,31px); }
+    .spectrum-tags b,.bachelor>b { font-size:clamp(19px,1.5vw,25px); color:#24394f; font-weight:500; }
+    .spectrum-tags { gap:16px; flex-wrap:wrap; }
+    .rank-pair span { font-size:clamp(23px,1.9vw,31px); }
+    .rank-pair span small { font-size:16px; color:#34465d; }
+    .rank-change span { font-size:18px; color:#24394f; }.rank-change b { color:#34465d; }
+    .researcher-stat span { font-size:21px; color:#24394f; }
+    .growth-chain { font-size:clamp(22px,1.9vw,31px); }
+    .fine-print,.source-line { font-size:14px; color:#40536a; }
+    .seminar-top,.slide-progress { font-size:16px; color:#34465d; }
+    .freedom-grid { display:grid; grid-template-columns:1fr 1.12fr; gap:24px; flex:1; align-items:center; padding:20px 0 4px; }
+    .freedom-card { padding:20px 30px; border-radius:22px; background:#f0f3f7; }
+    .exploring-card { background:#eaf3fc; border:2px solid #7daed4; }
+    .freedom-label { display:block; font-size:25px; font-weight:800; margin-bottom:8px; }
+    .exploring-card .freedom-label { color:#0e4a84; }
+    .freedom-card h3 { font-size:clamp(27px,2.35vw,38px); letter-spacing:-.05em; margin:0; }
+    .freedom-diagram { display:block; width:100%; height:100px; margin:12px 0; }
+    .freedom-card p { font-size:clamp(21px,1.8vw,28px); color:#162d4c; line-height:1.65; letter-spacing:-.045em; margin:0; }
+    .freedom-card .freedom-summary { margin-top:20px; padding-top:14px; border-top:1px solid #b8c9dc; font-weight:800; font-size:clamp(24px,2vw,32px); }
+    .exploring-card .freedom-summary { color:#0e4a84; }
+    @media(max-height:850px) and (min-width:801px) {
+      .eyebrow { font-size:22px; margin-bottom:6px; }
+      .seminar h1,.seminar h2 { font-size:36px; }
+      .takeaway { font-size:28px; margin-top:10px; }
+      .degree p { font-size:24px; }.degree h3 { font-size:32px; }
+      .mini-index { font-size:19px; }.analogy-labels h3 { font-size:24px; }.analogy-labels p { font-size:17px; }
+      .work-demo { font-size:14px; padding:6px 8px; min-height:32px; }.work-demo small { font-size:11px; }
+      .freedom-grid { padding-top:14px; gap:18px; }
+      .freedom-card { padding:18px 24px; }.freedom-label { font-size:22px; margin-bottom:6px; }
+      .freedom-card h3 { font-size:29px; }.freedom-diagram { height:95px; margin:12px 0; }
+      .freedom-card p { font-size:22px; line-height:1.5; }.freedom-card .freedom-summary { font-size:25px; margin-top:12px; padding-top:10px; }
+      .spectrum-ring { padding-top:12px; }.master,.bachelor { margin-top:12px; }.bachelor { padding-bottom:14px; }
+      .spectrum-ring>span { font-size:23px; }.spectrum-tags b,.bachelor>b { font-size:19px; }
+      .ranking-card,.growth-card { padding:16px 20px; }.researcher-stat { gap:16px; }.researcher-stat span { font-size:18px; }.growth-chain { font-size:22px; }
+      .rank-pair span { font-size:23px; }.rank-change span { font-size:16px; }.rank-pair { margin-bottom:16px; }
+    }
+    @media(max-width:800px) {
+      .eyebrow { font-size:17px; }.seminar h1,.seminar h2 { font-size:30px; }.takeaway { font-size:23px; }
+      .degree p { font-size:18px; }.degree h3 { font-size:27px; }.mini-index { font-size:16px; }
+      .analogy-labels h3 { font-size:20px; }.analogy-labels p { font-size:15px; }.work-demo { font-size:13px; }.work-demo small { font-size:11px; }
+      .gallery-hint { font-size:16px; }.paper-card span { font-size:12px; }
+      .freedom-grid { grid-template-columns:1fr; flex:none; gap:16px; }.freedom-card { padding:20px; }.freedom-label { font-size:21px; }
+      .freedom-card h3 { font-size:26px; }.freedom-diagram { height:95px; margin:12px 0; }.freedom-card p { font-size:19px; }.freedom-card .freedom-summary { font-size:22px; margin-top:12px; padding-top:10px; }
+      .identity-stack h3 { font-size:20px; }.spectrum-ring>span { font-size:20px; }.spectrum-tags b,.bachelor>b { font-size:16px; }
+      .rank-pair span { font-size:19px; }.rank-pair span small { font-size:13px; }.rank-change span { font-size:14px; }.researcher-stat span { font-size:16px; }.growth-chain { font-size:19px; }
+      .fine-print,.source-line { font-size:12px; }.seminar-top,.slide-progress { font-size:12px; }
+    }
+    @media(max-width:480px) {
+      .seminar h1,.seminar h2 { font-size:27px; }.eyebrow { font-size:16px; }.takeaway { font-size:21px; }
+      .analogy-layout { flex:none; }.analogy-labels { gap:16px; }.analogy-labels>div:first-child,.analogy-labels>.work-description { flex:auto; width:100%; }.analogy-art { height:230px; margin-top:14px; }
+      .work-demo { font-size:13px; }.analogy-labels h3 { font-size:22px; }
+      .degree-grid { gap:4px; }.degree p { font-size:16px; line-height:1.45; }.degree h3 { font-size:24px; }
+      .freedom-card { padding:18px 14px; }.freedom-card h3 { font-size:24px; }.freedom-card p { font-size:18px; }.freedom-card .freedom-summary { font-size:21px; }
+      .researcher-stat span { font-size:15px; }.growth-chain { font-size:17px; }.rank-change { flex-wrap:wrap; }
+    }
+
+    @media(max-height:850px) and (min-width:801px) {
+      .analogy-labels h3 { line-height:1.3; margin-bottom:5px; }
+      .analogy-connector { font-size:20px; line-height:1; }
+      .analogy-labels { padding:0; }.analogy-labels .mini-index { margin-bottom:4px; }
+      .freedom-card { padding-top:16px; padding-bottom:16px; }
+      .opportunity-layout { padding-top:12px; padding-bottom:12px; }
+    }
+    @media(min-width:801px) {
+      .analogy-labels .mini-index { margin-bottom:8px; line-height:1.35; }
+      .analogy-labels p { line-height:1.5; }
+      .work-demos { margin-top:10px; }
+      .opportunity-layout { padding-top:10px; padding-bottom:8px; }
+      .erica-layout { padding-top:10px; }
+    }
+    .degree p { height:3.4em; flex-shrink:0; line-height:1.4; }
     @media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; animation:none!important; scroll-behavior:auto!important; } }
 </style>
 </head>
@@ -105,7 +197,7 @@
     <div class="slide-window">
       <section class="seminar-slide active" id="slide-1" aria-labelledby="title-1">
         <header><p class="eyebrow">01 / 같은 출발선</p><h1 id="title-1" tabindex="-1">모두가 할 수 있는 일,<br class="mobile-break"> 나만이 할 수 있는 일.</h1></header>
-        <div class="analogy-layout"><div class="analogy-labels"><div><span class="mini-index">예비군 훈련</span><h3>서로 다른 경험<br>공통의 기초 훈련</h3><p>방독면 · 투척 · 엎드리기</p></div><div class="analogy-connector" aria-hidden="true">↓</div><div class="work-description"><span class="mini-index blue">취업 후의 업무</span><h3>전문성이 드러나기 전,<br>주어진 일을 수행</h3><p>CAD · 메싱 · 해석 실행<br>파일 정리 · 자료 조사</p><div class="work-demos" aria-label="학생 연구 데모"><a class="work-demo" href="https://junseokchoi-hyu.github.io/" target="_blank" rel="noopener">CAD 모델링 <span aria-hidden="true">↗</span></a><button class="work-demo" type="button" disabled>Meshing <small>준비 중</small></button><a class="work-demo" href="https://hanjinseong.github.io/ipmsm-design/" target="_blank" rel="noopener">해석 자동화 · Simulation <span aria-hidden="true">↗</span></a></div></div></div><img class="analogy-art" src="images/seminar-20261001/routine-to-research.png" alt="위: 방독면 착용, 가까운 표적 투척, 엎드리기 기초 훈련을 하는 예비군. 아래: CAD와 메싱, 해석 실행, 파일 정리와 자료 조사를 하는 사무실의 엔지니어들."></div>
+        <div class="analogy-layout"><div class="analogy-labels"><div><span class="mini-index">예비군 훈련</span><h3>서로 다른 경험<br>공통의 기초 훈련</h3><p>방독면 · 투척 · 엎드리기</p></div><div class="analogy-connector" aria-hidden="true">↓</div><div class="work-description"><span class="mini-index blue">취업 후의 업무</span><h3>전문성이 드러나기 전,<br>주어진 일을 수행</h3><p>파일 정리 · 자료 조사</p><div class="work-demos" aria-label="학생 연구 데모"><a class="work-demo" href="https://junseokchoi-hyu.github.io/" target="_blank" rel="noopener">CAD 모델링 <span aria-hidden="true">↗</span></a><button class="work-demo" type="button" disabled>Meshing <small>준비 중</small></button><a class="work-demo" href="https://hanjinseong.github.io/ipmsm-design/" target="_blank" rel="noopener">해석 자동화 · Simulation <span aria-hidden="true">↗</span></a></div></div></div><img class="analogy-art" src="images/seminar-20261001/routine-to-research.png" alt="위: 방독면 착용, 가까운 표적 투척, 엎드리기 기초 훈련을 하는 예비군. 아래: CAD와 메싱, 해석 실행, 파일 정리와 자료 조사를 하는 사무실의 엔지니어들."></div>
         <p class="takeaway">내 전문성이 보이지 않으면, <strong>맡는 일도 비슷해진다.</strong></p><p class="fine-print">전문성의 가시성을 설명하는 비유 · 실제 업무는 직무와 개인의 경험에 따라 다릅니다.</p>
       </section>
       <section class="seminar-slide" id="slide-2" aria-labelledby="title-2" inert aria-hidden="true">
@@ -184,7 +276,7 @@
     <ellipse cx="23" cy="28" rx="9" ry="16" transform="rotate(-20 23 28)"/><ellipse cx="-14" cy="50" rx="12" ry="9"/><ellipse cx="14" cy="50" rx="12" ry="9"/>
     <g stroke="none" fill="#fff"><circle cx="-8" cy="0" r="2.8"/><circle cx="8" cy="0" r="2.8"/><ellipse cy="11" rx="8" ry="6" fill-opacity=".28"/></g><path d="M-3 9h6l-3 3z" fill="#fff" stroke="none"/></g><g transform="translate(215 128)" fill="white" stroke="#c75267" stroke-width="2"><path d="M0 0h22l8 8v32H0z"/><path d="M22 0v8h8M6 15h18M6 21h18M6 27h12"/><circle cx="22" cy="35" r="6" fill="#c75267" stroke="white"/></g><g transform="translate(230 128)" fill="white" stroke="#c75267" stroke-width="2"><path d="M0 0h22l8 8v32H0z"/><path d="M22 0v8h8M6 15h18M6 21h18M6 27h12"/><circle cx="22" cy="35" r="6" fill="#c75267" stroke="white"/></g><path d="M24 284h312" stroke="#182e4e" stroke-width="4"/><rect x="51" y="301" width="70" height="20" rx="5" fill="#182e4e"/>
     <circle cx="281" cy="310" r="11" fill="#eaa849" stroke="#182e4e" stroke-width="2"/><path d="M250 310v-12" stroke="#182e4e" stroke-width="5"/><circle cx="250" cy="295" r="6" fill="#ee6365"/>
-    <path d="M53 338v10m254-10v10" stroke="#182e4e" stroke-width="9" stroke-linecap="round"/></svg><p>나만의 색 · 논문 1–2편</p></article><article class="degree"><h3>박사</h3><svg class="claw-machine" viewBox="0 0 360 370" role="img" aria-label="박사: 같은 높이의 인형 중 하나만 빨강에서 파랑으로 변하는 색, 논문 여섯 편">
+    <path d="M53 338v10m254-10v10" stroke="#182e4e" stroke-width="9" stroke-linecap="round"/></svg><p>나만의 색<span class="paper-count">논문 1–2편</span></p></article><article class="degree"><h3>박사</h3><svg class="claw-machine" viewBox="0 0 360 370" role="img" aria-label="박사: 같은 높이의 인형 중 하나만 빨강에서 파랑으로 변하는 색, 논문 여섯 편">
     <defs><linearGradient id="identity-gradient-2"><stop stop-color="#f35561"/><stop offset=".48" stop-color="#b665b8"/><stop offset="1" stop-color="#347bdf"/></linearGradient></defs>
     <rect x="24" y="12" width="312" height="325" rx="22" fill="#f1f5fa" stroke="#182e4e" stroke-width="4"/>
     <rect x="40" y="55" width="280" height="222" rx="10" fill="#fff" stroke="#bccbdd" stroke-width="2"/>
@@ -221,12 +313,35 @@
     <ellipse cx="23" cy="28" rx="9" ry="16" transform="rotate(-20 23 28)"/><ellipse cx="-14" cy="50" rx="12" ry="9"/><ellipse cx="14" cy="50" rx="12" ry="9"/>
     <g stroke="none" fill="#fff"><circle cx="-8" cy="0" r="2.8"/><circle cx="8" cy="0" r="2.8"/><ellipse cy="11" rx="8" ry="6" fill-opacity=".28"/></g><path d="M-3 9h6l-3 3z" fill="#fff" stroke="none"/></g><g transform="translate(215 128)" fill="white" stroke="#536bb9" stroke-width="2"><path d="M0 0h22l8 8v32H0z"/><path d="M22 0v8h8M6 15h18M6 21h18M6 27h12"/><circle cx="22" cy="35" r="6" fill="#536bb9" stroke="white"/></g><g transform="translate(230 128)" fill="white" stroke="#536bb9" stroke-width="2"><path d="M0 0h22l8 8v32H0z"/><path d="M22 0v8h8M6 15h18M6 21h18M6 27h12"/><circle cx="22" cy="35" r="6" fill="#536bb9" stroke="white"/></g><g transform="translate(245 128)" fill="white" stroke="#536bb9" stroke-width="2"><path d="M0 0h22l8 8v32H0z"/><path d="M22 0v8h8M6 15h18M6 21h18M6 27h12"/><circle cx="22" cy="35" r="6" fill="#536bb9" stroke="white"/></g><g transform="translate(215 160)" fill="white" stroke="#536bb9" stroke-width="2"><path d="M0 0h22l8 8v32H0z"/><path d="M22 0v8h8M6 15h18M6 21h18M6 27h12"/><circle cx="22" cy="35" r="6" fill="#536bb9" stroke="white"/></g><g transform="translate(230 160)" fill="white" stroke="#536bb9" stroke-width="2"><path d="M0 0h22l8 8v32H0z"/><path d="M22 0v8h8M6 15h18M6 21h18M6 27h12"/><circle cx="22" cy="35" r="6" fill="#536bb9" stroke="white"/></g><g transform="translate(245 160)" fill="white" stroke="#536bb9" stroke-width="2"><path d="M0 0h22l8 8v32H0z"/><path d="M22 0v8h8M6 15h18M6 21h18M6 27h12"/><circle cx="22" cy="35" r="6" fill="#536bb9" stroke="white"/></g><path d="M24 284h312" stroke="#182e4e" stroke-width="4"/><rect x="51" y="301" width="70" height="20" rx="5" fill="#182e4e"/>
     <circle cx="281" cy="310" r="11" fill="#eaa849" stroke="#182e4e" stroke-width="2"/><path d="M250 310v-12" stroke="#182e4e" stroke-width="5"/><circle cx="250" cy="295" r="6" fill="#ee6365"/>
-    <path d="M53 338v10m254-10v10" stroke="#182e4e" stroke-width="9" stroke-linecap="round"/></svg><p>깊고 넓어진 색 · 논문 5편 이상</p></article></div><p class="takeaway">연구가 쌓이면, <strong>나를 찾는 이유가 생긴다.</strong></p><p class="fine-print">논문 수와 채용 상황은 설명을 위한 예시입니다.</p>
+    <path d="M53 338v10m254-10v10" stroke="#182e4e" stroke-width="9" stroke-linecap="round"/></svg><p>깊고 넓어진 색<span class="paper-count">논문 5편 이상</span></p></article></div><p class="takeaway">연구가 쌓이면, <strong>나를 찾는 이유가 생긴다.</strong></p><p class="fine-print">논문 수와 채용 상황은 설명을 위한 예시입니다.</p>
       </section>
       <section class="seminar-slide" id="slide-3" aria-labelledby="title-3" inert aria-hidden="true">
-        <header><p class="eyebrow">03 / 내가 연구를 할 수 있을까?</p><h2 id="title-3" tabindex="-1">공부와 연구는 <em>다른 게임.</em></h2></header>
-        <div class="comparison-grid"><article class="comparison study"><span class="mini-index">시험 중심의 공부</span><h3>주어진 답을 찾는 과정</h3><svg viewBox="0 0 460 160" role="img" aria-label="동일한 문제를 풀고 정답과 오답으로 평가받는 세 장의 시험지"><g fill="white" stroke="#94a4b9" stroke-width="2"><rect x="28" y="15" width="108" height="130" rx="8"/><rect x="176" y="15" width="108" height="130" rx="8"/><rect x="324" y="15" width="108" height="130" rx="8"/></g><g stroke="#c3cedc" stroke-width="5"><path d="M48 45h67m-67 17h67M196 45h67m-67 17h67M344 45h67m-67 17h67"/></g><g stroke="#e47773" stroke-width="5" fill="none"><circle cx="82" cy="105" r="20"/><path d="m215 90 30 30m0-30-30 30"/><circle cx="378" cy="105" r="20"/></g></svg><div class="comparison-points"><p>정해진 문제 <span>→</span> 정해진 기준</p><p>기억 · 재현 <span>→</span> 정답 / 오답</p></div></article><article class="comparison research"><span class="mini-index blue">문제 해결 중심의 연구</span><h3>내 방법을 설득하는 과정</h3><svg viewBox="0 0 460 160" role="img" aria-label="하나의 문제에서 서로 다른 세 가지 경로를 탐색하고 근거로 검증하는 연구"><g fill="none" stroke-width="4" stroke-linecap="round"><path d="M64 80H130C160 80 145 28 194 28h145" stroke="#e77076"/><path d="M130 80h209" stroke="#837bc3"/><path d="M130 80c35 0 18 53 64 53h145" stroke="#4389bb"/></g><circle cx="64" cy="80" r="27" fill="#163d68"/><text x="64" y="89" text-anchor="middle" fill="white" font-size="28">?</text><g fill="white" stroke="#448aaf" stroke-width="2"><circle cx="356" cy="28" r="20"/><circle cx="356" cy="80" r="20"/><circle cx="356" cy="133" r="20"/></g><g stroke="#448aaf" stroke-width="3" fill="none"><path d="m347 28 6 6 12-13m-18 59 6 6 12-13m-18 60 6 6 12-13"/></g></svg><div class="comparison-points"><p>열린 문제 <span>→</span> 다양한 접근</p><p>가설 · 실험 · 근거 <span>→</span> 논리적 설득</p></div></article></div>
-        <p class="takeaway">출발점은 완벽한 성적보다,<br><strong>풀고 싶은 마음 + 탐색의 자유를 즐기는 태도.</strong></p>
+        <header><p class="eyebrow">03 / 공부가 힘들어도, 연구는 다를 수 있다</p><h2 id="title-3" tabindex="-1">연구는 <em>내 방식으로 풀 수 있다.</em></h2></header>
+        <div class="freedom-grid">
+          <article class="freedom-card learning-card">
+            <span class="freedom-label">공부 · 시험</span>
+            <h3>정해진 답을 배우기</h3>
+            <svg class="freedom-diagram" viewBox="0 0 500 120" role="img" aria-label="서로 다른 학생들이 같은 풀이와 정답을 따라가는 공부">
+              <g fill="#51647a"><circle cx="35" cy="22" r="10"/><circle cx="35" cy="60" r="10"/><circle cx="35" cy="98" r="10"/></g>
+              <g fill="none" stroke="#7c8fa4" stroke-width="5"><path d="M55 22H180L290 60H378M55 60H378M55 98H180L290 60H378"/></g>
+              <rect x="378" y="32" width="100" height="56" rx="12" fill="#fff" stroke="#51647a" stroke-width="2"/><text x="428" y="69" text-anchor="middle" fill="#162d4c" font-size="26" font-weight="700">정답</text>
+            </svg>
+            <p>배운 내용을 익히고,<br><strong>같은 기준으로 평가받는다.</strong></p>
+            <p class="freedom-summary">“배운 대로 풀었는가?”</p>
+          </article>
+          <article class="freedom-card exploring-card">
+            <span class="freedom-label">연구</span>
+            <h3>푸는 방법은 내가 정하기</h3>
+            <svg class="freedom-diagram" viewBox="0 0 500 120" role="img" aria-label="하나의 연구 문제를 실험, 해석, AI 등 자신이 선택한 방법으로 해결하는 연구">
+              <rect x="10" y="32" width="90" height="56" rx="12" fill="#0e4a84"/><text x="55" y="69" text-anchor="middle" fill="white" font-size="26" font-weight="700">문제</text>
+              <g fill="none" stroke-width="5"><path d="M100 60H175C220 60 210 20 260 20H365" stroke="#d34e64"/><path d="M175 60H365" stroke="#7653b4"/><path d="M175 60C220 60 210 100 260 100H365" stroke="#18769d"/></g>
+              <g font-size="24" font-weight="700"><text x="390" y="28" fill="#b12d47">실험</text><text x="390" y="68" fill="#63419c">해석</text><text x="390" y="108" fill="#075b81">AI</text></g>
+            </svg>
+            <p>주제가 주어져도, <strong>접근법은 내 선택.</strong><br>내 아이디어를 <strong>근거와 논리로 설득한다.</strong></p>
+            <p class="freedom-summary">“나는 어떻게 풀어볼까?”</p>
+          </article>
+        </div>
+        <p class="takeaway freedom-takeaway">더 큰 <strong>자유도</strong>, 더 선명한 <strong>나만의 색.</strong></p>
       </section>
       <section class="seminar-slide" id="slide-4" aria-labelledby="title-4" inert aria-hidden="true">
         <header class="gallery-header"><div><p class="eyebrow">04 / 눈에 보이는 나의 성과</p><h2 id="title-4" tabindex="-1">한 편씩, <em>내 이름으로 쌓인다.</em></h2></div><span class="gallery-hint">논문을 누르면 PDF ↗</span></header>
