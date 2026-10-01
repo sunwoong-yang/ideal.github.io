@@ -186,6 +186,54 @@
       .erica-layout { padding-top:10px; }
     }
     .degree p { height:3.4em; flex-shrink:0; line-height:1.4; }
+
+    .career-evidence { flex-shrink:0; text-align:center; margin-top:12px; color:#102b4b; }
+    .career-evidence p { margin:3px 0; font-size:clamp(25px,2.05vw,35px); line-height:1.4; font-weight:600; letter-spacing:-.045em; color:#102b4b; }
+    .career-evidence p:last-child { font-size:clamp(29px,2.45vw,42px); }
+    .career-evidence strong { font-weight:800; }
+    .career-options { display:grid; grid-template-columns:minmax(0,.92fr) minmax(0,1.3fr); gap:38px; align-items:center; }
+    .career-options .spectrum { width:100%; }
+    .options-heading { font-size:clamp(23px,2vw,33px); margin:0 0 16px; text-align:center; letter-spacing:-.045em; }
+    .options-heading strong { color:#0e4a84; }
+    .career-options .spectrum-ring { padding:16px 16px 0; }
+    .career-options .spectrum-ring>span { font-size:clamp(20px,1.65vw,28px); }
+    .career-options .spectrum-tags b,.career-options .bachelor>b { font-size:clamp(18px,1.4vw,24px); color:#162d4c; }
+    .career-options .master { margin:16px 12px 0; }
+    .career-options .bachelor { margin:16px 10px 0; padding-bottom:16px; }
+    .company-bars { display:flex; align-items:stretch; gap:18px; height:290px; padding:0 6px; }
+    .company-column { display:flex; flex:1; min-width:0; flex-direction:column; justify-content:flex-end; align-items:stretch; }
+    .company-bar { position:relative; border-radius:12px 12px 0 0; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding:15px 6px; color:white; font-size:clamp(17px,1.35vw,23px); font-weight:700; line-height:1.4; text-align:center; }
+    .bachelor-bar { height:31%; background:#384f6a; }
+    .master-bar { height:57%; background:#b44259; }
+    .phd-bar { height:85%; background:linear-gradient(115deg,#a23f70,#225ba7); }
+    .company-bar i { font-size:36px; font-style:normal; font-weight:500; margin:auto 0; }
+    .company-column>b { border-top:3px solid #162d4c; padding-top:8px; color:#162d4c; text-align:center; font-size:28px; line-height:1.3; }
+    .company-chart-message { color:#162d4c; font-size:clamp(23px,1.9vw,32px); line-height:1.4; text-align:center; margin:16px 0 0; letter-spacing:-.035em; }
+    .company-chart-message strong { font-weight:800; }
+    @media(max-height:850px) and (min-width:801px) {
+      .career-evidence { margin-top:8px; }.career-evidence p { font-size:25px; }.career-evidence p:last-child { font-size:29px; }
+      .career-options { gap:28px; padding-top:10px; padding-bottom:4px; }
+      .options-heading { font-size:24px; margin-bottom:12px; }
+      .company-bars { height:240px; gap:14px; }.company-bar { font-size:17px; padding-top:10px; }.company-column>b { font-size:24px; }.company-bar i { font-size:28px; }
+      .company-chart-message { font-size:24px; margin-top:10px; }
+      .career-options .spectrum-ring { padding-top:16px; }.career-options .spectrum-ring>span { font-size:21px; }.career-options .spectrum-tags b,.career-options .bachelor>b { font-size:18px; }
+      .career-options .master,.career-options .bachelor { margin-top:16px; }.career-options .bachelor { padding-bottom:16px; }
+    }
+    @media(max-width:800px) {
+      .career-evidence p { font-size:20px; }.career-evidence p:last-child { font-size:23px; }
+      .career-options { grid-template-columns:1fr; flex:none; gap:26px; }.options-heading { font-size:23px; margin-bottom:14px; }
+      .company-bars { height:270px; gap:10px; }.company-bar { font-size:16px; }.company-column>b { font-size:23px; }.company-chart-message { font-size:22px; }
+      .career-options .spectrum-ring>span { font-size:20px; }.career-options .spectrum-tags b,.career-options .bachelor>b { font-size:17px; }
+    }
+    @media(max-width:480px) {
+      .company-bars { height:250px; gap:8px; padding:0; }.company-bar { font-size:13px; padding:10px 3px; }.company-bar i { font-size:25px; }
+      .career-options .spectrum-ring { padding-left:9px; padding-right:9px; }.career-options .master,.career-options .bachelor { margin-left:5px; margin-right:5px; }
+    }
+    @media(max-height:850px) and (min-width:801px) {
+      .career-options .spectrum-ring { padding-top:10px; }
+      .career-options .master,.career-options .bachelor { margin-top:10px; }
+      .career-options .bachelor { padding-bottom:10px; }
+    }
     @media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; animation:none!important; scroll-behavior:auto!important; } }
 </style>
 </head>
@@ -360,12 +408,32 @@
 <a class="paper-card" href="files/Mine/Publication%2013_GraphUNet.pdf#page=1" target="_blank" rel="noopener" aria-label="논문 13: GraphUNet PDF 새 탭에서 열기"><img src="images/seminar-20261001/paper-13.jpg" alt="GraphUNet 논문 첫 페이지" width="460" height="650"><span><b>13</b> GraphUNet</span></a>
 <a class="paper-card" href="files/Mine/Publication%2014_NA%20PINN.pdf#page=1" target="_blank" rel="noopener" aria-label="논문 14: NA PINN PDF 새 탭에서 열기"><img src="images/seminar-20261001/paper-14.jpg" alt="NA PINN 논문 첫 페이지" width="460" height="650"><span><b>14</b> NA PINN</span></a>
 <a class="paper-card" href="files/Mine/Publication%2015_Vehicle%20Collision.pdf#page=1" target="_blank" rel="noopener" aria-label="논문 15: Vehicle Collision PDF 새 탭에서 열기"><img src="images/seminar-20261001/paper-15.jpg" alt="Vehicle Collision 논문 첫 페이지" width="460" height="650"><span><b>15</b> Vehicle Collision</span></a>
-<a class="paper-card" href="files/Mine/Publication%2016_Point%20Diffusion.pdf#page=1" target="_blank" rel="noopener" aria-label="논문 16: Point Diffusion PDF 새 탭에서 열기"><img src="images/seminar-20261001/paper-16.jpg" alt="Point Diffusion 논문 첫 페이지" width="460" height="650"><span><b>16</b> Point Diffusion</span></a></div><p class="takeaway">문제를 푼 경험 → 논문 → <strong>내가 무엇을 할 수 있는지 보여주는 증거</strong></p>
+<a class="paper-card" href="files/Mine/Publication%2016_Point%20Diffusion.pdf#page=1" target="_blank" rel="noopener" aria-label="논문 16: Point Diffusion PDF 새 탭에서 열기"><img src="images/seminar-20261001/paper-16.jpg" alt="Point Diffusion 논문 첫 페이지" width="460" height="650"><span><b>16</b> Point Diffusion</span></a></div><div class="career-evidence"><p>문제를 푼 경험 → 논문 → <strong>내 능력을 보여주는 증거</strong></p><p><strong>내 이름으로 남아, 평생 내 커리어와 함께한다.</strong></p></div>
       </section>
       <section class="seminar-slide" id="slide-5" aria-labelledby="title-5" inert aria-hidden="true">
         <header><p class="eyebrow">05 / 성과가 열어주는 기회</p><h2 id="title-5" tabindex="-1">나만의 전문성만큼, <em>선택지가 넓어진다.</em></h2></header>
-        <div class="opportunity-layout"><div class="identity-stack"><div class="paper-stack" aria-hidden="true"><span></span><span></span><span>논문<br><b>+ 연구 경험</b></span></div><h3>나의 이름<br>나의 문제 해결 능력</h3></div><span class="big-arrow" aria-hidden="true">→</span><div class="spectrum"><div class="spectrum-ring phd"><span>박사 · 독립적인 문제 정의</span><div class="spectrum-tags"><b>선행 연구</b><b>전문 R&amp;D</b><b>연구기관 · 학계</b></div><div class="spectrum-ring master"><span>석사 · 분야별 전문성</span><div class="spectrum-tags"><b>특화 개발</b><b>연구개발 직무</b></div><div class="spectrum-ring bachelor"><span>학사 · 전공 기초</span><b>일반 엔지니어링 직무</b></div></div></div></div></div>
-        <p class="takeaway">“어디에 지원할까?”에서 <strong>“어떤 문제를 풀고 싶은가?”로.</strong></p><p class="fine-print">전문성에 따른 진로 확장을 표현한 개념도입니다. 실제 채용 자격과 기회는 분야·경험·직무에 따라 다릅니다.</p>
+        <div class="opportunity-layout career-options">
+          <div class="spectrum">
+            <h3 class="options-heading">쌓이는 전문성</h3>
+            <div class="spectrum-ring phd"><span>박사 · 독립적인 문제 정의</span><div class="spectrum-tags"><b>선행 연구 · 전문 R&amp;D</b></div>
+              <div class="spectrum-ring master"><span>석사 · 분야별 전문성</span><div class="spectrum-tags"><b>특화 개발 · 연구개발</b></div>
+                <div class="spectrum-ring bachelor"><span>학사 · 전공 기초</span><b>일반 엔지니어링</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="company-opportunities">
+            <h3 class="options-heading">지원 가능한 <strong>연구직·회사의 폭</strong></h3>
+            <div class="company-chart" role="img" aria-label="지원 가능한 연구직과 회사의 폭이 학사, 석사, 박사로 갈수록 넓어지는 개념도. 실제 회사 수를 집계한 그래프가 아닙니다.">
+              <div class="company-bars" aria-hidden="true">
+                <div class="company-column"><div class="company-bar bachelor-bar"><span>학사 지원<br>연구직</span></div><b>학사</b></div>
+                <div class="company-column"><div class="company-bar master-bar"><span>석사 이상<br>모집 연구직까지</span><i>+</i></div><b>석사</b></div>
+                <div class="company-column"><div class="company-bar phd-bar"><span>박사 전문인력<br>모집 연구직까지</span><i>+</i></div><b>박사</b></div>
+              </div>
+            </div>
+            <p class="company-chart-message"><strong>연구직 선택의 폭이 넓어진다.</strong></p>
+          </div>
+        </div>
+        <p class="takeaway">나의 전문성이, <strong>지원 가능한 회사의 폭을 넓힌다.</strong></p><p class="fine-print">막대 높이는 실제 회사 수가 아닌 기회 확장의 개념 표현입니다. 지원 자격은 기업·직무·경험에 따라 다릅니다.</p>
       </section>
       <section class="seminar-slide" id="slide-6" aria-labelledby="title-6" inert aria-hidden="true">
         <header><p class="eyebrow">06 / 왜 ERICA인가</p><h2 id="title-6" tabindex="-1">성장하는 연구 환경에서, <em>함께 성장하기.</em></h2></header>
