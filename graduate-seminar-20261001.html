@@ -234,6 +234,65 @@
       .career-options .master,.career-options .bachelor { margin-top:10px; }
       .career-options .bachelor { padding-bottom:10px; }
     }
+
+    #slide-6 .mini-index { color:#153e68; font-size:23px; line-height:1.4; }
+    #slide-6 .rank-pair span { color:#102b4b; font-weight:650; }
+    #slide-6 .rank-pair span small { font-size:17px; color:#16334f; font-weight:500; line-height:1.4; }
+    #slide-6 .rank-pair strong { font-size:76px; }
+    #slide-6 .rank-change span { font-size:20px; color:#102b4b; font-weight:600; }
+    #slide-6 .rank-change b { color:#16334f; }
+    #slide-6 .rank-change .current-rank { color:#0e4a84; }
+    #slide-6 .researcher-stat span { color:#102b4b; font-size:23px; line-height:1.5; font-weight:600; }
+    #slide-6 .researcher-stat { gap:20px; }
+    #slide-6 .growth-chain { color:#102b4b; font-size:26px; line-height:1.35; padding-top:14px; }
+    #slide-6 .growth-chain b { color:#0e4a84; font-size:22px; line-height:1.2; }
+    .metric-source { display:inline-flex; color:#064b87; font-size:19px; line-height:1.4; font-weight:750; text-decoration:underline; text-underline-offset:4px; margin-top:10px; padding:3px 0; }
+    .metric-source:hover { color:#092b4c; text-decoration-thickness:2px; }
+    .erica-references { flex-shrink:0; display:flex; flex-direction:column; gap:8px; margin-top:12px; color:#16334f; font-size:17px; font-weight:500; }
+    .reference-links { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+    .erica-references .reference-links a,.erica-references .reference-links button { background:#e8f2fc; border:1px solid #83acd1; border-radius:8px; padding:7px 14px; font-size:18px; line-height:1.4; color:#073c6c; font-weight:750; }
+    .erica-references .reference-links a:hover,.erica-references .reference-links button:hover { background:#d5e8fa; }
+    #sources-dialog { font-size:18px; color:#102b4b; }#sources-dialog .source-note { font-size:16px; color:#16334f; }#sources-dialog a { color:#064b87; font-weight:700; text-decoration:underline; }
+    @media(max-height:850px) and (min-width:801px) {
+      #slide-6 .mini-index { font-size:20px; }
+      #slide-6 .rank-pair strong { font-size:58px; }
+      #slide-6 .rank-pair { margin:6px 0 12px; }
+      #slide-6 .rank-pair span small { font-size:15px; }
+      #slide-6 .rank-change { padding-top:10px; }#slide-6 .rank-change span { font-size:17px; }
+      #slide-6 .researcher-stat span { font-size:19px; }
+      #slide-6 .growth-chain { font-size:22px; padding-top:10px; line-height:1.2; }
+      #slide-6 .growth-chain b { font-size:19px; line-height:1; }
+      .metric-source { font-size:17px; margin-top:6px; }
+      .erica-references { gap:6px; margin-top:7px; font-size:15px; }
+      .erica-references .reference-links a,.erica-references .reference-links button { font-size:17px; padding:5px 12px; }
+    }
+    @media(max-width:800px) {
+      #slide-6 .mini-index { font-size:18px; }#slide-6 .rank-pair strong { font-size:52px; }
+      #slide-6 .rank-pair span small { font-size:14px; }#slide-6 .rank-change span { font-size:16px; }
+      #slide-6 .researcher-stat span { font-size:18px; }#slide-6 .growth-chain { font-size:21px; }
+      .metric-source { font-size:16px; }.erica-references { font-size:14px; }
+      .erica-references .reference-links a,.erica-references .reference-links button { font-size:16px; }
+    }
+    @media(max-width:480px) {
+      #slide-6 .growth-card { display:block; }#slide-6 .researcher-stat { flex-direction:row; flex-wrap:nowrap; gap:12px; }
+      #slide-6 .researcher-stat span { font-size:16px; }#slide-6 .growth-chain { font-size:20px; }
+      #slide-6 .rank-pair span { font-size:18px; }#slide-6 .rank-pair span small { font-size:13px; }
+      .metric-source { font-size:14px; }.erica-references { text-align:center; }
+    }
+    .researcher-description { display:flex; flex-direction:column; align-items:flex-start; }
+    @media(min-width:801px) {
+      #slide-6 .ranking-card,#slide-6 .growth-card { padding:16px 24px; }
+      #slide-6 .rank-pair { margin:6px 0 12px; }
+      #slide-6 .rank-pair span { line-height:1.35; }
+      #slide-6 .rank-change { padding-top:10px; }
+      #slide-6 .growth-chain { gap:5px; line-height:1.25; }
+      #slide-6 .growth-chain b { display:none; }
+      #slide-6 .erica-layout { padding-top:6px; padding-bottom:4px; }
+    }
+    @media(max-height:850px) and (min-width:801px) {
+      #slide-6 .takeaway { margin-top:4px; }
+      .erica-references { margin-top:4px; gap:3px; }
+    }
     @media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; animation:none!important; scroll-behavior:auto!important; } }
 </style>
 </head>
@@ -437,9 +496,9 @@
       </section>
       <section class="seminar-slide" id="slide-6" aria-labelledby="title-6" inert aria-hidden="true">
         <header><p class="eyebrow">06 / 왜 ERICA인가</p><h2 id="title-6" tabindex="-1">성장하는 연구 환경에서, <em>함께 성장하기.</em></h2></header>
-        <div class="erica-layout"><div class="ranking-card"><span class="mini-index">2025 중앙일보 대학평가 · ERICA</span><div class="rank-pair"><div><strong>7<small>위</small></strong><span>교수연구 부문</span></div><div><strong>6<small>위</small></strong><span>논문 인용 영향력<small>FWCI · 분야 보정 인용 지표</small></span></div></div><div class="rank-change"><span>종합순위</span><b>16<small>위</small></b><span class="rise-arrow">↗</span><b class="current-rank">13<small>위</small></b><span>2024 → 2025</span></div></div><div class="growth-card"><span class="mini-index blue">성과를 만들 수 있는 토대</span><div class="researcher-stat"><strong>27<small>명</small></strong><span>2025 세계 상위 2% 연구자<br>ERICA 선정 인원</span></div><div class="growth-chain"><span>교수진 · 연구 인프라</span><b>↓</b><span>함께 풀 문제 · 연구 경험</span><b>↓</b><strong>다음 성과의 주인공, 여러분</strong></div></div></div>
+        <div class="erica-layout"><div class="ranking-card"><span class="mini-index">2025 중앙일보 대학평가 · ERICA</span><div class="rank-pair"><div><strong>7<small>위</small></strong><span>교수연구 부문</span><a class="metric-source" href="https://www.joongang.co.kr/article/25389511#:~:text=%EA%B5%90%EC%88%98%EC%97%B0%EA%B5%AC%20%EB%B6%80%EB%AC%B8%207%EC%9C%84" target="_blank" rel="noopener" aria-label="교수연구 7위 출처: 중앙일보 원문 새 탭에서 열기">중앙일보 원문 ↗</a></div><div><strong>6<small>위</small></strong><span>논문 인용 영향력<small>FWCI · 분야 보정 인용 지표</small></span><a class="metric-source" href="https://www.joongang.co.kr/article/25389511#:~:text=%EC%A0%84%EA%B5%AD%206%EC%9C%84%EB%A5%BC%20%EA%B8%B0%EB%A1%9D%ED%96%88%EB%8B%A4" target="_blank" rel="noopener" aria-label="논문 인용 영향력 6위 출처: 중앙일보 원문 새 탭에서 열기">중앙일보 원문 ↗</a></div></div><div class="rank-change"><span>종합순위</span><b>16<small>위</small></b><span class="rise-arrow">↗</span><b class="current-rank">13<small>위</small></b><span>2024 → 2025</span></div></div><div class="growth-card"><span class="mini-index blue">성과를 만들 수 있는 토대</span><div class="researcher-stat"><strong>27<small>명</small></strong><div class="researcher-description"><span>2025 세계 상위 2% 연구자<br>ERICA 선정 인원</span><a class="metric-source" href="https://www.joongang.co.kr/article/25389511#:~:text=%EC%B4%9D%2027%EB%AA%85%EC%9D%B4%20%EC%84%A0%EC%A0%95" target="_blank" rel="noopener" aria-label="세계 상위 2% 연구자 27명 출처: 중앙일보 원문 새 탭에서 열기">중앙일보 원문 ↗</a></div></div><div class="growth-chain"><span>교수진 · 연구 인프라</span><b>↓</b><span>함께 풀 문제 · 연구 경험</span><b>↓</b><strong>다음 성과의 주인공, 여러분</strong></div></div></div>
         <p class="takeaway">대학원의 가치는 간판을 넘어, <strong>내가 성장할 수 있는 환경.</strong></p>
-        <div class="source-line"><span>ERICA 전체 지표 · 기계공학과 개별 순위가 아닙니다.</span><button type="button" id="sources-open">지표와 출처 보기 ↗</button><a href="join-us.html#join-details">IDEA LAB에서 시작하기 →</a></div>
+        <div class="source-line erica-references"><div class="reference-links"><a href="https://www.joongang.co.kr/article/25389511" target="_blank" rel="noopener">중앙일보 평가 기사 ↗</a><a href="https://hy-erica.com/vol112/pdf/ERICA_vol_112.pdf" target="_blank" rel="noopener">ERICA 공식 매거진 PDF ↗</a><button type="button" id="sources-open">지표 설명</button></div><span>2025년 ERICA 전체 지표 · 기계공학과 개별 순위가 아닙니다.</span></div>
       </section>
     </div>
     <div class="slide-controls"><button class="slide-arrow" id="previous" type="button" aria-label="이전 슬라이드"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="m25 8-12 12 12 12"/></svg></button><div class="slide-progress"><div class="slide-dots" aria-label="슬라이드 선택"></div><span id="slide-count" aria-live="polite">01 / 06</span></div><button class="slide-arrow" id="next" type="button" aria-label="다음 슬라이드"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="m15 8 12 12-12 12"/></svg></button></div>
