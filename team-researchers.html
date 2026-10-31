@@ -266,17 +266,24 @@
     z-index: 1;
   }
 
-  .member-website::before {
+  .member-website::before,
+  .member-website::after {
     content: '';
     position: absolute;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(219, 84, 147, 0.38) 0%, rgba(219, 84, 147, 0.2) 48%, rgba(219, 84, 147, 0) 82%);
+    inset: 2px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cpath d='M30 2v5M53 30h5M30 53v5M2 30h5' fill='none' stroke='%23222222' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
     opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    z-index: -1;
+    animation: website-twinkle 1.87s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .member-website::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cpath d='M10 10l4 4M46 14l4-4M46 46l4 4M10 50l4-4' fill='none' stroke='%23222222' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+
+  @keyframes website-twinkle {
+    0%, 15%, 85%, 100% { opacity: 0; }
+    45%, 55% { opacity: 0.55; }
   }
 
   .member-website:visited,
@@ -292,9 +299,12 @@
     text-decoration: none;
   }
 
-  .member-website:hover::before {
-    opacity: 0.78;
-    transform: scale(1);
+  @media (prefers-reduced-motion: reduce) {
+    .member-website::before,
+    .member-website::after {
+      animation: none;
+      opacity: 0.35;
+    }
   }
 
   .member-website:focus-visible {
@@ -624,7 +634,7 @@
 				<div class="col-lg-9">
 					<div class="recruitment-link-card">
 						<p>IDEA LAB은 각자의 비전을 AI로 구현해가는 연구자들로 구성되였으며, 함께할 새로운 동료를 모시고 있습니다.<br>자세한 모집 안내는 아래 버튼을 눌러 확인해 주세요.</p>
-						<a class="recruitment-link-btn" href="join-us.html">신규 멤버 모집 안내 보기<span class="arrow-icon">→</span></a>
+						<a class="recruitment-link-btn" href="join-us.html">멤버 모집 안내<span class="arrow-icon">→</span></a>
 					</div>
 				</div>
 			</div>
