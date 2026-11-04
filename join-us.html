@@ -283,7 +283,42 @@
         grid-template-columns: 1fr;
       }
     }
+    .email-copy-button {
+      padding: 0;
+      border: 0;
+      border-bottom: 1px dotted currentColor;
+      background: transparent;
+      color: #0E4A84;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .email-copy-button:hover { color: #176aa6; }
+    .email-copy-button:focus-visible {
+      outline: 2px solid #0E4A84;
+      outline-offset: 4px;
+    }
+
+    .email-copy-status {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1100;
+      max-width: calc(100% - 2rem);
+      padding: 0.7rem 1.1rem;
+      border-radius: 8px;
+      background: #202833;
+      color: #fff;
+      font-size: 0.9rem;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .email-copy-status:empty { display: none; }
   </style>
+  <script src="js/analytics.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -337,7 +372,7 @@
               다른 진학 트랙이나 학부연구생 활동에 관심 있는 학생도 편하게 문의주세요.<br>
               <br>
               모집 관련 상담을 원하시면 관심 분야, 성적표, 포트폴리오(CV)를 첨부하여<br>
-              <a href="mailto:sunwoongy@hanyang.ac.kr">sunwoongy@hanyang.ac.kr</a>로 연락주세요.
+              <button type="button" class="email-copy-button" id="copy-contact-email" title="클릭하여 이메일 주소 복사" aria-label="이메일 주소 복사: sunwoongy@hanyang.ac.kr">sunwoongy@hanyang.ac.kr</button>로 연락주세요.
               <br>
               연구실 합류 여부와 관계없이, 대학원 생활이나 연구 방향이 궁금하신 분들도 편하게 문의주세요.
             </p>
@@ -528,6 +563,50 @@
   <script src="js/navbar.js"></script>
 
   <script src="js/main.js"></script>
+  <div id="email-copy-status" class="email-copy-status" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script>
+    (function () {
+      var button = document.getElementById('copy-contact-email');
+      var status = document.getElementById('email-copy-status');
+      var statusTimer;
+
+      function copyFallback(text) {
+        var field = document.createElement('textarea');
+        field.value = text;
+        field.setAttribute('readonly', '');
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        document.body.appendChild(field);
+        field.select();
+        field.setSelectionRange(0, text.length);
+        var copied = false;
+        try { copied = document.execCommand('copy'); }
+        finally {
+          field.remove();
+          button.focus({ preventScroll: true });
+        }
+        if (!copied) { throw new Error('Copy failed'); }
+      }
+
+      button.addEventListener('click', async function () {
+        var email = button.textContent.trim();
+        var copied = false;
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(email);
+            copied = true;
+          }
+        } catch (error) { /* Try the fallback if clipboard access is denied. */ }
+        if (!copied) {
+          try { copyFallback(email); copied = true; }
+          catch (error) { copied = false; }
+        }
+        clearTimeout(statusTimer);
+        status.textContent = copied ? 'E-mail address copied!' : '복사하지 못했습니다. 이메일 주소를 직접 복사해 주세요.';
+        statusTimer = setTimeout(function () { status.textContent = ''; }, 3500);
+      });
+    }());
+  </script>
   <!-- <script>
     window.addEventListener('load', function () {
       var questions = document.querySelectorAll('.faq-question');
