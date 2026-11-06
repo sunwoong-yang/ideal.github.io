@@ -90,7 +90,7 @@
       grid-template-columns: repeat(8, minmax(0, 1fr));
       align-items: stretch;
       gap: 0.7rem;
-      width: min(94vw, 1040px);
+      width: min(94vw, 880px);
       padding: 0.7rem 0.8rem;
       border-radius: 28px;
       background: rgba(255, 255, 255, 0.94);
@@ -106,7 +106,7 @@
       justify-content: center;
       width: 100%;
       min-width: 0;
-      padding: 0.78rem 1.1rem;
+      padding: 0.78rem 0.65rem;
       border-radius: 999px;
       text-decoration: none !important;
       font-size: 0.9rem;
@@ -122,11 +122,11 @@
 
     @keyframes cursor-approach {
       0%   { transform: translate(14px, 14px); opacity: 0; }
-      5%   { transform: translate(14px, 14px); opacity: 1; }
-      20%  { transform: translate(0, 0);        opacity: 1; }
-      28%  { transform: translate(0, 0);        opacity: 1; }
-      33%  { transform: translate(0, 0);        opacity: 0; }
-      34%  { transform: translate(14px, 14px); opacity: 0; }
+      1%   { transform: translate(14px, 14px); opacity: 1; }
+      8%   { transform: translate(0, 0);        opacity: 1; }
+      10%  { transform: translate(0, 0);        opacity: 1; }
+      13%  { transform: translate(0, 0);        opacity: 0; }
+      14%  { transform: translate(14px, 14px); opacity: 0; }
       100% { transform: translate(14px, 14px); opacity: 0; }
     }
 
@@ -141,21 +141,21 @@
       background-size: contain;
       background-repeat: no-repeat;
       pointer-events: none;
-      animation: cursor-approach 6.8s ease-out infinite;
+      animation: cursor-approach 9.156s ease-out infinite backwards;
     }
 
     .demo-option:nth-child(2)::after {
-      animation-delay: 1.7s;
+      animation-delay: 1.308s;
       animation-fill-mode: backwards;
     }
 
     .demo-option:nth-child(3)::after {
-      animation-delay: 3.4s;
+      animation-delay: 2.616s;
       animation-fill-mode: backwards;
     }
 
     .demo-option:nth-child(4)::after {
-      animation-delay: 5.1s;
+      animation-delay: 3.924s;
       animation-fill-mode: backwards;
     }
 
@@ -260,9 +260,9 @@
       box-shadow: 0 16px 28px rgba(181, 86, 59, 0.24);
     }
 
-    .demo-option:nth-child(5)::after { animation-delay: 0.85s; animation-fill-mode: backwards; }
-    .demo-option:nth-child(6)::after { animation-delay: 2.55s; animation-fill-mode: backwards; }
-    .demo-option:nth-child(7)::after { animation-delay: 4.25s; animation-fill-mode: backwards; }
+    .demo-option:nth-child(5)::after { animation-delay: 5.232s; }
+    .demo-option:nth-child(6)::after { animation-delay: 6.54s; }
+    .demo-option:nth-child(7)::after { animation-delay: 7.848s; }
 
     @media (prefers-reduced-motion: reduce) {
       .demo-option::after { animation: none; display: none; }
@@ -673,12 +673,6 @@
         grid-template-columns: 1fr;
         width: min(92vw, 280px);
         border-radius: 22px;
-      }
-
-      .demo-option:nth-child(2)::after,
-      .demo-option:nth-child(3)::after,
-      .demo-option:nth-child(4)::after {
-        animation-delay: 0s;
       }
 
       .demo-option {
