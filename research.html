@@ -87,10 +87,10 @@
 
     .demo-options {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(8, minmax(0, 1fr));
       align-items: stretch;
       gap: 0.7rem;
-      width: min(100%, 680px);
+      width: min(94vw, 1040px);
       padding: 0.7rem 0.8rem;
       border-radius: 28px;
       background: rgba(255, 255, 255, 0.94);
@@ -100,6 +100,7 @@
     }
 
     .demo-option {
+      grid-column: span 2;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -159,6 +160,7 @@
     }
 
     .demo-option:first-child {
+      grid-column: 2 / span 2;
       color: #0f4f6c;
       background: linear-gradient(135deg, #f1fbff, #dff4fb);
       border-color: rgba(23, 119, 156, 0.2);
@@ -166,6 +168,7 @@
     }
 
     .demo-option:nth-child(2) {
+      grid-column: 4 / span 2;
       color: #5f3146;
       background: linear-gradient(135deg, #fff4f7, #fde7ef);
       border-color: rgba(173, 78, 121, 0.2);
@@ -173,6 +176,7 @@
     }
 
     .demo-option:nth-child(3) {
+      grid-column: 6 / span 2;
       color: #1f4d2e;
       background: linear-gradient(135deg, #f0fdf4, #d1fae5);
       border-color: rgba(22, 101, 52, 0.2);
@@ -180,7 +184,7 @@
     }
 
     .demo-option:nth-child(4) {
-      grid-column: 2;
+      grid-column: 1 / span 2;
       color: #43306b;
       background: linear-gradient(135deg, #f7f3ff, #ebe2ff);
       border-color: rgba(102, 72, 164, 0.2);
@@ -215,6 +219,53 @@
     .demo-option:nth-child(4):focus {
       background: linear-gradient(135deg, #6648a4, #8b6fd1);
       box-shadow: 0 16px 28px rgba(102, 72, 164, 0.24);
+    }
+
+    .demo-option:nth-child(5) {
+      color: #805018;
+      background: linear-gradient(135deg, #fffaf0, #fce8c5);
+      border-color: rgba(163, 104, 30, 0.2);
+    }
+
+    .demo-option:nth-child(6) {
+      color: #245b61;
+      background: linear-gradient(135deg, #effbfa, #ccece8);
+      border-color: rgba(33, 122, 119, 0.2);
+    }
+
+    .demo-option:nth-child(7) {
+      color: #8a4032;
+      background: linear-gradient(135deg, #fff5f0, #ffddd0);
+      border-color: rgba(181, 86, 59, 0.2);
+    }
+
+    .demo-option:nth-child(5):hover,
+    .demo-option:nth-child(5):focus {
+      color: #fff;
+      background: linear-gradient(135deg, #a3681e, #d6a14b);
+      box-shadow: 0 16px 28px rgba(163, 104, 30, 0.24);
+    }
+
+    .demo-option:nth-child(6):hover,
+    .demo-option:nth-child(6):focus {
+      color: #fff;
+      background: linear-gradient(135deg, #217a77, #48aaa3);
+      box-shadow: 0 16px 28px rgba(33, 122, 119, 0.24);
+    }
+
+    .demo-option:nth-child(7):hover,
+    .demo-option:nth-child(7):focus {
+      color: #fff;
+      background: linear-gradient(135deg, #b5563b, #df8b68);
+      box-shadow: 0 16px 28px rgba(181, 86, 59, 0.24);
+    }
+
+    .demo-option:nth-child(5)::after { animation-delay: 0.85s; animation-fill-mode: backwards; }
+    .demo-option:nth-child(6)::after { animation-delay: 2.55s; animation-fill-mode: backwards; }
+    .demo-option:nth-child(7)::after { animation-delay: 4.25s; animation-fill-mode: backwards; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .demo-option::after { animation: none; display: none; }
     }
 
     .demo-option-label {
@@ -635,7 +686,7 @@
         min-width: 0;
       }
 
-      .demo-option:nth-child(4) {
+      .demo-options .demo-option {
         grid-column: auto;
       }
 
@@ -717,6 +768,33 @@
                 <span>
                   <span class="demo-option-line">3D Wing Aerodynamic</span>
                   <span class="demo-option-line">Foundation Model</span>
+                </span>
+              </span>
+            </a>
+            <a href="https://tlsrkswl.github.io/Dong-u-Shin-IDEALAB/demos/rag-comparison/index.html?v=20261106-inline-logo" target="_blank" rel="noopener" class="demo-option">
+              <span class="demo-option-label">
+                <strong>Demo 5</strong>
+                <span>
+                  <span class="demo-option-line">Knowledge Graph</span>
+                  <span class="demo-option-line">for Drone Design</span>
+                </span>
+              </span>
+            </a>
+            <a href="https://junseokchoi-hyu.github.io/demo/" target="_blank" rel="noopener" class="demo-option">
+              <span class="demo-option-label">
+                <strong>Demo 6</strong>
+                <span>
+                  <span class="demo-option-line">Agent-based</span>
+                  <span class="demo-option-line">Aircraft CAD Modeling</span>
+                </span>
+              </span>
+            </a>
+            <a href="https://broha-source.github.io/Orbit-data-center/?v=lab-mark-1" target="_blank" rel="noopener" class="demo-option">
+              <span class="demo-option-label">
+                <strong>Demo 7</strong>
+                <span>
+                  <span class="demo-option-line">Generative Design</span>
+                  <span class="demo-option-line">for Space Data Center</span>
                 </span>
               </span>
             </a>
