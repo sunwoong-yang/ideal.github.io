@@ -187,6 +187,37 @@
       font-weight: 700;
     }
 
+    .resource-panel {
+      margin: 1.5rem 0;
+      padding: 0 1.4rem;
+      border: 1px solid #dfe6ee;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #f8fafc, #f0f4f8);
+      box-shadow: 0 8px 24px rgba(30, 50, 75, 0.05);
+    }
+
+    .resource-section { padding: 1.4rem 0; }
+    .resource-section + .resource-section { border-top: 1px solid #dce4ed; }
+    .resource-step { display: block; margin-bottom: .4rem; text-align: center; font-size: .7rem; font-weight: 700; letter-spacing: .15em; color: #69809a; }
+    #join-section .recruitment-card .resource-panel .resource-label {
+      margin: 0;
+      font-size: .95rem;
+      color: #243b53 !important;
+      line-height: 1.55 !important;
+    }
+    #join-section .resource-panel .resource-note {
+      margin: .45rem 0 0;
+      text-align: center;
+      text-align-last: center;
+      text-indent: 0;
+      font-size: .83rem;
+      color: #64748b;
+    }
+    .resource-panel .file-grid { margin: .9rem 0 0; gap: .5rem; }
+    .resource-panel .file-card { background: #fff; border-color: #e0e6ed; border-radius: 8px; padding: .6rem .85rem; min-height: 42px; }
+    .resource-panel .file-card:hover { background: #fff; border-color: #a9bed1; box-shadow: 0 4px 12px rgba(30, 60, 90, .1); transform: translateY(-2px); }
+    .resource-format { font-family: "DM Sans", sans-serif; font-size: .62rem; font-weight: 800; letter-spacing: .04em; color: #6c7e91; }
+
     .file-grid {
       display: flex;
       flex-wrap: wrap;
@@ -407,7 +438,10 @@
             <div class="faq-item">
               <div class="faq-question">■ AI 연구가 어렵게 느껴지는데, 저도 잘 해낼 수 있을까요?</div>
               <p>신입 구성원(학부연구생 포함)이 합류하면 지도교수가 직접 참여하는 <strong>AI 스터디</strong>를 진행합니다. AI 교재를 바탕으로 매주 학습한 내용을 PPT로 발표하고, 발표 내용과 이해도에 대해 구체적인 피드백 및 추가 티칭이 이루어집니다. IDEA 연구실에서 약 2개월간의 체계적인 스터디 과정과 성실한 동료들과의 학습 환경, 그리고 지도교수의 밀도 있는 지도가 함께한다면, AI 경험이 많지 않더라도 누구나 폭발적인 속도로 AI 연구에 필요한 역량을 쌓아갈 수 있습니다.</p>
-              <p class="resource-label"><strong>▼ IDEA LAB 학부연구생들이 스터디를 위해 직접 제작하고 발표했던 자료 ▼</strong></p>
+              <div class="resource-panel" aria-label="학부연구생들의 학습과 연구 성과">
+              <section class="resource-section" aria-labelledby="study-resources-title">
+              <span class="resource-step">01 · STUDY</span>
+              <h4 class="resource-label" id="study-resources-title">IDEA LAB 학부연구생들의 스터디 자료</h4>
               <div class="file-grid">
                 <a href="files/ai-study-examples/익명1_4장.pdf" target="_blank" class="file-card">
                   <svg class="file-icon" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg">
@@ -470,8 +504,10 @@
                   <span class="file-name">예시6.pdf</span>
                 </a>
               </div>
-              <p><a href="team-researchers.html">연구실 구성원</a>들의 개인 홈페이지에서 각자의 연구가 어떻게 진행되고 있는지도 직접 확인해 보세요.</p>
-              <p class="resource-label"><strong>▼ IDEA LAB 학부연구생들의 연구 내용이 소개된 개인 홈페이지 ▼</strong></p>
+              </section>
+              <section class="resource-section" aria-labelledby="website-resources-title">
+              <span class="resource-step">02 · RESEARCH</span>
+              <h4 class="resource-label" id="website-resources-title">IDEA LAB 학부연구생들의 연구 내용을 소개하는 개인 홈페이지</h4>
               <div class="file-grid" aria-label="학생 개인 홈페이지 예시">
                 <a href="https://junseokchoi-hyu.github.io/" target="_blank" rel="noopener noreferrer" class="file-card" aria-label="홈페이지 예시 1: 최준석">
                   <span class="icon-home" aria-hidden="true"></span><span class="file-name">홈페이지 예시 1</span>
@@ -488,6 +524,27 @@
                 <a href="https://seunghanjung.github.io/" target="_blank" rel="noopener noreferrer" class="file-card" aria-label="홈페이지 예시 5: 정승한">
                   <span class="icon-home" aria-hidden="true"></span><span class="file-name">홈페이지 예시 5</span>
                 </a>
+              </div>
+              </section>
+              <section class="resource-section" aria-labelledby="conference-resources-title">
+              <span class="resource-step">03 · PRESENTATION</span>
+              <h4 class="resource-label" id="conference-resources-title">IDEA LAB 학부연구생들의 학회 발표 자료</h4>
+              <p class="resource-note">3개월간의 연구 성과를 대한기계학회에서 발표했습니다.</p>
+              <div class="file-grid" aria-label="대한기계학회 발표 자료 예시">
+                <a href="files/ksme-2026/ksme-2026_oral_seunghan-jung.pdf" target="_blank" rel="noopener noreferrer" class="file-card" aria-label="구두발표 예시 1: 정승한 PDF">
+                  <span class="resource-format" aria-hidden="true">PDF</span><span class="file-name">구두발표 예시 1</span>
+                </a>
+                <a href="files/ksme-2026/ksme-2026_oral_hyeongjin-ha.pdf" target="_blank" rel="noopener noreferrer" class="file-card" aria-label="구두발표 예시 2: 하형진 PDF">
+                  <span class="resource-format" aria-hidden="true">PDF</span><span class="file-name">구두발표 예시 2</span>
+                </a>
+                <a href="files/ksme-2026/ksme-2026_poster_junseok-choi.pdf" target="_blank" rel="noopener noreferrer" class="file-card" aria-label="포스터발표 예시 1: 최준석 PDF">
+                  <span class="resource-format" aria-hidden="true">PDF</span><span class="file-name">포스터발표 예시 1</span>
+                </a>
+                <a href="files/ksme-2026/ksme-2026_poster_donggyun-ahn.pdf" target="_blank" rel="noopener noreferrer" class="file-card" aria-label="포스터발표 예시 2: 안동균 PDF">
+                  <span class="resource-format" aria-hidden="true">PDF</span><span class="file-name">포스터발표 예시 2</span>
+                </a>
+              </div>
+              </section>
               </div>
             </div>
 
