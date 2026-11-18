@@ -33,10 +33,11 @@
     .presentation-resources { margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid #e3e7eb; }
     .news-detail .presentation-resources h2 { font-size: .95rem; font-weight: 600; color: #444; margin-bottom: .65rem; }
     .presentation-links { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
-    .presentation-links a { display: inline-flex; align-items: center; gap: .35rem; padding: .15rem 0; color: #444; font-size: .85rem; text-decoration: none; transition: color .2s; }
-    .presentation-links a:hover { color: #0E4A84; text-decoration: underline; text-underline-offset: 3px; }
+    .presentation-links a { display: inline-flex; align-items: center; gap: .35rem; padding: .25rem .35rem; border-radius: 4px; color: #444; font-size: .85rem; text-decoration: underline; text-decoration-color: #b5bec7; text-decoration-thickness: 1px; text-underline-offset: 4px; cursor: pointer; transition: color .2s, background-color .2s, text-decoration-color .2s; }
+    .presentation-links a:hover { color: #0E4A84; background-color: #edf3f8; text-decoration-color: #0E4A84; }
     .presentation-links a:focus-visible { outline: 2px solid #0E4A84; outline-offset: 3px; }
-    .presentation-links .pdf-tag { font-size: .6rem; font-weight: 600; color: #88919a; }
+    .presentation-links .pdf-tag { font-size: .6rem; font-weight: 700; color: #586b7d; border: 1px solid #cbd3da; border-radius: 3px; padding: 0 .2rem; line-height: 1.5; }
+    .presentation-links a:hover .pdf-tag { color: #0E4A84; border-color: #8aa9c5; }
     .conference-gallery { margin: 0 0 1.8rem; }
     .gallery-stage { position: relative; aspect-ratio: 4 / 3; background: #f3f5f7; border-radius: 16px; overflow: hidden; }
     .gallery-stage img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
