@@ -31,12 +31,12 @@
     .back-link:hover { text-decoration: underline; }
     .review-block { border-left: 3px solid rgba(14, 74, 132, 0.25); padding-left: 1rem; margin: 0.75rem 0; }
     .presentation-resources { margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid #e3e7eb; }
-    .presentation-resources h2 { font-size: 1.1rem; font-weight: 700; color: #222; }
-    .presentation-links { display: flex; flex-wrap: wrap; gap: .6rem; }
-    .presentation-links a { display: inline-flex; align-items: center; gap: .55rem; padding: .65rem .9rem; border: 1px solid #dfe4e9; border-radius: 8px; color: #333; background: #fafbfc; text-decoration: none; transition: background .2s, border-color .2s, transform .2s; }
-    .presentation-links a:hover { background: #edf3f8; border-color: #9bb3c9; transform: translateY(-2px); }
+    .news-detail .presentation-resources h2 { font-size: .95rem; font-weight: 600; color: #444; margin-bottom: .65rem; }
+    .presentation-links { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+    .presentation-links a { display: inline-flex; align-items: center; gap: .35rem; padding: .15rem 0; color: #444; font-size: .85rem; text-decoration: none; transition: color .2s; }
+    .presentation-links a:hover { color: #0E4A84; text-decoration: underline; text-underline-offset: 3px; }
     .presentation-links a:focus-visible { outline: 2px solid #0E4A84; outline-offset: 3px; }
-    .presentation-links .pdf-tag { font-size: .65rem; font-weight: 800; color: #6a7886; }
+    .presentation-links .pdf-tag { font-size: .6rem; font-weight: 600; color: #88919a; }
     .conference-gallery { margin: 0 0 1.8rem; }
     .gallery-stage { position: relative; aspect-ratio: 4 / 3; background: #f3f5f7; border-radius: 16px; overflow: hidden; }
     .gallery-stage img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
@@ -109,7 +109,6 @@
         <p>지난 7월부터 AI 스터디와 연구를 병행해 온 학생들이 그동안의 결과를 학회 현장에서 직접 소개했습니다. 발표 준비부터 질의응답까지 경험하며, 자신의 연구를 명확하게 설명하고 앞으로의 연구 방향을 구체화하는 기회가 되었습니다.</p>
         <section class="presentation-resources" aria-labelledby="presentation-resources-title">
           <h2 id="presentation-resources-title">학생별 발표 자료</h2>
-          <p>학생 이름을 클릭하면 발표 자료 PDF가 열립니다.</p>
           <div class="presentation-links">
             <a href="../files/ksme-2026/ksme-2026_oral_seunghan-jung.pdf" target="_blank" rel="noopener noreferrer" aria-label="정승한 구두발표 자료 PDF 열기"><span class="pdf-tag">PDF</span>정승한 · 구두발표</a>
             <a href="../files/ksme-2026/ksme-2026_oral_hyeongjin-ha.pdf" target="_blank" rel="noopener noreferrer" aria-label="하형진 구두발표 자료 PDF 열기"><span class="pdf-tag">PDF</span>하형진 · 구두발표</a>
