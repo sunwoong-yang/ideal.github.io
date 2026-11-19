@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IDEA LAB | AI Wildfire Drone</title>
+  <meta name="description" content="산불 연기 기둥 사이를 통과하는 소방 드론. 기존 Adaptive MPC와 강화학습 AI의 비행을 같은 시뮬레이션 조건에서 비교합니다.">
+  <link rel="icon" href="../../images/HYU_logo_singlecolor_png.png">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/icomoon.css">
+  <link rel="stylesheet" href="demo.css">
+  <script src="../../js/analytics.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="lab-brand"><img src="assets/idea_lab_logo.png" alt="IDEA LAB — Intelligent Design for Engineering Applications Lab, Hanyang University ERICA"></div>
+    <header class="demo-intro">
+      <div class="eyebrow">IDEA LAB / AI FLIGHT CONTROL <span>Simulation demo</span></div>
+      <h1>산불의 연기 기둥 사이,<br><em>더 빠르게 길을 찾는 AI.</em></h1>
+      <p class="intro-copy">물을 실은 무거운 소방 드론이 뜨거운 상승기류를 견디며 안전한 통로를 지납니다.<br class="desktop-break"> 같은 산불, 같은 바람, 같은 출발 조건에서 기존 제어와 강화학습 AI의 비행을 비교해 보세요.</p>
+    </header>
+
+    <section class="video-section" aria-label="기존 제어와 제안 AI의 비행 비교">
+      <div class="comparison-labels">
+        <div class="baseline"><span class="method-kicker">LEFT · 기존 방법</span><strong>Adaptive MPC</strong><span>비행 중 상승기류를 반영해 계획을 수정하는 제어</span></div>
+        <div class="proposed"><span class="method-kicker">RIGHT · 제안 방법</span><strong>Reinforcement Learning AI</strong><span>가상 산불에서 비행을 익힌 강화학습 제어</span></div>
+      </div>
+      <div class="video-shell">
+        <video id="flight-video" controls autoplay muted loop playsinline preload="metadata" poster="assets/overview.jpg" aria-label="왼쪽 Adaptive MPC와 오른쪽 제안 강화학습 AI의 산불 통과 비행 비교" aria-describedby="video-caption">
+          <source src="assets/c3_wildfire_side_by_side.mp4" type="video/mp4">
+          브라우저가 영상 재생을 지원하지 않습니다. <a href="assets/c3_wildfire_side_by_side.mp4">MP4 영상 열기</a>
+        </video>
+      </div>
+      <div class="video-tools"><p id="playback-note">소리 없는 시뮬레이션 영상 · 약 23초 · 반복 재생</p><button id="replay" type="button">처음부터 다시 보기</button></div>
+      <p id="video-caption" class="video-caption">두 드론은 흰 틀로 표시된 안전 통로 6개를 순서대로 통과합니다. 오른쪽 AI는 <strong>17.4초</strong>에 도착하고, 왼쪽 Adaptive MPC는 <strong>21.5초</strong>에 도착합니다. AI가 먼저 도착하면 오른쪽 화면에 FINISHED가 표시되고 해당 장면에서 멈춥니다.</p>
+    </section>
+
+    <section class="reading-guide" aria-labelledby="guide-heading">
+      <h2 id="guide-heading">영상에서 무엇을 보면 될까요?</h2>
+      <div class="guide-grid">
+        <div><span class="guide-mark gate" aria-hidden="true"></span><h3>흰 틀은 안전한 통로</h3><p>연기 기둥 사이에서 지나갈 수 있는 길을 표시합니다. 실제 공중에 설치된 구조물은 아닙니다.</p></div>
+        <div><span class="guide-mark heat" aria-hidden="true"></span><h3>빛나는 중심부는 위험 구역</h3><p>연기 아래의 뜨거운 중심부는 피해야 합니다. 상승기류는 무거운 드론을 위로 밀어 올립니다.</p></div>
+        <div><span class="guide-mark markers" aria-hidden="true"><i></i><i></i></span><h3>시간과 통과 수를 비교</h3><p>각 화면 왼쪽 위의 t와 gates를 보세요. 노란 공은 AI 드론, 파란 공은 기존 방법 드론을 가리킵니다.</p></div>
+      </div>
+    </section>
+
+    <section class="story" aria-labelledby="story-heading">
+      <div class="story-copy"><span class="eyebrow">THE MISSION</span><h2 id="story-heading">단순히 목적지를 향해<br>직진할 수 없는 이유.</h2>
+        <p>이 시나리오는 급수 지점에서 투하 지점으로 이동하기 위해 불타는 지역을 건너는 임무입니다. 드론은 연기 사이로 놓인 여섯 개 통로를 지그재그로 지나되, 뜨거운 중심부와 허용 고도 밖으로 벗어나지 않아야 합니다.</p>
+        <p>물을 실은 드론은 무겁고 반응이 느립니다. 다음 통로가 보인 뒤에 방향을 바꾸면 늦을 수 있어, <strong>언제 미리 돌아 들어가고 언제 속도를 줄일지</strong>가 중요합니다.</p>
+      </div>
+      <figure><img src="assets/topdown.jpg" alt="불타는 숲을 위에서 본 시뮬레이션과 연기 기둥 사이를 연결하는 두 드론의 비행 경로" loading="lazy"><figcaption>위에서 본 가상 산불 환경과 두 비행 경로</figcaption></figure>
+    </section>
+
+    <section class="ai-explanation" aria-labelledby="ai-heading">
+      <span class="eyebrow">WHAT THE AI LEARNS</span><h2 id="ai-heading">경로를 따라가는 대신,<br>잘 통과하는 비행을 배웁니다.</h2>
+      <div class="explanation-grid"><p>기존 Adaptive MPC는 기체의 움직임을 계산으로 예측하고, 비행 중 측정한 상승기류로 지도를 보정하며 다음 동작을 계획합니다. 다만 무거운 기체의 실제 반응과 예측이 다르면 보수적으로 움직이거나 통로를 놓칠 수 있습니다.</p><p>제안 AI는 가상 산불에서 비행을 반복하며 기체의 느린 반응과 상승기류의 영향을 경험합니다. 정해진 경로를 그대로 따라가도록 배우는 것이 아니라, <strong>실패를 피하면서 더 짧은 시간에 통과하도록</strong> 비행을 익힙니다. 두 방법은 같은 관측 정보와 같은 하위 비행 제어기를 사용합니다.</p></div>
+    </section>
+
+    <section class="results" aria-labelledby="results-heading">
+      <div class="results-heading"><div><span class="eyebrow">BEYOND THIS VIDEO</span><h2 id="results-heading">한 장면을 넘어, 128개 코스에서.</h2></div><p>학습에서 보지 못한 가상 산불 코스의 평가 결과입니다.<br>위 영상은 개발용 코스 한 개의 비교입니다.</p></div>
+      <div class="metrics"><div><strong>24.5<span>%</span></strong><h3>평균 임무 시간 단축</h3><p>제안 AI 19.1초 / Adaptive MPC 25.3초</p></div><div><strong>99.0<span>%</span></strong><h3>임무 성공률</h3><p>Adaptive MPC의 성공률은 95.7%</p></div><div><strong>0.2<span>ms</span></strong><h3>한 번의 AI 판단 시간</h3><p>0.1초마다 속도 명령을 내리는 비행 제어</p></div></div>
+      <p class="result-note">평균 임무 시간은 실패 시 90초의 페널티를 포함하며, AI는 독립 학습 3회의 평균입니다. 영상 속 시간 단축은 약 19%로, 128개 코스 평균인 24.5%와 구분됩니다.</p>
+    </section>
+
+  </main>
+  <footer class="ftco-footer ftco-section" style="padding: 2rem 0;">
+    <div class="container"><div class="row"><div class="col-md-12"><div style="display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;">
+      <div class="footer-logo" style="background:transparent;"><img src="../../images/01 캐릭터 마크 - 기본형-04.png" alt="Hanyang University ERICA logo" style="max-height:240px;"></div>
+      <p style="text-align:center;margin:0;"><span class="footer-line-1">&copy; IDEA LAB, Hanyang University ERICA.</span><span class="footer-line-2">All rights reserved.</span><br><span class="template-credit">This template is made by <a href="https://colorlib.com" target="_blank" rel="noopener">Colorlib</a></span></p>
+    </div></div></div></div>
+  </footer>
+  <script src="demo.js"></script>
+</body>
+</html>
