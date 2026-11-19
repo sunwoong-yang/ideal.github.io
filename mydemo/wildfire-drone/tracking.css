@@ -1,0 +1,28 @@
+.demo-jump-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.demo-jump-links a{color:var(--blue);font-size:14px;padding:8px 15px;border:1px solid var(--line);border-radius:6px;text-decoration:none;background:#fff;transition:background .2s,border-color .2s}
+.demo-jump-links a:hover{background:#f2f6fa;border-color:#a9bdce}
+#plume-crossing,#front-tracking{scroll-margin-top:25px}
+.demo-section-heading{margin:35px 0 24px}
+.demo-section-heading h2{margin:8px 0 12px}
+.demo-section-heading p{color:var(--muted);max-width:950px}
+.tracking-demo{border-top:1px solid var(--line);margin-top:40px;padding-top:32px}
+.video-shell.tracking-video video{aspect-ratio:16/9}
+.wind-callout{margin:28px 0;padding:18px 22px;border-left:3px solid #a9bdce;background:#f6f8fa}
+.wind-callout strong{font-size:16px;color:var(--blue)}
+.wind-callout p{margin:5px 0 0;color:var(--muted);font-size:15px}
+.tracking-guide{margin-top:38px}
+.tracking-guide h2{font-size:25px}
+.tracking-guide figure{margin:0 0 28px}
+.tracking-guide img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px}
+.tracking-guide figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+.panel-descriptions{margin:0;border-top:1px solid var(--line)}
+.panel-descriptions>div{display:grid;grid-template-columns:300px 1fr;gap:30px;padding:18px 0;border-bottom:1px solid var(--line)}
+.panel-descriptions dt{font-weight:700;color:var(--ink);font-size:16px}
+.panel-descriptions dt>span{color:var(--blue);margin-right:8px}
+.panel-descriptions small{display:block;margin-left:28px;font-size:13px;font-weight:400;color:var(--muted)}
+.panel-descriptions dd{margin:0;color:var(--muted);font-size:15px}
+.panel-descriptions strong{color:var(--ink)}
+.tracking-process{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin:35px 0 20px;padding:26px;background:#f6f8fa;border-radius:10px}
+.tracking-process h3{margin-top:0;font-size:18px}
+.tracking-process p{font-size:15px;color:var(--muted);margin:0}
+@media(max-width:767px){.demo-jump-links{gap:8px}.demo-jump-links a{font-size:13px;padding:7px 11px}.demo-section-heading{margin-top:28px}.tracking-demo{padding-top:15px;margin-top:25px}.panel-descriptions>div{grid-template-columns:1fr;gap:7px}.panel-descriptions small{display:inline;margin-left:8px}.tracking-process{grid-template-columns:1fr;gap:22px;padding:22px}.tracking-guide h2{font-size:22px}}

@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IDEA LAB | AI Wildfire Drone</title>
-  <meta name="description" content="산불 연기 기둥 사이를 통과하는 소방 드론. 기존 Adaptive MPC와 강화학습 AI의 비행을 같은 시뮬레이션 조건에서 비교합니다.">
+  <meta name="description" content="산불 진압을 위한 AI 드론의 두 가지 시뮬레이션 데모: 연기 기둥 사이의 통과 비행과 열화상 기반 화선 감시 비행을 소개합니다.">
   <link rel="icon" href="../../images/HYU_logo_singlecolor_png.png">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/icomoon.css">
   <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="tracking.css">
   <script src="../../js/analytics.js" defer></script>
 </head>
 <body>
@@ -16,22 +17,24 @@
     <div class="lab-brand"><img src="assets/idea_lab_logo.png" alt="IDEA LAB — Intelligent Design for Engineering Applications Lab, Hanyang University ERICA"></div>
     <header class="demo-intro">
       <div class="eyebrow">IDEA LAB / AI FLIGHT CONTROL <span>Simulation demo</span></div>
-      <h1>산불의 연기 기둥 사이,<br><em>더 빠르게 길을 찾는 AI.</em></h1>
-      <p class="intro-copy">물을 실은 무거운 소방 드론이 뜨거운 상승기류를 견디며 안전한 통로를 지납니다.<br class="desktop-break"> 같은 산불, 같은 바람, 같은 출발 조건에서 기존 제어와 강화학습 AI의 비행을 비교해 보세요.</p>
+      <h1>산불 진압을 위한 소방 드론의 AI 비행 제어</h1>
+      <p class="intro-copy">물을 실은 드론의 통과 비행부터, 번지는 불길을 따라가는 감시 비행까지.<br class="desktop-break"> 산불의 열기와 상승기류 속에서 AI가 드론의 인식과 비행을 돕는 두 가지 시뮬레이션을 소개합니다.</p>
+      <div class="demo-jump-links" aria-label="데모 바로가기"><a href="#plume-crossing">연기 기둥 통과 비행</a><a href="#front-tracking">불길 가장자리 감시 비행</a></div>
     </header>
 
-    <section class="video-section" aria-label="기존 제어와 제안 AI의 비행 비교">
+    <section class="video-section" id="plume-crossing" aria-labelledby="crossing-heading">
+      <div class="demo-section-heading"><span class="eyebrow">PLUME CROSSING</span><h2 id="crossing-heading">연기 기둥 사이를 통과하는 소방 드론</h2><p>같은 산불, 같은 바람, 같은 출발 조건에서 기존 제어와 강화학습 AI의 비행을 비교해 보세요.</p></div>
       <div class="comparison-labels">
         <div class="baseline"><span class="method-kicker">LEFT · 기존 방법</span><strong>Adaptive MPC</strong><span>비행 중 상승기류를 반영해 계획을 수정하는 제어</span></div>
         <div class="proposed"><span class="method-kicker">RIGHT · 제안 방법</span><strong>Reinforcement Learning AI</strong><span>가상 산불에서 비행을 익힌 강화학습 제어</span></div>
       </div>
       <div class="video-shell">
-        <video id="flight-video" controls autoplay muted loop playsinline preload="metadata" poster="assets/overview.jpg" aria-label="왼쪽 Adaptive MPC와 오른쪽 제안 강화학습 AI의 산불 통과 비행 비교" aria-describedby="video-caption">
+        <video id="flight-video" data-demo-video controls autoplay muted loop playsinline preload="metadata" poster="assets/overview.jpg" aria-label="왼쪽 Adaptive MPC와 오른쪽 제안 강화학습 AI의 산불 통과 비행 비교" aria-describedby="video-caption">
           <source src="assets/c3_wildfire_side_by_side.mp4" type="video/mp4">
           브라우저가 영상 재생을 지원하지 않습니다. <a href="assets/c3_wildfire_side_by_side.mp4">MP4 영상 열기</a>
         </video>
       </div>
-      <div class="video-tools"><p id="playback-note">소리 없는 시뮬레이션 영상 · 약 23초 · 반복 재생</p><button id="replay" type="button">처음부터 다시 보기</button></div>
+      <div class="video-tools"><p id="playback-note">소리 없는 시뮬레이션 영상 · 약 23초 · 반복 재생</p><button id="replay" data-replay="flight-video" type="button">처음부터 다시 보기</button></div>
       <p id="video-caption" class="video-caption">두 드론은 흰 틀로 표시된 안전 통로 6개를 순서대로 통과합니다. 오른쪽 AI는 <strong>17.4초</strong>에 도착하고, 왼쪽 Adaptive MPC는 <strong>21.5초</strong>에 도착합니다. AI가 먼저 도착하면 오른쪽 화면에 FINISHED가 표시되고 해당 장면에서 멈춥니다.</p>
     </section>
 
@@ -63,6 +66,36 @@
       <p class="result-note">평균 임무 시간은 실패 시 90초의 페널티를 포함하며, AI는 독립 학습 3회의 평균입니다. 영상 속 시간 단축은 약 19%로, 128개 코스 평균인 24.5%와 구분됩니다.</p>
     </section>
 
+    <section class="tracking-demo" id="front-tracking" aria-labelledby="tracking-heading">
+      <div class="demo-section-heading"><span class="eyebrow">FIRE FRONT TRACKING</span><h2 id="tracking-heading">번지는 산불의 가장자리를 따라가며 감시하는 드론</h2><p>열화상에서 불길의 경계를 찾고, 불 지도를 갱신하며 화선 둘레를 따라 비행합니다.</p></div>
+      <div class="video-shell tracking-video">
+        <video id="tracking-video" data-demo-video controls autoplay muted loop playsinline preload="metadata" poster="assets/fire_front_tracking_poster.png" aria-label="산불의 가장자리를 따라 비행하는 드론과 열화상, 비행 데이터, 불 지도를 보여주는 5개 화면" aria-describedby="tracking-caption">
+          <source src="assets/fire_front_tracking_composite.mp4" type="video/mp4">
+          브라우저가 영상 재생을 지원하지 않습니다. <a href="assets/fire_front_tracking_composite.mp4">MP4 영상 열기</a>
+        </video>
+      </div>
+      <div class="video-tools"><p id="tracking-note">소리 없는 시뮬레이션 영상 · 110초 · 반복 재생</p><button data-replay="tracking-video" type="button">처음부터 다시 보기</button></div>
+      <p id="tracking-caption" class="video-caption">산불이 어디까지 번졌는지 계속 파악하는 감시 임무입니다. AI는 가상 열화상 영상에서 불길의 경계를 찾고, 강화학습 비행 제어기는 상승기류 속에서 기체의 자세를 조절합니다. 갱신된 불 지도와 예측 연기 정보를 이용해 <strong>규칙 기반 경로 결정</strong>이 다음 비행 방향을 정합니다.</p>
+      <div class="wind-callout"><strong>40–55초 구간을 확인해 보세요.</strong><p>바람 방향이 75도 바뀌면서 불이 번지는 방향도 달라집니다. 드론은 새 화선을 따라 비행 경로를 바꿉니다.</p></div>
+
+      <section class="tracking-guide" aria-labelledby="tracking-guide-heading">
+        <h2 id="tracking-guide-heading">다섯 화면을 함께 읽는 법</h2>
+        <figure><img src="assets/fire_front_panel_guide.jpg" alt="다섯 화면의 위치 안내: 1 왼쪽 위 추격 화면, 2 오른쪽 위 열화상과 AI, 3 왼쪽 아래 드론 카메라, 4 가운데 아래 비행 데이터, 5 오른쪽 아래 불 지도" loading="lazy"><figcaption>영상의 각 화면을 아래 설명과 함께 확인해 보세요.</figcaption></figure>
+        <dl class="panel-descriptions">
+          <div><dt><span>①</span> 추격 화면 <small>왼쪽 위</small></dt><dd>드론을 뒤에서 따라갑니다. 숲에 번지는 불길과 연기, 그 위를 비행하는 드론의 움직임을 볼 수 있습니다.</dd></div>
+          <div><dt><span>②</span> 열화상 카메라 + AI <small>오른쪽 위</small></dt><dd>뜨거운 곳은 노랑·주황색입니다. <strong>하늘색 선은 AI가 찾은 불 경계</strong>, 흰 선은 평가용 정답입니다.</dd></div>
+          <div><dt><span>③</span> 드론 카메라 <small>왼쪽 아래</small></dt><dd>드론에 달린 일반 컬러 카메라의 시점입니다. 드론이 바라보는 지형과 불길을 보여줍니다.</dd></div>
+          <div><dt><span>④</span> 비행 데이터 <small>가운데 아래</small></dt><dd>상승기류, 기체 기울기, 명령 속도와 실제 속도의 차이, 모터 명령을 표시합니다. AI가 기체를 조절하는 기록입니다.</dd></div>
+          <div><dt><span>⑤</span> 불 지도 <small>오른쪽 아래</small></dt><dd>하늘색·파란 점은 AI가 추정한 불 경계, <strong>노란 선은 드론이 지나온 길</strong>입니다. 흰 선은 실제 경계, 분홍 선은 예측 연기 기둥 중심이며, 작은 화살표는 바람 방향입니다.</dd></div>
+        </dl>
+      </section>
+      <div class="tracking-process" aria-label="인지부터 비행까지의 과정">
+        <div><h3>열화상으로 경계 찾기</h3><p>AI가 영상 속 불타는 띠를 찾아 지형 위의 불 지도로 옮깁니다.</p></div>
+        <div><h3>지도로 경로 정하기</h3><p>규칙 기반 로직이 화선과 연기 정보를 보고 다음 비행 방향을 정합니다.</p></div>
+        <div><h3>상승기류 속 자세 제어</h3><p>강화학습 AI가 모터를 조절해 드론의 자세와 움직임을 제어합니다.</p></div>
+      </div>
+      <p class="result-note">이 영상의 110초 시뮬레이션에서는 추락 없이 비행했으며, 화면에 보이는 화선의 위치 오차는 평균 약 2.5 m였습니다. 화선의 77%를 20초 이내의 최신 정보로 유지했습니다. 이는 이 시나리오의 결과이며, 위 통과 비행 데모의 128개 코스 평가와는 별개입니다.</p>
+    </section>
   </main>
   <footer class="ftco-footer ftco-section" style="padding: 2rem 0;">
     <div class="container"><div class="row"><div class="col-md-12"><div style="display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;">
