@@ -11066,4 +11066,10 @@ textarea.form-control {
 }
 
 
+.news-category-tabs { display: flex; justify-content: center; gap: .6rem; margin-bottom: 1.5rem; }
+.news-category-tabs a { padding: .45rem 1.15rem; border: 1px solid #dce3ea; border-radius: 6px; background: #fff; color: #526273; font-size: .95rem; font-weight: 600; transition: background .2s, color .2s; }
+.news-category-tabs a:hover { color: #0E4A84; background: #edf3f8; }
+.news-category-tabs a[aria-current="page"] { color: #fff; background: #0E4A84; border-color: #0E4A84; }
+.news-category-tabs a:focus-visible { outline: 2px solid #0E4A84; outline-offset: 3px; }
+
 /*# sourceMappingURL=style.css.map */
