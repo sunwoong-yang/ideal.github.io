@@ -48,7 +48,7 @@
           <a href="${prefix}projects.html" class="nav-link"><span>Projects</span></a>
         </li>
         <li class="nav-item dropdown" data-nav-item="news">
-          <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-toggle="dropdown"
+          <a class="nav-link dropdown-toggle" href="${prefix}news.html#news-menu" id="newsDropdown"
             aria-haspopup="true" aria-expanded="false"><span>News</span></a>
           <div class="dropdown-menu" aria-labelledby="newsDropdown">
             <a class="dropdown-item" href="${prefix}news.html">Advisor</a>
@@ -87,6 +87,37 @@
     }
 
     placeholder.replaceWith(navbar);
+
+    var newsItem = navbar.querySelector('[data-nav-item="news"]');
+    var newsLink = newsItem.querySelector('.nav-link');
+    var newsMenu = newsItem.querySelector('.dropdown-menu');
+    function setNewsMenu(open) {
+      newsItem.classList.toggle('show', open);
+      newsMenu.classList.toggle('show', open);
+      newsLink.setAttribute('aria-expanded', String(open));
+      if (open && window.matchMedia('(max-width: 991px)').matches) {
+        navbar.querySelector('.navbar-collapse').classList.add('show');
+        navbar.querySelector('.navbar-toggler').setAttribute('aria-expanded', 'true');
+      }
+    }
+    newsLink.addEventListener('click', function (event) {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+      if (window.location.pathname === new URL(newsLink.href).pathname) {
+        event.preventDefault();
+        window.scrollTo(0, 0);
+        setNewsMenu(!newsItem.classList.contains('show'));
+      }
+    });
+    document.addEventListener('click', function (event) {
+      if (!newsItem.contains(event.target)) setNewsMenu(false);
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && newsItem.classList.contains('show')) {
+        setNewsMenu(false);
+        newsLink.focus();
+      }
+    });
+    if (window.location.hash === '#news-menu') setNewsMenu(true);
   }
 
   function initNavbar() {
