@@ -317,6 +317,21 @@
     transform: scale(0.95);
   }
 
+  .member-website-pending {
+    opacity: 0.45;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .member-website-pending::before,
+  .member-website-pending::after {
+    display: none;
+  }
+
+  .team-card .member-photo-pending {
+    background: #fff;
+  }
+
   .team-card .team-role,
   .team-card h4,
   .team-card p {
@@ -729,6 +744,19 @@
 						<p class="member-dept">Hanyang University (ERICA),<br>Mechanical Engineering</p>
 						<p class="member-since">Incoming M.S. (2028.03)</p>
 						<p class="member-quote"><em>"Wanna become a Defense-AI Engineer"</em></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+					<div class="team-card">
+						<span class="member-website member-website-pending" role="img" aria-label="임석정 개인 웹사이트 준비 중">
+							<span class="icon-home" aria-hidden="true"></span>
+						</span>
+						<div class="member-photo member-photo-pending" role="img" aria-label="임석정 프로필 사진 준비 중"></div>
+						<div class="team-role">Undergraduate Intern</div>
+						<h4>임석정</h4>
+						<p class="member-dept">Hanyang University (ERICA),<br>Mechatronics Engineering</p>
+						<p class="member-since">Incoming M.S. (2028.03)</p>
+						<p class="member-quote"><em>To be announced</em></p>
 					</div>
 				</div>
 			</div>
