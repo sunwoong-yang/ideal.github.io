@@ -358,32 +358,46 @@
       max-height: calc(100dvh - 2rem);
       padding: 0;
       overflow: hidden;
-      border: 0;
+      border: 1px solid #ccdbe7;
       border-radius: 18px;
       background: #fff;
       box-shadow: 0 18px 64px #12273c38;
       color: #233849;
+      text-align: center;
       word-break: keep-all;
     }
     .intern-notice[open] { display: flex; flex-direction: column; }
     .intern-notice::backdrop { background: rgba(17, 32, 48, .47); }
     html:has(.intern-notice[open]) { overflow: hidden; }
-    .intern-notice header { padding: 1.35rem 1.5rem 1.1rem; background: #eff5fa; flex: none; }
-    .intern-notice h2, .intern-notice-body h3 { text-align: center; }
+    .intern-notice header {
+      margin: .75rem .75rem 0;
+      padding: 1rem .75rem;
+      border: 1px solid #abc6da;
+      border-radius: 12px;
+      background: linear-gradient(115deg, #eef5fa, #fafcfe 54%, #eaf2f8);
+      flex: none;
+    }
+    .intern-notice-kicker {
+      display: block; margin-bottom: .35rem; color: #41647f;
+      font-size: .69rem; font-weight: 700; letter-spacing: .14em;
+    }
     .intern-notice h2 span { display: inline-block; }
+    .intern-notice h2:focus { outline: none; }
     .intern-notice h2 { margin: 0; font-size: 1.65rem; color: #152d43; font-weight: 700; }
     .intern-notice-body { padding: 0 1.5rem; overflow-y: auto; overscroll-behavior: contain; }
     .intern-notice-body section { padding: .8rem 0; }
     .intern-notice-body section + section { border-top: 1px solid #e4ebef; }
-    .intern-notice-body h3 { margin: 0 0 .25rem; font-size: .95rem; color: #164f7b; font-weight: 700; }
+    .intern-notice-body h3 { margin: 0 0 .35rem; font-size: .95rem; color: #164f7b; font-weight: 700; }
     .intern-notice-body p, .intern-notice-body ul { margin: 0; font-size: .93rem; line-height: 1.55; }
-    .intern-notice-body ul { padding-left: 1.15rem; }
+    .intern-notice-body ul { padding: 0; list-style-position: inside; }
+    .intern-notice-body li::marker { color: #5a7d99; }
+    .intern-notice-body p, .intern-notice-body li { text-wrap: balance; }
     .intern-notice-body li + li { margin-top: .14rem; }
-    .intern-notice form { margin: 0; padding: .75rem 1.5rem 1rem; text-align: right; border-top: 1px solid #e4ebef; }
+    .intern-notice form { margin: 0; padding: .65rem 1.5rem; border-top: 1px solid #e4ebef; background: #f7fafc; }
     .intern-notice button, .intern-notice-trigger {
       cursor: pointer; border-radius: 8px; font: inherit; font-weight: 600;
     }
-    .intern-notice button { border: 0; background: #174e78; color: white; padding: .5rem 1.5rem; }
+    .intern-notice button { min-width: 6rem; border: 0; border-radius: 2rem; background: #174e78; color: white; padding: .5rem 1.5rem; }
     .intern-notice button:hover { background: #113b5c; }
     .intern-notice-trigger { color: #174e78; border: 1px solid #bfd1df; padding: .4rem .85rem; background: white; }
     .intern-notice-trigger:hover { background: #eff5fa; }
@@ -396,7 +410,8 @@
 
   <dialog class="intern-notice" id="intern-notice" aria-labelledby="intern-notice-title" lang="ko">
     <header>
-      <h2 id="intern-notice-title"><span>학부연구생 모집</span> <span>(26년 겨울방학 시작)</span></h2>
+      <span class="intern-notice-kicker" lang="en">IDEA LAB · RECRUITMENT</span>
+      <h2 id="intern-notice-title" tabindex="-1" autofocus><span>학부연구생 모집</span> <span>(26년 겨울방학 시작)</span></h2>
     </header>
     <div class="intern-notice-body" tabindex="0" role="region" aria-label="모집 안내 상세">
       <section>
