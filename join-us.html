@@ -369,7 +369,8 @@
     .intern-notice::backdrop { background: rgba(17, 32, 48, .47); }
     html:has(.intern-notice[open]) { overflow: hidden; }
     .intern-notice header { padding: 1.35rem 1.5rem 1.1rem; background: #eff5fa; flex: none; }
-    .intern-notice header p { margin: 0 0 .25rem; color: #205681; font-size: .85rem; font-weight: 700; }
+    .intern-notice h2, .intern-notice-body h3 { text-align: center; }
+    .intern-notice h2 span { display: inline-block; }
     .intern-notice h2 { margin: 0; font-size: 1.65rem; color: #152d43; font-weight: 700; }
     .intern-notice-body { padding: 0 1.5rem; overflow-y: auto; overscroll-behavior: contain; }
     .intern-notice-body section { padding: .8rem 0; }
@@ -395,13 +396,12 @@
 
   <dialog class="intern-notice" id="intern-notice" aria-labelledby="intern-notice-title" lang="ko">
     <header>
-      <p>2026년 겨울방학부터 활동 시작</p>
-      <h2 id="intern-notice-title">학부연구생 모집</h2>
+      <h2 id="intern-notice-title"><span>학부연구생 모집</span> <span>(26년 겨울방학 시작)</span></h2>
     </header>
     <div class="intern-notice-body" tabindex="0" role="region" aria-label="모집 안내 상세">
       <section>
         <h3>모집 대상</h3>
-        <p>대학원 진학을 고려하며 다양한 연구실을 탐색하고 있는 분</p>
+        <p>대학원 진학을 1순위로 고려하며, 다양한 연구실의 연구 분야를 탐색하고 있는 분</p>
       </section>
       <section>
         <h3>지원 자격</h3>
@@ -413,13 +413,13 @@
       <section>
         <h3>연구 활동</h3>
         <p>본인의 관심 분야에서 AI가 필요한 문제를 찾고, 그 문제를 해결하는 프로젝트를 진행합니다.</p>
-        <p style="margin-top: .35rem"><strong>방학 중 코어타임:</strong> 10:00–16:00에는 연구실에 출근해 활동합니다.</p>
+        <p style="margin-top: .35rem"><strong>코어타임:</strong> 10:00–16:00에는 연구실에 출근해 활동합니다.</p>
       </section>
       <section>
         <h3>지원 혜택</h3>
         <ul>
-          <li>학부연구생 활동 기간 내내 개인 좌석 제공</li>
-          <li>1인당 모니터 1대 제공</li>
+          <li>활동 기간 동안 연구실 내 개인 좌석 제공</li>
+          <li>모니터 제공</li>
           <li>15만 원 상당의 Claude 요금제 제공</li>
         </ul>
       </section>
