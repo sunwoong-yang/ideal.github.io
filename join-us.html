@@ -358,7 +358,7 @@
       max-height: calc(100dvh - 2rem);
       padding: 0;
       overflow: hidden;
-      border: 1px solid #ccdbe7;
+      border: 1px solid #222;
       border-radius: 18px;
       background: #fff;
       box-shadow: 0 18px 64px #12273c38;
@@ -370,20 +370,12 @@
     .intern-notice::backdrop { background: rgba(17, 32, 48, .47); }
     html:has(.intern-notice[open]) { overflow: hidden; }
     .intern-notice header {
-      margin: .75rem .75rem 0;
-      padding: 1rem .75rem;
-      border: 1px solid #abc6da;
-      border-radius: 12px;
-      background: linear-gradient(115deg, #eef5fa, #fafcfe 54%, #eaf2f8);
+      padding: 1.5rem 1rem .5rem;
       flex: none;
-    }
-    .intern-notice-kicker {
-      display: block; margin-bottom: .35rem; color: #41647f;
-      font-size: .69rem; font-weight: 700; letter-spacing: .14em;
     }
     .intern-notice h2 span { display: inline-block; }
     .intern-notice h2:focus { outline: none; }
-    .intern-notice h2 { margin: 0; font-size: 1.65rem; color: #152d43; font-weight: 700; }
+    .intern-notice h2 { margin: 0; font-size: 1.65rem; color: #000; font-weight: 700; }
     .intern-notice-body { padding: 0 1.5rem; overflow-y: auto; overscroll-behavior: contain; }
     .intern-notice-body section { padding: .8rem 0; }
     .intern-notice-body section + section { border-top: 1px solid #e4ebef; }
@@ -410,7 +402,6 @@
 
   <dialog class="intern-notice" id="intern-notice" aria-labelledby="intern-notice-title" lang="ko">
     <header>
-      <span class="intern-notice-kicker" lang="en">IDEA LAB · RECRUITMENT</span>
       <h2 id="intern-notice-title" tabindex="-1" autofocus><span>학부연구생 모집</span> <span>(26년 겨울방학 시작)</span></h2>
     </header>
     <div class="intern-notice-body" tabindex="0" role="region" aria-label="모집 안내 상세">
