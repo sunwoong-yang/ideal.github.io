@@ -348,6 +348,11 @@
         font-size: 0.8rem !important;
       }
     }
+    @media (max-width: 400px) {
+      .publication-stats { padding: 1rem .65rem; }
+      .publication-stat-item { grid-template-columns: auto minmax(0, 1fr) auto; gap: .35rem; }
+      .publication-stat-label { padding-inline: .4rem; }
+    }
   </style>
   <script src="js/analytics.js"></script>
 </head>

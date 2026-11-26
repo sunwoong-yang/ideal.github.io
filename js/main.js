@@ -66,7 +66,7 @@
 	var onePageClick = function() {
 
 
-		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
+		$(document).on('click', '#ftco-nav a[href^="#"]:not([href="#"])', function (event) {
 	    event.preventDefault();
 
 	    var href = $.attr(this, 'href');

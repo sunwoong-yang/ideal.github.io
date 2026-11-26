@@ -393,6 +393,14 @@
     .intern-notice button:hover { background: #113b5c; }
     .intern-notice-trigger { color: #174e78; border: 1px solid #bfd1df; padding: .4rem .85rem; background: white; }
     .intern-notice-trigger:hover { background: #eff5fa; }
+    @media (max-width: 575.98px) {
+      .contact-card, .recruitment-card { padding: 1.2rem 1rem; }
+      .resource-panel { padding: 0 .75rem; }
+      .resource-panel .file-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(7rem, 100%), 1fr)); }
+      .resource-panel .file-card { min-height: 44px; justify-content: center; padding: .5rem .3rem; }
+      #join-section .faq-item > p, #join-section .faq-item li { text-align: left; text-indent: 0; }
+      .intern-notice-trigger, .intern-notice button { min-height: 44px; }
+    }
   </style>
   <script src="js/analytics.js"></script>
 </head>

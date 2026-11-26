@@ -698,21 +698,6 @@
         font-size: 1rem !important;
       }
 
-      .demo-options {
-        grid-template-columns: 1fr;
-        width: min(92vw, 280px);
-        border-radius: 22px;
-      }
-
-      .demo-option {
-        width: 100%;
-        min-width: 0;
-      }
-
-      .demo-options .demo-option {
-        grid-column: auto;
-      }
-
       .component-grid {
         grid-template-columns: 1fr;
       }
@@ -732,6 +717,19 @@
         content: '\A';
         white-space: pre;
       }
+    }
+    @media (max-width: 991.98px) {
+      .demo-launcher { display: flex; width: 100%; }
+      .demo-options {
+        width: 100%; grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: .5rem; padding: .55rem; border-radius: 16px;
+      }
+      .demo-options .demo-option { grid-column: auto; padding: .65rem .35rem; border-radius: 10px; }
+      .demo-option::after { display: none; }
+    }
+    @media (max-width: 575.98px) {
+      .demo-options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .demo-options .demo-option:last-child:nth-child(odd) { grid-column: 1 / -1; }
     }
   </style>
   <script src="js/analytics.js"></script>

@@ -11072,4 +11072,39 @@ textarea.form-control {
 .news-category-tabs a[aria-current="page"] { color: #fff; background: #0E4A84; border-color: #0E4A84; }
 .news-category-tabs a:focus-visible { outline: 2px solid #0E4A84; outline-offset: 3px; }
 
+/* Enlarge touch targets without changing the closed navbar's dimensions. */
+@media (max-width: 991.98px) {
+  #ftco-navbar .navbar-toggler { position: relative; }
+  #ftco-navbar .navbar-toggler::after {
+    content: "";
+    position: absolute;
+    inset: -9px 0;
+  }
+  #ftco-navbar .navbar-collapse.show {
+    max-height: calc(100vh - 5.5rem);
+    max-height: calc(100dvh - 5.5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  #ftco-navbar .navbar-nav .nav-item > .nav-link,
+  #ftco-navbar .navbar-nav .dropdown-item {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding-top: .45rem;
+    padding-bottom: .45rem;
+  }
+  #ftco-navbar .navbar-nav > .nav-item.nav-cta > .nav-link.nav-cta-link { min-height: 44px !important; }
+  #ftco-navbar .navbar-nav .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .55rem;
+  }
+  .news-category-tabs a { display: inline-flex; align-items: center; min-height: 44px; }
+}
+@media (max-width: 575.98px) {
+  .ftco-footer div:has(> .footer-logo) { flex-direction: column; gap: .75rem !important; }
+  .ftco-footer .footer-logo img { max-height: 100px !important; max-width: 100%; }
+  .ftco-footer .footer-line-1, .ftco-footer .footer-line-2 { display: inline-block; }
+}
+
 /*# sourceMappingURL=style.css.map */
